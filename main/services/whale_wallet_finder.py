@@ -56,12 +56,13 @@ class WhaleWalletFinder:
                 options=chrome_options
             )
             
-            # Set page load timeout
-            self.driver.set_page_load_timeout(30)
+            # Set shorter page load timeout
+            self.driver.set_page_load_timeout(15)
+            self.driver.implicitly_wait(5)  # Set implicit wait for finding elements
             
-            # Navigate to the page
+            # Navigate to the page and wait for specific elements
             self.driver.get(self.LEADERBOARD_URL)
-            time.sleep(5)  # Initial page load
+            self.wait_for_page_load()  # Use our custom wait instead of sleep
             
         except Exception as e:
             print(f"Error setting up driver: {e}")
@@ -71,20 +72,32 @@ class WhaleWalletFinder:
             
     def wait_for_table(self):
         """Wait for table to be present and return it."""
-        wait = WebDriverWait(self.driver, 30)
+        wait = WebDriverWait(self.driver, 10)
         table = wait.until(EC.presence_of_element_located((By.TAG_NAME, "table")))
-        time.sleep(1)  # Short wait for data to load
+        
+        # Wait for table to have data and verify first row has a valid rank
+        def table_has_valid_data(driver):
+            try:
+                rows = driver.find_elements(By.CSS_SELECTOR, "tbody tr")
+                if len(rows) == 0:
+                    return False
+                rank = rows[0].find_element(By.CSS_SELECTOR, "td:first-child").text.strip()
+                return bool(rank and rank.isdigit())
+            except:
+                return False
+        
+        wait.until(table_has_valid_data)
         return table
         
     def wait_for_page_load(self):
         """Wait for page to load by checking for key elements."""
         try:
-            wait = WebDriverWait(self.driver, 10)
-            # Wait for table to be present and visible
-            wait.until(EC.presence_of_element_located((By.TAG_NAME, "table")))
-            wait.until(EC.visibility_of_element_located((By.TAG_NAME, "table")))
-            # Wait for at least one row to be present
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "tbody tr")))
+            wait = WebDriverWait(self.driver, 8)  # Reduced from 10 to 8 seconds
+            # Wait for table and first row in a single condition
+            wait.until(lambda d: (
+                d.find_element(By.TAG_NAME, "table").is_displayed() and 
+                len(d.find_elements(By.CSS_SELECTOR, "tbody tr")) > 0
+            ))
             return True
         except Exception as e:
             print(f"Error waiting for page load: {e}")
@@ -102,7 +115,9 @@ class WhaleWalletFinder:
             rows = table.find_elements(By.CSS_SELECTOR, "tbody tr")
             total_rows = len(rows)
             
-            print(f"Found {total_rows} traders on page {self.current_page}")
+            # Get the expected first rank for this page
+            expected_first_rank = (self.current_page - 1) * 10 + 1
+            print(f"Found {total_rows} traders on page {self.current_page} (expecting ranks {expected_first_rank}-{expected_first_rank + 9})")
             
             while processed_count < total_rows:
                 try:
@@ -114,6 +129,17 @@ class WhaleWalletFinder:
                     while retry_count < max_retries:
                         try:
                             table = self.wait_for_table()
+                            # Verify we're still on the correct page
+                            first_rank = table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
+                            if int(first_rank) != expected_first_rank:
+                                print(f"Wrong page detected (rank {first_rank}, expected {expected_first_rank})")
+                                # Navigate directly to the correct page
+                                self.driver.get(f"{self.LEADERBOARD_URL}?page={self.current_page}")
+                                if not self.wait_for_page_load():
+                                    retry_count += 1
+                                    continue
+                                table = self.wait_for_table()
+                            
                             rows = table.find_elements(By.CSS_SELECTOR, "tbody tr")
                             row = rows[processed_count]
                             cells = row.find_elements(By.TAG_NAME, "td")
@@ -150,6 +176,9 @@ class WhaleWalletFinder:
                         
                         # Only process if ROI is positive, volume meets minimum, and account value meets minimum
                         if roi > self.MIN_ROI and volume >= self.MIN_30D_VOLUME and account_value >= self.MIN_ACCOUNT_VALUE:
+                            # Store the current URL to return to the correct page
+                            current_page_url = self.driver.current_url
+                            
                             # Click on the trader to get to their page using JavaScript
                             self.driver.execute_script("arguments[0].click();", trader_cell)
                             
@@ -158,10 +187,10 @@ class WhaleWalletFinder:
                             wait.until(lambda driver: self.LEADERBOARD_URL not in driver.current_url)
                             
                             # Get the current URL which contains the full address
-                            current_url = self.driver.current_url
-                            full_address = current_url.split("/")[-1]  # Get the last part of the URL
+                            trader_url = self.driver.current_url
+                            full_address = trader_url.split("/")[-1]  # Get the last part of the URL
                             
-                            print(f"Processing trader {processed_count + 1}: {full_address}")
+                            print(f"Processing trader {processed_count + 1} (rank {expected_first_rank + processed_count}): {full_address}")
                             whale_data.append({
                                 'address': full_address,
                                 'account_value': account_value_text,
@@ -169,12 +198,11 @@ class WhaleWalletFinder:
                                 'roi_30d': roi
                             })
                             
-                            # Go back to the leaderboard
-                            self.driver.back()
-                            # Wait for leaderboard page to load
+                            # Return directly to the correct page URL
+                            self.driver.get(current_page_url)
                             if not self.wait_for_page_load():
                                 # If waiting fails, try refreshing
-                                self.driver.get(self.LEADERBOARD_URL)
+                                self.driver.get(f"{self.LEADERBOARD_URL}?page={self.current_page}")
                                 self.wait_for_page_load()
                             
                     except Exception as e:
@@ -198,68 +226,109 @@ class WhaleWalletFinder:
         try:
             print("\nAttempting to move to the next page...")
             
-            # First get the current table for staleness check
+            # First get the current table and rank
             current_table = self.wait_for_table()
-            
-            # Get current first rank for comparison
             old_first_rank = current_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
             print(f"Current first rank: {old_first_rank}")
             
-            # Try to find the Next button using JavaScript
-            script = """
-            const elements = document.querySelectorAll('button');
-            for (const el of elements) {
-                if (el.textContent.includes('Next')) {
-                    return el;
-                }
-            }
-            return null;
-            """
-            next_button = self.driver.execute_script(script)
-            
-            if not next_button:
-                print("Could not find Next button")
-                return False
-                
-            # Check if button is enabled
-            is_enabled = self.driver.execute_script("return !arguments[0].disabled", next_button)
-            if not is_enabled:
-                print("Next button is disabled")
-                return False
-                
-            # Scroll the button into view and click
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-            time.sleep(0.5)  # Short wait for scroll
-            
-            # Click using JavaScript
-            self.driver.execute_script("arguments[0].click();", next_button)
-            
-            # Wait for new table and verify data
             try:
-                if not self.wait_for_page_load():
-                    return False
-                    
-                new_table = self.wait_for_table()
-                first_row = new_table.find_element(By.CSS_SELECTOR, "tbody tr")
-                new_rank = first_row.find_element(By.CSS_SELECTOR, "td:first-child").text.strip()
+                current_first_rank = int(old_first_rank)
+                expected_next_first_rank = current_first_rank + 10
+                print(f"Expecting next page to start with rank {expected_next_first_rank}")
+            except ValueError:
+                print("Could not determine expected next rank")
+                return False
+            
+            # Find the Next button more efficiently using multiple strategies
+            try:
+                # Try to find the Next button using various selectors
+                next_button = None
                 
-                # Verify rank increased
+                # Strategy 1: Find by nav and last button (Next is usually last)
                 try:
-                    old_rank_num = int(old_first_rank)
-                    new_rank_num = int(new_rank)
-                    if new_rank_num > old_rank_num:
-                        self.current_page += 1
-                        print(f"Successfully moved to page {self.current_page}")
-                        return True
-                except ValueError:
-                    print("Could not compare ranks numerically")
+                    nav = self.driver.find_element(By.CSS_SELECTOR, "nav[aria-label='pagination']")
+                    buttons = nav.find_elements(By.TAG_NAME, "button")
+                    if len(buttons) > 0:
+                        next_button = buttons[-1]  # Last button should be Next
+                except:
+                    pass
+                
+                # Strategy 2: Find by SVG attributes
+                if not next_button:
+                    buttons = self.driver.find_elements(By.TAG_NAME, "button")
+                    for button in buttons:
+                        try:
+                            svg = button.find_element(By.TAG_NAME, "svg")
+                            if svg.get_attribute("width") == "18" and svg.get_attribute("height") == "18":
+                                next_button = button
+                                break
+                        except:
+                            continue
+                
+                # Strategy 3: Find by button text content
+                if not next_button:
+                    buttons = self.driver.find_elements(By.TAG_NAME, "button")
+                    for button in buttons:
+                        if "next" in button.get_attribute("textContent").lower():
+                            next_button = button
+                            break
+                
+                if not next_button:
+                    print("Could not find Next button")
                     return False
+                
+                if not next_button.is_enabled():
+                    print("Next button is disabled")
+                    return False
+                
+                print("\nFound Next button")
+                
+                # Try direct navigation first
+                next_page_url = f"{self.LEADERBOARD_URL}?page={self.current_page + 1}"
+                print(f"Navigating to: {next_page_url}")
+                self.driver.get(next_page_url)
+                
+                # Verify new page
+                max_retries = 2
+                retry_count = 0
+                
+                while retry_count < max_retries:
+                    if not self.wait_for_page_load():
+                        print("Page did not load properly, retrying...")
+                        retry_count += 1
+                        self.driver.refresh()
+                        continue
+                        
+                    new_table = self.wait_for_table()
+                    new_rank = new_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
                     
-                print("Page data does not show progression in ranks")
+                    try:
+                        new_rank_num = int(new_rank)
+                        if new_rank_num == expected_next_first_rank:
+                            self.current_page += 1
+                            print(f"Successfully moved to page {self.current_page} (rank {new_rank_num})")
+                            return True
+                        else:
+                            print(f"Wrong page loaded (got rank {new_rank_num}, expected {expected_next_first_rank})")
+                            if retry_count < max_retries - 1:
+                                # If direct navigation failed, try clicking the button
+                                if retry_count == 0:
+                                    print("Trying button click instead...")
+                                    self.driver.execute_script("arguments[0].click();", next_button)
+                                else:
+                                    self.driver.get(next_page_url)
+                                retry_count += 1
+                                continue
+                            return False
+                    except ValueError:
+                        print(f"Could not verify rank number: {new_rank}")
+                        return False
+                        
+                print("Failed to navigate to correct page after all retries")
                 return False
                 
             except Exception as e:
-                print(f"Error verifying new page data: {e}")
+                print(f"Error with Next button: {e}")
                 return False
             
         except Exception as e:
@@ -328,6 +397,7 @@ def main():
             
             if not page_data:
                 print("No data found on current page.")
+                finder.cleanup()  # Only cleanup if we truly have no data
                 break
                 
             # Add data from this page
@@ -336,6 +406,7 @@ def main():
             # Try to move to next page
             if not finder.move_to_next_page():
                 print("Could not move to next page. Stopping search.")
+                finder.cleanup()  # Only cleanup if we can't move to next page
                 break
         
         # Display results
@@ -346,8 +417,9 @@ def main():
             output_file = os.path.join('resources', 'leaderboard_wallets.json')
             finder.save_whale_wallets(all_whale_data, output_file)
             
-    finally:
-        finder.cleanup()
+    except Exception as e:
+        print(f"Error in main: {e}")
+        finder.cleanup()  # Cleanup on error
 
 if __name__ == "__main__":
     main()
