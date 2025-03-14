@@ -2,64 +2,58 @@
   "wallets": [
     {
       "address": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
-      "account_value": "$101,216,868.17",
-      "volume_30d": 48891691.71,
+      "account_value": "$101,555,349.86",
+      "volume_30d": 49229644.61,
       "roi_30d": 49.0
     },
     {
       "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "account_value": "$57,693,220.74",
-      "volume_30d": 26084591.28,
+      "account_value": "$57,769,552.07",
+      "volume_30d": 26102898.72,
       "roi_30d": 49.0
     },
     {
       "address": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
-      "account_value": "$11,080,117.12",
-      "volume_30d": 12292192.97,
-      "roi_30d": 171.0
-    },
-    {
-      "address": "0xe4d31c2541a9ce596419879b1a46ffc7cd202c62",
-      "account_value": "$0.01",
-      "volume_30d": 10993711.55,
-      "roi_30d": 412.0
-    },
-    {
-      "address": "0x45d26f28196d226497130c4bac709d808fed4029",
-      "account_value": "$9,748,857.07",
-      "volume_30d": 9532993.47,
-      "roi_30d": 70.0
-    },
-    {
-      "address": "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9",
-      "account_value": "$12,794,568.70",
-      "volume_30d": 9016860.72,
-      "roi_30d": 67.0
+      "account_value": "$11,019,725.34",
+      "volume_30d": 12208847.95,
+      "roi_30d": 169.0
     },
     {
       "address": "0x8af700ba841f30e0a3fcb0ee4c4a9d223e1efa05",
-      "account_value": "$16,143,617.93",
-      "volume_30d": 8655883.01,
-      "roi_30d": 52.0
+      "account_value": "$16,954,184.74",
+      "volume_30d": 9470080.94,
+      "roi_30d": 57.0
+    },
+    {
+      "address": "0x45d26f28196d226497130c4bac709d808fed4029",
+      "account_value": "$9,642,498.66",
+      "volume_30d": 9418776.86,
+      "roi_30d": 69.0
+    },
+    {
+      "address": "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9",
+      "account_value": "$12,665,213.26",
+      "volume_30d": 8882027.11,
+      "roi_30d": 66.0
     },
     {
       "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "account_value": "$22,110,645.12",
-      "volume_30d": 7701857.45,
+      "account_value": "$22,188,961.72",
+      "volume_30d": 7780601.05,
       "roi_30d": 34.0
     },
     {
       "address": "0x023a3d058020fb76cca98f01b3c48c8938a22355",
-      "account_value": "$14,566,652.07",
-      "volume_30d": 7283817.79,
+      "account_value": "$14,150,046.29",
+      "volume_30d": 7241388.06,
       "roi_30d": 25.0
     },
     {
-      "address": "0x499beed00ee60bef8ce07a68c92103bd2225b5fb",
-      "account_value": "$669,409.33",
-      "volume_30d": 6204868.49,
-      "roi_30d": 423.0
+      "address": "0x56498e5f90c14060499b62b6f459b3e3fb9280c5",
+      "account_value": "$6,695,499.63",
+      "volume_30d": 6219275.96,
+      "roi_30d": 114.0
     }
   ],
-  "last_updated": "2025-03-14 20:45:41"
+  "last_updated": "2025-03-14 21:07:01"
 }
