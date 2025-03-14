@@ -80,7 +80,7 @@ update-dev-deps       Update development dependencies to latest versions
 
 You can see the list of available releases on the [GitHub Releases](https://github.com/hyperliquid-dex/hyperliquid-python-sdk/releases) page.
 
-We follow the [Semantic Versions](https://semver.org/) specification and use [`Release Drafter`](https://github.com/marketplace/actions/release-drafter). As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you’re ready. With the categories option, you can categorize pull requests in release notes using labels.
+We follow the [Semantic Versions](https://semver.org/) specification and use [`Release Drafter`](https://github.com/marketplace/actions/release-drafter). As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you're ready. With the categories option, you can categorize pull requests in release notes using labels.
 
 ### List of labels and corresponding titles
 
@@ -121,3 +121,6 @@ This project is licensed under the terms of the `MIT` license. See [LICENSE](LIC
 
 This project was generated with [`python-package-template`](https://github.com/TezRomacH/python-package-template).
 # hyperliquidWhales
+=======
+# hyperliquid_whales
+>>>>>>> 007ac596f23b8e32728e62cffcd9196d2b7f9094
