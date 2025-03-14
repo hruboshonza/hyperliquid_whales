@@ -22,7 +22,7 @@ class WhaleWalletFinder:
     
     # Whale detection thresholds
     MIN_ACCOUNT_VALUE = 300000  # Minimum account value in USD
-    MIN_24H_VOLUME = 100000     # Minimum 24h trading volume in USD
+    MIN_24H_VOLUME = 0     # Minimum 24h trading volume in USD
     MIN_ROI = 0                 # Minimum ROI percentage (0 means we track all ROIs)
     
     # Webpage URL
@@ -46,61 +46,57 @@ class WhaleWalletFinder:
             driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
             driver.get(self.LEADERBOARD_URL)
             
-            # Wait for the table to be present and visible
-            wait = WebDriverWait(driver, 30)
-            wait.until(EC.presence_of_element_located((By.TAG_NAME, "table")))
-            
-            # Add a small delay to ensure data is loaded
-            time.sleep(5)
-            
-            # Find all rows in the table body
-            rows = driver.find_elements(By.CSS_SELECTOR, "tbody tr")
-            
             whale_data = []
-            for row in rows:
+            processed_count = 0
+            
+            while processed_count < 10:  # Process top 10 traders
                 try:
-                    # Wait for cells to be present
-                    cells = row.find_elements(By.TAG_NAME, "td")
-                    if len(cells) < 6:  # Make sure we have all needed columns
-                        continue
+                    # Wait for table and get fresh reference to rows
+                    wait = WebDriverWait(driver, 30)
+                    table = wait.until(EC.presence_of_element_located((By.TAG_NAME, "table")))
+                    time.sleep(2)  # Wait for data to load
                     
-                    # Get text content
-                    trader_cell = cells[1]
-                    account_value_text = cells[2].text.strip()
-                    volume_text = cells[5].text.strip()
-                    
-                    # Convert account value to float for comparison
-                    account_value = float(account_value_text.replace("$", "").replace(",", ""))
-                    
-                    # Only process if account value is > $10M
-                    if account_value > 10000000:
-                        # Click on the trader address to get full address
-                        try:
-                            trader_link = trader_cell.find_element(By.TAG_NAME, "a")
-                            trader_link.click()
-                            time.sleep(1)  # Wait for popup/tooltip
-                            
-                            # Try to find the full address in the popup/tooltip
-                            full_address = wait.until(EC.presence_of_element_located(
-                                (By.CSS_SELECTOR, "[data-tooltip-id]")
-                            )).get_attribute("data-tooltip-content")
-                            
-                            if not full_address:
-                                full_address = trader_cell.text.strip()
-                            
-                        except Exception as click_error:
-                            print(f"Could not get full address: {click_error}")
-                            full_address = trader_cell.text.strip()
+                    # Get fresh rows
+                    rows = table.find_elements(By.CSS_SELECTOR, "tbody tr")
+                    if processed_count >= len(rows):
+                        break
                         
-                        print(f"Found whale: {full_address}, Account: {account_value_text}, Volume: {volume_text}")
+                    # Get current row
+                    row = rows[processed_count]
+                    cells = row.find_elements(By.TAG_NAME, "td")
+                    
+                    if len(cells) >= 6:
+                        # Get text content
+                        trader_cell = cells[1]
+                        account_value_text = cells[2].text.strip()
+                        volume_text = cells[5].text.strip()
+                        
+                        # Click on the trader to get to their page
+                        trader_cell.click()
+                        time.sleep(2)  # Wait for navigation
+                        
+                        # Get the current URL which contains the full address
+                        current_url = driver.current_url
+                        full_address = current_url.split("/")[-1]  # Get the last part of the URL
+                        
+                        print(f"Processing trader {processed_count + 1}: {full_address}")
                         whale_data.append({
                             'address': full_address,
                             'account_value': account_value_text,
                             'volume': volume_text
                         })
-                            
+                        
+                        # Go back to the leaderboard
+                        driver.back()
+                        time.sleep(2)  # Wait for navigation back
+                    
+                    processed_count += 1
+                    
                 except Exception as e:
-                    print(f"Error processing row: {e}")
+                    print(f"Error processing row {processed_count + 1}: {e}")
+                    processed_count += 1  # Move to next row even if there's an error
+                    driver.get(self.LEADERBOARD_URL)  # Refresh the page
+                    time.sleep(2)
                     continue
             
             driver.quit()
@@ -155,10 +151,10 @@ class WhaleWalletFinder:
             print("No whale wallets found!")
             return
             
-        print("\nWhale Wallets Found:")
-        print("=" * 100)
-        print(f"{'Address':<42} | {'Account Value':>25} | {'Volume':>25}")
-        print("-" * 100)
+        print("\nTop 10 Traders:")
+        print("=" * 120)
+        print(f"{'Address':<42} | {'Account Value':>25} | {'Volume (7D)':>25}")
+        print("-" * 120)
         
         for whale in whale_data:
             print(
@@ -167,8 +163,7 @@ class WhaleWalletFinder:
                 f"{whale['volume']:>25}"
             )
         
-        print("=" * 100)
-        print(f"Total entries found: {len(whale_data)}")
+        print("=" * 120)
 
     def check_specific_wallet(self, address: str) -> Dict:
         """Check stats for a specific wallet address."""
