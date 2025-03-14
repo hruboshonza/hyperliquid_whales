@@ -1,0 +1,20 @@
+{
+  "wallets": [
+    {
+      "address": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+      "added_date": "2024-03-19",
+      "description": "Whale wallet tracking"
+    },
+    {
+      "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "added_date": "2024-03-19",
+      "description": "Whale wallet tracking"
+    },
+    {
+      "address": "0xe4d31c2541a9ce596419879b1a46ffc7cd202c62",
+      "added_date": "2024-03-19",
+      "description": "Whale wallet tracking"
+    }
+  ],
+  "last_updated": "2024-03-19"
+}
