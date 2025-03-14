@@ -1,0 +1,15 @@
+{
+  "wallets": [
+    {
+      "address": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+      "added_date": "2025-03-14",
+      "description": "Whale wallet with $104,091,001.93 account value"
+    },
+    {
+      "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "added_date": "2025-03-14",
+      "description": "Whale wallet with $36,493,060.21 account value"
+    }
+  ],
+  "last_updated": "2025-03-14"
+}

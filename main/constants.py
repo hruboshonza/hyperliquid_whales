@@ -21,4 +21,4 @@ WHALE_WALLETS_FILE = os.path.join('resources', 'whale_wallets.json')
 
 # Trade monitoring settings
 MIN_TRADE_VALUE = 10000.0  # Minimum trade value to display (in USD)
-LOOKBACK_DAYS = 3  # Number of days to look back for trades 
+LOOKBACK_DAYS = 4  # Number of days to look back for trades 

@@ -9,34 +9,30 @@ import os
 from collections import defaultdict
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
-import constants
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from constants import *
 
 class WhaleTradeMonitor:
     """
     Monitor and analyze trades of whale wallets on Hyperliquid.
     """
     
-    def __init__(self, use_testnet: bool = False):
-        """
-        Initialize the WhaleTradeMonitor.
-        
-        Args:
-            use_testnet (bool): Whether to use testnet instead of mainnet
-        """
-        api_url = hl_constants.TESTNET_API_URL if use_testnet else hl_constants.MAINNET_API_URL
-        self.info = Info(api_url)
+    def __init__(self):
+        """Initialize the WhaleTradeMonitor."""
+        self.info = Info(hl_constants.MAINNET_API_URL)
         self.whale_addresses = self.load_whale_addresses()
         
     def load_whale_addresses(self) -> Set[str]:
         """Load whale addresses from JSON file."""
         try:
-            if os.path.exists(constants.WHALE_WALLETS_FILE):
-                with open(constants.WHALE_WALLETS_FILE, 'r') as f:
+            if os.path.exists(WHALE_WALLETS_FILE):
+                with open(WHALE_WALLETS_FILE, 'r') as f:
                     data = json.load(f)
                     addresses = {wallet['address'].lower() for wallet in data['wallets']}
-                print(f"Loaded {len(addresses)} whale addresses from {constants.WHALE_WALLETS_FILE}")
+                print(f"Loaded {len(addresses)} whale addresses from {WHALE_WALLETS_FILE}")
                 return addresses
-            print(f"No whale addresses file found at {constants.WHALE_WALLETS_FILE}")
+            print(f"No whale addresses file found at {WHALE_WALLETS_FILE}")
             return set()
         except Exception as e:
             print(f"Error loading whale addresses: {e}")
@@ -55,7 +51,7 @@ class WhaleTradeMonitor:
         try:
             # Calculate time range (in milliseconds)
             current_time = int(datetime.now().timestamp() * 1000)
-            start_time = current_time - (constants.LOOKBACK_DAYS * 24 * 3600 * 1000)
+            start_time = current_time - (LOOKBACK_DAYS * 24 * 3600 * 1000)
             
             # Get trades
             trades = self.info.user_fills_by_time(address, start_time)
@@ -188,11 +184,11 @@ class WhaleTradeMonitor:
             # Filter trades by minimum value
             large_trades = [
                 trade for trade in trades 
-                if abs(float(trade.get('sz', 0)) * float(trade.get('px', 0))) >= constants.MIN_TRADE_VALUE
+                if abs(float(trade.get('sz', 0)) * float(trade.get('px', 0))) >= MIN_TRADE_VALUE
             ]
             
             if large_trades:
-                print(f"\nLarge Trades (>${constants.MIN_TRADE_VALUE:,.2f}) in last {constants.LOOKBACK_DAYS} {'day' if constants.LOOKBACK_DAYS == 1 else 'days'}:")
+                print(f"\nLarge Trades (>${MIN_TRADE_VALUE:,.2f}) in last {LOOKBACK_DAYS} {'day' if LOOKBACK_DAYS == 1 else 'days'}:")
                 print("=" * 120)
                 print("Timestamp            | Market   | Side   | Action  | Size         | Entry Price | Trade Value  | PnL")
                 print("-" * 120)
@@ -213,9 +209,9 @@ class WhaleTradeMonitor:
                 print(f"Total Large Trade Value: ${total_value:,.2f}")
                 print(f"Total Realized PnL: ${total_pnl:,.2f}")
             else:
-                print(f"\nNo trades larger than ${constants.MIN_TRADE_VALUE:,.2f} in the last {constants.LOOKBACK_DAYS} {'day' if constants.LOOKBACK_DAYS == 1 else 'days'}")
+                print(f"\nNo trades larger than ${MIN_TRADE_VALUE:,.2f} in the last {LOOKBACK_DAYS} {'day' if LOOKBACK_DAYS == 1 else 'days'}")
         else:
-            print(f"\nNo trades in the last {constants.LOOKBACK_DAYS} {'day' if constants.LOOKBACK_DAYS == 1 else 'days'}")
+            print(f"\nNo trades in the last {LOOKBACK_DAYS} {'day' if LOOKBACK_DAYS == 1 else 'days'}")
         
         # Get positions and group by coin
         positions = self.get_open_positions(address)
@@ -246,13 +242,13 @@ class WhaleTradeMonitor:
 
 def main():
     # Initialize monitor
-    monitor = WhaleTradeMonitor(use_testnet=False)
+    monitor = WhaleTradeMonitor()
     
     if not monitor.whale_addresses:
         print("No whale addresses found to monitor!")
         return
     
-    print(f"\nMonitoring whale wallet activity for the past {constants.LOOKBACK_DAYS} {'day' if constants.LOOKBACK_DAYS == 1 else 'days'}...")
+    print(f"\nMonitoring whale wallet activity for the past {LOOKBACK_DAYS} {'day' if LOOKBACK_DAYS == 1 else 'days'}...")
     
     # Check each whale wallet
     for address in sorted(monitor.whale_addresses):
