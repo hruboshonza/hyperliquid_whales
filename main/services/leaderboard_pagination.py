@@ -153,74 +153,33 @@ class LeaderboardPagination:
             old_first_rank = current_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
             print(f"Current first rank: {old_first_rank}")
             
-            # Try to find the Next button using JavaScript with debugging
+            # Try to find the Next button using specific SVG attributes
             script = """
-            const elements = document.querySelectorAll('.sc-jSUZER.jlrncQ');
-            const results = [];
-            for (const el of elements) {
+            const nextButton = Array.from(document.querySelectorAll('.sc-jSUZER.jlrncQ')).find(el => {
                 const svg = el.querySelector('svg');
-                if (svg) {
-                    results.push({
-                        viewBox: svg.getAttribute('viewBox'),
-                        width: svg.getAttribute('width'),
-                        height: svg.getAttribute('height'),
-                        innerHTML: svg.innerHTML,
-                        parentClasses: el.getAttribute('class'),
-                        parentStyle: el.getAttribute('style')
-                    });
-                }
-            }
-            return results;
-            """
-            svg_elements = self.driver.execute_script(script)
-            
-            print("\nFound SVG elements:")
-            for idx, svg in enumerate(svg_elements):
-                print(f"\nSVG {idx + 1}:")
-                for key, value in svg.items():
-                    print(f"{key}: {value}")
-            
-            # Now try to find the Next button by looking for the SVG with the right attributes
-            script = """
-            const elements = document.querySelectorAll('.sc-jSUZER.jlrncQ');
-            for (const el of elements) {
-                const svg = el.querySelector('svg');
-                if (svg && svg.getAttribute('width') === '18' && svg.getAttribute('height') === '18') {
-                    return el;
-                }
-            }
-            return null;
+                return svg && 
+                       svg.getAttribute('width') === '18' && 
+                       svg.getAttribute('height') === '18' &&
+                       svg.getAttribute('viewBox') === '0 0 24 24' &&
+                       svg.innerHTML.includes('M8.59 16.34l4.58-4.59');
+            });
+            return nextButton;
             """
             next_button = self.driver.execute_script(script)
             
             if not next_button:
-                print("\nCould not find Next button")
+                print("\nCould not find Next button - likely reached the last page")
                 return False
                 
             print("\nFound Next button")
             
-            # Print button state before click
-            print("\nButton state before click:")
-            print(f"Location: {next_button.location}")
-            print(f"Classes: {next_button.get_attribute('class')}")
-            print(f"Style: {next_button.get_attribute('style')}")
-            
-            # Scroll the button into view and click
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-            time.sleep(1)  # Wait for scroll
-            
-            # Click using JavaScript
+            # Click using JavaScript immediately
             self.driver.execute_script("arguments[0].click();", next_button)
             print("JavaScript click executed")
             
-            time.sleep(2)  # Wait for click to take effect
-            
-            # Print current URL after click
-            print(f"\nURL after click: {self.driver.current_url}")
-            
             # Wait for new table and verify data
             try:
-                time.sleep(2)  # Additional wait for data to load
+                time.sleep(2)  # Wait for data to load
                 new_table = self.wait_for_table()
                 first_row = new_table.find_element(By.CSS_SELECTOR, "tbody tr")
                 new_rank = first_row.find_element(By.CSS_SELECTOR, "td:first-child").text.strip()
@@ -258,19 +217,21 @@ class LeaderboardPagination:
 
 def main():
     pagination = LeaderboardPagination()
+    all_data = []
     
     try:
-        # Get first page data
-        first_page_data = pagination.get_current_page_data()
-        print("\nFirst page data collected successfully.")
-        
-        # Move to second page
-        if pagination.move_to_next_page():
-            second_page_data = pagination.get_current_page_data()
-            print("\nSecond page data collected successfully.")
-        else:
-            print("\nCould not move to second page.")
-        
+        while True:
+            # Get current page data
+            page_data = pagination.get_current_page_data()
+            if page_data:
+                all_data.extend(page_data)
+                print(f"\nCollected data from page {pagination.current_page}")
+            
+            # Try to move to next page
+            if not pagination.move_to_next_page():
+                print("\nReached last page or could not proceed.")
+                break
+            
     finally:
         pagination.cleanup()
 

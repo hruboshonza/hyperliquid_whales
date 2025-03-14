@@ -224,104 +224,112 @@ class WhaleWalletFinder:
     def move_to_next_page(self) -> bool:
         """Move to the next page if available."""
         try:
-            print("\nAttempting to move to the next page...")
+            print("\nAttempting to find and click the Next button...")
             
-            # First get the current table and rank
+            # First get the current table for staleness check
             current_table = self.wait_for_table()
+            
+            # Get current first rank for comparison
             old_first_rank = current_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
             print(f"Current first rank: {old_first_rank}")
             
-            try:
-                current_first_rank = int(old_first_rank)
-                expected_next_first_rank = current_first_rank + 10
-                print(f"Expecting next page to start with rank {expected_next_first_rank}")
-            except ValueError:
-                print("Could not determine expected next rank")
-                return False
+            # Try to find the Next button using JavaScript with debugging
+            script = """
+            const elements = document.querySelectorAll('.sc-jSUZER.jlrncQ');
+            const results = [];
+            for (const el of elements) {
+                const svg = el.querySelector('svg');
+                if (svg) {
+                    results.push({
+                        viewBox: svg.getAttribute('viewBox'),
+                        width: svg.getAttribute('width'),
+                        height: svg.getAttribute('height'),
+                        innerHTML: svg.innerHTML,
+                        parentClasses: el.getAttribute('class'),
+                        parentStyle: el.getAttribute('style')
+                    });
+                }
+            }
+            return results;
+            """
+            svg_elements = self.driver.execute_script(script)
             
-            # Find the Next button using the LeaderboardPagination structure
+            print("\nFound SVG elements:")
+            for idx, svg in enumerate(svg_elements):
+                print(f"\nSVG {idx + 1}:")
+                for key, value in svg.items():
+                    print(f"{key}: {value}")
+            
+            # Now try to find the Next button by looking for the SVG with the right attributes
+            script = """
+            const elements = document.querySelectorAll('.sc-jSUZER.jlrncQ');
+            for (const el of elements) {
+                const svg = el.querySelector('svg');
+                if (svg && svg.getAttribute('width') === '18' && svg.getAttribute('height') === '18') {
+                    return el;
+                }
+            }
+            return null;
+            """
+            next_button = self.driver.execute_script(script)
+            
+            if not next_button:
+                print("\nCould not find Next button")
+                return False
+                
+            print("\nFound Next button")
+            
+            # Print button state before click
+            print("\nButton state before click:")
+            print(f"Location: {next_button.location}")
+            print(f"Classes: {next_button.get_attribute('class')}")
+            print(f"Style: {next_button.get_attribute('style')}")
+            
+            # Scroll the button into view and click
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+            time.sleep(1)  # Wait for scroll
+            
+            # Click using JavaScript
+            self.driver.execute_script("arguments[0].click();", next_button)
+            print("JavaScript click executed")
+            
+            time.sleep(2)  # Wait for click to take effect
+            
+            # Print current URL after click
+            print(f"\nURL after click: {self.driver.current_url}")
+            
+            # Wait for new table and verify data
             try:
-                # First find the pagination container
-                wait = WebDriverWait(self.driver, 5)
-                pagination_div = wait.until(EC.presence_of_element_located((
-                    By.CSS_SELECTOR, 
-                    "div[style*='display: flex'][style*='gap: 16px']"
-                )))
-                print("Found pagination container")
+                time.sleep(2)  # Additional wait for data to load
+                new_table = self.wait_for_table()
+                first_row = new_table.find_element(By.CSS_SELECTOR, "tbody tr")
+                new_rank = first_row.find_element(By.CSS_SELECTOR, "td:first-child").text.strip()
                 
-                # Find all buttons in the pagination
-                buttons = pagination_div.find_elements(By.TAG_NAME, "button")
-                print(f"Found {len(buttons)} pagination buttons")
+                print(f"New first rank: {new_rank}")
                 
-                # The Next button should be the last button
-                next_button = buttons[-1]
-                
-                # Check if button is enabled
-                if not next_button.is_enabled():
-                    print("Next button is disabled")
+                # Verify rank increased
+                try:
+                    old_rank_num = int(old_first_rank)
+                    new_rank_num = int(new_rank)
+                    if new_rank_num > old_rank_num:
+                        self.current_page += 1
+                        print(f"Successfully moved to page {self.current_page}")
+                        return True
+                except ValueError:
+                    print("Could not compare ranks numerically")
                     return False
-                
-                print("Found enabled Next button")
-                
-                # Scroll into view and wait a moment
-                self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-                time.sleep(0.5)  # Short wait for scroll
-                
-                # Click using JavaScript
-                self.driver.execute_script("arguments[0].click();", next_button)
-                print("Clicked Next button")
-                
-                # Wait for the rank to change
-                max_retries = 3
-                retry_count = 0
-                
-                while retry_count < max_retries:
-                    try:
-                        # Wait for table to update
-                        wait = WebDriverWait(self.driver, 5)
-                        wait.until(lambda d: (
-                            len(d.find_elements(By.CSS_SELECTOR, "tbody tr")) > 0 and
-                            d.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip() != old_first_rank
-                        ))
-                        
-                        # Get new rank and verify
-                        new_table = self.wait_for_table()
-                        new_rank = new_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
-                        new_rank_num = int(new_rank)
-                        
-                        if new_rank_num == expected_next_first_rank:
-                            self.current_page += 1
-                            print(f"Successfully moved to page {self.current_page} (rank {new_rank_num})")
-                            return True
-                        else:
-                            print(f"Wrong rank after navigation (got {new_rank_num}, expected {expected_next_first_rank})")
-                            if retry_count < max_retries - 1:
-                                print("Retrying Next button click...")
-                                self.driver.execute_script("arguments[0].click();", next_button)
-                                retry_count += 1
-                                time.sleep(0.5)  # Short wait between retries
-                                continue
-                            return False
-                            
-                    except Exception as e:
-                        print(f"Error verifying new page (attempt {retry_count + 1}): {e}")
-                        if retry_count < max_retries - 1:
-                            retry_count += 1
-                            time.sleep(0.5)
-                            continue
-                        return False
-                
-                print("Failed to verify new page after all retries")
+                    
+                print("Page data does not show progression in ranks")
                 return False
                 
             except Exception as e:
-                print(f"Error finding Next button: {e}")
+                print(f"Error verifying new page data: {e}")
                 return False
             
         except Exception as e:
             print(f"Error moving to next page: {e}")
             return False
-    
+
     def save_whale_wallets(self, whale_data: List[Dict], output_file: str):
         """Save whale wallet data to JSON file."""
         try:
