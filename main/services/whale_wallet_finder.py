@@ -239,96 +239,83 @@ class WhaleWalletFinder:
                 print("Could not determine expected next rank")
                 return False
             
-            # Find the Next button more efficiently using multiple strategies
+            # Find the Next button using the LeaderboardPagination structure
             try:
-                # Try to find the Next button using various selectors
-                next_button = None
+                # First find the pagination container
+                wait = WebDriverWait(self.driver, 5)
+                pagination_div = wait.until(EC.presence_of_element_located((
+                    By.CSS_SELECTOR, 
+                    "div[style*='display: flex'][style*='gap: 16px']"
+                )))
+                print("Found pagination container")
                 
-                # Strategy 1: Find by nav and last button (Next is usually last)
-                try:
-                    nav = self.driver.find_element(By.CSS_SELECTOR, "nav[aria-label='pagination']")
-                    buttons = nav.find_elements(By.TAG_NAME, "button")
-                    if len(buttons) > 0:
-                        next_button = buttons[-1]  # Last button should be Next
-                except:
-                    pass
+                # Find all buttons in the pagination
+                buttons = pagination_div.find_elements(By.TAG_NAME, "button")
+                print(f"Found {len(buttons)} pagination buttons")
                 
-                # Strategy 2: Find by SVG attributes
-                if not next_button:
-                    buttons = self.driver.find_elements(By.TAG_NAME, "button")
-                    for button in buttons:
-                        try:
-                            svg = button.find_element(By.TAG_NAME, "svg")
-                            if svg.get_attribute("width") == "18" and svg.get_attribute("height") == "18":
-                                next_button = button
-                                break
-                        except:
-                            continue
+                # The Next button should be the last button
+                next_button = buttons[-1]
                 
-                # Strategy 3: Find by button text content
-                if not next_button:
-                    buttons = self.driver.find_elements(By.TAG_NAME, "button")
-                    for button in buttons:
-                        if "next" in button.get_attribute("textContent").lower():
-                            next_button = button
-                            break
-                
-                if not next_button:
-                    print("Could not find Next button")
-                    return False
-                
+                # Check if button is enabled
                 if not next_button.is_enabled():
                     print("Next button is disabled")
                     return False
                 
-                print("\nFound Next button")
+                print("Found enabled Next button")
                 
-                # Try direct navigation first
-                next_page_url = f"{self.LEADERBOARD_URL}?page={self.current_page + 1}"
-                print(f"Navigating to: {next_page_url}")
-                self.driver.get(next_page_url)
+                # Scroll into view and wait a moment
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+                time.sleep(0.5)  # Short wait for scroll
                 
-                # Verify new page
-                max_retries = 2
+                # Click using JavaScript
+                self.driver.execute_script("arguments[0].click();", next_button)
+                print("Clicked Next button")
+                
+                # Wait for the rank to change
+                max_retries = 3
                 retry_count = 0
                 
                 while retry_count < max_retries:
-                    if not self.wait_for_page_load():
-                        print("Page did not load properly, retrying...")
-                        retry_count += 1
-                        self.driver.refresh()
-                        continue
-                        
-                    new_table = self.wait_for_table()
-                    new_rank = new_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
-                    
                     try:
+                        # Wait for table to update
+                        wait = WebDriverWait(self.driver, 5)
+                        wait.until(lambda d: (
+                            len(d.find_elements(By.CSS_SELECTOR, "tbody tr")) > 0 and
+                            d.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip() != old_first_rank
+                        ))
+                        
+                        # Get new rank and verify
+                        new_table = self.wait_for_table()
+                        new_rank = new_table.find_element(By.CSS_SELECTOR, "tbody tr td:first-child").text.strip()
                         new_rank_num = int(new_rank)
+                        
                         if new_rank_num == expected_next_first_rank:
                             self.current_page += 1
                             print(f"Successfully moved to page {self.current_page} (rank {new_rank_num})")
                             return True
                         else:
-                            print(f"Wrong page loaded (got rank {new_rank_num}, expected {expected_next_first_rank})")
+                            print(f"Wrong rank after navigation (got {new_rank_num}, expected {expected_next_first_rank})")
                             if retry_count < max_retries - 1:
-                                # If direct navigation failed, try clicking the button
-                                if retry_count == 0:
-                                    print("Trying button click instead...")
-                                    self.driver.execute_script("arguments[0].click();", next_button)
-                                else:
-                                    self.driver.get(next_page_url)
+                                print("Retrying Next button click...")
+                                self.driver.execute_script("arguments[0].click();", next_button)
                                 retry_count += 1
+                                time.sleep(0.5)  # Short wait between retries
                                 continue
                             return False
-                    except ValueError:
-                        print(f"Could not verify rank number: {new_rank}")
+                            
+                    except Exception as e:
+                        print(f"Error verifying new page (attempt {retry_count + 1}): {e}")
+                        if retry_count < max_retries - 1:
+                            retry_count += 1
+                            time.sleep(0.5)
+                            continue
                         return False
-                        
-                print("Failed to navigate to correct page after all retries")
+                
+                print("Failed to verify new page after all retries")
                 return False
                 
             except Exception as e:
-                print(f"Error with Next button: {e}")
+                print(f"Error finding Next button: {e}")
                 return False
             
         except Exception as e:
@@ -404,7 +391,10 @@ def main():
             all_whale_data.extend(page_data)
             
             # Try to move to next page
-            if not finder.move_to_next_page():
+            if finder.move_to_next_page():
+                next_page_data = finder.get_leaderboard_data()
+                print("\nNext page data collected successfully.")
+            else:
                 print("Could not move to next page. Stopping search.")
                 finder.cleanup()  # Only cleanup if we can't move to next page
                 break
