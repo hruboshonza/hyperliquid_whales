@@ -1,0 +1,65 @@
+{
+  "wallets": [
+    {
+      "address": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+      "account_value": "$104,005,765.55",
+      "volume_7d": 51681676.53,
+      "roi_7d": 52.0
+    },
+    {
+      "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "account_value": "$58,639,873.10",
+      "volume_7d": 27239456.82,
+      "roi_7d": 51.0
+    },
+    {
+      "address": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
+      "account_value": "$10,737,536.66",
+      "volume_7d": 13037829.87,
+      "roi_7d": 181.0
+    },
+    {
+      "address": "0xe4d31c2541a9ce596419879b1a46ffc7cd202c62",
+      "account_value": "$0.01",
+      "volume_7d": 10993711.55,
+      "roi_7d": 412.0
+    },
+    {
+      "address": "0x45d26f28196d226497130c4bac709d808fed4029",
+      "account_value": "$10,174,155.17",
+      "volume_7d": 10004919.5,
+      "roi_7d": 74.0
+    },
+    {
+      "address": "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9",
+      "account_value": "$13,469,252.96",
+      "volume_7d": 9705998.68,
+      "roi_7d": 72.0
+    },
+    {
+      "address": "0x8af700ba841f30e0a3fcb0ee4c4a9d223e1efa05",
+      "account_value": "$16,675,243.11",
+      "volume_7d": 9346481.61,
+      "roi_7d": 57.0
+    },
+    {
+      "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+      "account_value": "$20,373,397.21",
+      "volume_7d": 8763310.41,
+      "roi_7d": 38.0
+    },
+    {
+      "address": "0x023a3d058020fb76cca98f01b3c48c8938a22355",
+      "account_value": "$11,132,076.02",
+      "volume_7d": 7447985.83,
+      "roi_7d": 25.0
+    },
+    {
+      "address": "0xa312114b5795dff9b8db50474dd57701aa78ad1e",
+      "account_value": "$6,437,775.63",
+      "volume_7d": 6342856.76,
+      "roi_7d": 97.0
+    }
+  ],
+  "last_updated": "2025-03-14 15:22:26"
+}
