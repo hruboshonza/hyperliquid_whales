@@ -19,11 +19,14 @@ class LoadWalletsDrafts:
     """Handle dynamic pagination of Hyperliquid leaderboard data for 30D period."""
     
     LEADERBOARD_URL = "https://app.hyperliquid.xyz/leaderboard"
+    # Maximum number of wallets to process before stopping
+    MAX_WALLETS_TO_PROCESS = 15
     
     def __init__(self):
         """Initialize the pagination handler."""
         self.driver = None
         self.current_page = 1
+        self.total_wallets_processed = 0
         self.setup_driver()
         
     def setup_driver(self):
@@ -116,6 +119,11 @@ class LoadWalletsDrafts:
             page_data = []
             
             for idx, row in enumerate(rows, 1):
+                # Check if we've reached the processing limit
+                if self.total_wallets_processed >= self.MAX_WALLETS_TO_PROCESS:
+                    print(f"\nReached maximum number of wallets to process ({self.MAX_WALLETS_TO_PROCESS})")
+                    return page_data
+
                 try:
                     cells = row.find_elements(By.TAG_NAME, "td")
                     if len(cells) >= 6:
@@ -142,6 +150,7 @@ class LoadWalletsDrafts:
                             'pnl_30d': pnl
                         }
                         page_data.append(trader_data)
+                        self.total_wallets_processed += 1
                         
                 except Exception as e:
                     print(f"Error processing trader {idx} on page {self.current_page}: {e}")
@@ -263,6 +272,11 @@ def main(max_pages: int = 10000):
             page_data = pagination.get_current_page_data()
             if page_data:
                 all_data.extend(page_data)
+                
+                # Check if we've reached the processing limit
+                if pagination.total_wallets_processed >= pagination.MAX_WALLETS_TO_PROCESS:
+                    print(f"\nReached maximum number of wallets to process ({pagination.MAX_WALLETS_TO_PROCESS})")
+                    break
                 
                 if not pagination.move_to_next_page():
                     print("\nReached the last page or encountered an error")

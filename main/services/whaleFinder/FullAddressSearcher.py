@@ -1,5 +1,6 @@
 """
 Process wallet data to find full addresses and details for 30D period.
+Classifies whales as Active (volume > $1M) or Sleeping.
 """
 
 import json
@@ -11,8 +12,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import time
+import os
 
 class FullAddressSearcher:
+    # Maximum number of wallets to process before stopping
+    MAX_WALLETS_TO_PROCESS =16
+
     def __init__(self):
         self.leaderboard_data = self._load_leaderboard_data()
         self.processed_wallets = []
@@ -41,16 +46,15 @@ class FullAddressSearcher:
         """Save processed wallet details to JSON file."""
         try:
             try:
-                with open('resources/whale_wallets_detail.json', 'r') as file:
+                with open('main/resources/activeWhales.json', 'r') as file:
                     existing_data = json.load(file)
             except (FileNotFoundError, json.JSONDecodeError):
                 existing_data = {'wallets': []}
 
-            # Check if wallet already exists (checking both full and shortened addresses)
+            # Check if wallet already exists
             wallet_exists = False
             for wallet in existing_data['wallets']:
-                if (wallet['address'] == wallet_details['address'] or
-                    wallet['address'].split('...')[0] == wallet_details['address'].split('...')[0]):
+                if wallet['fullAddress'] == wallet_details['fullAddress']:
                     wallet.update(wallet_details)
                     wallet_exists = True
                     break
@@ -58,14 +62,10 @@ class FullAddressSearcher:
             if not wallet_exists:
                 existing_data['wallets'].append(wallet_details)
 
-            # Remove any entries with shortened addresses if we have their full address
-            full_addresses = {w['address'] for w in existing_data['wallets'] if '...' not in w['address']}
-            existing_data['wallets'] = [
-                w for w in existing_data['wallets']
-                if '...' not in w['address'] or w['address'].split('...')[0] not in {a[:len(w['address'].split('...')[0])] for a in full_addresses}
-            ]
+            # Create directory if it doesn't exist
+            os.makedirs('main/resources', exist_ok=True)
 
-            with open('resources/whale_wallets_detail.json', 'w') as file:
+            with open('main/resources/activeWhales.json', 'w') as file:
                 json.dump(existing_data, file, indent=4)
 
         except Exception as e:
@@ -151,11 +151,15 @@ class FullAddressSearcher:
                         roi_text = cells[4].text.strip().replace('%', '').replace(',', '.')
                         roi = float(roi_text)
                         
-                        # Get PNL from the third column
-                        pnl_text = cells[3].text.strip().replace('$', '').replace(',', '')
+                        # Get volume from the third column
+                        volume_text = cells[3].text.strip().replace('$', '').replace(',', '')
+                        volume = float(volume_text)
+                        
+                        # Get PNL from the fifth column for sorting only
+                        pnl_text = cells[5].text.strip().replace('$', '').replace(',', '')
                         pnl = float(pnl_text)
                         
-                        print(f"Values found - Account: ${account_value:,.2f}, ROI: {roi}%, PNL: ${pnl:,.2f}")
+                        print(f"Values found - Account: ${account_value:,.2f}, ROI: {roi}%, Volume: ${volume:,.2f}")
                         
                         # Check if meets minimum requirements for all traders
                         if account_value >= 300000 and roi >= 10:
@@ -164,9 +168,9 @@ class FullAddressSearcher:
                                 print(f"Found exact match for custom name: {trader}")
                                 best_match_data = {
                                     'row': row,
-                                    'pnl': pnl,
                                     'account_value': account_value,
                                     'roi': roi,
+                                    'volume': volume,
                                     'name': trader
                                 }
                                 break  # Exit loop as we found exact match
@@ -175,9 +179,9 @@ class FullAddressSearcher:
                                 highest_pnl = pnl
                                 best_match_data = {
                                     'row': row,
-                                    'pnl': pnl,
                                     'account_value': account_value,
                                     'roi': roi,
+                                    'volume': volume,
                                     'name': trader
                                 }
                     except (ValueError, IndexError) as e:
@@ -198,12 +202,14 @@ class FullAddressSearcher:
                     self.driver.get(current_url)
                     time.sleep(2)  # Wait for navigation back
                     
+                    # Determine activity status based on volume
+                    status = "Active" if best_match_data['volume'] > 1000000 else "Sleeping"
+                    
                     return {
-                        'address': full_address,
-                        'pnl': best_match_data['pnl'],
-                        'account_value': best_match_data['account_value'],
+                        'fullAddress': full_address,
+                        'accountValue': best_match_data['account_value'],
                         'roi': best_match_data['roi'],
-                        'name': best_match_data['name']
+                        'status': status
                     }
                 except Exception as e:
                     print(f"Error getting full address: {e}")
@@ -221,6 +227,11 @@ class FullAddressSearcher:
             self.setup_driver()
             
             for trader_data in self.leaderboard_data:
+                # Check if we've reached the processing limit
+                if len(self.processed_wallets) >= self.MAX_WALLETS_TO_PROCESS:
+                    print(f"\nReached maximum number of wallets to process ({self.MAX_WALLETS_TO_PROCESS})")
+                    break
+                    
                 wallet = trader_data['trader']
                 wallet_prefix = self._extract_wallet_prefix(wallet)
                 
@@ -235,18 +246,10 @@ class FullAddressSearcher:
                 for retry in range(max_retries):
                     result = self.search_wallet(wallet_prefix)
                     if result:  # If we got a valid result
-                        wallet_details = {
-                            'address': result['address'],
-                            'original_address': wallet,
-                            'pnl': result['pnl'],
-                            'account_value': result['account_value'],
-                            'roi': result['roi'],
-                            'name': result.get('name', wallet)
-                        }
-                        print(f"Found wallet with Account Value: ${result['account_value']:,.2f}, ROI: {result['roi']}%")
-                        self._save_wallet_details(wallet_details)
-                        self.processed_wallets.append(wallet_details)
-                        print(f"Successfully processed wallet: {result['address']}")
+                        print(f"Found wallet with Account Value: ${result['accountValue']:,.2f}, ROI: {result['roi']}%, Status: {result['status']}")
+                        self._save_wallet_details(result)
+                        self.processed_wallets.append(result)
+                        print(f"Successfully processed wallet: {result['fullAddress']}")
                         break
                     elif not self.driver.find_elements(By.CSS_SELECTOR, "tbody tr"):
                         # Only retry if no rows found

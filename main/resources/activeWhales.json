@@ -1,0 +1,22 @@
+{
+    "wallets": [
+        {
+            "fullAddress": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+            "accountValue": 100839907.85,
+            "roi": 55.42,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+            "accountValue": 57251686.74,
+            "roi": 59.4,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
+            "accountValue": 11251841.78,
+            "roi": 212.29,
+            "status": "Active"
+        }
+    ]
+}

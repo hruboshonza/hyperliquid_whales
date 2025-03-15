@@ -2,7 +2,7 @@
 Run the whale finder process to collect and process wallet data.
 """
 
-from services.whaleFinder.LoadWalletsDrafts import LoadWalletsDrafts, main as load_wallets
+from main.services.whaleFinder.LoadWalletsDrafts import LoadWalletsDrafts, main as load_wallets
 from main.services.whaleFinder.FullAddressSearcher import FullAddressSearcher
 
 def main():
@@ -22,11 +22,10 @@ def main():
     print(f"\nProcessed {len(processed_wallets)} wallets successfully.")
     
     for wallet in processed_wallets:
-        print(f"\nWallet: {wallet['name']}")
-        print(f"Full Address: {wallet['address']}")
-        print(f"Account Value: ${wallet['account_value']:,.2f}")
+        print(f"\nFull Address: {wallet['fullAddress']}")
+        print(f"Account Value: ${wallet['accountValue']:,.2f}")
         print(f"ROI (30D): {wallet['roi']}%")
-        print(f"PNL (30D): ${wallet['pnl']:,.2f}")
+        print(f"Status: {wallet['status']}")
         print("-" * 50)
 
 if __name__ == "__main__":
