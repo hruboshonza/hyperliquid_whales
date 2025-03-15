@@ -5,6 +5,7 @@ Dynamic pagination handler for Hyperliquid leaderboard.
 from typing import Dict, List, Optional
 import time
 import json
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -216,9 +217,12 @@ class LeaderboardPagination:
             self.driver.quit()
             self.driver = None
 
-def save_to_json(data: List[Dict], filename: str = "leaderboard_draft/data.json"):
+def save_to_json(data: List[Dict], filename: str = "resources/leaderboard_draft_data/data.json"):
     """Save the collected data to a JSON file."""
     try:
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        
         # Extract only the required fields
         processed_data = []
         for entry in data:
