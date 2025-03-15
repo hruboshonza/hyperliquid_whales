@@ -216,7 +216,7 @@ class LeaderboardPagination:
             self.driver.quit()
             self.driver = None
 
-def save_to_json(data: List[Dict], filename: str = "leaderboard_data.json"):
+def save_to_json(data: List[Dict], filename: str = "leaderboard_draft/data.json"):
     """Save the collected data to a JSON file."""
     try:
         # Extract only the required fields
