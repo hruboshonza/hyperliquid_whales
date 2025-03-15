@@ -63,9 +63,9 @@ class FullAddressSearcher:
                 existing_data['wallets'].append(wallet_details)
 
             # Create directory if it doesn't exist
-            os.makedirs('main/resources', exist_ok=True)
+            os.makedirs('resources', exist_ok=True)
 
-            with open('main/resources/activeWhales.json', 'w') as file:
+            with open('resources/activeWhales.json', 'w') as file:
                 json.dump(existing_data, file, indent=4)
 
         except Exception as e:
