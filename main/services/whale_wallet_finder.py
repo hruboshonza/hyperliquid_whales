@@ -19,6 +19,7 @@ from hyperliquid.utils import constants as hl_constants
 
 class WhaleWalletFinder:
     """Find and track whale wallets from Hyperliquid leaderboard."""
+    """ !!!!!!!!!!!!!! It gets just a first page, because of leaderboard automatic redirection on first page.... Cannot be used!!!!!!!!!!!!!!!!"""
     
     # Whale detection thresholds
     MIN_ACCOUNT_VALUE = 300000  # Minimum account value in USD

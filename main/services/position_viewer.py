@@ -10,7 +10,7 @@ from datetime import datetime
 from hyperliquid.info import Info
 from hyperliquid.utils import constants
 from pprint import pprint
-from whale_wallet_finder import WhaleWalletFinder
+from main.services.whale_wallet_finder import WhaleWalletFinder
 from constants import WhaleConfig
 
 # Constants

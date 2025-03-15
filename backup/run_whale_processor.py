@@ -1,4 +1,4 @@
-from whale_detail_process import WhaleDetailProcess
+from main.services.whaleFinder.FullAddressSearcher import WhaleDetailProcess
 
 def main():
     processor = WhaleDetailProcess()
