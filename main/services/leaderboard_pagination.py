@@ -4,6 +4,7 @@ Dynamic pagination handler for Hyperliquid leaderboard.
 
 from typing import Dict, List, Optional
 import time
+import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -215,25 +216,55 @@ class LeaderboardPagination:
             self.driver.quit()
             self.driver = None
 
-def main():
+def save_to_json(data: List[Dict], filename: str = "leaderboard_data.json"):
+    """Save the collected data to a JSON file."""
+    try:
+        # Extract only the required fields
+        processed_data = []
+        for entry in data:
+            processed_entry = {
+                'trader': entry['trader'],
+                'account_value': entry['account_value'],
+                'pnl_7d': entry['pnl_7d'],
+                'roi_7d': entry['roi_7d'],
+                'volume_7d': entry['volume_7d']
+            }
+            processed_data.append(processed_entry)
+            
+        with open(filename, 'w') as f:
+            json.dump(processed_data, f, indent=4)
+        print(f"\nData successfully saved to {filename}")
+    except Exception as e:
+        print(f"Error saving data to JSON: {e}")
+
+def main(max_pages: int = 10000):
     pagination = LeaderboardPagination()
     all_data = []
     
     try:
-        while True:
+        current_page = 1
+        while current_page <= max_pages:
             # Get current page data
             page_data = pagination.get_current_page_data()
             if page_data:
                 all_data.extend(page_data)
                 print(f"\nCollected data from page {pagination.current_page}")
             
+            if current_page == max_pages:
+                break
+                
             # Try to move to next page
             if not pagination.move_to_next_page():
                 print("\nReached last page or could not proceed.")
                 break
+                
+            current_page += 1
+            
+        # Save collected data to JSON
+        save_to_json(all_data)
             
     finally:
         pagination.cleanup()
 
 if __name__ == "__main__":
-    main() 
+    main(max_pages=10000)  # Change this number to collect data from more or fewer pages 
