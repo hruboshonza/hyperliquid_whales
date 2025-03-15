@@ -50,7 +50,7 @@ class LeaderboardPagination:
             
             # Navigate to the page
             self.driver.get(self.LEADERBOARD_URL)
-            time.sleep(5)  # Initial page load
+            time.sleep(1)  # Initial page load
             
             # Print page title and URL for debugging
             print(f"Page title: {self.driver.title}")
@@ -78,7 +78,7 @@ class LeaderboardPagination:
 
     def wait_for_table(self):
         """Wait for table to be present and return it."""
-        wait = WebDriverWait(self.driver, 30)
+        wait = WebDriverWait(self.driver, 10)
         table = wait.until(EC.presence_of_element_located((By.TAG_NAME, "table")))
         time.sleep(2)  # Wait for data to load
         return table
@@ -179,7 +179,7 @@ class LeaderboardPagination:
             
             # Wait for new table and verify data
             try:
-                time.sleep(2)  # Wait for data to load
+                time.sleep(1)  # Wait for data to load
                 new_table = self.wait_for_table()
                 first_row = new_table.find_element(By.CSS_SELECTOR, "tbody tr")
                 new_rank = first_row.find_element(By.CSS_SELECTOR, "td:first-child").text.strip()
