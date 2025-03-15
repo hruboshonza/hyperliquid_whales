@@ -16,7 +16,7 @@ import os
 
 class FullAddressSearcher:
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS =16
+    MAX_WALLETS_TO_PROCESS =2000
 
     def __init__(self):
         self.leaderboard_data = self._load_leaderboard_data()
@@ -46,7 +46,7 @@ class FullAddressSearcher:
         """Save processed wallet details to JSON file."""
         try:
             try:
-                with open('main/resources/activeWhales.json', 'r') as file:
+                with open('resources/activeWhales.json', 'r') as file:
                     existing_data = json.load(file)
             except (FileNotFoundError, json.JSONDecodeError):
                 existing_data = {'wallets': []}
@@ -111,28 +111,34 @@ class FullAddressSearcher:
     def search_wallet(self, wallet_prefix: str) -> Optional[Dict]:
         """Search for a wallet and return its details if found."""
         try:
+            # Always go back to the main leaderboard page first
+            self.driver.get(self.LEADERBOARD_URL)
+            time.sleep(2)  # Wait for page load
+            
             # Find and interact with search input
             search_input = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "input[placeholder='Search by wallet address...']"))
             )
-            search_input.clear()
+            
+            # Clear the search input using JavaScript
+            self.driver.execute_script("arguments[0].value = '';", search_input)
+            search_input.clear()  # Also use Selenium's clear for good measure
+            time.sleep(1)  # Wait after clearing
+            
+            # Enter new search term
             search_input.send_keys(wallet_prefix)
             search_input.send_keys(Keys.RETURN)
-            time.sleep(3)  # Increased wait time for search results
-
-            print(f"Searching for: {wallet_prefix}")
+            time.sleep(3)  # Wait for search results
             
             # Find all matching rows
             rows = self.driver.find_elements(By.CSS_SELECTOR, "tbody tr")
             if not rows:
-                print("No rows found in search results")
+                print("❌ No matches found")
                 return None
 
-            print(f"Found {len(rows)} potential matches")
-
-            # If multiple results, find the one with highest PNL
-            highest_pnl = float('-inf')
-            best_match_data = None
+            print(f"📋 Found {len(rows)} matches")
+            
+            # Store the current URL before we start processing rows
             current_url = self.driver.current_url
 
             for row in rows:
@@ -141,7 +147,6 @@ class FullAddressSearcher:
                     try:
                         # Get trader name/address from first column
                         trader = cells[1].text.strip()
-                        print(f"Checking trader: {trader}")
                         
                         # Get account value from the second column
                         account_value_text = cells[2].text.strip().replace('$', '').replace(',', '')
@@ -155,71 +160,63 @@ class FullAddressSearcher:
                         volume_text = cells[3].text.strip().replace('$', '').replace(',', '')
                         volume = float(volume_text)
                         
-                        # Get PNL from the fifth column for sorting only
-                        pnl_text = cells[5].text.strip().replace('$', '').replace(',', '')
-                        pnl = float(pnl_text)
-                        
-                        print(f"Values found - Account: ${account_value:,.2f}, ROI: {roi}%, Volume: ${volume:,.2f}")
-                        
-                        # Check if meets minimum requirements for all traders
+                        # Check if meets minimum requirements
                         if account_value >= 300000 and roi >= 10:
                             # For custom names, check exact match
                             if '...' not in wallet_prefix and wallet_prefix == trader:
-                                print(f"Found exact match for custom name: {trader}")
-                                best_match_data = {
-                                    'row': row,
-                                    'account_value': account_value,
+                                # Click on the row to get full address
+                                self.driver.execute_script("arguments[0].click();", cells[1])
+                                time.sleep(2)  # Wait for navigation
+                                
+                                # Get the full address from URL
+                                full_address = self.driver.current_url.split('/')[-1]
+                                
+                                # Go back to the leaderboard
+                                self.driver.get(current_url)
+                                time.sleep(2)  # Wait for navigation back
+                                
+                                return {
+                                    'fullAddress': full_address,
+                                    'accountValue': account_value,
                                     'roi': roi,
-                                    'volume': volume,
-                                    'name': trader
+                                    'status': "Active" if volume > 1000000 else "Sleeping"
                                 }
-                                break  # Exit loop as we found exact match
-                            # For addresses, use highest PNL
-                            elif pnl > highest_pnl:
-                                highest_pnl = pnl
-                                best_match_data = {
-                                    'row': row,
-                                    'account_value': account_value,
+                            # For addresses, check if prefix matches
+                            elif '...' in trader and trader.startswith(wallet_prefix):
+                                # Click on the row to get full address
+                                self.driver.execute_script("arguments[0].click();", cells[1])
+                                time.sleep(2)  # Wait for navigation
+                                
+                                # Get the full address from URL
+                                full_address = self.driver.current_url.split('/')[-1]
+                                
+                                # Go back to the leaderboard
+                                self.driver.get(current_url)
+                                time.sleep(2)  # Wait for navigation back
+                                
+                                return {
+                                    'fullAddress': full_address,
+                                    'accountValue': account_value,
                                     'roi': roi,
-                                    'volume': volume,
-                                    'name': trader
+                                    'status': "Active" if volume > 1000000 else "Sleeping"
                                 }
+                                
                     except (ValueError, IndexError) as e:
-                        print(f"Error parsing row data: {e}")
                         continue
 
-            if best_match_data:
-                try:
-                    print(f"Best match found: {best_match_data['name']}")
-                    # Click on the best match row
-                    self.driver.execute_script("arguments[0].click();", best_match_data['row'].find_elements(By.TAG_NAME, "td")[1])
-                    time.sleep(2)  # Wait for navigation
-                    
-                    # Get the full address from URL
-                    full_address = self.driver.current_url.split('/')[-1]
-                    
-                    # Go back to the leaderboard
-                    self.driver.get(current_url)
-                    time.sleep(2)  # Wait for navigation back
-                    
-                    # Determine activity status based on volume
-                    status = "Active" if best_match_data['volume'] > 1000000 else "Sleeping"
-                    
-                    return {
-                        'fullAddress': full_address,
-                        'accountValue': best_match_data['account_value'],
-                        'roi': best_match_data['roi'],
-                        'status': status
-                    }
-                except Exception as e:
-                    print(f"Error getting full address: {e}")
-                    return None
-
+            print("❌ No matches met criteria")
             return None
 
         except Exception as e:
-            print(f"Error searching wallet {wallet_prefix}: {e}")
+            print(f"❌ Error: {str(e)}")
             return None
+        finally:
+            # Always go back to the main page after search
+            try:
+                self.driver.get(self.LEADERBOARD_URL)
+                time.sleep(2)
+            except:
+                pass
 
     def process_wallets(self):
         """Process all wallets from the leaderboard data."""
@@ -229,42 +226,26 @@ class FullAddressSearcher:
             for trader_data in self.leaderboard_data:
                 # Check if we've reached the processing limit
                 if len(self.processed_wallets) >= self.MAX_WALLETS_TO_PROCESS:
-                    print(f"\nReached maximum number of wallets to process ({self.MAX_WALLETS_TO_PROCESS})")
+                    print(f"\n✋ Reached limit of {self.MAX_WALLETS_TO_PROCESS} wallets")
                     break
                     
                 wallet = trader_data['trader']
                 wallet_prefix = self._extract_wallet_prefix(wallet)
                 
-                print(f"\nProcessing wallet: {wallet_prefix}")
-                print(f"Original data: {trader_data}")
+                print(f"\n📝 Processing: {wallet_prefix}")
                 
-                # Search for the wallet (including custom names)
-                max_retries = 3
-                result = None
-                rows_found = False
+                # Search for the wallet
+                result = self.search_wallet(wallet_prefix)
                 
-                for retry in range(max_retries):
-                    result = self.search_wallet(wallet_prefix)
-                    if result:  # If we got a valid result
-                        print(f"Found wallet with Account Value: ${result['accountValue']:,.2f}, ROI: {result['roi']}%, Status: {result['status']}")
-                        self._save_wallet_details(result)
-                        self.processed_wallets.append(result)
-                        print(f"Successfully processed wallet: {result['fullAddress']}")
-                        break
-                    elif not self.driver.find_elements(By.CSS_SELECTOR, "tbody tr"):
-                        # Only retry if no rows found
-                        print(f"Retry {retry + 1}/{max_retries} for wallet: {wallet_prefix}")
-                        time.sleep(2)
-                    else:
-                        # Found rows but didn't meet criteria
-                        print(f"Found rows but no matching criteria for wallet: {wallet_prefix}")
-                        break
-
-                if not result and not self.driver.find_elements(By.CSS_SELECTOR, "tbody tr"):
-                    print(f"No search results found for wallet: {wallet_prefix} after {max_retries} retries")
+                if result:
+                    self._save_wallet_details(result)
+                    self.processed_wallets.append(result)
+                    print(f"✅ Success: {result['fullAddress']} (${result['accountValue']:,.2f}, ROI: {result['roi']}%)")
+                else:
+                    print(f"❌ Failed: {wallet_prefix}")
 
         except Exception as e:
-            print(f"Error processing wallets: {e}")
+            print(f"❌ Error: {str(e)}")
         finally:
             if self.driver:
                 self.driver.quit()

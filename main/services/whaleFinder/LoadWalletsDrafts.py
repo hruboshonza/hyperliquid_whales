@@ -20,7 +20,7 @@ class LoadWalletsDrafts:
     
     LEADERBOARD_URL = "https://app.hyperliquid.xyz/leaderboard"
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS = 15
+    MAX_WALLETS_TO_PROCESS = 2000
     
     def __init__(self):
         """Initialize the pagination handler."""
