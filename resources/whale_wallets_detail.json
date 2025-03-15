@@ -1,0 +1,22 @@
+{
+    "wallets": [
+        {
+            "address": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+            "original_address": "0x20c2...44f5",
+            "pnl": 53110822.29,
+            "account_value": 101427070.56
+        },
+        {
+            "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+            "original_address": "0xecb6...2b00",
+            "pnl": 29438640.21,
+            "account_value": 57627101.43
+        },
+        {
+            "address": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
+            "original_address": "0x8cc9...2b6a",
+            "pnl": 13238492.05,
+            "account_value": 11199046.11
+        }
+    ]
+}
