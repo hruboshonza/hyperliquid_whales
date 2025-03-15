@@ -88,10 +88,15 @@ class WhaleDetailProcess:
             search_input.send_keys(Keys.RETURN)
             time.sleep(3)  # Increased wait time for search results
 
+            print(f"Searching for: {wallet_prefix}")
+            
             # Find all matching rows
             rows = self.driver.find_elements(By.CSS_SELECTOR, "tbody tr")
             if not rows:
+                print("No rows found in search results")
                 return None
+
+            print(f"Found {len(rows)} potential matches")
 
             # If multiple results, find the one with highest PNL
             highest_pnl = float('-inf')
@@ -100,33 +105,56 @@ class WhaleDetailProcess:
 
             for row in rows:
                 cells = row.find_elements(By.TAG_NAME, "td")
-                if len(cells) >= 3:  # Make sure we have enough cells
+                if len(cells) >= 4:  # Make sure we have enough cells
                     try:
+                        # Get trader name/address from first column
+                        trader = cells[1].text.strip()
+                        print(f"Checking trader: {trader}")
+                        
                         # Get account value from the second column
                         account_value_text = cells[2].text.strip().replace('$', '').replace(',', '')
                         account_value = float(account_value_text)
+                        
+                        # Get ROI from the fourth column
+                        roi_text = cells[4].text.strip().replace('%', '').replace(',', '.')
+                        roi = float(roi_text)
                         
                         # Get PNL from the third column
                         pnl_text = cells[3].text.strip().replace('$', '').replace(',', '')
                         pnl = float(pnl_text)
                         
-                        if pnl > highest_pnl:
-                            highest_pnl = pnl
-                            # Click on the row to get the full address
-                            try:
-                                # Store current data before clicking
+                        print(f"Values found - Account: ${account_value:,.2f}, ROI: {roi}%, PNL: ${pnl:,.2f}")
+                        
+                        # Check if meets minimum requirements for all traders
+                        if account_value >= 300000 and roi >= 10:
+                            # For custom names, check exact match
+                            if '...' not in wallet_prefix and wallet_prefix == trader:
+                                print(f"Found exact match for custom name: {trader}")
                                 best_match_data = {
                                     'row': row,
                                     'pnl': pnl,
-                                    'account_value': account_value
+                                    'account_value': account_value,
+                                    'roi': roi,
+                                    'name': trader
                                 }
-                            except:
-                                continue
-                    except (ValueError, IndexError):
+                                break  # Exit loop as we found exact match
+                            # For addresses, use highest PNL
+                            elif pnl > highest_pnl:
+                                highest_pnl = pnl
+                                best_match_data = {
+                                    'row': row,
+                                    'pnl': pnl,
+                                    'account_value': account_value,
+                                    'roi': roi,
+                                    'name': trader
+                                }
+                    except (ValueError, IndexError) as e:
+                        print(f"Error parsing row data: {e}")
                         continue
 
             if best_match_data:
                 try:
+                    print(f"Best match found: {best_match_data['name']}")
                     # Click on the best match row
                     self.driver.execute_script("arguments[0].click();", best_match_data['row'].find_elements(By.TAG_NAME, "td")[1])
                     time.sleep(2)  # Wait for navigation
@@ -141,7 +169,9 @@ class WhaleDetailProcess:
                     return {
                         'address': full_address,
                         'pnl': best_match_data['pnl'],
-                        'account_value': best_match_data['account_value']
+                        'account_value': best_match_data['account_value'],
+                        'roi': best_match_data['roi'],
+                        'name': best_match_data['name']
                     }
                 except Exception as e:
                     print(f"Error getting full address: {e}")
@@ -162,36 +192,40 @@ class WhaleDetailProcess:
                 wallet = trader_data['trader']
                 wallet_prefix = self._extract_wallet_prefix(wallet)
                 
-                print(f"Processing wallet: {wallet_prefix}")
+                print(f"\nProcessing wallet: {wallet_prefix}")
+                print(f"Original data: {trader_data}")
                 
-                # Skip if it's a custom name without dots
-                if '...' not in wallet and len(wallet) < 10:
-                    print(f"Skipping custom name: {wallet}")
-                    continue
-                
-                # Search for the wallet
+                # Search for the wallet (including custom names)
                 max_retries = 3
                 result = None
                 
                 for retry in range(max_retries):
                     result = self.search_wallet(wallet_prefix)
-                    if result:
+                    if result:  # If we got a valid result
+                        wallet_details = {
+                            'address': result['address'],
+                            'original_address': wallet,
+                            'pnl': result['pnl'],
+                            'account_value': result['account_value'],
+                            'roi': result['roi'],
+                            'name': result.get('name', wallet)
+                        }
+                        print(f"Found wallet with Account Value: ${result['account_value']:,.2f}, ROI: {result['roi']}%")
+                        self._save_wallet_details(wallet_details)
+                        self.processed_wallets.append(wallet_details)
+                        print(f"Successfully processed wallet: {result['address']}")
                         break
-                    print(f"Retry {retry + 1}/{max_retries} for wallet: {wallet_prefix}")
-                    time.sleep(2)
-                
-                if result:
-                    wallet_details = {
-                        'address': result['address'],
-                        'original_address': wallet,
-                        'pnl': result['pnl'],
-                        'account_value': result['account_value']
-                    }
-                    self._save_wallet_details(wallet_details)
-                    self.processed_wallets.append(wallet_details)
-                    print(f"Successfully processed wallet: {result['address']}")
-                else:
-                    print(f"No results found for wallet: {wallet_prefix} after {max_retries} retries")
+                    elif not self.driver.find_elements(By.CSS_SELECTOR, "tbody tr"):
+                        # Only retry if no rows found
+                        print(f"Retry {retry + 1}/{max_retries} for wallet: {wallet_prefix}")
+                        time.sleep(2)
+                    else:
+                        # Found rows but didn't meet criteria
+                        print(f"Found rows but no matching criteria for wallet: {wallet_prefix}")
+                        break
+
+                if not result and not self.driver.find_elements(By.CSS_SELECTOR, "tbody tr"):
+                    print(f"No search results found for wallet: {wallet_prefix} after {max_retries} retries")
 
         except Exception as e:
             print(f"Error processing wallets: {e}")
