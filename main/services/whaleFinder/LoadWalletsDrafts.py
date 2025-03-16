@@ -21,7 +21,7 @@ class LoadWalletsDrafts:
     LEADERBOARD_URL = "https://app.hyperliquid.xyz/leaderboard"
     DATA_SAVE_FILE = "resources/leaderboard_draft_data2.json"
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS = 100
+    MAX_WALLETS_TO_PROCESS = 200
     
     # Whale filter criteria
     MIN_ACCOUNT_VALUE = 300000   # $300k minimum account value
@@ -250,14 +250,43 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
         # Create directory if it doesn't exist
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         
+        def parse_number(value: str) -> float:
+            """Parse number string handling both US and EU formats."""
+            try:
+                # Remove currency symbol and spaces
+                clean_value = value.replace('$', '').replace(' ', '')
+                
+                # Handle percentage
+                if '%' in clean_value:
+                    clean_value = clean_value.replace('%', '')
+                
+                # If comma is used as decimal separator (EU format)
+                if ',' in clean_value and '.' not in clean_value:
+                    clean_value = clean_value.replace(',', '.')
+                # If both comma and period exist, assume comma is thousand separator
+                elif ',' in clean_value and '.' in clean_value:
+                    clean_value = clean_value.replace(',', '')
+                
+                return float(clean_value)
+            except ValueError as e:
+                print(f"Error parsing number '{value}': {e}")
+                return 0.0
+        
         # Extract only the required fields and filter based on criteria
         processed_data = []
+        whales_count = 0
         for entry in data:
             try:
-                # Convert values to float for comparison
-                account_value = float(entry['account_value'].replace('$', '').replace(',', ''))
-                roi = float(entry['roi_30d'].replace('%', '').replace(',', '.'))
-                volume = float(entry['volume_30d'].replace('$', '').replace(',', ''))
+                # Convert values using the new parser
+                account_value = parse_number(entry['account_value'])
+                roi = parse_number(entry['roi_30d'])
+                volume = parse_number(entry['volume_30d'])
+                
+                # Debug print for values
+                print(f"\nProcessing wallet {entry['trader']}:")
+                print(f"Account Value: ${account_value:,.2f}")
+                print(f"ROI: {roi:.2f}%")
+                print(f"Volume: ${volume:,.2f}")
                 
                 # Check if meets whale criteria
                 if account_value >= LoadWalletsDrafts.MIN_ACCOUNT_VALUE and \
@@ -272,10 +301,18 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                         'is_whale': True
                     }
                     processed_data.append(processed_entry)
+                    whales_count += 1
+                    print(f"✅ Wallet {entry['trader']} meets criteria!")
                 else:
-                    print(f"❌ Wallet {entry['trader']} does not meet criteria")
+                    print(f"❌ Wallet {entry['trader']} does not meet criteria:")
+                    if account_value < LoadWalletsDrafts.MIN_ACCOUNT_VALUE:
+                        print(f"   Account value ${account_value:,.2f} < ${LoadWalletsDrafts.MIN_ACCOUNT_VALUE:,.2f}")
+                    if roi < LoadWalletsDrafts.MIN_ROI:
+                        print(f"   ROI {roi:.2f}% < {LoadWalletsDrafts.MIN_ROI}%")
+                    if volume < LoadWalletsDrafts.MIN_VOLUME:
+                        print(f"   Volume ${volume:,.2f} < ${LoadWalletsDrafts.MIN_VOLUME:,.2f}")
 
-            except (ValueError, KeyError) as e:
+            except Exception as e:
                 print(f"Error processing entry {entry}: {e}")
                 continue
             
@@ -284,7 +321,7 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
         print(f"\nData successfully saved to {filename}")
         
         # Print summary of whales found
-        print(f"✅ Found {len(processed_data)} active whales out of {len(data)} total traders")
+        print(f"✅ Found {whales_count} active whales out of {len(data)} total traders")
         
     except Exception as e:
         print(f"Error saving data to JSON: {e}")

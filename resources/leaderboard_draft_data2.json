@@ -232,6 +232,14 @@
         "is_whale": true
     },
     {
+        "trader": "0xf07f...f2f6",
+        "account_value": "$1,007,468.32",
+        "pnl_30d": "$205.41",
+        "roi_30d": "2 645 552,10%",
+        "volume_30d": "$2,645,552.10",
+        "is_whale": true
+    },
+    {
         "trader": "0xaea8...e59b",
         "account_value": "$2,036,169.55",
         "pnl_30d": "$12,991,433.08",
