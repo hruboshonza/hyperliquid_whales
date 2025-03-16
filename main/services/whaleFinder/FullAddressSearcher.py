@@ -84,33 +84,89 @@ class FullAddressSearcher:
     def _switch_to_30d_period(self):
         """Switch the leaderboard to 30D period."""
         try:
-            # Wait for the period selector to be present
-            wait = WebDriverWait(self.driver, 10)
-            period_selector = wait.until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "button[aria-haspopup='listbox']"))
-            )
+            # Wait for the page to load completely
+            time.sleep(3)
             
+            # Try multiple selectors for the period button
+            selectors = [
+                "button[aria-haspopup='listbox']",
+                "button.MuiButtonBase-root",
+                "//button[contains(., '24H') or contains(., '7D') or contains(., '30D')]"
+            ]
+            
+            period_selector = None
+            for selector in selectors:
+                try:
+                    if selector.startswith("//"):
+                        period_selector = WebDriverWait(self.driver, 5).until(
+                            EC.presence_of_element_located((By.XPATH, selector))
+                        )
+                    else:
+                        period_selector = WebDriverWait(self.driver, 5).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                        )
+                    if period_selector:
+                        break
+                except:
+                    continue
+            
+            if not period_selector:
+                print("Could not find period selector")
+                return
+                
             # Click the period selector
-            period_selector.click()
-            time.sleep(1)
+            self.driver.execute_script("arguments[0].click();", period_selector)
+            time.sleep(2)
             
-            # Find and click the 30D option
-            period_options = self.driver.find_elements(By.CSS_SELECTOR, "li[role='option']")
-            for option in period_options:
-                if "30D" in option.text:
-                    option.click()
-                    time.sleep(2)  # Wait for data to reload
-                    print("Successfully switched to 30D period")
-                    return
-                    
+            # Try different approaches to find and click the 30D option
+            try:
+                # First try: Look for li elements
+                options = self.driver.find_elements(By.CSS_SELECTOR, "li[role='option']")
+                for option in options:
+                    if "30D" in option.text:
+                        self.driver.execute_script("arguments[0].click();", option)
+                        time.sleep(2)
+                        return
+                        
+                # Second try: Look for any clickable element with "30D"
+                options = self.driver.find_elements(By.XPATH, "//*[contains(text(), '30D')]")
+                for option in options:
+                    if option.is_displayed():
+                        self.driver.execute_script("arguments[0].click();", option)
+                        time.sleep(2)
+                        return
+                        
+            except Exception as e:
+                print(f"Error clicking 30D option: {e}")
+                
             print("Could not find 30D period option")
             
         except Exception as e:
             print(f"Error switching to 30D period: {e}")
+            # Try to restart the session
+            self.driver.quit()
+            self.driver = None
+            self.setup_driver()
+
+    def _validate_session(self):
+        """Validate current session and restart if invalid."""
+        try:
+            # Try to interact with the page
+            self.driver.find_element(By.CSS_SELECTOR, "input[placeholder='Search by wallet address...']")
+            return True
+        except:
+            print("Session expired, restarting...")
+            self.driver.quit()
+            self.driver = None
+            self.setup_driver()
+            return True
 
     def search_wallet(self, wallet_prefix: str) -> Optional[Dict]:
         """Search for a wallet and return its details if found."""
         try:
+            # Validate session before each search
+            self._validate_session()
+            
             # Always go back to the main leaderboard page first
             self.driver.get(self.LEADERBOARD_URL)
             time.sleep(2)  # Wait for page load
@@ -179,7 +235,7 @@ class FullAddressSearcher:
                                     'fullAddress': full_address,
                                     'accountValue': account_value,
                                     'roi': roi,
-                                    'status': "Active" if volume > 1000000 else "Sleeping"
+                                    'status': "Active" if volume >= 1000000 else "Sleeping"
                                 }
                             # For addresses, check if prefix matches
                             elif '...' in trader and trader.startswith(wallet_prefix):
@@ -198,7 +254,7 @@ class FullAddressSearcher:
                                     'fullAddress': full_address,
                                     'accountValue': account_value,
                                     'roi': roi,
-                                    'status': "Active" if volume > 1000000 else "Sleeping"
+                                    'status': "Active" if volume >= 1000000 else "Sleeping"
                                 }
                                 
                     except (ValueError, IndexError) as e:

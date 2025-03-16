@@ -19,8 +19,14 @@ class LoadWalletsDrafts:
     """Handle dynamic pagination of Hyperliquid leaderboard data for 30D period."""
     
     LEADERBOARD_URL = "https://app.hyperliquid.xyz/leaderboard"
+    DATA_SAVE_FILE = "resources/leaderboard_draft_data2.json"
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS = 2000
+    MAX_WALLETS_TO_PROCESS = 100
+    
+    # Whale filter criteria
+    MIN_ACCOUNT_VALUE = 300000   # $300k minimum account value
+    MIN_ROI = 10                 # 10% minimum ROI
+    MIN_VOLUME = 1000000         # $1M minimum volume
     
     def __init__(self):
         """Initialize the pagination handler."""
@@ -33,29 +39,30 @@ class LoadWalletsDrafts:
         """Set up the Chrome driver with appropriate options."""
         try:
             chrome_options = Options()
-            chrome_options.add_argument("--headless=new")
+            chrome_options.add_argument("--headless")
             chrome_options.add_argument("--no-sandbox")
             chrome_options.add_argument("--disable-dev-shm-usage")
             chrome_options.add_argument("--disable-gpu")
             chrome_options.add_argument("--window-size=1920,1080")
-            chrome_options.add_argument("--remote-debugging-port=9222")
-            chrome_options.add_argument("--disable-extensions")
-            chrome_options.add_argument("--disable-infobars")
+            
+            # Remove problematic options
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option("useAutomationExtension", False)
             
+            print("Setting up Chrome WebDriver...")
             self.driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
                 options=chrome_options
             )
             
             # Set page load timeout
             self.driver.set_page_load_timeout(30)
             
+            print("Navigating to leaderboard URL...")
             # Navigate to the page
             self.driver.get(self.LEADERBOARD_URL)
-            time.sleep(2)  # Initial page load
+            time.sleep(5)  # Increased wait time for initial page load
             
+            print("Setting up 30D period...")
             # Switch to 30D period
             self._switch_to_30d_period()
             
@@ -237,27 +244,48 @@ class LoadWalletsDrafts:
             self.driver.quit()
             self.driver = None
 
-def save_to_json(data: List[Dict], filename: str = "resources/leaderboard_draft_data.json"):
+def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_FILE):
     """Save the collected data to a JSON file."""
     try:
         # Create directory if it doesn't exist
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         
-        # Extract only the required fields
+        # Extract only the required fields and filter based on criteria
         processed_data = []
         for entry in data:
-            processed_entry = {
-                'trader': entry['trader'],
-                'account_value': entry['account_value'],
-                'pnl_30d': entry['pnl_30d'],
-                'roi_30d': entry['roi_30d'],
-                'volume_30d': entry['volume_30d']
-            }
-            processed_data.append(processed_entry)
+            try:
+                # Convert values to float for comparison
+                account_value = float(entry['account_value'].replace('$', '').replace(',', ''))
+                roi = float(entry['roi_30d'].replace('%', '').replace(',', '.'))
+                volume = float(entry['volume_30d'].replace('$', '').replace(',', ''))
+                
+                # Check if meets whale criteria
+                if account_value >= LoadWalletsDrafts.MIN_ACCOUNT_VALUE and \
+                   roi >= LoadWalletsDrafts.MIN_ROI and \
+                   volume >= LoadWalletsDrafts.MIN_VOLUME:
+                    processed_entry = {
+                        'trader': entry['trader'],
+                        'account_value': entry['account_value'],
+                        'pnl_30d': entry['pnl_30d'],
+                        'roi_30d': entry['roi_30d'],
+                        'volume_30d': entry['volume_30d'],
+                        'is_whale': True
+                    }
+                    processed_data.append(processed_entry)
+                else:
+                    print(f"❌ Wallet {entry['trader']} does not meet criteria")
+
+            except (ValueError, KeyError) as e:
+                print(f"Error processing entry {entry}: {e}")
+                continue
             
         with open(filename, 'w') as f:
             json.dump(processed_data, f, indent=4)
         print(f"\nData successfully saved to {filename}")
+        
+        # Print summary of whales found
+        print(f"✅ Found {len(processed_data)} active whales out of {len(data)} total traders")
+        
     except Exception as e:
         print(f"Error saving data to JSON: {e}")
 
