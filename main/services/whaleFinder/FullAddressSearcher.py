@@ -16,7 +16,9 @@ import os
 
 class FullAddressSearcher:
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS =2000
+    MAX_WALLETS_TO_PROCESS =200
+    DATA_SAVE_FILE = "resources/activeWhales2.json"
+    DRAFT_DATA_LOAD_FILE = "resources/leaderboard_draft_data2.json"
 
     def __init__(self):
         self.leaderboard_data = self._load_leaderboard_data()
@@ -27,7 +29,7 @@ class FullAddressSearcher:
     def _load_leaderboard_data(self) -> List[Dict]:
         """Load the leaderboard data from JSON file."""
         try:
-            with open('resources/leaderboard_draft_data.json', 'r') as file:
+            with open(self.DRAFT_DATA_LOAD_FILE, 'r') as file:
                 return json.load(file)
         except FileNotFoundError:
             print("Leaderboard data file not found")
@@ -46,7 +48,7 @@ class FullAddressSearcher:
         """Save processed wallet details to JSON file."""
         try:
             try:
-                with open('resources/activeWhales.json', 'r') as file:
+                with open(self.DATA_SAVE_FILE, 'r') as file:
                     existing_data = json.load(file)
             except (FileNotFoundError, json.JSONDecodeError):
                 existing_data = {'wallets': []}
@@ -65,7 +67,7 @@ class FullAddressSearcher:
             # Create directory if it doesn't exist
             os.makedirs('resources', exist_ok=True)
 
-            with open('resources/activeWhales.json', 'w') as file:
+            with open(self.DATA_SAVE_FILE, 'w') as file:
                 json.dump(existing_data, file, indent=4)
 
         except Exception as e:
@@ -98,11 +100,11 @@ class FullAddressSearcher:
             for selector in selectors:
                 try:
                     if selector.startswith("//"):
-                        period_selector = WebDriverWait(self.driver, 5).until(
+                        period_selector = WebDriverWait(self.driver, 3).until(
                             EC.presence_of_element_located((By.XPATH, selector))
                         )
                     else:
-                        period_selector = WebDriverWait(self.driver, 5).until(
+                        period_selector = WebDriverWait(self.driver, 3).until(
                             EC.presence_of_element_located((By.CSS_SELECTOR, selector))
                         )
                     if period_selector:
@@ -125,7 +127,7 @@ class FullAddressSearcher:
                 for option in options:
                     if "30D" in option.text:
                         self.driver.execute_script("arguments[0].click();", option)
-                        time.sleep(2)
+                        time.sleep(1)
                         return
                         
                 # Second try: Look for any clickable element with "30D"
@@ -133,7 +135,7 @@ class FullAddressSearcher:
                 for option in options:
                     if option.is_displayed():
                         self.driver.execute_script("arguments[0].click();", option)
-                        time.sleep(2)
+                        time.sleep(1)
                         return
                         
             except Exception as e:
@@ -169,10 +171,10 @@ class FullAddressSearcher:
             
             # Always go back to the main leaderboard page first
             self.driver.get(self.LEADERBOARD_URL)
-            time.sleep(2)  # Wait for page load
+            time.sleep(1)  # Wait for page load
             
             # Find and interact with search input
-            search_input = WebDriverWait(self.driver, 10).until(
+            search_input = WebDriverWait(self.driver, 3).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "input[placeholder='Search by wallet address...']"))
             )
             
@@ -184,7 +186,7 @@ class FullAddressSearcher:
             # Enter new search term
             search_input.send_keys(wallet_prefix)
             search_input.send_keys(Keys.RETURN)
-            time.sleep(3)  # Wait for search results
+            time.sleep(1)  # Wait for search results
             
             # Find all matching rows
             rows = self.driver.find_elements(By.CSS_SELECTOR, "tbody tr")
@@ -222,14 +224,14 @@ class FullAddressSearcher:
                             if '...' not in wallet_prefix and wallet_prefix == trader:
                                 # Click on the row to get full address
                                 self.driver.execute_script("arguments[0].click();", cells[1])
-                                time.sleep(2)  # Wait for navigation
+                                time.sleep(1)  # Wait for navigation
                                 
                                 # Get the full address from URL
                                 full_address = self.driver.current_url.split('/')[-1]
                                 
                                 # Go back to the leaderboard
                                 self.driver.get(current_url)
-                                time.sleep(2)  # Wait for navigation back
+                                time.sleep(1)  # Wait for navigation back
                                 
                                 return {
                                     'fullAddress': full_address,
@@ -241,20 +243,19 @@ class FullAddressSearcher:
                             elif '...' in trader and trader.startswith(wallet_prefix):
                                 # Click on the row to get full address
                                 self.driver.execute_script("arguments[0].click();", cells[1])
-                                time.sleep(2)  # Wait for navigation
+                                time.sleep(1)  # Wait for navigation
                                 
                                 # Get the full address from URL
                                 full_address = self.driver.current_url.split('/')[-1]
                                 
                                 # Go back to the leaderboard
                                 self.driver.get(current_url)
-                                time.sleep(2)  # Wait for navigation back
+                                time.sleep(1)  # Wait for navigation back
                                 
                                 return {
                                     'fullAddress': full_address,
                                     'accountValue': account_value,
-                                    'roi': roi,
-                                    'status': "Active" if volume >= 1000000 else "Sleeping"
+                                    'roi': roi
                                 }
                                 
                     except (ValueError, IndexError) as e:

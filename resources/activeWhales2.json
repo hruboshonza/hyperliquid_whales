@@ -1,0 +1,424 @@
+{
+    "wallets": [
+        {
+            "fullAddress": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
+            "accountValue": 106005183.59,
+            "roi": 59.15,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+            "accountValue": 54656110.36,
+            "roi": 55.13,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
+            "accountValue": 11398241.75,
+            "roi": 197.38,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x8af700ba841f30e0a3fcb0ee4c4a9d223e1efa05",
+            "accountValue": 17100431.83,
+            "roi": 77.68,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x45d26f28196d226497130c4bac709d808fed4029",
+            "accountValue": 10215126.19,
+            "roi": 85.34,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+            "accountValue": 20565425.38,
+            "roi": 48.96,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9",
+            "accountValue": 13232268.02,
+            "roi": 74.63,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xf3f496c9486be5924a93d67e98298733bb47057c",
+            "accountValue": 21449224.46,
+            "roi": 69.21,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xa312114b5795dff9b8db50474dd57701aa78ad1e",
+            "accountValue": 6704161.65,
+            "roi": 120.75,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x023a3d058020fb76cca98f01b3c48c8938a22355",
+            "accountValue": 17521834.9,
+            "roi": 22.29,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x499beed00ee60bef8ce07a68c92103bd2225b5fb",
+            "accountValue": 623156.43,
+            "roi": 554.34,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x5d2f4460ac3514ada79f5d9838916e508ab39bb7",
+            "accountValue": 2036130.28,
+            "roi": 145.77,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+            "accountValue": 7444955.06,
+            "roi": 38.88,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xa87a233e8a7d8951ff790a2e39738086cb5f71b7",
+            "accountValue": 29785484.2,
+            "roi": 52.57,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x2ba553d9f990a3b66b03b2dc0d030dfc1c061036",
+            "accountValue": 19744984.41,
+            "roi": 32.22,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x1f793d9f0368c1da329cb112212d81d521e7a9b8",
+            "accountValue": 3107398.85,
+            "roi": 126.78,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x6859da14835424957a1e6b397d8026b1d9ff7e1e",
+            "accountValue": 2079222.16,
+            "roi": 103.77,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x56498e5f90c14060499b62b6f459b3e3fb9280c5",
+            "accountValue": 10703956.79,
+            "roi": 79.96,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x880ac484a1743862989a441d6d867238c7aa311c",
+            "accountValue": 2578287.72,
+            "roi": 69.09,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xe86b057f5eb764c9738d6b0d38170befd0723664",
+            "accountValue": 8742505.92,
+            "roi": 84.19,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xd487e26c62ed8c28ce3cc70b5791e501c2934982",
+            "accountValue": 7482854.09,
+            "roi": 77.45,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x162cc7c861ebd0c06b3d72319201150482518185",
+            "accountValue": 10541158.5,
+            "roi": 37.31,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xd47587702a91731dc1089b5db0932cf820151a91",
+            "accountValue": 4281972.39,
+            "roi": 66.03,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x76c2164fc79492401db1890db0d17d16b9155aa0",
+            "accountValue": 8458726.85,
+            "roi": 56.71,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x807a2e2e469df84b299da5f90f15dda4380daca1",
+            "accountValue": 7293279.76,
+            "roi": 221.56,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x5a54ad9860b08aaee07174887f9ee5107b0a2e72",
+            "accountValue": 5218268.01,
+            "roi": 142.48,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x863b676e5e4fea0541062c32983dc8f84749ca6d",
+            "accountValue": 583093.08,
+            "roi": 134.01,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xe6bd577759caa3bca511b3b3b8310f26e5de6f6d",
+            "accountValue": 1882703.44,
+            "roi": 57.98,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x9458f423df6569f053358ee9906613cd69c1ec04",
+            "accountValue": 3616241.44,
+            "roi": 296.1,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xaea8e3bd369217cc6e3e6abddf0da318fba8e59b",
+            "accountValue": 2036169.55,
+            "roi": 110.4,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xbfc79c444c41a74516bf31237ebf586a231480b4",
+            "accountValue": 2051598.82,
+            "roi": 109.87,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x8bff50aad8b4e06c5e148eaeb9d7aef69e26cdc3",
+            "accountValue": 5510614.2,
+            "roi": 51.53,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xeb93e6fc46b78c19bfe3264afabccae410956389",
+            "accountValue": 2194286.98,
+            "roi": 76.28,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x7fe8cfe481ec2f702692a9152e3f002f3e417ac6",
+            "accountValue": 3195877.66,
+            "roi": 65.35,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xceec48581b3145a575508719f45da07dc57fa7ce",
+            "accountValue": 6346281.5,
+            "roi": 97.43,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xdbd1bac81ad581c7198c9d155ca468f32a0c29dd",
+            "accountValue": 3433829.56,
+            "roi": 85.87,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xff8850989681b1163cbaf0b0f6b719c1c663dc25",
+            "accountValue": 5297605.01,
+            "roi": 28.0,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x9e8b1e51c642f4c8b87c6ba11c53d516a218afc4",
+            "accountValue": 5121991.68,
+            "roi": 46.15,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x265bda080f9107223a74455201674538c32482b0",
+            "accountValue": 6072043.22,
+            "roi": 74.96,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x24a9bac9be61ca40f0a5fb4f7452a90ed212b893",
+            "accountValue": 6288751.39,
+            "roi": 56.91,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb39230a0352ada7a287da138876fa4728e2a0405",
+            "accountValue": 6846168.5,
+            "roi": 53.41,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xcf13fae6690c07cbd471574b68e504319ee0882d",
+            "accountValue": 1700443.21,
+            "roi": 111.95,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x7c976f00e84db0b44f945fc6d7fad34b43150a1a",
+            "accountValue": 12100101.32,
+            "roi": 24.92,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb3e475368ed0fa0ad23c04de0423d48a0758806f",
+            "accountValue": 6690904.28,
+            "roi": 46.14,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x123dbca6a27005a3c4ce10cb66ee8ece8fc13bff",
+            "accountValue": 6623593.19,
+            "roi": 33.7,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb0fbfefc6c325964d0ffc3f909bdda80b8421326",
+            "accountValue": 1123346.92,
+            "roi": 137.82,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb4a04f60522a539caa55e9ce74c9bb3e6f2253f0",
+            "accountValue": 613836.42,
+            "roi": 98.69,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb4caaff781251594911cc76aec61cef46ba00894",
+            "accountValue": 7607497.92,
+            "roi": 53.86,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x6915ca9e8952168e59ea0b8328351ac249dd8ffe",
+            "accountValue": 2128293.86,
+            "roi": 158.29,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x61387d7e85508811de339276e013e0517f3782ad",
+            "accountValue": 5446362.95,
+            "roi": 17.45,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xccf135ab352d561a15eb7be2a243cc4fcb7f0ab1",
+            "accountValue": 3612306.2,
+            "roi": 110.06,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x007d76eec0ba411ce873a8819df50dd443d967a0",
+            "accountValue": 9594793.09,
+            "roi": 20.7,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xd0e825fa2ecc2f67b97dc1f3b1595fd842c0ff47",
+            "accountValue": 3403786.01,
+            "roi": 109.26,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xf7bf60583377a56319c42e9daedfa7d06f70a316",
+            "accountValue": 10231572.68,
+            "roi": 11.53,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xad8be12a452b5b8f9ad9883f6e8e67536627db4b",
+            "accountValue": 603085.71,
+            "roi": 217.69,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x9f07dc88dc450978e5ddf973f6a0236a7cfbf99a",
+            "accountValue": 903596.07,
+            "roi": 156.42,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x4bbf95c18dca8609fa2bfa01aa1f07b77e334b4b",
+            "accountValue": 2904692.22,
+            "roi": 108.81,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xa9ed0db00e5c29e7e18a55db159ea33fb5fea60a",
+            "accountValue": 3693325.39,
+            "roi": 26.95,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xc7c87046d9e147b14cc773bf3f865febfb966ea4",
+            "accountValue": 5910996.77,
+            "roi": 13.37,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x27c9fa86c91b84ddfa15de58c482ff662498d65d",
+            "accountValue": 1793773.56,
+            "roi": 163.0,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xa71d664f7899dbe4ac768c1b162c4c5610e978aa",
+            "accountValue": 512060.49,
+            "roi": 93.69,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xa64a1222d70015fcb2ea356d51f2bdac8aca5f70",
+            "accountValue": 3277961.45,
+            "roi": 75.76,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x60a8d209af0b997d87d8e69dd48ac7330d4d6900",
+            "accountValue": 2097554.66,
+            "roi": 55.4,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xfb6ebda89152bbb06cfc0b4ce7f2a3c469b96137",
+            "accountValue": 3493144.97,
+            "roi": 41.37,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xcccf42c120fa1a7ad953665500c1bd4f6307b34b",
+            "accountValue": 2524928.03,
+            "roi": 22.34,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x2f7a83314829ea002450381ad181fd525bdb340d",
+            "accountValue": 4118293.27,
+            "roi": 23.76,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x29eb62882a8bd104a64400a2971d0d6881777043",
+            "accountValue": 1876633.19,
+            "roi": 30.27,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xac50a255e330c388f44b9d01259d6b153a9f0ed9",
+            "accountValue": 1204775.62,
+            "roi": 93.3,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0xb35add6ed8de7ab9dd3e35544fa2e4d5634da765",
+            "accountValue": 1824817.89,
+            "roi": 44.38,
+            "status": "Active"
+        },
+        {
+            "fullAddress": "0x369daedbefcb30b82154338c8fd613a70c60d251",
+            "accountValue": 2887416.65,
+            "roi": 30.81,
+            "status": "Active"
+        }
+    ]
+}
