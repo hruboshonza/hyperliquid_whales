@@ -16,9 +16,9 @@ import os
 
 class FullAddressSearcher:
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS =200
+    MAX_WALLETS_TO_PROCESS =2000
     DATA_SAVE_FILE = "resources/activeWhales2.json"
-    DRAFT_DATA_LOAD_FILE = "resources/leaderboard_draft_data2.json"
+    DRAFT_DATA_LOAD_FILE = "resources/leaderboard_draft_data.json"
 
     def __init__(self):
         self.leaderboard_data = self._load_leaderboard_data()
@@ -236,8 +236,7 @@ class FullAddressSearcher:
                                 return {
                                     'fullAddress': full_address,
                                     'accountValue': account_value,
-                                    'roi': roi,
-                                    'status': "Active" if volume >= 1000000 else "Sleeping"
+                                    'roi': roi
                                 }
                             # For addresses, check if prefix matches
                             elif '...' in trader and trader.startswith(wallet_prefix):

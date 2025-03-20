@@ -19,14 +19,14 @@ class LoadWalletsDrafts:
     """Handle dynamic pagination of Hyperliquid leaderboard data for 30D period."""
     
     LEADERBOARD_URL = "https://app.hyperliquid.xyz/leaderboard"
-    DATA_SAVE_FILE = "resources/leaderboard_draft_data2.json"
+    DATA_SAVE_FILE = "resources/leaderboard_draft_data.json"
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS = 200
+    MAX_WALLETS_TO_PROCESS = 2000
     
     # Whale filter criteria
     MIN_ACCOUNT_VALUE = 300000   # $300k minimum account value
     MIN_ROI = 10                 # 10% minimum ROI
-    MIN_VOLUME = 1000000         # $1M minimum volume
+    MIN_VOLUME = 500000         # $1M minimum volume -> to volume je mozna az moc vysoke, snizim na priste na 500k... Vzalo mi to ted jen 67 walletek
     
     def __init__(self):
         """Initialize the pagination handler."""

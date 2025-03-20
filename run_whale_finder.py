@@ -9,8 +9,8 @@ def main():
     print("Starting whale finder process...")
     
     # Step 1: Load wallet drafts from leaderboard
-    print("\nStep 1: Loading wallet drafts from leaderboard (30D period)...")
-    load_wallets()
+    # print("\nStep 1: Loading wallet drafts from leaderboard (30D period)...")
+    # load_wallets()
     
     ## Step 2: Process wallets to get full addresses and details
     print("\nStep 2: Processing wallets to get full addresses and details...")
