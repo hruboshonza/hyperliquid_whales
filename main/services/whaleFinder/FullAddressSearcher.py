@@ -17,7 +17,7 @@ import os
 class FullAddressSearcher:
     # Maximum number of wallets to process before stopping
     MAX_WALLETS_TO_PROCESS =2000
-    DATA_SAVE_FILE = "resources/activeWhales2.json"
+    DATA_SAVE_FILE = "resources/activeWhales.json"
     DRAFT_DATA_LOAD_FILE = "resources/leaderboard_draft_data.json"
 
     def __init__(self):
