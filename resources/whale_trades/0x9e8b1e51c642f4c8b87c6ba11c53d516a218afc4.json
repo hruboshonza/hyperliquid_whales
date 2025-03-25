@@ -6,31 +6,31 @@
       "size": 103.8569,
       "entry_price": 84082.7,
       "mark_price": 0.0,
-      "unrealized_pnl": 392914.409563,
-      "position_value": 9125490.3754,
+      "unrealized_pnl": 403196.242663,
+      "position_value": 9135772.2085,
       "leverage": {
         "type": "cross",
         "value": 40
       },
-      "timestamp": "2025-03-25T16:48:02.962336"
+      "timestamp": "2025-03-25T18:20:47.161171"
     },
     {
       "coin": "XRP",
       "size": -3485572.0,
       "entry_price": 2.49647,
       "mark_price": 0.0,
-      "unrealized_pnl": 186723.080181,
-      "position_value": 8514903.8388,
+      "unrealized_pnl": 201711.039781,
+      "position_value": 8499915.8792,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T16:48:02.962346"
+      "timestamp": "2025-03-25T18:20:47.161179"
     }
   ],
-  "total_position_value": 17640394.214199997,
-  "total_unrealized_pnl": 579637.489744,
+  "total_position_value": 17635688.087700002,
+  "total_unrealized_pnl": 604907.282444,
   "account_value": 5370754.92,
   "roi": 55.11,
-  "timestamp": "2025-03-25T16:48:02.962428"
+  "timestamp": "2025-03-25T18:20:47.161701"
 }

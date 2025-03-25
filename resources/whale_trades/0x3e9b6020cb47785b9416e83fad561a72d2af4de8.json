@@ -6,33 +6,33 @@
       "size": 4.58419,
       "entry_price": 80742.3,
       "mark_price": 0.0,
-      "unrealized_pnl": 32619.375715,
-      "position_value": 402757.76502,
+      "unrealized_pnl": 33109.884045,
+      "position_value": 403248.27335,
       "leverage": {
         "type": "isolated",
         "value": 4,
-        "rawUsd": "-277774.409562"
+        "rawUsd": "-277760.054707"
       },
-      "timestamp": "2025-03-25T16:48:03.618871"
+      "timestamp": "2025-03-25T18:20:47.431522"
     },
     {
       "coin": "MKR",
       "size": 55.7899,
       "entry_price": 1276.37,
       "mark_price": 0.0,
-      "unrealized_pnl": -740.60866,
-      "position_value": 70468.22269,
+      "unrealized_pnl": -467.23815,
+      "position_value": 70741.5932,
       "leverage": {
         "type": "isolated",
         "value": 1,
-        "rawUsd": "-141.681495"
+        "rawUsd": "-143.441387"
       },
-      "timestamp": "2025-03-25T16:48:03.618884"
+      "timestamp": "2025-03-25T18:20:47.431532"
     }
   ],
-  "total_position_value": 473225.98771,
-  "total_unrealized_pnl": 31878.767054999997,
+  "total_position_value": 473989.86655,
+  "total_unrealized_pnl": 32642.645894999998,
   "account_value": 314753.58,
   "roi": 160.66,
-  "timestamp": "2025-03-25T16:48:03.618955"
+  "timestamp": "2025-03-25T18:20:47.431765"
 }

@@ -6,122 +6,122 @@
       "size": -34.95,
       "entry_price": 83868.6,
       "mark_price": 0.0,
-      "unrealized_pnl": -139708.986985,
-      "position_value": 3070916.7,
+      "unrealized_pnl": -143169.036985,
+      "position_value": 3074376.75,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T16:48:03.169739"
+      "timestamp": "2025-03-25T18:20:46.895942"
     },
     {
       "coin": "ETH",
       "size": -400.0,
       "entry_price": 1948.17,
       "mark_price": 0.0,
-      "unrealized_pnl": -48968.18351,
-      "position_value": 828240.0,
+      "unrealized_pnl": -50008.18351,
+      "position_value": 829280.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T16:48:03.169749"
+      "timestamp": "2025-03-25T18:20:46.895952"
     },
     {
       "coin": "HYPE",
       "size": -14050.0,
       "entry_price": 15.4018,
       "mark_price": 0.0,
-      "unrealized_pnl": -17016.439543,
-      "position_value": 233412.65,
+      "unrealized_pnl": -12239.439543,
+      "position_value": 228635.65,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T16:48:03.169766"
+      "timestamp": "2025-03-25T18:20:46.895967"
     },
     {
       "coin": "AAVE",
       "size": -350.0,
       "entry_price": 187.2424,
       "mark_price": 0.0,
-      "unrealized_pnl": -167.1508,
-      "position_value": 65702.0,
+      "unrealized_pnl": -65.6508,
+      "position_value": 65600.5,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:03.169762"
+      "timestamp": "2025-03-25T18:20:46.895963"
     },
     {
       "coin": "CRV",
       "size": -64000.0,
       "entry_price": 0.49701,
       "mark_price": 0.0,
-      "unrealized_pnl": -897.086357,
-      "position_value": 32705.92,
+      "unrealized_pnl": -581.566357,
+      "position_value": 32390.4,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:03.169757"
+      "timestamp": "2025-03-25T18:20:46.895959"
     },
     {
       "coin": "OP",
       "size": -27500.0,
       "entry_price": 0.8666,
       "mark_price": 0.0,
-      "unrealized_pnl": -927.007603,
-      "position_value": 24758.525,
+      "unrealized_pnl": -848.082603,
+      "position_value": 24679.6,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:03.169752"
+      "timestamp": "2025-03-25T18:20:46.895954"
     },
     {
       "coin": "LDO",
       "size": -22500.0,
       "entry_price": 1.04827,
       "mark_price": 0.0,
-      "unrealized_pnl": -416.79039,
-      "position_value": 24003.0,
+      "unrealized_pnl": -266.04039,
+      "position_value": 23852.25,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:03.169759"
+      "timestamp": "2025-03-25T18:20:46.895961"
     },
     {
       "coin": "ARB",
       "size": -60000.0,
       "entry_price": 0.37498,
       "mark_price": 0.0,
-      "unrealized_pnl": -1030.975,
-      "position_value": 23530.2,
+      "unrealized_pnl": -982.975,
+      "position_value": 23482.2,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:03.169755"
+      "timestamp": "2025-03-25T18:20:46.895956"
     },
     {
       "coin": "COMP",
       "size": -500.0,
       "entry_price": 43.2909,
       "mark_price": 0.0,
-      "unrealized_pnl": -622.02862,
-      "position_value": 22267.5,
+      "unrealized_pnl": -524.52862,
+      "position_value": 22170.0,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T16:48:03.169764"
+      "timestamp": "2025-03-25T18:20:46.895965"
     }
   ],
-  "total_position_value": 4325536.495,
-  "total_unrealized_pnl": -209754.648808,
+  "total_position_value": 4324467.350000001,
+  "total_unrealized_pnl": -208685.50380800004,
   "account_value": 1769502.52,
   "roi": 145.42,
-  "timestamp": "2025-03-25T16:48:03.169848"
+  "timestamp": "2025-03-25T18:20:46.896047"
 }

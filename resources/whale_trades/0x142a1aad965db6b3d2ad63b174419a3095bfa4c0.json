@@ -6,18 +6,18 @@
       "size": 88258.51,
       "entry_price": 14.1475,
       "mark_price": 0.0,
-      "unrealized_pnl": 217593.21024,
-      "position_value": 1466238.62663,
+      "unrealized_pnl": 187761.83386,
+      "position_value": 1436407.25025,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T16:48:02.368498"
+      "timestamp": "2025-03-25T18:20:45.838827"
     }
   ],
-  "total_position_value": 1466238.62663,
-  "total_unrealized_pnl": 217593.21024,
+  "total_position_value": 1436407.25025,
+  "total_unrealized_pnl": 187761.83386,
   "account_value": 8340681.8,
   "roi": 12.56,
-  "timestamp": "2025-03-25T16:48:02.368581"
+  "timestamp": "2025-03-25T18:20:45.839147"
 }

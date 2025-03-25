@@ -6,44 +6,44 @@
       "size": 28.0,
       "entry_price": 87896.0,
       "mark_price": 0.0,
-      "unrealized_pnl": -842.111172,
-      "position_value": 2460248.0,
+      "unrealized_pnl": 2685.888828,
+      "position_value": 2463776.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T16:48:02.090930"
+      "timestamp": "2025-03-25T18:20:45.671644"
     },
     {
       "coin": "HYPE",
       "size": -90010.03,
       "entry_price": 13.0506,
       "mark_price": 0.0,
-      "unrealized_pnl": -320644.063397,
-      "position_value": 1495336.62839,
+      "unrealized_pnl": -290220.673257,
+      "position_value": 1464913.23825,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T16:48:02.090973"
+      "timestamp": "2025-03-25T18:20:45.671675"
     },
     {
       "coin": "POPCAT",
       "size": 88635.0,
       "entry_price": 0.239524,
       "mark_price": 0.0,
-      "unrealized_pnl": 1745.689924,
-      "position_value": 22975.9647,
+      "unrealized_pnl": 1206.789124,
+      "position_value": 22437.0639,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T16:48:02.090967"
+      "timestamp": "2025-03-25T18:20:45.671665"
     }
   ],
-  "total_position_value": 3978560.59309,
-  "total_unrealized_pnl": -319740.484645,
+  "total_position_value": 3951126.30215,
+  "total_unrealized_pnl": -286327.995305,
   "account_value": 3086712.41,
   "roi": 26.34,
-  "timestamp": "2025-03-25T16:48:02.092496"
+  "timestamp": "2025-03-25T18:20:45.671847"
 }

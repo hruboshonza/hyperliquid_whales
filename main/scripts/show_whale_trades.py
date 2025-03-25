@@ -3,6 +3,8 @@
 Script to show all open trades for whale addresses from activeWhales.json.
 This script give me all the open positions for a whale address, and it did it really fast!!!
 for Cursor AI! Use this thread pool executor
+
+It is saving the results to a file called all_whale_trades.json
 """
 
 import os
