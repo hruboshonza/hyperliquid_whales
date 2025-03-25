@@ -6,161 +6,161 @@
       "size": -54032.27,
       "entry_price": 91.0468,
       "mark_price": 0.0,
-      "unrealized_pnl": -122388.93652,
-      "position_value": 5041859.17824,
+      "unrealized_pnl": -147730.07115,
+      "position_value": 5067200.31287,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130462"
+      "timestamp": "2025-03-25T19:12:00.651230"
     },
     {
       "coin": "kPEPE",
-      "size": -386163868.0,
-      "entry_price": 0.007886,
+      "size": -397576845.0,
+      "entry_price": 0.007892,
       "mark_price": 0.0,
-      "unrealized_pnl": -56334.512876,
-      "position_value": 3101668.187776,
+      "unrealized_pnl": -64326.417059,
+      "position_value": 3202083.90963,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130475"
+      "timestamp": "2025-03-25T19:12:00.651242"
     },
     {
       "coin": "SOL",
       "size": -15707.26,
       "entry_price": 138.0149,
       "mark_price": 0.0,
-      "unrealized_pnl": -107516.95135,
-      "position_value": 2275353.6836,
+      "unrealized_pnl": -116155.94435,
+      "position_value": 2283992.6766,
       "leverage": {
         "type": "cross",
         "value": 11
       },
-      "timestamp": "2025-03-25T18:20:44.130458"
-    },
-    {
-      "coin": "XRP",
-      "size": 535274.0,
-      "entry_price": 2.415361,
-      "mark_price": 0.0,
-      "unrealized_pnl": 12599.52629,
-      "position_value": 1305479.7586,
-      "leverage": {
-        "type": "cross",
-        "value": 10
-      },
-      "timestamp": "2025-03-25T18:20:44.130483"
+      "timestamp": "2025-03-25T19:12:00.651226"
     },
     {
       "coin": "LINK",
       "size": -83664.1,
       "entry_price": 14.00684,
       "mark_price": 0.0,
-      "unrealized_pnl": -114967.418019,
-      "position_value": 1286837.5221,
+      "unrealized_pnl": -121660.546019,
+      "position_value": 1293530.6501,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130479"
+      "timestamp": "2025-03-25T19:12:00.651246"
+    },
+    {
+      "coin": "XRP",
+      "size": 507512.0,
+      "entry_price": 2.415361,
+      "mark_price": 0.0,
+      "unrealized_pnl": 28287.937949,
+      "position_value": 1254112.9032,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T19:12:00.651250"
     },
     {
       "coin": "DOGE",
       "size": -821216.0,
       "entry_price": 0.182052,
       "mark_price": 0.0,
-      "unrealized_pnl": -7150.90353,
-      "position_value": 156655.16416,
+      "unrealized_pnl": -8785.12337,
+      "position_value": 158289.384,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130466"
+      "timestamp": "2025-03-25T19:12:00.651234"
     },
     {
       "coin": "SUI",
-      "size": -54330.2,
-      "entry_price": 2.31867,
+      "size": -56330.2,
+      "entry_price": 2.32371,
       "mark_price": 0.0,
-      "unrealized_pnl": -7319.64864,
-      "position_value": 133293.71268,
+      "unrealized_pnl": -8105.13748,
+      "position_value": 139000.40152,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130470"
+      "timestamp": "2025-03-25T19:12:00.651238"
+    },
+    {
+      "coin": "BTC",
+      "size": 0.93798,
+      "entry_price": 87971.7,
+      "mark_price": 0.0,
+      "unrealized_pnl": -28.841,
+      "position_value": 82486.89918,
+      "leverage": {
+        "type": "cross",
+        "value": 11
+      },
+      "timestamp": "2025-03-25T19:12:00.651204"
     },
     {
       "coin": "ETH",
       "size": -32.2175,
       "entry_price": 1997.92,
       "mark_price": 0.0,
-      "unrealized_pnl": -2441.171648,
-      "position_value": 66809.42975,
+      "unrealized_pnl": -2437.949898,
+      "position_value": 66806.208,
       "leverage": {
         "type": "cross",
         "value": 12
       },
-      "timestamp": "2025-03-25T18:20:44.130451"
+      "timestamp": "2025-03-25T19:12:00.651219"
     },
     {
       "coin": "TRUMP",
       "size": 4979.6,
       "entry_price": 11.42051,
       "mark_price": 0.0,
-      "unrealized_pnl": 759.293431,
-      "position_value": 57628.9108,
+      "unrealized_pnl": 933.579431,
+      "position_value": 57803.1968,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130494"
+      "timestamp": "2025-03-25T19:12:00.651261"
     },
     {
       "coin": "WIF",
-      "size": -7639.0,
-      "entry_price": 0.547321,
+      "size": -13639.0,
+      "entry_price": 0.548304,
       "mark_price": 0.0,
-      "unrealized_pnl": 11.46912,
-      "position_value": 4169.51898,
+      "unrealized_pnl": 0.60996,
+      "position_value": 7477.71814,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:44.130491"
-    },
-    {
-      "coin": "BTC",
-      "size": 0.04327,
-      "entry_price": 88149.0,
-      "mark_price": 0.0,
-      "unrealized_pnl": -6.79339,
-      "position_value": 3807.41384,
-      "leverage": {
-        "type": "cross",
-        "value": 11
-      },
-      "timestamp": "2025-03-25T18:20:44.130426"
+      "timestamp": "2025-03-25T19:12:00.651258"
     },
     {
       "coin": "BCH",
       "size": -1.0,
       "entry_price": 432.06,
       "mark_price": 0.0,
-      "unrealized_pnl": 94.59,
-      "position_value": 337.47,
+      "unrealized_pnl": 93.66,
+      "position_value": 338.4,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.130487"
+      "timestamp": "2025-03-25T19:12:00.651254"
     }
   ],
-  "total_position_value": 13433899.950526003,
-  "total_unrealized_pnl": -404661.457132,
+  "total_position_value": 13613122.660040002,
+  "total_unrealized_pnl": -439914.242986,
   "account_value": 3966974.59,
   "roi": 50.53,
-  "timestamp": "2025-03-25T18:20:44.130772"
+  "timestamp": "2025-03-25T19:12:00.651463"
 }

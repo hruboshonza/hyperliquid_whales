@@ -6,278 +6,278 @@
       "size": -2717.2665,
       "entry_price": 2328.93,
       "mark_price": 0.0,
-      "unrealized_pnl": 693554.582522,
-      "position_value": 5634795.54105,
+      "unrealized_pnl": 694098.035822,
+      "position_value": 5634252.08775,
       "leverage": {
         "type": "cross",
         "value": 25
       },
-      "timestamp": "2025-03-25T18:20:46.545904"
+      "timestamp": "2025-03-25T19:12:02.874703"
     },
     {
       "coin": "BTC",
       "size": -32.3628,
       "entry_price": 96401.5,
       "mark_price": 0.0,
-      "unrealized_pnl": 272156.246287,
-      "position_value": 2847667.4976,
+      "unrealized_pnl": 273839.111887,
+      "position_value": 2845984.632,
       "leverage": {
         "type": "cross",
         "value": 30
       },
-      "timestamp": "2025-03-25T18:20:46.545804"
+      "timestamp": "2025-03-25T19:12:02.874692"
     },
     {
       "coin": "LINK",
       "size": -40810.5,
       "entry_price": 24.21879,
       "mark_price": 0.0,
-      "unrealized_pnl": 360674.750318,
-      "position_value": 627706.3005,
+      "unrealized_pnl": 357450.720818,
+      "position_value": 630930.33,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.545955"
+      "timestamp": "2025-03-25T19:12:02.874723"
     },
     {
       "coin": "FARTCOIN",
       "size": -970965.4,
       "entry_price": 0.9855,
       "mark_price": 0.0,
-      "unrealized_pnl": 409631.118326,
-      "position_value": 547255.518748,
+      "unrealized_pnl": 414796.654254,
+      "position_value": 542089.98282,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:46.546012"
+      "timestamp": "2025-03-25T19:12:02.874772"
     },
     {
       "coin": "JUP",
       "size": -773203.0,
       "entry_price": 0.84429,
       "mark_price": 0.0,
-      "unrealized_pnl": 212623.212272,
-      "position_value": 440184.4679,
+      "unrealized_pnl": 212746.924752,
+      "position_value": 440060.75542,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.545959"
+      "timestamp": "2025-03-25T19:12:02.874733"
     },
     {
       "coin": "POPCAT",
       "size": -905600.0,
       "entry_price": 0.94743,
       "mark_price": 0.0,
-      "unrealized_pnl": 628749.26065,
-      "position_value": 229243.584,
+      "unrealized_pnl": 629573.35665,
+      "position_value": 228419.488,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.545984"
+      "timestamp": "2025-03-25T19:12:02.874746"
     },
     {
       "coin": "ARB",
       "size": -351597.6,
       "entry_price": 0.64506,
       "mark_price": 0.0,
-      "unrealized_pnl": 89169.778749,
-      "position_value": 137632.88052,
+      "unrealized_pnl": 88445.487693,
+      "position_value": 138357.171576,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.545933"
+      "timestamp": "2025-03-25T19:12:02.874714"
     },
     {
       "coin": "WIF",
       "size": -212979.0,
       "entry_price": 2.617356,
       "mark_price": 0.0,
-      "unrealized_pnl": 441193.83102,
-      "position_value": 116248.19778,
+      "unrealized_pnl": 440718.88785,
+      "position_value": 116723.14095,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.545961"
+      "timestamp": "2025-03-25T19:12:02.874737"
     },
     {
       "coin": "SOL",
       "size": -720.0,
       "entry_price": 167.9545,
       "mark_price": 0.0,
-      "unrealized_pnl": 16628.0724,
-      "position_value": 104299.2,
+      "unrealized_pnl": 16246.4724,
+      "position_value": 104680.8,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T18:20:46.545927"
+      "timestamp": "2025-03-25T19:12:02.874709"
     },
     {
       "coin": "WLD",
       "size": -109479.0,
       "entry_price": 2.03842,
       "mark_price": 0.0,
-      "unrealized_pnl": 121297.470234,
-      "position_value": 101866.92513,
+      "unrealized_pnl": 121342.356624,
+      "position_value": 101822.03874,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.545957"
+      "timestamp": "2025-03-25T19:12:02.874728"
     },
     {
       "coin": "ZEREBRO",
       "size": -2152745.0,
       "entry_price": 0.341063,
       "mark_price": 0.0,
-      "unrealized_pnl": 652301.36771,
-      "position_value": 81920.55823,
+      "unrealized_pnl": 652523.100445,
+      "position_value": 81698.825495,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.546017"
+      "timestamp": "2025-03-25T19:12:02.874781"
     },
     {
       "coin": "GOAT",
       "size": -852119.0,
       "entry_price": 0.617977,
       "mark_price": 0.0,
-      "unrealized_pnl": 473044.640792,
-      "position_value": 53545.453722,
+      "unrealized_pnl": 472778.779664,
+      "position_value": 53811.31485,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:46.545989"
+      "timestamp": "2025-03-25T19:12:02.874755"
     },
     {
       "coin": "HYPE",
       "size": -3000.0,
       "entry_price": 17.7523,
       "mark_price": 0.0,
-      "unrealized_pnl": 4432.0,
-      "position_value": 48825.0,
+      "unrealized_pnl": 4618.0,
+      "position_value": 48639.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:46.546010"
+      "timestamp": "2025-03-25T19:12:02.874768"
     },
     {
       "coin": "GRIFFAIN",
       "size": -800000.0,
       "entry_price": 0.505889,
       "mark_price": 0.0,
-      "unrealized_pnl": 364036.08993,
-      "position_value": 40675.2,
+      "unrealized_pnl": 364649.68993,
+      "position_value": 40061.6,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.546019"
+      "timestamp": "2025-03-25T19:12:02.874786"
     },
     {
       "coin": "AI16Z",
       "size": -171598.0,
       "entry_price": 1.31738,
       "mark_price": 0.0,
-      "unrealized_pnl": 190092.30195,
-      "position_value": 35968.65678,
+      "unrealized_pnl": 190169.52105,
+      "position_value": 35891.43768,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.546015"
+      "timestamp": "2025-03-25T19:12:02.874777"
     },
     {
       "coin": "TRUMP",
       "size": -2165.2,
       "entry_price": 30.14862,
       "mark_price": 0.0,
-      "unrealized_pnl": 40219.94492,
-      "position_value": 25057.8596,
+      "unrealized_pnl": 40144.16292,
+      "position_value": 25133.6416,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.546021"
+      "timestamp": "2025-03-25T19:12:02.874790"
     },
     {
       "coin": "SUI",
       "size": -8500.0,
       "entry_price": 3.4643,
       "mark_price": 0.0,
-      "unrealized_pnl": 8592.65,
-      "position_value": 20853.9,
+      "unrealized_pnl": 8472.8,
+      "position_value": 20973.75,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:46.545935"
+      "timestamp": "2025-03-25T19:12:02.874719"
     },
     {
       "coin": "MOODENG",
       "size": -380000.0,
       "entry_price": 0.472274,
       "mark_price": 0.0,
-      "unrealized_pnl": 163825.83667,
-      "position_value": 15638.52,
+      "unrealized_pnl": 163906.77667,
+      "position_value": 15557.58,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.545990"
+      "timestamp": "2025-03-25T19:12:02.874759"
     },
     {
       "coin": "HBAR",
       "size": -40000.0,
       "entry_price": 0.309935,
       "mark_price": 0.0,
-      "unrealized_pnl": 4537.431596,
-      "position_value": 7860.0,
+      "unrealized_pnl": 4507.031596,
+      "position_value": 7890.4,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.545982"
+      "timestamp": "2025-03-25T19:12:02.874742"
     },
     {
       "coin": "CHILLGUY",
       "size": -240871.0,
       "entry_price": 0.371754,
       "mark_price": 0.0,
-      "unrealized_pnl": 82034.005578,
-      "position_value": 7510.839522,
+      "unrealized_pnl": 82039.063869,
+      "position_value": 7505.781231,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:46.545992"
+      "timestamp": "2025-03-25T19:12:02.874763"
     },
     {
       "coin": "ZK",
       "size": -8100.0,
       "entry_price": 0.14414,
       "mark_price": 0.0,
-      "unrealized_pnl": 516.3588,
-      "position_value": 651.1752,
+      "unrealized_pnl": 512.487,
+      "position_value": 655.047,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:46.545987"
+      "timestamp": "2025-03-25T19:12:02.874751"
     }
   ],
-  "total_position_value": 11125407.276282001,
-  "total_unrealized_pnl": 5229310.950723999,
+  "total_position_value": 11121138.805112,
+  "total_unrealized_pnl": 5233579.421893999,
   "account_value": 2000086.12,
   "roi": 110.5,
-  "timestamp": "2025-03-25T18:20:46.575037"
+  "timestamp": "2025-03-25T19:12:02.875594"
 }

@@ -6,57 +6,57 @@
       "size": -138540.99,
       "entry_price": 21.6351,
       "mark_price": 0.0,
-      "unrealized_pnl": 742605.246068,
-      "position_value": 2254754.61225,
+      "unrealized_pnl": 751194.787448,
+      "position_value": 2246165.07087,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:45.281733"
+      "timestamp": "2025-03-25T19:12:01.833037"
     },
     {
       "coin": "BERA",
       "size": -114154.9,
       "entry_price": 6.03874,
       "mark_price": 0.0,
-      "unrealized_pnl": -228144.563457,
-      "position_value": 917497.17777,
+      "unrealized_pnl": -235085.181377,
+      "position_value": 924437.79569,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:45.281747"
+      "timestamp": "2025-03-25T19:12:01.833053"
     },
     {
       "coin": "S",
       "size": -518630.0,
       "entry_price": 0.555342,
       "mark_price": 0.0,
-      "unrealized_pnl": -31474.19904,
-      "position_value": 319491.6389,
+      "unrealized_pnl": -32495.90014,
+      "position_value": 320513.34,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T18:20:45.281742"
+      "timestamp": "2025-03-25T19:12:01.833048"
     },
     {
       "coin": "IP",
       "size": 5.0,
       "entry_price": 3.1276,
       "mark_price": 0.0,
-      "unrealized_pnl": 14.8305,
-      "position_value": 30.4685,
+      "unrealized_pnl": 14.704,
+      "position_value": 30.342,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:45.281751"
+      "timestamp": "2025-03-25T19:12:01.833058"
     }
   ],
-  "total_position_value": 3491773.89742,
-  "total_unrealized_pnl": 483001.314071,
+  "total_position_value": 3491146.54856,
+  "total_unrealized_pnl": 483628.4099310001,
   "account_value": 3715200.06,
   "roi": 23.13,
-  "timestamp": "2025-03-25T18:20:45.283084"
+  "timestamp": "2025-03-25T19:12:01.834080"
 }

@@ -6,47 +6,47 @@
       "size": 66.0,
       "entry_price": 84904.7,
       "mark_price": 0.0,
-      "unrealized_pnl": 203760.97486,
-      "position_value": 5807472.0,
+      "unrealized_pnl": 200328.97486,
+      "position_value": 5804040.0,
       "leverage": {
         "type": "isolated",
         "value": 20,
-        "rawUsd": "-5326035.6506939996"
+        "rawUsd": "-5325885.8374819998"
       },
-      "timestamp": "2025-03-25T18:20:45.500301"
+      "timestamp": "2025-03-25T19:12:01.846200"
     },
     {
       "coin": "ETH",
       "size": 2000.0,
       "entry_price": 2068.73,
       "mark_price": 0.0,
-      "unrealized_pnl": 9937.15681,
-      "position_value": 4147400.0,
+      "unrealized_pnl": 9537.15681,
+      "position_value": 4147000.0,
       "leverage": {
         "type": "isolated",
         "value": 20,
-        "rawUsd": "-3930559.578886"
+        "rawUsd": "-3930611.4863849999"
       },
-      "timestamp": "2025-03-25T18:20:45.500317"
+      "timestamp": "2025-03-25T19:12:01.846223"
     },
     {
       "coin": "SOL",
       "size": 20000.0,
       "entry_price": 126.7784,
       "mark_price": 0.0,
-      "unrealized_pnl": 361631.682593,
-      "position_value": 2897200.0,
+      "unrealized_pnl": 372231.682593,
+      "position_value": 2907800.0,
       "leverage": {
         "type": "isolated",
         "value": 12,
-        "rawUsd": "-2326623.2981179999"
+        "rawUsd": "-2326659.5281179999"
       },
-      "timestamp": "2025-03-25T18:20:45.500322"
+      "timestamp": "2025-03-25T19:12:01.846227"
     }
   ],
-  "total_position_value": 12852072.0,
-  "total_unrealized_pnl": 575329.8142629999,
+  "total_position_value": 12858840.0,
+  "total_unrealized_pnl": 582097.8142629999,
   "account_value": 3368186.93,
   "roi": 52.45,
-  "timestamp": "2025-03-25T18:20:45.500414"
+  "timestamp": "2025-03-25T19:12:01.846339"
 }

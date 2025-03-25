@@ -6,57 +6,57 @@
       "size": -208550.0,
       "entry_price": 20.6865,
       "mark_price": 0.0,
-      "unrealized_pnl": 920034.204692,
-      "position_value": 3394151.25,
+      "unrealized_pnl": 932755.754692,
+      "position_value": 3381429.7,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:44.761911"
+      "timestamp": "2025-03-25T19:12:01.026256"
     },
     {
       "coin": "XRP",
       "size": -111907.0,
       "entry_price": 2.63489,
       "mark_price": 0.0,
-      "unrealized_pnl": 21932.716928,
-      "position_value": 272929.9823,
+      "unrealized_pnl": 18329.311528,
+      "position_value": 276533.3877,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T18:20:44.761904"
+      "timestamp": "2025-03-25T19:12:01.026247"
     },
     {
       "coin": "ADA",
       "size": -326000.0,
       "entry_price": 0.80631,
       "mark_price": 0.0,
-      "unrealized_pnl": 17734.68192,
-      "position_value": 245122.66,
+      "unrealized_pnl": 17467.36192,
+      "position_value": 245389.98,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.761907"
+      "timestamp": "2025-03-25T19:12:01.026251"
     },
     {
       "coin": "kPEPE",
       "size": -10000.0,
       "entry_price": 0.025256,
       "mark_price": 0.0,
-      "unrealized_pnl": 172.24348,
-      "position_value": 80.32,
+      "unrealized_pnl": 172.02348,
+      "position_value": 80.54,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:44.761894"
+      "timestamp": "2025-03-25T19:12:01.026235"
     }
   ],
-  "total_position_value": 3912284.2123,
-  "total_unrealized_pnl": 959873.84702,
+  "total_position_value": 3903433.6077,
+  "total_unrealized_pnl": 968724.4516200001,
   "account_value": 6723970.68,
   "roi": 48.12,
-  "timestamp": "2025-03-25T18:20:44.761975"
+  "timestamp": "2025-03-25T19:12:01.027878"
 }

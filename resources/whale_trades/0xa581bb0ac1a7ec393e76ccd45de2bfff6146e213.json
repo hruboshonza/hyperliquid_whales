@@ -6,57 +6,57 @@
       "size": -42000.0,
       "entry_price": 21.3243,
       "mark_price": 0.0,
-      "unrealized_pnl": 212072.634149,
-      "position_value": 683550.0,
+      "unrealized_pnl": 214676.634149,
+      "position_value": 680946.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:45.778197"
+      "timestamp": "2025-03-25T19:12:02.121897"
     },
     {
       "coin": "MKR",
       "size": -110.0,
       "entry_price": 1495.17,
       "mark_price": 0.0,
-      "unrealized_pnl": 24989.736542,
-      "position_value": 139480.0,
+      "unrealized_pnl": 24285.736542,
+      "position_value": 140184.0,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T18:20:45.778193"
+      "timestamp": "2025-03-25T19:12:02.121888"
     },
     {
       "coin": "ETH",
       "size": -45.0,
       "entry_price": 3236.75,
       "mark_price": 0.0,
-      "unrealized_pnl": 52337.36842,
-      "position_value": 93316.5,
+      "unrealized_pnl": 52346.36842,
+      "position_value": 93307.5,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T18:20:45.778186"
+      "timestamp": "2025-03-25T19:12:02.121877"
     },
     {
       "coin": "PURR",
       "size": -525000.0,
       "entry_price": 0.38522,
       "mark_price": 0.0,
-      "unrealized_pnl": 134563.272869,
-      "position_value": 67677.75,
+      "unrealized_pnl": 134505.522869,
+      "position_value": 67735.5,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T18:20:45.778195"
+      "timestamp": "2025-03-25T19:12:02.121892"
     }
   ],
-  "total_position_value": 984024.25,
-  "total_unrealized_pnl": 423963.01197999995,
+  "total_position_value": 982173.0,
+  "total_unrealized_pnl": 425814.26197999995,
   "account_value": 1337574.98,
   "roi": 85.28,
-  "timestamp": "2025-03-25T18:20:45.778377"
+  "timestamp": "2025-03-25T19:12:02.122481"
 }

@@ -178,6 +178,7 @@ class WhaleTokenAnalyzer:
         return all_positions
 
 def main():
+    start_time = datetime.now()
     parser = argparse.ArgumentParser(description='Analyze whale positions for a specific token')
     parser.add_argument('token', help='Token symbol (e.g., BTC, ETH)')
     parser.add_argument('whale_addresses', nargs='+', help='Whale addresses to analyze')

@@ -6,31 +6,31 @@
       "size": -440.01233,
       "entry_price": 84692.2,
       "mark_price": 0.0,
-      "unrealized_pnl": -1451940.146808,
-      "position_value": 38717564.94136,
+      "unrealized_pnl": -1429499.517978,
+      "position_value": 38695124.31253,
       "leverage": {
         "type": "cross",
         "value": 40
       },
-      "timestamp": "2025-03-25T18:20:44.364949"
+      "timestamp": "2025-03-25T19:12:00.752441"
     },
     {
       "coin": "ETH",
       "size": -365.0,
       "entry_price": 2658.0,
       "mark_price": 0.0,
-      "unrealized_pnl": 213269.5,
-      "position_value": 756900.5,
+      "unrealized_pnl": 213306.0,
+      "position_value": 756864.0,
       "leverage": {
         "type": "cross",
         "value": 25
       },
-      "timestamp": "2025-03-25T18:20:44.364959"
+      "timestamp": "2025-03-25T19:12:00.752448"
     }
   ],
-  "total_position_value": 39474465.44136,
-  "total_unrealized_pnl": -1238670.646808,
+  "total_position_value": 39451988.31253,
+  "total_unrealized_pnl": -1216193.517978,
   "account_value": 6247675.12,
   "roi": 129.47,
-  "timestamp": "2025-03-25T18:20:44.365339"
+  "timestamp": "2025-03-25T19:12:00.752496"
 }
