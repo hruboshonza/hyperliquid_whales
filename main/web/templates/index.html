@@ -24,34 +24,26 @@
             display: none;
         }
         .summary-card {
-            background: white;
-            border-radius: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
             padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            gap: 20px;
         }
         .summary-item {
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        .summary-item:hover {
-            transform: translateY(-2px);
+            text-align: center;
         }
         .summary-label {
-            font-size: 0.9em;
+            font-size: 0.9rem;
             color: #6c757d;
             margin-bottom: 5px;
         }
         .summary-value {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             font-weight: bold;
         }
         .table-container {
@@ -67,29 +59,21 @@
             top: 0;
         }
         .position-long {
-            color: #198754;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: rgba(25, 135, 84, 0.1);
+            color: #28a745;
+            font-weight: bold;
         }
         .position-short {
             color: #dc3545;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: rgba(220, 53, 69, 0.1);
+            font-weight: bold;
         }
         .pnl-positive {
-            color: #198754;
-            font-weight: 600;
+            color: #28a745;
         }
         .pnl-negative {
             color: #dc3545;
-            font-weight: 600;
         }
         .wallet-link {
-            color: #0d6efd;
+            color: #007bff;
             text-decoration: none;
         }
         .wallet-link:hover {
@@ -108,6 +92,25 @@
         .leverage-value {
             font-weight: 600;
             color: #6610f2;
+        }
+        .sortable {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+        .sortable:after {
+            content: '↕';
+            position: absolute;
+            right: 5px;
+            color: #6c757d;
+        }
+        .sort-asc:after {
+            content: '↑';
+            color: #007bff;
+        }
+        .sort-desc:after {
+            content: '↓';
+            color: #007bff;
         }
     </style>
 </head>
@@ -169,12 +172,12 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>Wallet</th>
-                                <th>Side</th>
-                                <th>Size</th>
-                                <th>Entry Price</th>
-                                <th>Position Value</th>
-                                <th>Unrealized PnL</th>
+                                <th class="sortable" data-sort="wallet">Wallet</th>
+                                <th class="sortable" data-sort="side">Side</th>
+                                <th class="sortable" data-sort="size">Size</th>
+                                <th class="sortable" data-sort="entry_price">Entry Price</th>
+                                <th class="sortable" data-sort="position_value">Position Value</th>
+                                <th class="sortable" data-sort="unrealized_pnl">Unrealized PnL</th>
                             </tr>
                         </thead>
                         <tbody id="positionsTable"></tbody>
@@ -225,27 +228,74 @@
                 document.getElementById('totalShortValue').textContent = data.summary.total_short_value;
                 document.getElementById('totalPnL').textContent = data.summary.total_pnl;
                 
+                // Add sorting functionality
+                document.querySelectorAll('.sortable').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const sortBy = header.dataset.sort;
+                        const currentOrder = header.dataset.order === 'asc' ? 'desc' : 'asc';
+                        
+                        // Update sort indicators
+                        document.querySelectorAll('.sortable').forEach(h => {
+                            h.dataset.order = '';
+                            h.classList.remove('sort-asc', 'sort-desc');
+                        });
+                        header.dataset.order = currentOrder;
+                        header.classList.add(`sort-${currentOrder}`);
+                        
+                        // Sort the table
+                        const tbody = document.getElementById('positionsTable');
+                        const rows = Array.from(tbody.querySelectorAll('tr'));
+                        
+                        rows.sort((a, b) => {
+                            let aValue = a.querySelector(`td[data-${sortBy}]`).dataset[sortBy];
+                            let bValue = b.querySelector(`td[data-${sortBy}]`).dataset[sortBy];
+                            
+                            // Handle numeric values
+                            if (['size', 'position_value', 'unrealized_pnl'].includes(sortBy)) {
+                                aValue = parseFloat(aValue);
+                                bValue = parseFloat(bValue);
+                            }
+                            
+                            // Handle side sorting (Long before Short)
+                            if (sortBy === 'side') {
+                                aValue = aValue === 'Long' ? 1 : 0;
+                                bValue = bValue === 'Long' ? 1 : 0;
+                            }
+                            
+                            if (currentOrder === 'asc') {
+                                return aValue > bValue ? 1 : -1;
+                            } else {
+                                return aValue < bValue ? 1 : -1;
+                            }
+                        });
+                        
+                        // Reorder the table
+                        rows.forEach(row => tbody.appendChild(row));
+                    });
+                });
+                
                 // Update positions table
                 const positionsTable = document.getElementById('positionsTable');
                 positionsTable.innerHTML = data.positions.map(pos => {
                     return `
                     <tr>
-                        <td>
+                        <td data-wallet="${pos.wallet}">
                             <a href="https://hypurrscan.io/address/${pos.wallet}" 
                                class="wallet-link" 
                                target="_blank">
                                 ${pos.wallet.slice(0, 6)}...${pos.wallet.slice(-4)}
                             </a>
                         </td>
-                        <td>
+                        <td data-side="${pos.side}">
                             <span class="position-${pos.side.toLowerCase()}">
                                 ${pos.side}
                             </span>
                         </td>
-                        <td>${pos.size}</td>
-                        <td>${pos.entry_price}</td>
-                        <td>${pos.position_value}</td>
-                        <td class="${parseFloat(pos.unrealized_pnl.replace(/[^0-9.-]+/g, '')) >= 0 ? 'pnl-positive' : 'pnl-negative'}">
+                        <td data-size="${parseFloat(pos.size.replace(/[^0-9.-]+/g, ''))}">${pos.size}</td>
+                        <td data-entry_price="${parseFloat(pos.entry_price.replace(/[^0-9.-]+/g, ''))}">${pos.entry_price}</td>
+                        <td data-position_value="${parseFloat(pos.position_value.replace(/[^0-9.-]+/g, ''))}">${pos.position_value}</td>
+                        <td data-unrealized_pnl="${parseFloat(pos.unrealized_pnl.replace(/[^0-9.-]+/g, ''))}" 
+                            class="${parseFloat(pos.unrealized_pnl.replace(/[^0-9.-]+/g, '')) >= 0 ? 'pnl-positive' : 'pnl-negative'}">
                             ${pos.unrealized_pnl}
                         </td>
                     </tr>

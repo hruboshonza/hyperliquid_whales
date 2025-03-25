@@ -14,6 +14,7 @@ import concurrent.futures
 from collections import defaultdict
 from dataclasses import dataclass
 from tabulate import tabulate
+import threading
 
 # Add the parent directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -21,6 +22,36 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+
+class ConnectionPool:
+    """Manages a pool of API connections."""
+    _instance = None
+    _lock = threading.Lock()
+    
+    def __new__(cls):
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = super(ConnectionPool, cls).__new__(cls)
+            return cls._instance
+    
+    def __init__(self):
+        if not hasattr(self, 'initialized'):
+            self.connections = []
+            self.max_connections = 10  # Reduced from 20 to 10
+            self.lock = threading.Lock()
+            self.initialized = True
+    
+    def get_connection(self):
+        """Get an available connection from the pool."""
+        with self.lock:
+            if len(self.connections) < self.max_connections:
+                connection = Info(hl_constants.MAINNET_API_URL)
+                self.connections.append(connection)
+            return self.connections[-1]  # Always return the last connection
+    
+    def release_connection(self, connection):
+        """Release a connection back to the pool."""
+        pass  # No need to do anything since we're reusing the same connection
 
 @dataclass
 class TokenPosition:
@@ -42,8 +73,8 @@ class WhaleTokenAnalyzer:
         self.positions: List[TokenPosition] = []
         self.processed_wallets = 0
         self.wallets_with_positions = 0
-        self.MAX_WORKERS = 10  # Number of concurrent workers
-        self.info = Info(hl_constants.MAINNET_API_URL)
+        self.connection_pool = ConnectionPool()
+        self.info = Info(hl_constants.MAINNET_API_URL)  # Create a single connection for the analyzer
         
     def get_all_positions(self, whale_address: str) -> List[Dict]:
         """Get all open positions for a whale address."""
@@ -52,33 +83,44 @@ class WhaleTokenAnalyzer:
             user_state = self.info.user_state(whale_address)
             positions = []
             
-            if isinstance(user_state, dict) and 'assetPositions' in user_state:
-                for pos in user_state['assetPositions']:
-                    position_data = pos.get('position', {})
-                    coin = position_data.get('coin')
+            if not isinstance(user_state, dict) or 'assetPositions' not in user_state:
+                return positions
+                
+            for pos in user_state['assetPositions']:
+                position_data = pos.get('position', {})
+                coin = position_data.get('coin')
+                
+                if coin != self.token:  # Skip positions for other tokens
+                    continue
                     
-                    if coin == self.token:  # Only include positions for the specified token
-                        size = float(position_data.get('szi', 0))
-                        if size != 0:  # Only include non-zero positions
-                            entry_price = float(position_data.get('entryPx', 0))
-                            unrealized_pnl = float(position_data.get('unrealizedPnl', 0))
-                            margin = float(position_data.get('margin', 0))
-                            
-                            # Calculate position value and leverage
-                            position_value = abs(size * entry_price)
-                            leverage_value = round(position_value / margin, 2) if margin > 0 else 0
-                            
-                            positions.append({
-                                'coin': coin,
-                                'size': size,
-                                'entry_price': entry_price,
-                                'position_value': position_value,
-                                'unrealized_pnl': unrealized_pnl,
-                                'leverage': {
-                                    'type': 'cross' if margin > 0 else 'unknown',
-                                    'value': leverage_value
-                                }
-                            })
+                size = float(position_data.get('szi', 0))
+                if size == 0:  # Skip zero-size positions
+                    continue
+                    
+                entry_price = float(position_data.get('entryPx', 0))
+                unrealized_pnl = float(position_data.get('unrealizedPnl', 0))
+                margin = float(position_data.get('margin', 0))
+                
+                # Calculate position value and leverage
+                position_value = abs(size * entry_price)
+                
+                # Skip positions smaller than $100,000
+                if position_value < 100000:
+                    continue
+                    
+                leverage_value = round(position_value / margin, 2) if margin > 0 else 0
+                
+                positions.append({
+                    'coin': coin,
+                    'size': size,
+                    'entry_price': entry_price,
+                    'position_value': position_value,
+                    'unrealized_pnl': unrealized_pnl,
+                    'leverage': {
+                        'type': 'cross' if margin > 0 else 'unknown',
+                        'value': leverage_value
+                    }
+                })
             
             return positions
         except Exception as e:
@@ -111,32 +153,29 @@ class WhaleTokenAnalyzer:
             return []
             
     def analyze_positions(self) -> List[TokenPosition]:
-        """Analyze all whale positions for the specified token using parallel processing."""
-        start_time = datetime.now()
+        """Analyze positions for all whales."""
+        all_positions = []
         
-        print(f"\nProcessing {len(self.whale_addresses)} whale addresses for {self.token} positions...")
-        
-        # Process whales in parallel
-        with concurrent.futures.ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
+        # Use ThreadPoolExecutor to process whales in parallel
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:  # Reduced from 20 to 10
+            # Submit all whale processing tasks
             future_to_whale = {
-                executor.submit(self.process_whale, address): address 
-                for address in self.whale_addresses
+                executor.submit(self.process_whale, whale_address): whale_address 
+                for whale_address in self.whale_addresses
             }
             
+            # Process completed tasks as they finish
             for future in concurrent.futures.as_completed(future_to_whale):
-                address = future_to_whale[future]
+                whale_address = future_to_whale[future]
                 try:
-                    token_positions = future.result()
-                    if token_positions:
-                        self.positions.extend(token_positions)
-                        self.wallets_with_positions += 1
-                    self.processed_wallets += 1
+                    positions = future.result()
+                    all_positions.extend(positions)
                 except Exception as e:
-                    print(f"Error processing whale {address}: {str(e)}")
-                    
+                    print(f"Error processing whale {whale_address}: {str(e)}")
+        
         # Sort positions by position value (largest first)
-        self.positions.sort(key=lambda x: abs(x.position_value), reverse=True)
-        return self.positions
+        all_positions.sort(key=lambda x: abs(x.position_value), reverse=True)
+        return all_positions
 
 def main():
     parser = argparse.ArgumentParser(description='Analyze whale positions for a specific token')
