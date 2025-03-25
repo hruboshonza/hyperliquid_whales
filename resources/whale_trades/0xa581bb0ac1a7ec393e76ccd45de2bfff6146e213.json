@@ -1,0 +1,62 @@
+{
+  "address": "0xa581bb0ac1a7ec393e76ccd45de2bfff6146e213",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -42000.0,
+      "entry_price": 21.3243,
+      "mark_price": 0.0,
+      "unrealized_pnl": 196448.634149,
+      "position_value": 699174.0,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:47.643328"
+    },
+    {
+      "coin": "MKR",
+      "size": -110.0,
+      "entry_price": 1495.17,
+      "mark_price": 0.0,
+      "unrealized_pnl": 25495.736542,
+      "position_value": 138974.0,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:47.643320"
+    },
+    {
+      "coin": "ETH",
+      "size": -45.0,
+      "entry_price": 3236.75,
+      "mark_price": 0.0,
+      "unrealized_pnl": 52715.36842,
+      "position_value": 92938.5,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:47.643307"
+    },
+    {
+      "coin": "PURR",
+      "size": -525000.0,
+      "entry_price": 0.38522,
+      "mark_price": 0.0,
+      "unrealized_pnl": 135114.522869,
+      "position_value": 67126.5,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:47.643325"
+    }
+  ],
+  "total_position_value": 998213.0,
+  "total_unrealized_pnl": 409774.26197999995,
+  "account_value": 1337574.98,
+  "roi": 85.28,
+  "timestamp": "2025-03-25T15:16:47.643416"
+}

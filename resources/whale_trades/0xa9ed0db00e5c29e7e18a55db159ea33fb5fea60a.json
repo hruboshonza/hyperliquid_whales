@@ -1,0 +1,62 @@
+{
+  "address": "0xa9ed0db00e5c29e7e18a55db159ea33fb5fea60a",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -138540.99,
+      "entry_price": 21.6351,
+      "mark_price": 0.0,
+      "unrealized_pnl": 691067.997788,
+      "position_value": 2306291.86053,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:47.086425"
+    },
+    {
+      "coin": "BERA",
+      "size": -114154.9,
+      "entry_price": 6.03874,
+      "mark_price": 0.0,
+      "unrealized_pnl": -238133.117207,
+      "position_value": 927485.73152,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:47.086438"
+    },
+    {
+      "coin": "S",
+      "size": -518630.0,
+      "entry_price": 0.555342,
+      "mark_price": 0.0,
+      "unrealized_pnl": -30831.09784,
+      "position_value": 318848.5377,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:47.086435"
+    },
+    {
+      "coin": "IP",
+      "size": 5.0,
+      "entry_price": 3.1276,
+      "mark_price": 0.0,
+      "unrealized_pnl": 15.077,
+      "position_value": 30.715,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:47.086440"
+    }
+  ],
+  "total_position_value": 3552656.84475,
+  "total_unrealized_pnl": 422118.859741,
+  "account_value": 3715200.06,
+  "roi": 23.13,
+  "timestamp": "2025-03-25T15:16:47.086502"
+}

@@ -1,0 +1,23 @@
+{
+  "address": "0xc4180d58e4980ae6b39c133ab3a9389ae62e8706",
+  "positions": [
+    {
+      "coin": "POPCAT",
+      "size": -440737.0,
+      "entry_price": 0.255019,
+      "mark_price": 0.0,
+      "unrealized_pnl": 2238.898942,
+      "position_value": 110157.80578,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:48.449125"
+    }
+  ],
+  "total_position_value": 110157.80578,
+  "total_unrealized_pnl": 2238.898942,
+  "account_value": 457270.03,
+  "roi": 10.22,
+  "timestamp": "2025-03-25T15:16:48.449152"
+}

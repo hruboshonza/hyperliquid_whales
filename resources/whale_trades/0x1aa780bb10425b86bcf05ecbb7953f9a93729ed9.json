@@ -1,0 +1,36 @@
+{
+  "address": "0x1aa780bb10425b86bcf05ecbb7953f9a93729ed9",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": -1.0,
+      "entry_price": 88179.4,
+      "mark_price": 0.0,
+      "unrealized_pnl": 393.49882,
+      "position_value": 87786.0,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:47.938101"
+    },
+    {
+      "coin": "PURR",
+      "size": -71250.0,
+      "entry_price": 0.121587,
+      "mark_price": 0.0,
+      "unrealized_pnl": -446.915606,
+      "position_value": 9110.025,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:47.938113"
+    }
+  ],
+  "total_position_value": 96896.025,
+  "total_unrealized_pnl": -53.416786,
+  "account_value": 2696951.85,
+  "roi": 20.47,
+  "timestamp": "2025-03-25T15:16:47.938176"
+}

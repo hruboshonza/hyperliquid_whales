@@ -1,0 +1,62 @@
+{
+  "address": "0x863b676e5e4fea0541062c32983dc8f84749ca6d",
+  "positions": [
+    {
+      "coin": "SOL",
+      "size": 14317.92,
+      "entry_price": 140.8728,
+      "mark_price": 0.0,
+      "unrealized_pnl": 73123.3471,
+      "position_value": 2090129.9616,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:45.970475"
+    },
+    {
+      "coin": "BTC",
+      "size": 23.07856,
+      "entry_price": 86810.3,
+      "mark_price": 0.0,
+      "unrealized_pnl": 22517.46515,
+      "position_value": 2025974.46816,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:45.970456"
+    },
+    {
+      "coin": "ETH",
+      "size": 974.8726,
+      "entry_price": 2062.01,
+      "mark_price": 0.0,
+      "unrealized_pnl": 3206.79064,
+      "position_value": 2013404.38078,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:45.970471"
+    },
+    {
+      "coin": "AVAX",
+      "size": 69027.4,
+      "entry_price": 21.972,
+      "mark_price": 0.0,
+      "unrealized_pnl": 35059.93675,
+      "position_value": 1551735.952,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:45.970478"
+    }
+  ],
+  "total_position_value": 7681244.76254,
+  "total_unrealized_pnl": 133907.53964,
+  "account_value": 876688.01,
+  "roi": 148.29,
+  "timestamp": "2025-03-25T15:16:45.972042"
+}

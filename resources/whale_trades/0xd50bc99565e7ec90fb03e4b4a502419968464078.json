@@ -1,0 +1,37 @@
+{
+  "address": "0xd50bc99565e7ec90fb03e4b4a502419968464078",
+  "positions": [
+    {
+      "coin": "EIGEN",
+      "size": -159005.0,
+      "entry_price": 3.7966,
+      "mark_price": 0.0,
+      "unrealized_pnl": 420669.649102,
+      "position_value": 183014.755,
+      "leverage": {
+        "type": "isolated",
+        "value": 1,
+        "rawUsd": "641682.817743"
+      },
+      "timestamp": "2025-03-25T15:16:50.602569"
+    },
+    {
+      "coin": "SOL",
+      "size": -1058.66,
+      "entry_price": 204.9222,
+      "mark_price": 0.0,
+      "unrealized_pnl": 62389.187584,
+      "position_value": 154553.7734,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:50.602516"
+    }
+  ],
+  "total_position_value": 337568.5284,
+  "total_unrealized_pnl": 483058.836686,
+  "account_value": 4337423.26,
+  "roi": 32.34,
+  "timestamp": "2025-03-25T15:16:50.602697"
+}

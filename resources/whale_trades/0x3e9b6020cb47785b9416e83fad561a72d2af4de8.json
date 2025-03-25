@@ -1,0 +1,38 @@
+{
+  "address": "0x3e9b6020cb47785b9416e83fad561a72d2af4de8",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": 4.58419,
+      "entry_price": 80742.3,
+      "mark_price": 0.0,
+      "unrealized_pnl": 32220.551185,
+      "position_value": 402358.94049,
+      "leverage": {
+        "type": "isolated",
+        "value": 4,
+        "rawUsd": "-277776.150127"
+      },
+      "timestamp": "2025-03-25T15:16:49.997601"
+    },
+    {
+      "coin": "MKR",
+      "size": 55.7899,
+      "entry_price": 1276.37,
+      "mark_price": 0.0,
+      "unrealized_pnl": -729.45068,
+      "position_value": 70479.38067,
+      "leverage": {
+        "type": "isolated",
+        "value": 1,
+        "rawUsd": "-140.800224"
+      },
+      "timestamp": "2025-03-25T15:16:49.997618"
+    }
+  ],
+  "total_position_value": 472838.32116,
+  "total_unrealized_pnl": 31491.100505,
+  "account_value": 314753.58,
+  "roi": 160.66,
+  "timestamp": "2025-03-25T15:16:49.997709"
+}

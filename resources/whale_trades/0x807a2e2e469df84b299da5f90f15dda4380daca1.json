@@ -1,0 +1,23 @@
+{
+  "address": "0x807a2e2e469df84b299da5f90f15dda4380daca1",
+  "positions": [
+    {
+      "coin": "LISTA",
+      "size": -1233.0,
+      "entry_price": 0.26239,
+      "mark_price": 0.0,
+      "unrealized_pnl": 80.69985,
+      "position_value": 242.82702,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:45.973333"
+    }
+  ],
+  "total_position_value": 242.82702,
+  "total_unrealized_pnl": 80.69985,
+  "account_value": 8100167.68,
+  "roi": 202.78,
+  "timestamp": "2025-03-25T15:16:45.975104"
+}

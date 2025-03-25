@@ -1,0 +1,23 @@
+{
+  "address": "0xb4a04f60522a539caa55e9ce74c9bb3e6f2253f0",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": -120.0,
+      "entry_price": 83276.7,
+      "mark_price": 0.0,
+      "unrealized_pnl": -539312.735194,
+      "position_value": 10532520.0,
+      "leverage": {
+        "type": "cross",
+        "value": 40
+      },
+      "timestamp": "2025-03-25T15:16:49.347437"
+    }
+  ],
+  "total_position_value": 10532520.0,
+  "total_unrealized_pnl": -539312.735194,
+  "account_value": 1526331.71,
+  "roi": 76.37,
+  "timestamp": "2025-03-25T15:16:49.347514"
+}

@@ -1,0 +1,101 @@
+{
+  "address": "0xe0ffc829349c88c159462942ad885f12130e7610",
+  "positions": [
+    {
+      "coin": "XRP",
+      "size": -90689.0,
+      "entry_price": 2.357879,
+      "mark_price": 0.0,
+      "unrealized_pnl": -7846.4472,
+      "position_value": 221680.1916,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840858"
+    },
+    {
+      "coin": "SOL",
+      "size": -479.17,
+      "entry_price": 127.2187,
+      "mark_price": 0.0,
+      "unrealized_pnl": -8994.6321,
+      "position_value": 69954.0283,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840840"
+    },
+    {
+      "coin": "ONDO",
+      "size": -71852.0,
+      "entry_price": 0.857148,
+      "mark_price": 0.0,
+      "unrealized_pnl": -5188.55007,
+      "position_value": 66776.37472,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840870"
+    },
+    {
+      "coin": "ADA",
+      "size": -84823.0,
+      "entry_price": 0.73268,
+      "mark_price": 0.0,
+      "unrealized_pnl": -2133.24275,
+      "position_value": 64281.41409,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:49.840867"
+    },
+    {
+      "coin": "SUI",
+      "size": -26206.0,
+      "entry_price": 2.34011,
+      "mark_price": 0.0,
+      "unrealized_pnl": -2263.77447,
+      "position_value": 63588.859,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840854"
+    },
+    {
+      "coin": "TRX",
+      "size": -259611.0,
+      "entry_price": 0.23284,
+      "mark_price": 0.0,
+      "unrealized_pnl": 1313.75371,
+      "position_value": 59134.19358,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840863"
+    },
+    {
+      "coin": "HYPE",
+      "size": -0.36,
+      "entry_price": 24.9284,
+      "mark_price": 0.0,
+      "unrealized_pnl": 2.982034,
+      "position_value": 5.9922,
+      "leverage": {
+        "type": "cross",
+        "value": 1
+      },
+      "timestamp": "2025-03-25T15:16:49.840874"
+    }
+  ],
+  "total_position_value": 545421.05349,
+  "total_unrealized_pnl": -25109.910846000002,
+  "account_value": 1470747.54,
+  "roi": 37.85,
+  "timestamp": "2025-03-25T15:16:49.841028"
+}

@@ -1,0 +1,49 @@
+{
+  "address": "0xceec48581b3145a575508719f45da07dc57fa7ce",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -170439.54,
+      "entry_price": 22.1635,
+      "mark_price": 0.0,
+      "unrealized_pnl": 940236.833864,
+      "position_value": 2837307.02238,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:46.541388"
+    },
+    {
+      "coin": "SOL",
+      "size": 2000.0,
+      "entry_price": 212.8521,
+      "mark_price": 0.0,
+      "unrealized_pnl": -133744.3232,
+      "position_value": 291960.0,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:46.541375"
+    },
+    {
+      "coin": "PURR",
+      "size": -1800000.0,
+      "entry_price": 0.284799,
+      "mark_price": 0.0,
+      "unrealized_pnl": 282491.774142,
+      "position_value": 230148.0,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:46.541385"
+    }
+  ],
+  "total_position_value": 3359415.02238,
+  "total_unrealized_pnl": 1088984.284806,
+  "account_value": 6509797.49,
+  "roi": 81.56,
+  "timestamp": "2025-03-25T15:16:46.541444"
+}

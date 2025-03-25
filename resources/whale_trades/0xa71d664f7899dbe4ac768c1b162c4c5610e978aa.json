@@ -1,0 +1,23 @@
+{
+  "address": "0xa71d664f7899dbe4ac768c1b162c4c5610e978aa",
+  "positions": [
+    {
+      "coin": "NIL",
+      "size": 1710000.0,
+      "entry_price": 0.764205,
+      "mark_price": 0.0,
+      "unrealized_pnl": -97341.897356,
+      "position_value": 1209448.8,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:46.822305"
+    }
+  ],
+  "total_position_value": 1209448.8,
+  "total_unrealized_pnl": -97341.897356,
+  "account_value": 858802.1,
+  "roi": 111.99,
+  "timestamp": "2025-03-25T15:16:46.822354"
+}

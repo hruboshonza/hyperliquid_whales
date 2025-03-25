@@ -1,0 +1,36 @@
+{
+  "address": "0x84838a8c45a9572846ec1c7a7f7fd8183fca9d3f",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -52000.0,
+      "entry_price": 24.443,
+      "mark_price": 0.0,
+      "unrealized_pnl": 405396.155674,
+      "position_value": 865644.0,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:48.438016"
+    },
+    {
+      "coin": "PENGU",
+      "size": -894576.0,
+      "entry_price": 0.022839,
+      "mark_price": 0.0,
+      "unrealized_pnl": 14123.565888,
+      "position_value": 6307.655376,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:48.438032"
+    }
+  ],
+  "total_position_value": 871951.655376,
+  "total_unrealized_pnl": 419519.721562,
+  "account_value": 2689447.28,
+  "roi": 59.03,
+  "timestamp": "2025-03-25T15:16:48.438580"
+}

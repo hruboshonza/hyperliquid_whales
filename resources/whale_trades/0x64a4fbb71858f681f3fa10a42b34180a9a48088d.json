@@ -1,0 +1,75 @@
+{
+  "address": "0x64a4fbb71858f681f3fa10a42b34180a9a48088d",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -21238.55,
+      "entry_price": 20.5064,
+      "mark_price": 0.0,
+      "unrealized_pnl": 82011.636786,
+      "position_value": 353515.66475,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:50.364836"
+    },
+    {
+      "coin": "BTC",
+      "size": -1.0,
+      "entry_price": 92678.0,
+      "mark_price": 0.0,
+      "unrealized_pnl": 4907.0,
+      "position_value": 87771.0,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:50.364823"
+    },
+    {
+      "coin": "SOL",
+      "size": -295.0,
+      "entry_price": 131.3666,
+      "mark_price": 0.0,
+      "unrealized_pnl": -4313.883338,
+      "position_value": 43067.05,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:50.364832"
+    },
+    {
+      "coin": "IO",
+      "size": -11.2,
+      "entry_price": 1.3028,
+      "mark_price": 0.0,
+      "unrealized_pnl": 4.3064,
+      "position_value": 10.28496,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:50.364834"
+    },
+    {
+      "coin": "TRUMP",
+      "size": 0.2,
+      "entry_price": 17.04999,
+      "mark_price": 0.0,
+      "unrealized_pnl": -1.100599,
+      "position_value": 2.3094,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:50.364838"
+    }
+  ],
+  "total_position_value": 484366.30911000003,
+  "total_unrealized_pnl": 82607.959249,
+  "account_value": 1008384.74,
+  "roi": 42.31,
+  "timestamp": "2025-03-25T15:16:50.364903"
+}

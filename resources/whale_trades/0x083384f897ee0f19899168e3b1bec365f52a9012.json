@@ -1,0 +1,23 @@
+{
+  "address": "0x083384f897ee0f19899168e3b1bec365f52a9012",
+  "positions": [
+    {
+      "coin": "ETH",
+      "size": -424.3302,
+      "entry_price": 2295.61,
+      "mark_price": 0.0,
+      "unrealized_pnl": 97816.22158,
+      "position_value": 876284.29602,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:49.743462"
+    }
+  ],
+  "total_position_value": 876284.29602,
+  "total_unrealized_pnl": 97816.22158,
+  "account_value": 1930675.82,
+  "roi": 76.69,
+  "timestamp": "2025-03-25T15:16:49.743538"
+}

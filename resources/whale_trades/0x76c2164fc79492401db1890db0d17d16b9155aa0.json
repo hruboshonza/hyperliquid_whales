@@ -1,0 +1,62 @@
+{
+  "address": "0x76c2164fc79492401db1890db0d17d16b9155aa0",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": -208550.0,
+      "entry_price": 20.6865,
+      "mark_price": 0.0,
+      "unrealized_pnl": 842453.604692,
+      "position_value": 3471731.85,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:46.257281"
+    },
+    {
+      "coin": "XRP",
+      "size": -111907.0,
+      "entry_price": 2.63489,
+      "mark_price": 0.0,
+      "unrealized_pnl": 21317.228428,
+      "position_value": 273545.4708,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:46.257276"
+    },
+    {
+      "coin": "ADA",
+      "size": -326000.0,
+      "entry_price": 0.80631,
+      "mark_price": 0.0,
+      "unrealized_pnl": 15788.46192,
+      "position_value": 247068.88,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:46.257278"
+    },
+    {
+      "coin": "kPEPE",
+      "size": -10000.0,
+      "entry_price": 0.025256,
+      "mark_price": 0.0,
+      "unrealized_pnl": 172.86348,
+      "position_value": 79.7,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:46.257271"
+    }
+  ],
+  "total_position_value": 3992425.9008,
+  "total_unrealized_pnl": 879732.15852,
+  "account_value": 6723970.68,
+  "roi": 48.12,
+  "timestamp": "2025-03-25T15:16:46.257924"
+}

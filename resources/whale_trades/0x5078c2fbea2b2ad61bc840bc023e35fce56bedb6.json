@@ -1,0 +1,23 @@
+{
+  "address": "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
+  "positions": [
+    {
+      "coin": "kPEPE",
+      "size": 2767884362.0,
+      "entry_price": 0.007887,
+      "mark_price": 0.0,
+      "unrealized_pnl": 228066.939112,
+      "position_value": 22060038.36514,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-25T15:16:48.250445"
+    }
+  ],
+  "total_position_value": 22060038.36514,
+  "total_unrealized_pnl": 228066.939112,
+  "account_value": 5338687.93,
+  "roi": 14.76,
+  "timestamp": "2025-03-25T15:16:48.250494"
+}

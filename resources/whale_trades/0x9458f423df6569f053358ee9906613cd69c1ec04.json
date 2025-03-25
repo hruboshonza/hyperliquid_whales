@@ -1,0 +1,116 @@
+{
+  "address": "0x9458f423df6569f053358ee9906613cd69c1ec04",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": 31.85466,
+      "entry_price": 79344.6,
+      "mark_price": 0.0,
+      "unrealized_pnl": 268895.32932,
+      "position_value": 2796393.18276,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:45.972768"
+    },
+    {
+      "coin": "ETH",
+      "size": 229.2609,
+      "entry_price": 2182.13,
+      "mark_price": 0.0,
+      "unrealized_pnl": -26785.40448,
+      "position_value": 473492.53677,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:45.972775"
+    },
+    {
+      "coin": "REQ",
+      "size": -1012796.0,
+      "entry_price": 0.11103,
+      "mark_price": 0.0,
+      "unrealized_pnl": -3018.13208,
+      "position_value": 115468.87196,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:45.972787"
+    },
+    {
+      "coin": "HYPE",
+      "size": -5347.58,
+      "entry_price": 16.837,
+      "mark_price": 0.0,
+      "unrealized_pnl": 1016.06891,
+      "position_value": 89021.16426,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:45.972790"
+    },
+    {
+      "coin": "FTT",
+      "size": -66992.5,
+      "entry_price": 1.22,
+      "mark_price": 0.0,
+      "unrealized_pnl": 2974.467,
+      "position_value": 78756.383,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:45.972784"
+    },
+    {
+      "coin": "IP",
+      "size": -8441.2,
+      "entry_price": 5.30894,
+      "mark_price": 0.0,
+      "unrealized_pnl": -7040.447202,
+      "position_value": 51854.2916,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-25T15:16:45.972793"
+    },
+    {
+      "coin": "HPOS",
+      "size": 226211.0,
+      "entry_price": 0.054553,
+      "mark_price": 0.0,
+      "unrealized_pnl": 1259.315857,
+      "position_value": 13599.80532,
+      "leverage": {
+        "type": "isolated",
+        "value": 3,
+        "rawUsd": "-8259.849361"
+      },
+      "timestamp": "2025-03-25T15:16:45.972778"
+    },
+    {
+      "coin": "RLB",
+      "size": 35593.0,
+      "entry_price": 0.06633,
+      "mark_price": 0.0,
+      "unrealized_pnl": 821.699998,
+      "position_value": 3182.583688,
+      "leverage": {
+        "type": "isolated",
+        "value": 3,
+        "rawUsd": "-1680.711618"
+      },
+      "timestamp": "2025-03-25T15:16:45.972781"
+    }
+  ],
+  "total_position_value": 3621768.8193580005,
+  "total_unrealized_pnl": 238122.897323,
+  "account_value": 3929736.57,
+  "roi": 272.29,
+  "timestamp": "2025-03-25T15:16:45.976941"
+}

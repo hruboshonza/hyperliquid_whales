@@ -1,0 +1,49 @@
+{
+  "address": "0x7fe8cfe481ec2f702692a9152e3f002f3e417ac6",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": 100.0,
+      "entry_price": 87005.7,
+      "mark_price": 0.0,
+      "unrealized_pnl": 78027.586324,
+      "position_value": 8778600.0,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:46.255166"
+    },
+    {
+      "coin": "SOL",
+      "size": -10000.0,
+      "entry_price": 124.8942,
+      "mark_price": 0.0,
+      "unrealized_pnl": -210857.890331,
+      "position_value": 1459800.0,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-25T15:16:46.255193"
+    },
+    {
+      "coin": "ENA",
+      "size": 1500000.0,
+      "entry_price": 0.410761,
+      "mark_price": 0.0,
+      "unrealized_pnl": 29862.183079,
+      "position_value": 646005.0,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-25T15:16:46.255196"
+    }
+  ],
+  "total_position_value": 10884405.0,
+  "total_unrealized_pnl": -102968.120928,
+  "account_value": 5161585.3,
+  "roi": 68.28,
+  "timestamp": "2025-03-25T15:16:46.255336"
+}
