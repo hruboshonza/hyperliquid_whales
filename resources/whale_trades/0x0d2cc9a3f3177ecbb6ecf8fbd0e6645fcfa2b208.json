@@ -6,57 +6,57 @@
       "size": -395.2266,
       "entry_price": 2697.2,
       "mark_price": 0.0,
-      "unrealized_pnl": 249822.877621,
-      "position_value": 816182.45166,
+      "unrealized_pnl": 247609.608661,
+      "position_value": 818395.72062,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T15:16:50.218186"
+      "timestamp": "2025-03-25T16:48:03.833516"
     },
     {
       "coin": "HYPE",
       "size": -33819.3,
       "entry_price": 24.0881,
       "mark_price": 0.0,
-      "unrealized_pnl": 251723.443378,
-      "position_value": 562922.2485,
+      "unrealized_pnl": 252940.938178,
+      "position_value": 561704.7537,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:50.218212"
+      "timestamp": "2025-03-25T16:48:03.833527"
     },
     {
       "coin": "PURR",
       "size": -651841.0,
       "entry_price": 0.14946,
       "mark_price": 0.0,
-      "unrealized_pnl": 14073.24719,
-      "position_value": 83350.90867,
+      "unrealized_pnl": 12521.86561,
+      "position_value": 84902.29025,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:50.218208"
+      "timestamp": "2025-03-25T16:48:03.833525"
     },
     {
       "coin": "NIL",
       "size": -100000.0,
       "entry_price": 0.707941,
       "mark_price": 0.0,
-      "unrealized_pnl": 66.14672,
-      "position_value": 70728.0,
+      "unrealized_pnl": 3472.14672,
+      "position_value": 67322.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:50.218216"
+      "timestamp": "2025-03-25T16:48:03.833530"
     }
   ],
-  "total_position_value": 1533183.60883,
-  "total_unrealized_pnl": 515685.71490900003,
+  "total_position_value": 1532324.76457,
+  "total_unrealized_pnl": 516544.559169,
   "account_value": 1466059.06,
   "roi": 109.14,
-  "timestamp": "2025-03-25T15:16:50.218308"
+  "timestamp": "2025-03-25T16:48:03.833713"
 }

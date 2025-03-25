@@ -6,31 +6,31 @@
       "size": -52000.0,
       "entry_price": 24.443,
       "mark_price": 0.0,
-      "unrealized_pnl": 405396.155674,
-      "position_value": 865644.0,
+      "unrealized_pnl": 407164.155674,
+      "position_value": 863876.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:48.438016"
+      "timestamp": "2025-03-25T16:48:02.652456"
     },
     {
       "coin": "PENGU",
       "size": -894576.0,
       "entry_price": 0.022839,
       "mark_price": 0.0,
-      "unrealized_pnl": 14123.565888,
-      "position_value": 6307.655376,
+      "unrealized_pnl": 14130.722496,
+      "position_value": 6300.498768,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T15:16:48.438032"
+      "timestamp": "2025-03-25T16:48:02.652469"
     }
   ],
-  "total_position_value": 871951.655376,
-  "total_unrealized_pnl": 419519.721562,
+  "total_position_value": 870176.498768,
+  "total_unrealized_pnl": 421294.87817,
   "account_value": 2689447.28,
   "roi": 59.03,
-  "timestamp": "2025-03-25T15:16:48.438580"
+  "timestamp": "2025-03-25T16:48:02.652549"
 }

@@ -3,22 +3,22 @@
   "positions": [
     {
       "coin": "HYPE",
-      "size": -59768.59,
+      "size": -57847.82,
       "entry_price": 21.4573,
       "mark_price": 0.0,
-      "unrealized_pnl": 287508.960559,
-      "position_value": 994967.71773,
+      "unrealized_pnl": 280236.174332,
+      "position_value": 961025.83366,
       "leverage": {
         "type": "isolated",
         "value": 1,
-        "rawUsd": "2662495.238568"
+        "rawUsd": "2576914.737404"
       },
-      "timestamp": "2025-03-25T15:16:47.670524"
+      "timestamp": "2025-03-25T16:48:02.153524"
     }
   ],
-  "total_position_value": 994967.71773,
-  "total_unrealized_pnl": 287508.960559,
+  "total_position_value": 961025.83366,
+  "total_unrealized_pnl": 280236.174332,
   "account_value": 2783000.81,
   "roi": 44.72,
-  "timestamp": "2025-03-25T15:16:47.670574"
+  "timestamp": "2025-03-25T16:48:02.153563"
 }

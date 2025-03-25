@@ -6,57 +6,57 @@
       "size": -49830.43,
       "entry_price": 18.0342,
       "mark_price": 0.0,
-      "unrealized_pnl": 69127.545644,
-      "position_value": 829527.16821,
+      "unrealized_pnl": 70821.780264,
+      "position_value": 827832.93359,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:47.662895"
+      "timestamp": "2025-03-25T16:48:02.152093"
     },
     {
       "coin": "ETH",
       "size": -102.3805,
       "entry_price": 2010.19,
       "mark_price": 0.0,
-      "unrealized_pnl": -5641.942898,
-      "position_value": 211446.44665,
+      "unrealized_pnl": -6184.559548,
+      "position_value": 211989.0633,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T15:16:47.662877"
+      "timestamp": "2025-03-25T16:48:02.152077"
     },
     {
       "coin": "ENA",
       "size": -434813.0,
       "entry_price": 0.388043,
       "mark_price": 0.0,
-      "unrealized_pnl": -18534.526869,
-      "position_value": 187260.91471,
+      "unrealized_pnl": -20034.631719,
+      "position_value": 188761.01956,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T15:16:47.662891"
+      "timestamp": "2025-03-25T16:48:02.152090"
     },
     {
       "coin": "FARTCOIN",
       "size": 8835.4,
       "entry_price": 0.494,
       "mark_price": 0.0,
-      "unrealized_pnl": 602.397572,
-      "position_value": 4967.085172,
+      "unrealized_pnl": 622.8957,
+      "position_value": 4987.5833,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T15:16:47.662898"
+      "timestamp": "2025-03-25T16:48:02.152096"
     }
   ],
-  "total_position_value": 1233201.6147420001,
-  "total_unrealized_pnl": 45553.473449,
+  "total_position_value": 1233570.59975,
+  "total_unrealized_pnl": 45225.484697,
   "account_value": 1854167.6,
   "roi": 69.92,
-  "timestamp": "2025-03-25T15:16:47.662991"
+  "timestamp": "2025-03-25T16:48:02.152166"
 }

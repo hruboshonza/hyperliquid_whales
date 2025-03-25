@@ -14,9 +14,12 @@ from collections import defaultdict
 from dataclasses import dataclass
 from tabulate import tabulate
 
-
 # Add the parent directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from services.position_tracker import PositionTracker
+from hyperliquid.info import Info
+from hyperliquid.utils import constants as hl_constants
 
 @dataclass
 class AssetPosition:
@@ -38,14 +41,59 @@ class WhalePositionAnalyzer:
         self.processed_wallets = 0
         self.wallets_with_positions = 0
         self.MAX_WORKERS = 10  # Number of concurrent workers
+        self.info = Info(hl_constants.MAINNET_API_URL)
         
-    def process_whale_file(self, file_path: str) -> Dict:
-        """Process a single whale's position file."""
+    def get_all_positions(self, whale_address: str) -> List[Dict]:
+        """
+        Get all open positions for a whale address.
+        
+        Args:
+            whale_address (str): The whale address to get positions for
+            
+        Returns:
+            List[Dict]: List of all open positions
+        """
+        all_positions = []
+        
         try:
-            with open(file_path, 'r') as f:
-                whale_data = json.load(f)
-                
-            if not whale_data.get('positions'):
+            user_state = self.info.user_state(whale_address)
+            
+            if isinstance(user_state, dict) and 'assetPositions' in user_state:
+                for pos in user_state['assetPositions']:
+                    position_data = pos.get('position', {})
+                    coin = position_data.get('coin')
+                    size = float(position_data.get('szi', 0))
+                    
+                    if size != 0:  # Only include non-zero positions
+                        entry_price = float(position_data.get('entryPx', 0))
+                        mark_price = float(position_data.get('markPx', 0))
+                        position_value = float(position_data.get('positionValue', 0))
+                        unrealized_pnl = float(position_data.get('unrealizedPnl', 0))
+                        
+                        position = {
+                            'coin': coin,
+                            'size': size,
+                            'entry_price': entry_price,
+                            'mark_price': mark_price,
+                            'unrealized_pnl': unrealized_pnl,
+                            'position_value': position_value,
+                            'leverage': position_data.get('leverage', {'type': 'unknown', 'value': 0}),
+                            'timestamp': datetime.now().isoformat()
+                        }
+                        all_positions.append(position)
+                        
+            return all_positions
+            
+        except Exception as e:
+            print(f"Error getting positions for {whale_address}: {str(e)}")
+            return []
+            
+    def process_whale(self, whale_address: str) -> Dict:
+        """Process a single whale's positions."""
+        try:
+            positions = self.get_all_positions(whale_address)
+            
+            if not positions:
                 return {}
                 
             # Aggregate positions by asset
@@ -55,7 +103,7 @@ class WhalePositionAnalyzer:
             
             MIN_POSITION_VALUE = 100000  # Minimum position value to count
             
-            for position in whale_data['positions']:
+            for position in positions:
                 asset = position['coin']
                 size = position['size']
                 value = position['position_value']
@@ -76,7 +124,7 @@ class WhalePositionAnalyzer:
             return asset_positions
             
         except Exception as e:
-            print(f"Error processing file {file_path}: {str(e)}")
+            print(f"Error processing whale {whale_address}: {str(e)}")
             return {}
             
     def update_asset_positions(self, asset_positions: Dict):
@@ -127,28 +175,24 @@ class WhalePositionAnalyzer:
         """Analyze all whale positions using parallel processing."""
         start_time = datetime.now()
         
-        # Get list of all whale position files
-        whale_trades_dir = "resources/whale_trades"
-        if not os.path.exists(whale_trades_dir):
-            print(f"Error: Directory {whale_trades_dir} not found")
-            return
+        # Read active whales from JSON file
+        with open('resources/activeWhales.json', 'r') as f:
+            active_whales = json.load(f)
             
-        position_files = [f for f in os.listdir(whale_trades_dir) 
-                         if f.endswith('.json') and f != 'all_whale_trades.json']
+        whale_addresses = [whale['fullAddress'] for whale in active_whales['wallets']]
         
-        print(f"\nProcessing {len(position_files)} whale position files...")
+        print(f"\nProcessing {len(whale_addresses)} whale addresses...")
         print("Note: Only counting positions > $100,000 in value")
         
-        # Process files in parallel
+        # Process whales in parallel
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
-            future_to_file = {
-                executor.submit(self.process_whale_file, 
-                              os.path.join(whale_trades_dir, file)): file 
-                for file in position_files
+            future_to_whale = {
+                executor.submit(self.process_whale, address): address 
+                for address in whale_addresses
             }
             
-            for future in concurrent.futures.as_completed(future_to_file):
-                file = future_to_file[future]
+            for future in concurrent.futures.as_completed(future_to_whale):
+                address = future_to_whale[future]
                 try:
                     asset_positions = future.result()
                     if asset_positions:
@@ -156,7 +200,7 @@ class WhalePositionAnalyzer:
                         self.wallets_with_positions += 1
                     self.processed_wallets += 1
                 except Exception as e:
-                    print(f"Error processing {file}: {str(e)}")
+                    print(f"Error processing whale {address}: {str(e)}")
                     
         # Prepare data for display
         table_data = []
