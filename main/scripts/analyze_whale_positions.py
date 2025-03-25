@@ -89,6 +89,40 @@ class WhalePositionAnalyzer:
             self.asset_positions[asset].total_long_value += positions['long_value']
             self.asset_positions[asset].total_short_value += positions['short_value']
             
+    def display_top_positions(self):
+        """Display top 10 most longed and shorted assets by position value."""
+        # Sort assets by long value
+        sorted_longs = sorted(
+            self.asset_positions.items(),
+            key=lambda x: x[1].total_long_value,
+            reverse=True
+        )[:10]
+        
+        # Sort assets by short value
+        sorted_shorts = sorted(
+            self.asset_positions.items(),
+            key=lambda x: x[1].total_short_value,
+            reverse=True
+        )[:10]
+        
+        print("\nTop 10 Most Longed Assets (by position value)")
+        print("=" * 80)
+        long_data = [[asset, f"${pos.total_long_value:,.2f}", 
+                     f"{pos.total_long_size:,.2f}", pos.long_count] 
+                     for asset, pos in sorted_longs]
+        print(tabulate(long_data, 
+                      headers=['Asset', 'Total Long Value', 'Total Long Size', 'Number of Positions'],
+                      tablefmt='grid'))
+        
+        print("\nTop 10 Most Shorted Assets (by position value)")
+        print("=" * 80)
+        short_data = [[asset, f"${pos.total_short_value:,.2f}", 
+                      f"{pos.total_short_size:,.2f}", pos.short_count] 
+                      for asset, pos in sorted_shorts]
+        print(tabulate(short_data, 
+                      headers=['Asset', 'Total Short Value', 'Total Short Size', 'Number of Positions'],
+                      tablefmt='grid'))
+        
     def analyze_positions(self):
         """Analyze all whale positions using parallel processing."""
         start_time = datetime.now()
@@ -151,6 +185,9 @@ class WhalePositionAnalyzer:
                               'Total Long Size', 'Total Short Size',
                               'Total Long Value', 'Total Short Value'],
                       tablefmt='grid'))
+        
+        # Display top positions
+        self.display_top_positions()
         
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
