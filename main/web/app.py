@@ -10,6 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from scripts.analyze_whale_token_positions import WhaleTokenAnalyzer
 from scripts.show_whale_trades import WhaleTradeTracker
+from scripts.analyze_recent_whale_positions import RecentWhalePositionAnalyzer
 
 app = Flask(__name__)
 
@@ -97,6 +98,71 @@ def analyze():
             'positions': positions_data,
             'summary': summary,
             'token': token
+        })
+        
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@app.route('/recent_positions', methods=['GET'])
+def get_recent_positions():
+    try:
+        # Get the correct path to activeWhales.json
+        json_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 
+                                'resources', 'activeWhales.json')
+        
+        analyzer = RecentWhalePositionAnalyzer()
+        analyzer.analyze_positions()
+        
+        # Sort assets by new long value
+        sorted_longs = sorted(
+            analyzer.asset_positions.items(),
+            key=lambda x: x[1].total_new_long_value,
+            reverse=True
+        )[:10]
+        
+        # Sort assets by new short value
+        sorted_shorts = sorted(
+            analyzer.asset_positions.items(),
+            key=lambda x: x[1].total_new_short_value,
+            reverse=True
+        )[:10]
+        
+        # Calculate totals
+        total_new_long_positions = sum(pos.new_long_count for _, pos in analyzer.asset_positions.items())
+        total_new_short_positions = sum(pos.new_short_count for _, pos in analyzer.asset_positions.items())
+        total_closed_long_positions = sum(pos.closed_long_count for _, pos in analyzer.asset_positions.items())
+        total_closed_short_positions = sum(pos.closed_short_count for _, pos in analyzer.asset_positions.items())
+        
+        # Prepare data for the template
+        long_positions = [{
+            'asset': asset,
+            'value': f"${pos.total_new_long_value:,.2f}",
+            'size': f"{pos.total_new_long_size:,.2f}",
+            'new_count': pos.new_long_count,
+            'closed_count': pos.closed_long_count,
+            'whale_count': len(set(pos.whale_addresses))
+        } for asset, pos in sorted_longs]
+        
+        short_positions = [{
+            'asset': asset,
+            'value': f"${pos.total_new_short_value:,.2f}",
+            'size': f"{pos.total_new_short_size:,.2f}",
+            'new_count': pos.new_short_count,
+            'closed_count': pos.closed_short_count,
+            'whale_count': len(set(pos.whale_addresses))
+        } for asset, pos in sorted_shorts]
+        
+        summary = {
+            'total_new_long': total_new_long_positions,
+            'total_new_short': total_new_short_positions,
+            'total_closed_long': total_closed_long_positions,
+            'total_closed_short': total_closed_short_positions
+        }
+        
+        return jsonify({
+            'long_positions': long_positions,
+            'short_positions': short_positions,
+            'summary': summary
         })
         
     except Exception as e:

@@ -93,6 +93,9 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="trades-tab" data-bs-toggle="tab" data-bs-target="#trades" type="button" role="tab">Whale Trades</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="recent-positions-tab" data-bs-toggle="tab" data-bs-target="#recent-positions" type="button" role="tab">Recent Positions</button>
+            </li>
         </ul>
 
         <!-- Tab Content -->
@@ -173,6 +176,86 @@
                     <div class="card-body">
                         <h5 class="card-title">Whale Trades</h5>
                         <p>Whale trades functionality coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Positions Tab -->
+            <div class="tab-pane fade" id="recent-positions" role="tabpanel">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Whale Positions (Last 24h)</h5>
+                        <div class="mb-4">
+                            <button class="btn btn-primary" id="refreshRecentPositions">Refresh Data</button>
+                        </div>
+                        
+                        <div id="recentLoading" class="text-center d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        
+                        <div id="recentError" class="alert alert-danger d-none"></div>
+                        
+                        <div id="recentResults" class="d-none">
+                            <!-- Summary Section -->
+                            <div class="summary-card mb-4">
+                                <div class="summary-grid">
+                                    <div class="summary-item">
+                                        <h6>New Long Positions</h6>
+                                        <p id="totalNewLong">0</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>New Short Positions</h6>
+                                        <p id="totalNewShort">0</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Closed Long Positions</h6>
+                                        <p id="totalClosedLong">0</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Closed Short Positions</h6>
+                                        <p id="totalClosedShort">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Long Positions Table -->
+                            <h4 class="mb-3">Most Longed Assets</h4>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Asset</th>
+                                            <th>Total Value</th>
+                                            <th>Total Size</th>
+                                            <th>New Positions</th>
+                                            <th>Closed Positions</th>
+                                            <th>Number of Whales</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="longPositionsTable"></tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Short Positions Table -->
+                            <h4 class="mb-3">Most Shorted Assets</h4>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Asset</th>
+                                            <th>Total Value</th>
+                                            <th>Total Size</th>
+                                            <th>New Positions</th>
+                                            <th>Closed Positions</th>
+                                            <th>Number of Whales</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="shortPositionsTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -307,6 +390,81 @@
                 // Reorder the table
                 rows.forEach(row => tbody.appendChild(row));
             });
+        });
+
+        // Recent Positions Tab Functionality
+        document.getElementById('refreshRecentPositions').addEventListener('click', async () => {
+            const loading = document.getElementById('recentLoading');
+            const error = document.getElementById('recentError');
+            const results = document.getElementById('recentResults');
+            
+            loading.classList.remove('d-none');
+            error.classList.add('d-none');
+            results.classList.add('d-none');
+            
+            try {
+                const response = await fetch('/recent_positions');
+                const data = await response.json();
+                
+                if (data.error) {
+                    error.textContent = data.error;
+                    error.classList.remove('d-none');
+                    return;
+                }
+                
+                // Update summary
+                document.getElementById('totalNewLong').textContent = data.summary.total_new_long;
+                document.getElementById('totalNewShort').textContent = data.summary.total_new_short;
+                document.getElementById('totalClosedLong').textContent = data.summary.total_closed_long;
+                document.getElementById('totalClosedShort').textContent = data.summary.total_closed_short;
+                
+                // Update long positions table
+                const longTbody = document.getElementById('longPositionsTable');
+                longTbody.innerHTML = '';
+                
+                data.long_positions.forEach(pos => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${pos.asset}</td>
+                        <td class="text-success">${pos.value}</td>
+                        <td>${pos.size}</td>
+                        <td>${pos.new_count}</td>
+                        <td>${pos.closed_count}</td>
+                        <td>${pos.whale_count}</td>
+                    `;
+                    longTbody.appendChild(row);
+                });
+                
+                // Update short positions table
+                const shortTbody = document.getElementById('shortPositionsTable');
+                shortTbody.innerHTML = '';
+                
+                data.short_positions.forEach(pos => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${pos.asset}</td>
+                        <td class="text-danger">${pos.value}</td>
+                        <td>${pos.size}</td>
+                        <td>${pos.new_count}</td>
+                        <td>${pos.closed_count}</td>
+                        <td>${pos.whale_count}</td>
+                    `;
+                    shortTbody.appendChild(row);
+                });
+                
+                results.classList.remove('d-none');
+                
+            } catch (e) {
+                error.textContent = 'Error fetching recent positions data';
+                error.classList.remove('d-none');
+            } finally {
+                loading.classList.add('d-none');
+            }
+        });
+        
+        // Load recent positions data when tab is shown
+        document.getElementById('recent-positions-tab').addEventListener('shown.bs.tab', () => {
+            document.getElementById('refreshRecentPositions').click();
         });
     </script>
 </body>
