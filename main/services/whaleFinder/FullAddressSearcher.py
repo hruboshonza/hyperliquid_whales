@@ -11,12 +11,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import StaleElementReferenceException
 import time
 import os
 
 class FullAddressSearcher:
     # Maximum number of wallets to process before stopping
-    MAX_WALLETS_TO_PROCESS =2000
+    MAX_WALLETS_TO_PROCESS = 2000
     DATA_SAVE_FILE = "resources/activeWhales.json"
     DRAFT_DATA_LOAD_FILE = "resources/leaderboard_draft_data.json"
 
@@ -78,6 +79,10 @@ class FullAddressSearcher:
         if not self.driver:
             options = webdriver.ChromeOptions()
             options.add_argument('--headless')  # Run in headless mode
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-gpu')
+            options.add_argument('--window-size=1920,1080')
             self.driver = webdriver.Chrome(options=options)
             self.driver.get(self.LEADERBOARD_URL)
             time.sleep(2)  # Wait for page to load
@@ -163,6 +168,16 @@ class FullAddressSearcher:
             self.setup_driver()
             return True
 
+    def _get_element_text_safely(self, element, retries=3):
+        """Safely get text from an element with retries."""
+        for _ in range(retries):
+            try:
+                return element.text.strip()
+            except StaleElementReferenceException:
+                time.sleep(0.5)
+                continue
+        return ""
+
     def search_wallet(self, wallet_prefix: str) -> Optional[Dict]:
         """Search for a wallet and return its details if found."""
         try:
@@ -171,10 +186,10 @@ class FullAddressSearcher:
             
             # Always go back to the main leaderboard page first
             self.driver.get(self.LEADERBOARD_URL)
-            time.sleep(1)  # Wait for page load
+            time.sleep(2)  # Wait for page load
             
             # Find and interact with search input
-            search_input = WebDriverWait(self.driver, 3).until(
+            search_input = WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "input[placeholder='Search by wallet address...']"))
             )
             
@@ -186,10 +201,22 @@ class FullAddressSearcher:
             # Enter new search term
             search_input.send_keys(wallet_prefix)
             search_input.send_keys(Keys.RETURN)
-            time.sleep(1)  # Wait for search results
+            time.sleep(2)  # Wait for search results
             
-            # Find all matching rows
-            rows = self.driver.find_elements(By.CSS_SELECTOR, "tbody tr")
+            # Find all matching rows with retry
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    rows = WebDriverWait(self.driver, 5).until(
+                        EC.presence_of_all_elements_located((By.CSS_SELECTOR, "tbody tr"))
+                    )
+                    break
+                except Exception as e:
+                    if attempt == max_retries - 1:
+                        print(f"❌ No matches found after {max_retries} attempts")
+                        return None
+                    time.sleep(1)
+
             if not rows:
                 print("❌ No matches found")
                 return None
@@ -200,108 +227,123 @@ class FullAddressSearcher:
             current_url = self.driver.current_url
 
             for row in rows:
-                cells = row.find_elements(By.TAG_NAME, "td")
-                if len(cells) >= 4:  # Make sure we have enough cells
-                    try:
-                        # Get trader name/address from first column
-                        trader = cells[1].text.strip()
-                        
-                        # Get account value from the second column
-                        account_value_text = cells[2].text.strip().replace('$', '').replace(',', '')
-                        account_value = float(account_value_text)
-                        
-                        # Get ROI from the fourth column
-                        roi_text = cells[4].text.strip().replace('%', '').replace(',', '.')
-                        roi = float(roi_text)
-                        
-                        # Get volume from the third column
-                        volume_text = cells[3].text.strip().replace('$', '').replace(',', '')
-                        volume = float(volume_text)
-                        
-                        # Check if meets minimum requirements
-                        if account_value >= 300000 and roi >= 10:
-                            # For custom names, check exact match
-                            if '...' not in wallet_prefix and wallet_prefix == trader:
-                                # Click on the row to get full address
-                                self.driver.execute_script("arguments[0].click();", cells[1])
-                                time.sleep(1)  # Wait for navigation
-                                
-                                # Get the full address from URL
-                                full_address = self.driver.current_url.split('/')[-1]
-                                
-                                # Go back to the leaderboard
-                                self.driver.get(current_url)
-                                time.sleep(1)  # Wait for navigation back
-                                
-                                return {
-                                    'fullAddress': full_address,
-                                    'accountValue': account_value,
-                                    'roi': roi
-                                }
-                            # For addresses, check if prefix matches
-                            elif '...' in trader and trader.startswith(wallet_prefix):
-                                # Click on the row to get full address
-                                self.driver.execute_script("arguments[0].click();", cells[1])
-                                time.sleep(1)  # Wait for navigation
-                                
-                                # Get the full address from URL
-                                full_address = self.driver.current_url.split('/')[-1]
-                                
-                                # Go back to the leaderboard
-                                self.driver.get(current_url)
-                                time.sleep(1)  # Wait for navigation back
-                                
-                                return {
-                                    'fullAddress': full_address,
-                                    'accountValue': account_value,
-                                    'roi': roi
-                                }
-                                
-                    except (ValueError, IndexError) as e:
+                try:
+                    # Re-find cells to avoid stale elements
+                    cells = row.find_elements(By.TAG_NAME, "td")
+                    if len(cells) < 4:
                         continue
 
-            print("❌ No matches met criteria")
+                    # Get trader name/address from first column
+                    trader = self._get_element_text_safely(cells[1])
+                    if not trader:
+                        continue
+                    
+                    # Get account value from the second column
+                    account_value_text = self._get_element_text_safely(cells[2])
+                    account_value_text = account_value_text.replace('$', '').replace(',', '')
+                    try:
+                        account_value = float(account_value_text)
+                    except ValueError:
+                        continue
+                    
+                    # Get ROI from the fourth column
+                    roi_text = self._get_element_text_safely(cells[4])
+                    roi_text = roi_text.replace('%', '').replace(',', '.')
+                    try:
+                        roi = float(roi_text)
+                    except ValueError:
+                        continue
+                    
+                    # Get volume from the third column
+                    volume_text = self._get_element_text_safely(cells[3])
+                    volume_text = volume_text.replace('$', '').replace(',', '')
+                    try:
+                        volume = float(volume_text)
+                    except ValueError:
+                        continue
+                    
+                    # Check if meets minimum requirements
+                    if account_value >= 300000 and roi >= 10:
+                        # For custom names, check exact match
+                        if '...' not in wallet_prefix and wallet_prefix == trader:
+                            # Click on the row to get full address
+                            self.driver.execute_script("arguments[0].click();", cells[1])
+                            time.sleep(2)  # Wait for navigation
+                            
+                            # Get the full address from URL
+                            full_address = self.driver.current_url.split('/')[-1]
+                            
+                            # Go back to the leaderboard
+                            self.driver.get(current_url)
+                            time.sleep(2)  # Wait for navigation back
+                            
+                            return {
+                                'fullAddress': full_address,
+                                'accountValue': account_value,
+                                'roi': roi,
+                                'volume': volume
+                            }
+                        # For addresses, check if prefix matches
+                        elif '...' in trader and trader.startswith(wallet_prefix):
+                            # Click on the row to get full address
+                            self.driver.execute_script("arguments[0].click();", cells[1])
+                            time.sleep(2)  # Wait for navigation
+                            
+                            # Get the full address from URL
+                            full_address = self.driver.current_url.split('/')[-1]
+                            
+                            # Go back to the leaderboard
+                            self.driver.get(current_url)
+                            time.sleep(2)  # Wait for navigation back
+                            
+                            return {
+                                'fullAddress': full_address,
+                                'accountValue': account_value,
+                                'roi': roi,
+                                'volume': volume
+                            }
+                except StaleElementReferenceException:
+                    print("❌ Stale element encountered, skipping row")
+                    continue
+                except Exception as e:
+                    print(f"❌ Error processing row: {e}")
+                    continue
+
             return None
 
         except Exception as e:
-            print(f"❌ Error: {str(e)}")
+            print(f"❌ Error in search_wallet: {e}")
             return None
-        finally:
-            # Always go back to the main page after search
-            try:
-                self.driver.get(self.LEADERBOARD_URL)
-                time.sleep(2)
-            except:
-                pass
 
     def process_wallets(self):
         """Process all wallets from the leaderboard data."""
-        try:
-            self.setup_driver()
-            
-            for trader_data in self.leaderboard_data:
-                # Check if we've reached the processing limit
-                if len(self.processed_wallets) >= self.MAX_WALLETS_TO_PROCESS:
-                    print(f"\n✋ Reached limit of {self.MAX_WALLETS_TO_PROCESS} wallets")
-                    break
-                    
-                wallet = trader_data['trader']
-                wallet_prefix = self._extract_wallet_prefix(wallet)
-                
-                print(f"\n📝 Processing: {wallet_prefix}")
-                
-                # Search for the wallet
-                result = self.search_wallet(wallet_prefix)
-                
-                if result:
-                    self._save_wallet_details(result)
-                    self.processed_wallets.append(result)
-                    print(f"✅ Success: {result['fullAddress']} (${result['accountValue']:,.2f}, ROI: {result['roi']}%)")
-                else:
-                    print(f"❌ Failed: {wallet_prefix}")
+        if not self.leaderboard_data:
+            print("No leaderboard data to process")
+            return
 
-        except Exception as e:
-            print(f"❌ Error: {str(e)}")
+        self.setup_driver()
+        try:
+            for wallet in self.leaderboard_data:
+                try:
+                    trader = wallet.get('trader')
+                    if not trader:
+                        continue
+
+                    print(f"\n📝 Processing: {trader}")
+                    wallet_prefix = self._extract_wallet_prefix(trader)
+                    
+                    wallet_details = self.search_wallet(wallet_prefix)
+                    if wallet_details:
+                        self.processed_wallets.append(wallet_details)
+                        self._save_wallet_details(wallet_details)
+                        print(f"✅ Successfully processed wallet: {wallet_details['fullAddress']}")
+                    else:
+                        print(f"❌ Failed to process wallet: {trader}")
+
+                except Exception as e:
+                    print(f"❌ Error processing wallet {trader}: {e}")
+                    continue
+
         finally:
             if self.driver:
                 self.driver.quit()
