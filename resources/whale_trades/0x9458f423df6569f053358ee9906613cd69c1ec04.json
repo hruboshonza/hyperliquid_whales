@@ -6,111 +6,111 @@
       "size": 31.85466,
       "entry_price": 79344.6,
       "mark_price": 0.0,
-      "unrealized_pnl": 273832.80162,
-      "position_value": 2801330.65506,
+      "unrealized_pnl": 272080.79532,
+      "position_value": 2799578.64876,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:00.993649"
+      "timestamp": "2025-03-26T10:48:04.807630"
     },
     {
       "coin": "ETH",
       "size": 229.2609,
       "entry_price": 2182.13,
       "mark_price": 0.0,
-      "unrealized_pnl": -24882.53901,
-      "position_value": 475395.40224,
+      "unrealized_pnl": -27840.00462,
+      "position_value": 472437.93663,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:00.993669"
+      "timestamp": "2025-03-26T10:48:04.807638"
     },
     {
       "coin": "REQ",
-      "size": -1012796.0,
+      "size": -951255.0,
       "entry_price": 0.11103,
       "mark_price": 0.0,
-      "unrealized_pnl": -3301.71496,
-      "position_value": 115752.45484,
+      "unrealized_pnl": -2939.37795,
+      "position_value": 108557.2206,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:00.993686"
+      "timestamp": "2025-03-26T10:48:04.807655"
     },
     {
       "coin": "HYPE",
       "size": -5347.58,
       "entry_price": 16.837,
       "mark_price": 0.0,
-      "unrealized_pnl": 3331.57105,
-      "position_value": 86705.66212,
+      "unrealized_pnl": 4256.70239,
+      "position_value": 85780.53078,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:00.993690"
+      "timestamp": "2025-03-26T10:48:04.807659"
     },
     {
       "coin": "FTT",
       "size": -66992.5,
       "entry_price": 1.22,
       "mark_price": 0.0,
-      "unrealized_pnl": 1942.7825,
-      "position_value": 79788.0675,
+      "unrealized_pnl": 2887.37675,
+      "position_value": 78843.47325,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:00.993682"
+      "timestamp": "2025-03-26T10:48:04.807651"
     },
     {
       "coin": "IP",
       "size": -8441.2,
       "entry_price": 5.30894,
       "mark_price": 0.0,
-      "unrealized_pnl": -6407.357202,
-      "position_value": 51221.2016,
+      "unrealized_pnl": -7509.777922,
+      "position_value": 52323.62232,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:00.993694"
+      "timestamp": "2025-03-26T10:48:04.807663"
     },
     {
       "coin": "HPOS",
       "size": 226211.0,
       "entry_price": 0.054553,
       "mark_price": 0.0,
-      "unrealized_pnl": 1851.083833,
-      "position_value": 14191.573296,
+      "unrealized_pnl": 1548.639726,
+      "position_value": 13889.129189,
       "leverage": {
         "type": "isolated",
         "value": 3,
-        "rawUsd": "-8260.546748"
+        "rawUsd": "-8263.136205"
       },
-      "timestamp": "2025-03-25T19:12:00.993674"
+      "timestamp": "2025-03-26T10:48:04.807643"
     },
     {
       "coin": "RLB",
       "size": 35593.0,
       "entry_price": 0.06633,
       "mark_price": 0.0,
-      "unrealized_pnl": 777.315527,
-      "position_value": 3138.199217,
+      "unrealized_pnl": 796.21541,
+      "position_value": 3157.0991,
       "leverage": {
         "type": "isolated",
         "value": 3,
-        "rawUsd": "-1680.871397"
+        "rawUsd": "-1681.464651"
       },
-      "timestamp": "2025-03-25T19:12:00.993678"
+      "timestamp": "2025-03-26T10:48:04.807647"
     }
   ],
-  "total_position_value": 3627523.2158729993,
-  "total_unrealized_pnl": 247143.94335799996,
-  "account_value": 3929736.57,
-  "roi": 272.29,
-  "timestamp": "2025-03-25T19:12:00.993842"
+  "total_position_value": 3614567.660629,
+  "total_unrealized_pnl": 243280.56910399997,
+  "account_value": 4226785.74,
+  "roi": 131.11,
+  "timestamp": "2025-03-26T10:48:04.814596"
 }

@@ -1,0 +1,101 @@
+{
+  "address": "0x4174579ea2143c6ce23fc33b3f4b6ba9224bf572",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": 34.12638,
+      "entry_price": 87926.7,
+      "mark_price": 0.0,
+      "unrealized_pnl": -1391.07589,
+      "position_value": 2999231.03268,
+      "leverage": {
+        "type": "cross",
+        "value": 25
+      },
+      "timestamp": "2025-03-26T10:48:08.112939"
+    },
+    {
+      "coin": "SOL",
+      "size": 17352.06,
+      "entry_price": 144.1265,
+      "mark_price": 0.0,
+      "unrealized_pnl": -4799.228,
+      "position_value": 2496093.831,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.112952"
+    },
+    {
+      "coin": "TAO",
+      "size": 7822.474,
+      "entry_price": 270.029,
+      "mark_price": 0.0,
+      "unrealized_pnl": 49910.46599,
+      "position_value": 2162210.03834,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.112965"
+    },
+    {
+      "coin": "ENA",
+      "size": 3370775.0,
+      "entry_price": 0.410817,
+      "mark_price": 0.0,
+      "unrealized_pnl": 49490.253486,
+      "position_value": 1434264.7625,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.112968"
+    },
+    {
+      "coin": "ONDO",
+      "size": 1437715.0,
+      "entry_price": 0.909544,
+      "mark_price": 0.0,
+      "unrealized_pnl": 55906.520028,
+      "position_value": 1363572.03745,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.112962"
+    },
+    {
+      "coin": "JUP",
+      "size": 1329347.0,
+      "entry_price": 0.564644,
+      "mark_price": 0.0,
+      "unrealized_pnl": 5298.09364,
+      "position_value": 755906.58461,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.112956"
+    },
+    {
+      "coin": "JTO",
+      "size": 219589.0,
+      "entry_price": 2.281374,
+      "mark_price": 0.0,
+      "unrealized_pnl": 44713.998,
+      "position_value": 545678.665,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.112959"
+    }
+  ],
+  "total_position_value": 11756956.95158,
+  "total_unrealized_pnl": 199129.027254,
+  "account_value": 2324197.12,
+  "roi": 80.7,
+  "timestamp": "2025-03-26T10:48:08.113089"
+}

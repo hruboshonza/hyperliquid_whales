@@ -1,0 +1,75 @@
+{
+  "address": "0x7625dc67deab1864570ad816f59a9b867f280e49",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": -36.83043,
+      "entry_price": 82294.6,
+      "mark_price": 0.0,
+      "unrealized_pnl": -205930.718406,
+      "position_value": 3236879.17098,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-03-26T10:48:08.514986"
+    },
+    {
+      "coin": "HYPE",
+      "size": -16500.0,
+      "entry_price": 21.2,
+      "mark_price": 0.0,
+      "unrealized_pnl": 85156.745143,
+      "position_value": 264643.5,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.515004"
+    },
+    {
+      "coin": "NIL",
+      "size": -242270.0,
+      "entry_price": 0.806103,
+      "mark_price": 0.0,
+      "unrealized_pnl": 41743.89075,
+      "position_value": 153550.726,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.515007"
+    },
+    {
+      "coin": "ENA",
+      "size": -52500.0,
+      "entry_price": 1.0904,
+      "mark_price": 0.0,
+      "unrealized_pnl": 34907.25,
+      "position_value": 22338.75,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.515001"
+    },
+    {
+      "coin": "DOGE",
+      "size": -100000.0,
+      "entry_price": 0.423296,
+      "mark_price": 0.0,
+      "unrealized_pnl": 21916.65404,
+      "position_value": 20413.0,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.514998"
+    }
+  ],
+  "total_position_value": 3697825.1469799997,
+  "total_unrealized_pnl": -22206.178473,
+  "account_value": 1176133.85,
+  "roi": 37.51,
+  "timestamp": "2025-03-26T10:48:08.515082"
+}

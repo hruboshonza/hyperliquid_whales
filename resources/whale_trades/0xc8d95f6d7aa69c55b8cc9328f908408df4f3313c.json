@@ -1,0 +1,62 @@
+{
+  "address": "0xc8d95f6d7aa69c55b8cc9328f908408df4f3313c",
+  "positions": [
+    {
+      "coin": "kPEPE",
+      "size": -190711096.0,
+      "entry_price": 0.007949,
+      "mark_price": 0.0,
+      "unrealized_pnl": -167934.640861,
+      "position_value": 1683978.97768,
+      "leverage": {
+        "type": "cross",
+        "value": 4
+      },
+      "timestamp": "2025-03-26T10:48:08.422344"
+    },
+    {
+      "coin": "NIL",
+      "size": -889444.0,
+      "entry_price": 0.817762,
+      "mark_price": 0.0,
+      "unrealized_pnl": 163624.44909,
+      "position_value": 563729.6072,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.422358"
+    },
+    {
+      "coin": "MOVE",
+      "size": -900336.0,
+      "entry_price": 0.532586,
+      "mark_price": 0.0,
+      "unrealized_pnl": -8673.81197,
+      "position_value": 488180.18592,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.422351"
+    },
+    {
+      "coin": "OM",
+      "size": -7384.0,
+      "entry_price": 6.72902,
+      "mark_price": 0.0,
+      "unrealized_pnl": -292.983599,
+      "position_value": 49980.0808,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.422355"
+    }
+  ],
+  "total_position_value": 2785868.8516,
+  "total_unrealized_pnl": -13276.987339999983,
+  "account_value": 2991381.83,
+  "roi": 20.51,
+  "timestamp": "2025-03-26T10:48:08.424838"
+}

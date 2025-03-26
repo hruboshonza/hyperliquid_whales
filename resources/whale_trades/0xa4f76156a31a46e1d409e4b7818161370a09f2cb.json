@@ -1,0 +1,75 @@
+{
+  "address": "0xa4f76156a31a46e1d409e4b7818161370a09f2cb",
+  "positions": [
+    {
+      "coin": "ETH",
+      "size": 1339.7171,
+      "entry_price": 1870.32,
+      "mark_price": 0.0,
+      "unrealized_pnl": 254506.27843,
+      "position_value": 2760219.14113,
+      "leverage": {
+        "type": "cross",
+        "value": 25
+      },
+      "timestamp": "2025-03-26T10:48:08.552387"
+    },
+    {
+      "coin": "BTC",
+      "size": 25.0462,
+      "entry_price": 79859.5,
+      "mark_price": 0.0,
+      "unrealized_pnl": 201031.31157,
+      "position_value": 2201210.3332,
+      "leverage": {
+        "type": "cross",
+        "value": 40
+      },
+      "timestamp": "2025-03-26T10:48:08.552376"
+    },
+    {
+      "coin": "MKR",
+      "size": 442.59,
+      "entry_price": 1126.73,
+      "mark_price": 0.0,
+      "unrealized_pnl": 91025.19909,
+      "position_value": 589706.916,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.552393"
+    },
+    {
+      "coin": "AAVE",
+      "size": 2553.35,
+      "entry_price": 180.5549,
+      "mark_price": 0.0,
+      "unrealized_pnl": 16073.4539,
+      "position_value": 477093.4475,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.552390"
+    },
+    {
+      "coin": "ENA",
+      "size": 580988.0,
+      "entry_price": 0.430815,
+      "mark_price": 0.0,
+      "unrealized_pnl": -3087.98644,
+      "position_value": 247210.394,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-03-26T10:48:08.552396"
+    }
+  ],
+  "total_position_value": 6275440.231830001,
+  "total_unrealized_pnl": 559548.2565499999,
+  "account_value": 1562314.53,
+  "roi": 56.22,
+  "timestamp": "2025-03-26T10:48:08.553046"
+}

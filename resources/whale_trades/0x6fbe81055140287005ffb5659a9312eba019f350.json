@@ -1,0 +1,49 @@
+{
+  "address": "0x6fbe81055140287005ffb5659a9312eba019f350",
+  "positions": [
+    {
+      "coin": "SOL",
+      "size": 3559.01,
+      "entry_price": 140.4746,
+      "mark_price": 0.0,
+      "unrealized_pnl": 12012.7705,
+      "position_value": 511963.5885,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-03-26T10:48:08.419605"
+    },
+    {
+      "coin": "kPEPE",
+      "size": 32765420.0,
+      "entry_price": 0.007527,
+      "mark_price": 0.0,
+      "unrealized_pnl": 42672.815947,
+      "position_value": 289318.6586,
+      "leverage": {
+        "type": "cross",
+        "value": 4
+      },
+      "timestamp": "2025-03-26T10:48:08.419618"
+    },
+    {
+      "coin": "GRASS",
+      "size": -1839.9,
+      "entry_price": 1.599,
+      "mark_price": 0.0,
+      "unrealized_pnl": -1.47192,
+      "position_value": 2943.47202,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.419621"
+    }
+  ],
+  "total_position_value": 804225.71912,
+  "total_unrealized_pnl": 54684.114527,
+  "account_value": 1910186.28,
+  "roi": 36.41,
+  "timestamp": "2025-03-26T10:48:08.419690"
+}

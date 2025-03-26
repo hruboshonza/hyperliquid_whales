@@ -1,0 +1,23 @@
+{
+  "address": "0x99460c6b44fd9d93528b3b6e3365793acb40bb46",
+  "positions": [
+    {
+      "coin": "FARTCOIN",
+      "size": 1337000.0,
+      "entry_price": 0.36458,
+      "mark_price": 0.0,
+      "unrealized_pnl": 330742.318129,
+      "position_value": 818190.52,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.696268"
+    }
+  ],
+  "total_position_value": 818190.52,
+  "total_unrealized_pnl": 330742.318129,
+  "account_value": 1258724.63,
+  "roi": 187.87,
+  "timestamp": "2025-03-26T10:48:08.696385"
+}

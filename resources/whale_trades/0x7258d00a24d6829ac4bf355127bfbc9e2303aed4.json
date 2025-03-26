@@ -1,0 +1,49 @@
+{
+  "address": "0x7258d00a24d6829ac4bf355127bfbc9e2303aed4",
+  "positions": [
+    {
+      "coin": "ETH",
+      "size": -600.0,
+      "entry_price": 2053.68,
+      "mark_price": 0.0,
+      "unrealized_pnl": -3971.63649,
+      "position_value": 1236180.0,
+      "leverage": {
+        "type": "cross",
+        "value": 25
+      },
+      "timestamp": "2025-03-26T10:48:08.124068"
+    },
+    {
+      "coin": "HYPE",
+      "size": -35315.61,
+      "entry_price": 15.8463,
+      "mark_price": 0.0,
+      "unrealized_pnl": -6802.14504,
+      "position_value": 566427.06879,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.124072"
+    },
+    {
+      "coin": "BTC",
+      "size": -5.0,
+      "entry_price": 87150.2,
+      "mark_price": 0.0,
+      "unrealized_pnl": -3678.98217,
+      "position_value": 439430.0,
+      "leverage": {
+        "type": "cross",
+        "value": 40
+      },
+      "timestamp": "2025-03-26T10:48:08.124059"
+    }
+  ],
+  "total_position_value": 2242037.06879,
+  "total_unrealized_pnl": -14452.7637,
+  "account_value": 349913.29,
+  "roi": 100.61,
+  "timestamp": "2025-03-26T10:48:08.124132"
+}

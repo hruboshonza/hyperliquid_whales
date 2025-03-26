@@ -1,0 +1,36 @@
+{
+  "address": "0x8835b0975f734ad00e577cd45d686b4d9319457d",
+  "positions": [
+    {
+      "coin": "NIL",
+      "size": -660563.0,
+      "entry_price": 0.811528,
+      "mark_price": 0.0,
+      "unrealized_pnl": 117400.544,
+      "position_value": 418664.8294,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.421656"
+    },
+    {
+      "coin": "HYPE",
+      "size": -4293.02,
+      "entry_price": 16.9455,
+      "mark_price": 0.0,
+      "unrealized_pnl": 3891.819818,
+      "position_value": 68855.74778,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.421650"
+    }
+  ],
+  "total_position_value": 487520.57718,
+  "total_unrealized_pnl": 121292.363818,
+  "account_value": 640703.87,
+  "roi": 19.81,
+  "timestamp": "2025-03-26T10:48:08.423883"
+}

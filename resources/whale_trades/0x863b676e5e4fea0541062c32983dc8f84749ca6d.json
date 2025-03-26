@@ -6,70 +6,70 @@
       "size": 14317.92,
       "entry_price": 140.8728,
       "mark_price": 0.0,
-      "unrealized_pnl": 64962.1327,
-      "position_value": 2081968.7472,
+      "unrealized_pnl": 42769.3567,
+      "position_value": 2059775.9712,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:01.032100"
+      "timestamp": "2025-03-26T10:48:04.782840"
     },
     {
       "coin": "BTC",
       "size": 23.07856,
       "entry_price": 86810.3,
       "mark_price": 0.0,
-      "unrealized_pnl": 26094.64195,
-      "position_value": 2029551.64496,
+      "unrealized_pnl": 24825.32115,
+      "position_value": 2028282.32416,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:01.032090"
+      "timestamp": "2025-03-26T10:48:04.782811"
     },
     {
       "coin": "ETH",
       "size": 974.8726,
       "entry_price": 2062.01,
       "mark_price": 0.0,
-      "unrealized_pnl": 11298.23322,
-      "position_value": 2021495.82336,
+      "unrealized_pnl": -1277.62332,
+      "position_value": 2008919.96682,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:01.032096"
+      "timestamp": "2025-03-26T10:48:04.782832"
     },
     {
       "coin": "AVAX",
       "size": 69027.4,
       "entry_price": 21.972,
       "mark_price": 0.0,
-      "unrealized_pnl": 64258.52695,
-      "position_value": 1580934.5422,
+      "unrealized_pnl": 48796.38935,
+      "position_value": 1565472.4046,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T19:12:01.032103"
+      "timestamp": "2025-03-26T10:48:04.782848"
     },
     {
       "coin": "S",
       "size": 2419821.0,
       "entry_price": 0.627558,
       "mark_price": 0.0,
-      "unrealized_pnl": -23589.26664,
-      "position_value": 1494989.61201,
+      "unrealized_pnl": -10836.80997,
+      "position_value": 1507742.06868,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-25T19:12:01.032107"
+      "timestamp": "2025-03-26T10:48:04.782855"
     }
   ],
-  "total_position_value": 9208940.36973,
-  "total_unrealized_pnl": 143024.26818,
-  "account_value": 876688.01,
-  "roi": 148.29,
-  "timestamp": "2025-03-25T19:12:01.032209"
+  "total_position_value": 9170192.73546,
+  "total_unrealized_pnl": 104276.63390999999,
+  "account_value": 886057.25,
+  "roi": 203.26,
+  "timestamp": "2025-03-26T10:48:04.784296"
 }

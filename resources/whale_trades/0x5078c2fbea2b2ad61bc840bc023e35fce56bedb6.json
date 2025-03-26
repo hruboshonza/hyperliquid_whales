@@ -3,21 +3,21 @@
   "positions": [
     {
       "coin": "kPEPE",
-      "size": 2767884362.0,
-      "entry_price": 0.007887,
+      "size": 3007389439.0,
+      "entry_price": 0.007911,
       "mark_price": 0.0,
-      "unrealized_pnl": 455033.456796,
-      "position_value": 22287004.882824,
+      "unrealized_pnl": 2761562.466517,
+      "position_value": 26555248.74637,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T19:12:02.523579"
+      "timestamp": "2025-03-26T10:48:06.246351"
     }
   ],
-  "total_position_value": 22287004.882824,
-  "total_unrealized_pnl": 455033.456796,
-  "account_value": 5338687.93,
-  "roi": 14.76,
-  "timestamp": "2025-03-25T19:12:02.523715"
+  "total_position_value": 26555248.74637,
+  "total_unrealized_pnl": 2761562.466517,
+  "account_value": 5974793.17,
+  "roi": 39.18,
+  "timestamp": "2025-03-26T10:48:06.247057"
 }

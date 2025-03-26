@@ -6,57 +6,57 @@
       "size": -42000.0,
       "entry_price": 21.3243,
       "mark_price": 0.0,
-      "unrealized_pnl": 214676.634149,
-      "position_value": 680946.0,
+      "unrealized_pnl": 221984.634149,
+      "position_value": 673638.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:02.121897"
+      "timestamp": "2025-03-26T10:48:05.927227"
     },
     {
       "coin": "MKR",
       "size": -110.0,
       "entry_price": 1495.17,
       "mark_price": 0.0,
-      "unrealized_pnl": 24285.736542,
-      "position_value": 140184.0,
+      "unrealized_pnl": 17905.736542,
+      "position_value": 146564.0,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T19:12:02.121888"
+      "timestamp": "2025-03-26T10:48:05.927223"
     },
     {
       "coin": "ETH",
       "size": -45.0,
       "entry_price": 3236.75,
       "mark_price": 0.0,
-      "unrealized_pnl": 52346.36842,
-      "position_value": 93307.5,
+      "unrealized_pnl": 52940.36842,
+      "position_value": 92713.5,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-25T19:12:02.121877"
+      "timestamp": "2025-03-26T10:48:05.927219"
     },
     {
       "coin": "PURR",
       "size": -525000.0,
       "entry_price": 0.38522,
       "mark_price": 0.0,
-      "unrealized_pnl": 134505.522869,
-      "position_value": 67735.5,
+      "unrealized_pnl": 135844.272869,
+      "position_value": 66396.75,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:02.121892"
+      "timestamp": "2025-03-26T10:48:05.927225"
     }
   ],
-  "total_position_value": 982173.0,
-  "total_unrealized_pnl": 425814.26197999995,
-  "account_value": 1337574.98,
-  "roi": 85.28,
-  "timestamp": "2025-03-25T19:12:02.122481"
+  "total_position_value": 979312.25,
+  "total_unrealized_pnl": 428675.01197999995,
+  "account_value": 1526302.4,
+  "roi": 67.84,
+  "timestamp": "2025-03-26T10:48:05.927268"
 }

@@ -1,0 +1,36 @@
+{
+  "address": "0x43696620c4d433eca1361eb9722cc3098c184a13",
+  "positions": [
+    {
+      "coin": "BTC",
+      "size": -36.31925,
+      "entry_price": 84184.0,
+      "mark_price": 0.0,
+      "unrealized_pnl": -134452.49337,
+      "position_value": 3191953.6055,
+      "leverage": {
+        "type": "cross",
+        "value": 40
+      },
+      "timestamp": "2025-03-26T10:48:08.702138"
+    },
+    {
+      "coin": "HYPE",
+      "size": 1.0,
+      "entry_price": 23.405,
+      "mark_price": 0.0,
+      "unrealized_pnl": -7.366,
+      "position_value": 16.039,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-03-26T10:48:08.702160"
+    }
+  ],
+  "total_position_value": 3191969.6445,
+  "total_unrealized_pnl": -134459.85937000002,
+  "account_value": 888334.8,
+  "roi": 63.02,
+  "timestamp": "2025-03-26T10:48:08.702339"
+}

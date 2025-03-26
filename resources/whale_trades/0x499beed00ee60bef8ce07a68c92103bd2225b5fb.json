@@ -6,31 +6,31 @@
       "size": 127669.2,
       "entry_price": 3.72837,
       "mark_price": 0.0,
-      "unrealized_pnl": 298697.908546,
-      "position_value": 774696.7056,
+      "unrealized_pnl": 315371.506066,
+      "position_value": 791370.30312,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-25T19:12:00.588048"
+      "timestamp": "2025-03-26T10:48:04.515860"
     },
     {
       "coin": "TRUMP",
       "size": -50000.6,
       "entry_price": 12.00585,
       "mark_price": 0.0,
-      "unrealized_pnl": 19892.837831,
-      "position_value": 580406.9648,
+      "unrealized_pnl": 10492.725031,
+      "position_value": 589807.0776,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-25T19:12:00.588034"
+      "timestamp": "2025-03-26T10:48:04.515846"
     }
   ],
-  "total_position_value": 1355103.6704,
-  "total_unrealized_pnl": 318590.746377,
-  "account_value": 633834.69,
-  "roi": 457.14,
-  "timestamp": "2025-03-25T19:12:00.589435"
+  "total_position_value": 1381177.38072,
+  "total_unrealized_pnl": 325864.23109699995,
+  "account_value": 767358.85,
+  "roi": 43.42,
+  "timestamp": "2025-03-26T10:48:04.518136"
 }
