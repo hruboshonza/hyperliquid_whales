@@ -8,9 +8,9 @@ import json
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from scripts.analyze_whale_token_positions import WhaleTokenAnalyzer
+from scripts.actual_positions_by_asset import WhaleTokenAnalyzer
 from scripts.show_whale_trades import WhaleTradeTracker
-from scripts.analyze_recent_whale_positions import RecentWhalePositionAnalyzer
+from scripts.recent_24h_positions import RecentWhalePositionAnalyzer
 
 app = Flask(__name__)
 

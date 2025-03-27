@@ -83,18 +83,18 @@
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="mb-4">Whale Analysis Dashboard</h1>
+        <h1 class="mb-4">SMW Whale Analysis Dashboard</h1>
         
         <!-- Navigation Menu -->
         <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="positions-tab" data-bs-toggle="tab" data-bs-target="#positions" type="button" role="tab">Whale Positions</button>
+                <button class="nav-link active" id="positions-tab" data-bs-toggle="tab" data-bs-target="#positions" type="button" role="tab">Positions by Asset</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="trades-tab" data-bs-toggle="tab" data-bs-target="#trades" type="button" role="tab">Whale Trades</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="recent-positions-tab" data-bs-toggle="tab" data-bs-target="#recent-positions" type="button" role="tab">Recent Positions</button>
+                <button class="nav-link" id="recent-positions-tab" data-bs-toggle="tab" data-bs-target="#recent-positions" type="button" role="tab">Recent 24h Positions</button>
             </li>
         </ul>
 
@@ -175,7 +175,69 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Whale Trades</h5>
-                        <p>Whale trades functionality coming soon...</p>
+                        <form id="whaleTradesForm" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="wallet" name="wallet" placeholder="Enter full whale wallet address" required>
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </form>
+                        
+                        <div id="tradesLoading" class="text-center d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        
+                        <div id="tradesError" class="alert alert-danger d-none"></div>
+                        
+                        <div id="tradesResults" class="d-none">
+                            <h4 class="mb-3">Trade Analysis Results</h4>
+                            
+                            <!-- Summary Section -->
+                            <div class="summary-card">
+                                <div class="summary-grid">
+                                    <div class="summary-item">
+                                        <h6>Total Trades</h6>
+                                        <p id="totalTrades">0</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Total Volume</h6>
+                                        <p id="totalVolume">$0.00</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Average Trade Size</h6>
+                                        <p id="avgTradeSize">$0.00</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Most Traded Asset</h6>
+                                        <p id="mostTradedAsset">N/A</p>
+                                    </div>
+                                    <div class="summary-item">
+                                        <h6>Most Traded Volume</h6>
+                                        <p id="mostTradedVolume">$0.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Trades Table -->
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="sortable" data-sort="timestamp">Timestamp</th>
+                                            <th class="sortable" data-sort="asset">Asset</th>
+                                            <th class="sortable" data-sort="side">Side</th>
+                                            <th class="sortable" data-sort="size">Size</th>
+                                            <th class="sortable" data-sort="price">Price</th>
+                                            <th class="sortable" data-sort="value">Value</th>
+                                            <th class="sortable" data-sort="type">Type</th>
+                                            <th class="sortable" data-sort="pnl">PnL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tradesTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,6 +527,82 @@
         // Load recent positions data when tab is shown
         document.getElementById('recent-positions-tab').addEventListener('shown.bs.tab', () => {
             document.getElementById('refreshRecentPositions').click();
+        });
+
+        // Whale Trades Form Handler
+        document.getElementById('whaleTradesForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const wallet = document.getElementById('wallet').value.trim();
+            const loading = document.getElementById('tradesLoading');
+            const error = document.getElementById('tradesError');
+            const results = document.getElementById('tradesResults');
+            
+            if (!wallet) {
+                error.textContent = 'Please enter a wallet address';
+                error.classList.remove('d-none');
+                return;
+            }
+            
+            loading.classList.remove('d-none');
+            error.classList.add('d-none');
+            results.classList.add('d-none');
+            
+            try {
+                const response = await fetch('/whale_trades', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `wallet=${encodeURIComponent(wallet)}`
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    error.textContent = data.error;
+                    error.classList.remove('d-none');
+                    return;
+                }
+                
+                // Update summary
+                document.getElementById('totalTrades').textContent = data.summary.total_trades;
+                document.getElementById('totalVolume').textContent = data.summary.total_volume;
+                document.getElementById('avgTradeSize').textContent = data.summary.avg_trade_size;
+                document.getElementById('mostTradedAsset').textContent = data.summary.most_traded_asset;
+                document.getElementById('mostTradedVolume').textContent = data.summary.most_traded_volume;
+                
+                // Update trades table
+                const tradesTable = document.getElementById('tradesTable');
+                tradesTable.innerHTML = '';
+                
+                data.trades.forEach(trade => {
+                    const row = document.createElement('tr');
+                    const side = trade.size > 0 ? "Long" : "Short";
+                    const pnl = trade.type.startsWith('Close') ? trade.realized_pnl : trade.unrealized_pnl;
+                    const pnlClass = pnl >= 0 ? 'text-success' : 'text-danger';
+                    
+                    row.innerHTML = `
+                        <td>${trade.timestamp}</td>
+                        <td>${trade.asset}</td>
+                        <td class="${side === 'Long' ? 'position-long' : 'position-short'}">${side}</td>
+                        <td>${Math.abs(trade.size).toFixed(4)}</td>
+                        <td>${trade.price.toFixed(2)}</td>
+                        <td>${trade.value.toFixed(2)}</td>
+                        <td>${trade.type}</td>
+                        <td class="${pnlClass}">${pnl >= 0 ? '+' : ''}${pnl.toFixed(2)}</td>
+                    `;
+                    tradesTable.appendChild(row);
+                });
+                
+                results.classList.remove('d-none');
+                
+            } catch (err) {
+                error.textContent = 'Error fetching whale trades: ' + err.message;
+                error.classList.remove('d-none');
+            } finally {
+                loading.classList.add('d-none');
+            }
         });
     </script>
 </body>

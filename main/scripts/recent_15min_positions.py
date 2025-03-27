@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to analyze recently opened positions (last 24 hours) across all whale wallets.
+Script to analyze recently opened positions (last 15 minutes) across all whale wallets.
 Shows a summary of newly opened long and short positions for each asset.
 Excludes TWAP orders to focus on direct position openings.
 Only tracks positions > $100,000 in value.
@@ -20,7 +20,6 @@ import time
 import random
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import atexit
 
 # Add the parent directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -28,11 +27,6 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
-
-# Configuration
-TIME_PERIOD_HOURS = 1  # Time period to analyze in hours
-MIN_POSITION_VALUE = 100000  # Minimum position value to track in USD
-DEBUG_MODE = False  # Set to True to see detailed debug messages
 
 @dataclass
 class RecentAssetPosition:
@@ -65,22 +59,9 @@ class RecentWhalePositionAnalyzer:
         self.wallets_with_new_positions = 0
         self.MAX_WORKERS = 10  # Increased to 10 workers
         self.info = Info(hl_constants.MAINNET_API_URL)
-        self.cutoff_time = datetime.now() - timedelta(hours=TIME_PERIOD_HOURS)
+        self.cutoff_time = datetime.now() - timedelta(minutes=15)
         self.session = requests.Session()
         self.lock = threading.Lock()  # Fixed: Using threading.Lock instead of concurrent.futures.Lock
-        
-        # Register cleanup function
-        atexit.register(self.cleanup)
-        
-    def cleanup(self):
-        """Clean up resources and close connections."""
-        try:
-            if hasattr(self, 'session'):
-                self.session.close()
-            if hasattr(self, 'info'):
-                self.info.close()  # Close the Hyperliquid Info connection
-        except Exception as e:
-            print(f"Error during cleanup: {e}")
         
     def make_request_with_retry(self, url: str, payload: dict, max_retries: int = 3) -> Optional[dict]:
         """Make a request with exponential backoff retry logic."""
@@ -95,7 +76,7 @@ class RecentWhalePositionAnalyzer:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
                     delay = min(base_delay * (2 ** attempt) + random.uniform(0, 0.5), max_delay)
-                    # print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
+                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
                     time.sleep(delay)
                 else:
                     print(f"Error response: {response.status_code} - {response.text}")
@@ -123,13 +104,6 @@ class RecentWhalePositionAnalyzer:
             current_time = int(datetime.now().timestamp() * 1000)
             cutoff_time = int(self.cutoff_time.timestamp() * 1000)
             
-            # Debug logging for time window
-            if DEBUG_MODE:
-                print(f"\nDebug - Time window for {whale_address}:")
-                print(f"Current time: {datetime.fromtimestamp(current_time/1000)}")
-                print(f"Cutoff time: {datetime.fromtimestamp(cutoff_time/1000)}")
-                print(f"Time window: {(current_time - cutoff_time)/1000/3600:.2f} hours")
-            
             url = f"{hl_constants.MAINNET_API_URL}/info"
             payload = {
                 "type": "userFillsByTime",
@@ -141,12 +115,7 @@ class RecentWhalePositionAnalyzer:
             
             fills = self.make_request_with_retry(url, payload)
             if not fills:
-                if DEBUG_MODE:
-                    print(f"No fills returned for {whale_address}")
                 return []
-            
-            if DEBUG_MODE:
-                print(f"Total fills received: {len(fills)}")
             
             for fill in fills:
                 if fill.get('orderType', '').lower() == 'twap':
@@ -159,16 +128,13 @@ class RecentWhalePositionAnalyzer:
                 price = float(fill.get('px', 0))
                 position_value = size * price
                 
-                if abs(position_value) < MIN_POSITION_VALUE:  # Filter by minimum position value
+                if abs(position_value) < 100000:  # Changed from 50000 to 100000
                     continue
                 
                 is_long = dir_str == 'Open Long' or dir_str == 'Close Short'
                 is_short = dir_str == 'Open Short' or dir_str == 'Close Long'
                 
                 if is_long or is_short:
-                    fill_time = datetime.fromtimestamp(fill.get('time')/1000)
-                    if DEBUG_MODE:
-                        print(f"Position found: {coin} - {dir_str} - Value: ${position_value:,.2f} - Time: {fill_time}")
                     recent_positions.append({
                         'coin': coin,
                         'size': size if is_long else -size,
@@ -179,8 +145,6 @@ class RecentWhalePositionAnalyzer:
                         'is_long': is_long
                     })
             
-            if DEBUG_MODE:
-                print(f"Valid positions after filtering: {len(recent_positions)}")
             time.sleep(0.5 + random.uniform(0, 0.5))  # Reduced delay
                 
             return recent_positions
@@ -207,6 +171,8 @@ class RecentWhalePositionAnalyzer:
                 'whale_addresses': []
             })
             
+            MIN_POSITION_VALUE = 100000  # Changed from 50000 to 100000
+            
             # Debug counters
             total_positions = 0
             filtered_positions = 0
@@ -217,7 +183,7 @@ class RecentWhalePositionAnalyzer:
                 size = position['size']
                 value = position['position_value']
                 
-                if abs(value) < MIN_POSITION_VALUE:  # Filter by minimum position value
+                if abs(value) < MIN_POSITION_VALUE:
                     continue
                     
                 filtered_positions += 1
@@ -244,6 +210,14 @@ class RecentWhalePositionAnalyzer:
                 if whale_address not in asset_positions[asset]['whale_addresses']:
                     asset_positions[asset]['whale_addresses'].append(whale_address)
             
+            # Print debug information for this whale
+            print(f"\nWhale {whale_address}:")
+            print(f"Total positions found: {total_positions}")
+            print(f"Positions after value filter: {filtered_positions}")
+            for asset, pos in asset_positions.items():
+                if pos['short'] > 0 or pos['long'] > 0:
+                    print(f"  {asset}: {pos['short']} new shorts, {pos['long']} new longs")
+                    
             return asset_positions
             
         except Exception as e:
@@ -284,7 +258,7 @@ class RecentWhalePositionAnalyzer:
             reverse=True
         )[:10]
         
-        print(f"\nTop 10 Most Longed Assets (New Positions in Last {TIME_PERIOD_HOURS} Hours, > ${MIN_POSITION_VALUE:,}, Excluding TWAPs)")
+        print("\nTop 10 Most Longed Assets (New Positions in Last 15 Minutes, >$100k, Excluding TWAPs)")
         print("=" * 100)
         long_data = [[asset, f"${pos.total_new_long_value:,.2f}", 
                      f"{pos.total_new_long_size:,.2f}", pos.new_long_count,
@@ -295,7 +269,7 @@ class RecentWhalePositionAnalyzer:
                               'New Positions', 'Closed Positions', 'Number of Whales'],
                       tablefmt='grid'))
         
-        print(f"\nTop 10 Most Shorted Assets (New Positions in Last {TIME_PERIOD_HOURS} Hours, > ${MIN_POSITION_VALUE:,}, Excluding TWAPs)")
+        print("\nTop 10 Most Shorted Assets (New Positions in Last 15 Minutes, >$100k, Excluding TWAPs)")
         print("=" * 100)
         short_data = [[asset, f"${pos.total_new_short_value:,.2f}", 
                       f"{pos.total_new_short_size:,.2f}", pos.new_short_count,
@@ -332,8 +306,8 @@ class RecentWhalePositionAnalyzer:
         whale_addresses = [whale['fullAddress'] for whale in active_whales['wallets']]
         
         print(f"\nProcessing {len(whale_addresses)} whale addresses...")
-        print(f"Analyzing positions opened in the last {TIME_PERIOD_HOURS} hours (since {self.cutoff_time})")
-        print(f"Note: Only counting positions > ${MIN_POSITION_VALUE:,} in value")
+        print(f"Analyzing positions opened in the last 15 minutes (since {self.cutoff_time})")
+        print("Note: Only counting positions > $100,000 in value")
         print("Note: Excluding TWAP orders to focus on direct position openings")
         print("Note: Position values are calculated from fill data (entry price * size)")
         
@@ -352,8 +326,6 @@ class RecentWhalePositionAnalyzer:
                         self.update_asset_positions(asset_positions)
                         self.wallets_with_new_positions += 1
                     self.processed_wallets += 1
-                    if DEBUG_MODE:
-                        print(f"\nProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed")
                 except Exception as e:
                     print(f"Error processing whale {address}: {str(e)}")
         
@@ -368,7 +340,6 @@ class RecentWhalePositionAnalyzer:
         print(f"\nSummary:")
         print(f"Total wallets processed: {self.processed_wallets}")
         print(f"Wallets with new positions: {self.wallets_with_new_positions}")
-        print(f"Wallets with no activity: {self.processed_wallets - self.wallets_with_new_positions}")
         print(f"Total assets with new positions: {len(self.asset_positions)}")
         print(f"Processing time: {duration:.2f} seconds")
 
@@ -405,7 +376,7 @@ class RecentWhalePositionAnalyzer:
                 total_closed_short_value += positions.total_closed_short_value
         
         # Display results
-        print(f"\nWhale Position Analysis (Positions > ${MIN_POSITION_VALUE:,} in Last {TIME_PERIOD_HOURS} Hours, Excluding TWAPs)")
+        print("\nWhale Position Analysis (Positions > $100,000 in Last 15 Minutes, Excluding TWAPs)")
         print("=" * 140)
         print(tabulate(table_data, 
                       headers=['Asset', 'New Long', 'New Short', 'Closed Long', 'Closed Short',
@@ -423,16 +394,8 @@ class RecentWhalePositionAnalyzer:
         print(f"Total closed short value: ${total_closed_short_value:,.2f}")
 
 def main():
-    try:
-        analyzer = RecentWhalePositionAnalyzer()
-        analyzer.analyze_positions()
-    except KeyboardInterrupt:
-        print("\nScript interrupted by user. Cleaning up...")
-    except Exception as e:
-        print(f"\nError during execution: {e}")
-    finally:
-        # Cleanup will be handled by atexit handler
-        pass
+    analyzer = RecentWhalePositionAnalyzer()
+    analyzer.analyze_positions()
 
 if __name__ == "__main__":
     main() 
