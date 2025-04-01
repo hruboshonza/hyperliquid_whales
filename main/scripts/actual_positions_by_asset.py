@@ -22,6 +22,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+from config import (
+    MAX_WORKERS, ERROR_MESSAGES, SUCCESS_MESSAGES,
+    DEBUG_MODE, TABLE_FORMAT, ADDRESS_DISPLAY_LENGTH
+)
 
 class ConnectionPool:
     """Manages a pool of API connections."""
@@ -37,7 +41,7 @@ class ConnectionPool:
     def __init__(self):
         if not hasattr(self, 'initialized'):
             self.connections = []
-            self.max_connections = 10  # Reduced from 20 to 10
+            self.max_connections = MAX_WORKERS
             self.lock = threading.Lock()
             self.initialized = True
     
@@ -157,7 +161,7 @@ class WhaleTokenAnalyzer:
         all_positions = []
         
         # Use ThreadPoolExecutor to process whales in parallel
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:  # Reduced from 20 to 10
+        with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             # Submit all whale processing tasks
             future_to_whale = {
                 executor.submit(self.process_whale, whale_address): whale_address 
@@ -200,7 +204,7 @@ def main():
         leverage_str = f"{pos.leverage['type'].capitalize()} {pos.leverage['value']:.2f}x"
         
         table_data.append([
-            pos.wallet_address[:8] + "...",  # Truncated address
+            pos.wallet_address[:ADDRESS_DISPLAY_LENGTH] + "...",  # Truncated address
             direction,
             f"{abs(pos.size):,.4f}",
             f"${pos.entry_price:,.2f}",
@@ -224,7 +228,7 @@ def main():
     print(tabulate(table_data, 
                   headers=['Wallet', 'Side', 'Size', 'Entry Price', 'Position Value', 
                           'Unrealized PnL', 'Leverage'],
-                  tablefmt='grid'))
+                  tablefmt=TABLE_FORMAT))
     
     # Display summary
     print("\nSummary:")

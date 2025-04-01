@@ -3,60 +3,60 @@
   "positions": [
     {
       "coin": "HYPE",
-      "size": -42000.0,
-      "entry_price": 21.3243,
+      "size": -52000.0,
+      "entry_price": 16.9731,
       "mark_price": 0.0,
-      "unrealized_pnl": 221984.634149,
-      "position_value": 673638.0,
+      "unrealized_pnl": 194956.475068,
+      "position_value": 687648.0,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.927227"
+      "timestamp": "2025-04-01T21:57:47.216500"
     },
     {
       "coin": "MKR",
       "size": -110.0,
       "entry_price": 1495.17,
       "mark_price": 0.0,
-      "unrealized_pnl": 17905.736542,
-      "position_value": 146564.0,
+      "unrealized_pnl": 13131.736542,
+      "position_value": 151338.0,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-26T10:48:05.927223"
+      "timestamp": "2025-04-01T21:57:47.216494"
     },
     {
       "coin": "ETH",
       "size": -45.0,
       "entry_price": 3236.75,
       "mark_price": 0.0,
-      "unrealized_pnl": 52940.36842,
-      "position_value": 92713.5,
+      "unrealized_pnl": 59811.86842,
+      "position_value": 85842.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:05.927219"
+      "timestamp": "2025-04-01T21:57:47.216489"
     },
     {
       "coin": "PURR",
       "size": -525000.0,
       "entry_price": 0.38522,
       "mark_price": 0.0,
-      "unrealized_pnl": 135844.272869,
-      "position_value": 66396.75,
+      "unrealized_pnl": 153825.522869,
+      "position_value": 48415.5,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.927225"
+      "timestamp": "2025-04-01T21:57:47.216497"
     }
   ],
-  "total_position_value": 979312.25,
-  "total_unrealized_pnl": 428675.01197999995,
+  "total_position_value": 973243.5,
+  "total_unrealized_pnl": 421725.60289900005,
   "account_value": 1526302.4,
   "roi": 67.84,
-  "timestamp": "2025-03-26T10:48:05.927268"
+  "timestamp": "2025-04-01T21:57:47.216552"
 }

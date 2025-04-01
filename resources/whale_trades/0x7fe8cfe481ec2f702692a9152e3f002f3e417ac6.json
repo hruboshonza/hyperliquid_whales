@@ -2,48 +2,48 @@
   "address": "0x7fe8cfe481ec2f702692a9152e3f002f3e417ac6",
   "positions": [
     {
-      "coin": "BTC",
-      "size": 100.0,
-      "entry_price": 87005.7,
+      "coin": "ETH",
+      "size": -1300.0,
+      "entry_price": 1984.68,
       "mark_price": 0.0,
-      "unrealized_pnl": 88027.586324,
-      "position_value": 8788600.0,
+      "unrealized_pnl": 100210.749125,
+      "position_value": 2479880.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:05.064997"
+      "timestamp": "2025-04-01T21:57:46.430334"
+    },
+    {
+      "coin": "AAVE",
+      "size": -10000.0,
+      "entry_price": 179.207,
+      "mark_price": 0.0,
+      "unrealized_pnl": 121170.792656,
+      "position_value": 1670900.0,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "timestamp": "2025-04-01T21:57:46.430349"
     },
     {
       "coin": "SOL",
-      "size": -10000.0,
-      "entry_price": 124.8942,
+      "size": -13000.0,
+      "entry_price": 128.2062,
       "mark_price": 0.0,
-      "unrealized_pnl": -189657.890331,
-      "position_value": 1438600.0,
+      "unrealized_pnl": 18670.657769,
+      "position_value": 1648010.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:05.065035"
-    },
-    {
-      "coin": "ENA",
-      "size": 1500000.0,
-      "entry_price": 0.410761,
-      "mark_price": 0.0,
-      "unrealized_pnl": 22122.183079,
-      "position_value": 638265.0,
-      "leverage": {
-        "type": "cross",
-        "value": 5
-      },
-      "timestamp": "2025-03-26T10:48:05.065043"
+      "timestamp": "2025-04-01T21:57:46.430346"
     }
   ],
-  "total_position_value": 10865465.0,
-  "total_unrealized_pnl": -79508.120928,
+  "total_position_value": 5798790.0,
+  "total_unrealized_pnl": 240052.19955000002,
   "account_value": 4721766.5,
   "roi": 42.81,
-  "timestamp": "2025-03-26T10:48:05.065311"
+  "timestamp": "2025-04-01T21:57:46.433529"
 }

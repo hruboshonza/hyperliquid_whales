@@ -22,6 +22,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+from config import (
+    MAX_WORKERS, ERROR_MESSAGES, SUCCESS_MESSAGES,
+    DEBUG_MODE, TABLE_FORMAT
+)
 
 class WhaleTradeTracker:
     """
@@ -36,6 +40,7 @@ class WhaleTradeTracker:
         self.info = Info(hl_constants.MAINNET_API_URL)
         self.processed_wallets = 0
         self.wallets_with_trades = 0
+        self.MAX_WORKERS = MAX_WORKERS
         
     @lru_cache(maxsize=100)
     def get_all_positions(self, whale_address: str) -> List[Dict]:

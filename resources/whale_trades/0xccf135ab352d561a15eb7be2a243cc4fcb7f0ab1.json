@@ -3,47 +3,21 @@
   "positions": [
     {
       "coin": "HYPE",
-      "size": -131683.96,
+      "size": -129683.96,
       "entry_price": 19.2159,
       "mark_price": 0.0,
-      "unrealized_pnl": 418348.605468,
-      "position_value": 2112079.03444,
+      "unrealized_pnl": 777055.125023,
+      "position_value": 1714940.68704,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:07.119036"
-    },
-    {
-      "coin": "ETH",
-      "size": -238.2117,
-      "entry_price": 3242.23,
-      "mark_price": 0.0,
-      "unrealized_pnl": 281551.879662,
-      "position_value": 490787.56551,
-      "leverage": {
-        "type": "cross",
-        "value": 20
-      },
-      "timestamp": "2025-03-26T10:48:07.119010"
-    },
-    {
-      "coin": "BNB",
-      "size": -90.0,
-      "entry_price": 590.88,
-      "mark_price": 0.0,
-      "unrealized_pnl": -3516.26128,
-      "position_value": 56695.5,
-      "leverage": {
-        "type": "cross",
-        "value": 10
-      },
-      "timestamp": "2025-03-26T10:48:07.119027"
+      "timestamp": "2025-04-01T21:57:48.477268"
     }
   ],
-  "total_position_value": 2659562.09995,
-  "total_unrealized_pnl": 696384.22385,
+  "total_position_value": 1714940.68704,
+  "total_unrealized_pnl": 777055.125023,
   "account_value": 3571439.51,
   "roi": 53.28,
-  "timestamp": "2025-03-26T10:48:07.120344"
+  "timestamp": "2025-04-01T21:57:48.478071"
 }

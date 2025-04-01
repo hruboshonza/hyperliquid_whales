@@ -1,0 +1,23 @@
+{
+  "address": "0x7c4b71c1d8a11ed426f301c372a72e06f528e00b",
+  "positions": [
+    {
+      "coin": "HYPE",
+      "size": 162025.84,
+      "entry_price": 13.6402,
+      "mark_price": 0.0,
+      "unrealized_pnl": -67446.87095,
+      "position_value": 2142629.70816,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-04-01T21:57:48.759460"
+    }
+  ],
+  "total_position_value": 2142629.70816,
+  "total_unrealized_pnl": -67446.87095,
+  "account_value": 902731.82,
+  "roi": 95.57,
+  "timestamp": "2025-04-01T21:57:48.759618"
+}

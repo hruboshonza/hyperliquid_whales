@@ -2,61 +2,61 @@
   "address": "0x61387d7e85508811de339276e013e0517f3782ad",
   "positions": [
     {
-      "coin": "BTC",
-      "size": 2.71994,
-      "entry_price": 87727.8,
+      "coin": "ETH",
+      "size": 92.2328,
+      "entry_price": 1831.91,
       "mark_price": 0.0,
-      "unrealized_pnl": 430.244552,
-      "position_value": 239044.64684,
+      "unrealized_pnl": 6980.203598,
+      "position_value": 175943.28928,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:08.126687"
+      "timestamp": "2025-04-01T21:57:49.519838"
     },
     {
-      "coin": "ETH",
-      "size": -34.1655,
-      "entry_price": 2059.95,
+      "coin": "BTC",
+      "size": -0.8866,
+      "entry_price": 82974.1,
       "mark_price": 0.0,
-      "unrealized_pnl": -11.847843,
-      "position_value": 70391.17965,
+      "unrealized_pnl": -1650.7068,
+      "position_value": 75215.5976,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:08.126694"
+      "timestamp": "2025-04-01T21:57:49.519816"
     },
     {
       "coin": "FARTCOIN",
-      "size": -30912.0,
-      "entry_price": 0.57107,
+      "size": 27283.8,
+      "entry_price": 0.50622,
       "mark_price": 0.0,
-      "unrealized_pnl": -1263.867456,
-      "position_value": 18916.90752,
+      "unrealized_pnl": 35.005607,
+      "position_value": 13846.801338,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:08.126701"
+      "timestamp": "2025-04-01T21:57:49.519849"
     },
     {
       "coin": "XRP",
-      "size": -3473.0,
-      "entry_price": 2.445145,
+      "size": -1154.0,
+      "entry_price": 2.137173,
       "mark_price": 0.0,
-      "unrealized_pnl": -75.207444,
-      "position_value": 8567.1964,
+      "unrealized_pnl": 0.777,
+      "position_value": 2465.521,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:08.126697"
+      "timestamp": "2025-04-01T21:57:49.519844"
     }
   ],
-  "total_position_value": 336919.93041000003,
-  "total_unrealized_pnl": -920.678191,
+  "total_position_value": 267471.209218,
+  "total_unrealized_pnl": 5365.279405,
   "account_value": 5531310.62,
   "roi": 17.88,
-  "timestamp": "2025-03-26T10:48:08.127347"
+  "timestamp": "2025-04-01T21:57:49.520015"
 }

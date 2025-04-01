@@ -27,6 +27,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+from config import (
+    TIME_PERIOD_HOURS, MIN_POSITION_VALUE, DEBUG_MODE,
+    MAX_RETRIES, BASE_DELAY, MAX_DELAY, RATE_LIMIT_DELAY,
+    MAX_WORKERS, POSITION_TYPES, ACTION_TYPES, ORDER_TYPES,
+    ERROR_MESSAGES, SUCCESS_MESSAGES, TABLE_FORMAT,
+    EXCLUDE_TWAP_ORDERS
+)
 
 @dataclass
 class RecentAssetPosition:
@@ -49,19 +56,28 @@ class RecentAssetPosition:
     def __post_init__(self):
         self.whale_addresses = []
 
-class RecentWhalePositionAnalyzer:
+class RecentPositionAnalyzer:
     """Analyze recently opened positions across all whale wallets."""
     
     def __init__(self):
         """Initialize the analyzer."""
         self.asset_positions = defaultdict(lambda: RecentAssetPosition(asset=""))
         self.processed_wallets = 0
-        self.wallets_with_new_positions = 0
-        self.MAX_WORKERS = 10  # Increased to 10 workers
+        self.wallets_with_positions = 0
+        self.MAX_WORKERS = MAX_WORKERS
         self.info = Info(hl_constants.MAINNET_API_URL)
-        self.cutoff_time = datetime.now() - timedelta(minutes=15)
+        
+        # Use actual current time instead of rounding
+        self.reference_time = datetime.now()
+        self.cutoff_time = self.reference_time - timedelta(hours=TIME_PERIOD_HOURS)
+        
+        print(f"\nTracking Window:")
+        print(f"Reference time: {self.reference_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Cutoff time: {self.cutoff_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Analysis period: {TIME_PERIOD_HOURS} hours\n")
+        
         self.session = requests.Session()
-        self.lock = threading.Lock()  # Fixed: Using threading.Lock instead of concurrent.futures.Lock
+        self.lock = threading.Lock()
         
     def make_request_with_retry(self, url: str, payload: dict, max_retries: int = 3) -> Optional[dict]:
         """Make a request with exponential backoff retry logic."""
@@ -76,7 +92,7 @@ class RecentWhalePositionAnalyzer:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
                     delay = min(base_delay * (2 ** attempt) + random.uniform(0, 0.5), max_delay)
-                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
+                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
                     time.sleep(delay)
                 else:
                     print(f"Error response: {response.status_code} - {response.text}")
@@ -324,7 +340,7 @@ class RecentWhalePositionAnalyzer:
                     asset_positions = future.result()
                     if asset_positions:
                         self.update_asset_positions(asset_positions)
-                        self.wallets_with_new_positions += 1
+                        self.wallets_with_positions += 1
                     self.processed_wallets += 1
                 except Exception as e:
                     print(f"Error processing whale {address}: {str(e)}")
@@ -339,7 +355,7 @@ class RecentWhalePositionAnalyzer:
         
         print(f"\nSummary:")
         print(f"Total wallets processed: {self.processed_wallets}")
-        print(f"Wallets with new positions: {self.wallets_with_new_positions}")
+        print(f"Wallets with new positions: {self.wallets_with_positions}")
         print(f"Total assets with new positions: {len(self.asset_positions)}")
         print(f"Processing time: {duration:.2f} seconds")
 
@@ -394,7 +410,7 @@ class RecentWhalePositionAnalyzer:
         print(f"Total closed short value: ${total_closed_short_value:,.2f}")
 
 def main():
-    analyzer = RecentWhalePositionAnalyzer()
+    analyzer = RecentPositionAnalyzer()
     analyzer.analyze_positions()
 
 if __name__ == "__main__":

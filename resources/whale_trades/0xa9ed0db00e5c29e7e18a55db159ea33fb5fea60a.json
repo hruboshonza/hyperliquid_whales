@@ -3,60 +3,60 @@
   "positions": [
     {
       "coin": "HYPE",
-      "size": -138540.99,
-      "entry_price": 21.6351,
+      "size": -178540.99,
+      "entry_price": 20.198,
       "mark_price": 0.0,
-      "unrealized_pnl": 775023.837728,
-      "position_value": 2222336.02059,
+      "unrealized_pnl": 1245156.877638,
+      "position_value": 2361026.05176,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.628001"
+      "timestamp": "2025-04-01T21:57:46.887957"
     },
     {
       "coin": "BERA",
       "size": -114154.9,
       "entry_price": 6.03874,
       "mark_price": 0.0,
-      "unrealized_pnl": -222425.402967,
-      "position_value": 911778.01728,
+      "unrealized_pnl": -141558.071807,
+      "position_value": 830910.68612,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-26T10:48:05.628036"
+      "timestamp": "2025-04-01T21:57:46.887977"
     },
     {
       "coin": "S",
       "size": -518630.0,
       "entry_price": 0.555342,
       "mark_price": 0.0,
-      "unrealized_pnl": -35130.54054,
-      "position_value": 323147.9804,
+      "unrealized_pnl": 26420.46786,
+      "position_value": 261596.972,
       "leverage": {
         "type": "cross",
         "value": 5
       },
-      "timestamp": "2025-03-26T10:48:05.628030"
+      "timestamp": "2025-04-01T21:57:46.887973"
     },
     {
       "coin": "IP",
       "size": 5.0,
       "entry_price": 3.1276,
       "mark_price": 0.0,
-      "unrealized_pnl": 15.355,
-      "position_value": 30.993,
+      "unrealized_pnl": 7.601,
+      "position_value": 23.239,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.628042"
+      "timestamp": "2025-04-01T21:57:46.887981"
     }
   ],
-  "total_position_value": 3457293.0112699997,
-  "total_unrealized_pnl": 517483.24922099995,
+  "total_position_value": 3453556.94888,
+  "total_unrealized_pnl": 1130026.874691,
   "account_value": 3471928.4,
   "roi": 33.36,
-  "timestamp": "2025-03-26T10:48:05.629368"
+  "timestamp": "2025-04-01T21:57:46.888069"
 }

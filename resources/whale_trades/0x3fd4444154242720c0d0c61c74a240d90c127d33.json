@@ -1,0 +1,23 @@
+{
+  "address": "0x3fd4444154242720c0d0c61c74a240d90c127d33",
+  "positions": [
+    {
+      "coin": "SOL",
+      "size": 100000.0,
+      "entry_price": 126.9788,
+      "mark_price": 0.0,
+      "unrealized_pnl": -20881.969065,
+      "position_value": 12677000.0,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-04-01T21:57:46.637696"
+    }
+  ],
+  "total_position_value": 12677000.0,
+  "total_unrealized_pnl": -20881.969065,
+  "account_value": 6011840.41,
+  "roi": 36.82,
+  "timestamp": "2025-04-01T21:57:46.637742"
+}

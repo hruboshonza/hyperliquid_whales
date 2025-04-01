@@ -9868,3 +9868,29 @@ Percentage with trades: 81.20%
 
 Total processing time: 8.00 seconds
 Shutting down gracefully...
+2025-04-01 22:07:05,994 - INFO - Started position_history_tracker.py with PID 43304
+2025-04-01 22:07:05,996 - INFO - Started whale_position_tracker.py with PID 43305
+2025-04-01 22:07:05,997 - INFO - Started recent_24h_positions.py with PID 43306
+2025-04-01 22:07:06,001 - INFO - Started recent_15min_positions.py with PID 43307
+2025-04-01 22:09:26,641 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-01 22:09:26,641 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-01 22:09:49,157 - INFO - 127.0.0.1 - - [01/Apr/2025 22:09:49] "GET / HTTP/1.1" 200 -
+2025-04-01 22:09:56,523 - ERROR - Error analyzing positions: (429, None, 'null', None, {'Server': 'nginx/1.22.1', 'Date': 'Tue, 01 Apr 2025 20:09:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '4', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'vary': 'origin, access-control-request-method, access-control-request-headers', 'access-control-expose-headers': '*'})
+2025-04-01 22:09:56,538 - INFO - 127.0.0.1 - - [01/Apr/2025 22:09:56] "POST /analyze HTTP/1.1" 200 -
+2025-04-01 22:09:56,684 - INFO - Websocket connected
+2025-04-01 22:10:06,689 - INFO - 127.0.0.1 - - [01/Apr/2025 22:10:06] "[33mPOST /whale_trades HTTP/1.1[0m" 404 -
+2025-04-01 22:10:09,919 - INFO - Websocket connected
+2025-04-01 22:11:40,437 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-01 22:11:40,438 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-01 22:11:46,151 - INFO - Websocket connected
+2025-04-01 22:12:18,397 - INFO - 127.0.0.1 - - [01/Apr/2025 22:12:18] "GET /recent_positions HTTP/1.1" 200 -
+2025-04-01 22:12:56,340 - INFO - Websocket connected
+2025-04-01 22:12:56,369 - ERROR - Error analyzing positions: (429, None, 'null', None, {'Server': 'nginx/1.22.1', 'Date': 'Tue, 01 Apr 2025 20:12:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '4', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'vary': 'origin, access-control-request-method, access-control-request-headers', 'access-control-expose-headers': '*'})
+2025-04-01 22:12:56,370 - INFO - 127.0.0.1 - - [01/Apr/2025 22:12:56] "POST /analyze HTTP/1.1" 200 -
+2025-04-01 22:13:02,174 - INFO - 127.0.0.1 - - [01/Apr/2025 22:13:02] "[33mPOST /whale_trades HTTP/1.1[0m" 404 -
+2025-04-01 22:13:03,829 - INFO - 127.0.0.1 - - [01/Apr/2025 22:13:03] "GET / HTTP/1.1" 200 -
+2025-04-01 22:13:08,804 - INFO - Websocket connected
+2025-04-01 22:13:18,474 - INFO - 127.0.0.1 - - [01/Apr/2025 22:13:18] "POST /analyze HTTP/1.1" 200 -
+2025-04-01 22:14:13,995 - INFO - Websocket connected

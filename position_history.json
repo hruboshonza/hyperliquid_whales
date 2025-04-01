@@ -25,6 +25,19 @@
       "new_short_positions": 0,
       "closed_long_positions": 3,
       "closed_short_positions": 25
+    },
+    {
+      "timestamp": "2025-04-01T16:36:44.363856",
+      "long_wallets": 12,
+      "short_wallets": 34,
+      "total_long_value": 33572426.21012899,
+      "total_short_value": 179896891.08025703,
+      "total_long_size": 402.28981,
+      "total_short_size": 2135.4342199999996,
+      "new_long_positions": 87,
+      "new_short_positions": 37,
+      "closed_long_positions": 42,
+      "closed_short_positions": 89
     }
   ],
   "ETH": [
@@ -52,6 +65,19 @@
       "new_long_positions": 3,
       "new_short_positions": 1,
       "closed_long_positions": 6,
+      "closed_short_positions": 4
+    },
+    {
+      "timestamp": "2025-04-01T16:39:13.516675",
+      "long_wallets": 13,
+      "short_wallets": 28,
+      "total_long_value": 24977814.614443995,
+      "total_short_value": 267971895.59938806,
+      "total_long_size": 13006.250000000002,
+      "total_short_size": 109198.89510000001,
+      "new_long_positions": 12,
+      "new_short_positions": 15,
+      "closed_long_positions": 12,
       "closed_short_positions": 4
     }
   ],
@@ -81,6 +107,19 @@
       "new_short_positions": 0,
       "closed_long_positions": 0,
       "closed_short_positions": 0
+    },
+    {
+      "timestamp": "2025-04-01T16:42:20.493809",
+      "long_wallets": 5,
+      "short_wallets": 26,
+      "total_long_value": 19331147.664869998,
+      "total_short_value": 73285028.00920302,
+      "total_long_size": 149756.81,
+      "total_short_size": 511000.31000000006,
+      "new_long_positions": 2,
+      "new_short_positions": 0,
+      "closed_long_positions": 6,
+      "closed_short_positions": 4
     }
   ]
 }

@@ -3,60 +3,73 @@
   "positions": [
     {
       "coin": "SOL",
-      "size": -6782.64,
+      "size": -6664.64,
       "entry_price": 151.8517,
       "mark_price": 0.0,
-      "unrealized_pnl": 54272.674711,
-      "position_value": 975682.764,
+      "unrealized_pnl": 167093.878488,
+      "position_value": 844943.0592,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:07.694153"
+      "timestamp": "2025-04-01T21:57:49.196842"
+    },
+    {
+      "coin": "BTC",
+      "size": -1.653,
+      "entry_price": 89265.7,
+      "mark_price": 0.0,
+      "unrealized_pnl": 7322.331463,
+      "position_value": 140233.908,
+      "leverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "timestamp": "2025-04-01T21:57:49.196832"
     },
     {
       "coin": "HYPE",
       "size": -10000.38,
       "entry_price": 24.9811,
       "mark_price": 0.0,
-      "unrealized_pnl": 89425.286295,
-      "position_value": 160396.09482,
+      "unrealized_pnl": 117576.355995,
+      "position_value": 132245.02512,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:07.694157"
-    },
-    {
-      "coin": "BTC",
-      "size": -1.763,
-      "entry_price": 89265.7,
-      "mark_price": 0.0,
-      "unrealized_pnl": 2432.45095,
-      "position_value": 154943.018,
-      "leverage": {
-        "type": "cross",
-        "value": 20
-      },
-      "timestamp": "2025-03-26T10:48:07.694135"
+      "timestamp": "2025-04-01T21:57:49.196846"
     },
     {
       "coin": "ETH",
-      "size": -52.254,
+      "size": -50.687,
       "entry_price": 2616.78,
       "mark_price": 0.0,
-      "unrealized_pnl": 29078.389692,
-      "position_value": 107658.9162,
+      "unrealized_pnl": 35946.287918,
+      "position_value": 96690.5212,
       "leverage": {
         "type": "cross",
         "value": 25
       },
-      "timestamp": "2025-03-26T10:48:07.694148"
+      "timestamp": "2025-04-01T21:57:49.196840"
+    },
+    {
+      "coin": "JTO",
+      "size": -40000.0,
+      "entry_price": 2.387417,
+      "mark_price": 0.0,
+      "unrealized_pnl": 4592.7172,
+      "position_value": 90904.0,
+      "leverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "timestamp": "2025-04-01T21:57:49.196844"
     }
   ],
-  "total_position_value": 1398680.79302,
-  "total_unrealized_pnl": 175208.801648,
+  "total_position_value": 1305016.5135200003,
+  "total_unrealized_pnl": 332531.571064,
   "account_value": 1026172.02,
   "roi": 49.77,
-  "timestamp": "2025-03-26T10:48:07.695174"
+  "timestamp": "2025-04-01T21:57:49.196907"
 }

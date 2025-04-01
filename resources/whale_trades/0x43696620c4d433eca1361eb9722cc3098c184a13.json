@@ -6,31 +6,31 @@
       "size": -36.31925,
       "entry_price": 84184.0,
       "mark_price": 0.0,
-      "unrealized_pnl": -134452.49337,
-      "position_value": 3191953.6055,
+      "unrealized_pnl": -23678.78087,
+      "position_value": 3081179.893,
       "leverage": {
         "type": "cross",
         "value": 40
       },
-      "timestamp": "2025-03-26T10:48:08.702138"
+      "timestamp": "2025-04-01T21:57:50.029734"
     },
     {
       "coin": "HYPE",
       "size": 1.0,
       "entry_price": 23.405,
       "mark_price": 0.0,
-      "unrealized_pnl": -7.366,
-      "position_value": 16.039,
+      "unrealized_pnl": -10.181,
+      "position_value": 13.224,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:08.702160"
+      "timestamp": "2025-04-01T21:57:50.029747"
     }
   ],
-  "total_position_value": 3191969.6445,
-  "total_unrealized_pnl": -134459.85937000002,
+  "total_position_value": 3081193.117,
+  "total_unrealized_pnl": -23688.96187,
   "account_value": 888334.8,
   "roi": 63.02,
-  "timestamp": "2025-03-26T10:48:08.702339"
+  "timestamp": "2025-04-01T21:57:50.030221"
 }

@@ -3,47 +3,60 @@
   "positions": [
     {
       "coin": "SOL",
-      "size": 3559.01,
-      "entry_price": 140.4746,
+      "size": 7756.81,
+      "entry_price": 135.127,
       "mark_price": 0.0,
-      "unrealized_pnl": 12012.7705,
-      "position_value": 511963.5885,
+      "unrealized_pnl": -64746.2963,
+      "position_value": 983408.3718,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-26T10:48:08.419605"
+      "timestamp": "2025-04-01T21:57:49.741199"
     },
     {
-      "coin": "kPEPE",
-      "size": 32765420.0,
-      "entry_price": 0.007527,
+      "coin": "ENA",
+      "size": 1234782.0,
+      "entry_price": 0.368571,
       "mark_price": 0.0,
-      "unrealized_pnl": 42672.815947,
-      "position_value": 289318.6586,
+      "unrealized_pnl": 1096.994288,
+      "position_value": 456202.55772,
       "leverage": {
         "type": "cross",
-        "value": 4
+        "value": 5
       },
-      "timestamp": "2025-03-26T10:48:08.419618"
+      "timestamp": "2025-04-01T21:57:49.741212"
     },
     {
-      "coin": "GRASS",
-      "size": -1839.9,
-      "entry_price": 1.599,
+      "coin": "NIL",
+      "size": 279005.0,
+      "entry_price": 0.56185,
       "mark_price": 0.0,
-      "unrealized_pnl": -1.47192,
-      "position_value": 2943.47202,
+      "unrealized_pnl": -18503.679593,
+      "position_value": 138255.34765,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:08.419621"
+      "timestamp": "2025-04-01T21:57:49.741223"
+    },
+    {
+      "coin": "GRASS",
+      "size": -43730.1,
+      "entry_price": 1.88656,
+      "mark_price": 0.0,
+      "unrealized_pnl": 2106.41895,
+      "position_value": 80393.41584,
+      "leverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "timestamp": "2025-04-01T21:57:49.741218"
     }
   ],
-  "total_position_value": 804225.71912,
-  "total_unrealized_pnl": 54684.114527,
+  "total_position_value": 1658259.69301,
+  "total_unrealized_pnl": -80046.562655,
   "account_value": 1910186.28,
   "roi": 36.41,
-  "timestamp": "2025-03-26T10:48:08.419690"
+  "timestamp": "2025-04-01T21:57:49.741322"
 }

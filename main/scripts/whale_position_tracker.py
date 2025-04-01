@@ -8,7 +8,6 @@ Only tracks positions > $100,000 in value.
 
 import os
 import sys
-
 import json
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
@@ -28,11 +27,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
-
-# Configuration
-TIME_PERIOD_HOURS = 4  # Time period to analyze in hours
-MIN_POSITION_VALUE = 50000  # Minimum position value to track in USD
-DEBUG_MODE = False  # Set to True to see detailed debug messages
+from config import (
+    TIME_PERIOD_HOURS, MIN_POSITION_VALUE, DEBUG_MODE,
+    MAX_RETRIES, BASE_DELAY, MAX_DELAY, RATE_LIMIT_DELAY,
+    MAX_WORKERS, POSITION_TYPES, ACTION_TYPES, ORDER_TYPES,
+    ERROR_MESSAGES, SUCCESS_MESSAGES, TABLE_FORMAT
+)
 
 @dataclass
 class WhalePosition:
@@ -60,7 +60,7 @@ class WhalePositionTracker:
         self.positions = []
         self.processed_wallets = 0
         self.active_wallets = 0
-        self.MAX_WORKERS = 5
+        self.MAX_WORKERS = MAX_WORKERS
         self.info = Info(hl_constants.MAINNET_API_URL)
         
         # Use actual current time instead of rounding
@@ -86,32 +86,29 @@ class WhalePositionTracker:
         except Exception as e:
             print(f"Error during cleanup: {e}")
             
-    def make_request_with_retry(self, url: str, payload: dict, max_retries: int = 5) -> Optional[dict]:
+    def make_request_with_retry(self, url: str, payload: dict, max_retries: int = MAX_RETRIES) -> Optional[dict]:
         """Make a request with exponential backoff retry logic."""
-        base_delay = 2
-        max_delay = 30
-        
         for attempt in range(max_retries):
             try:
                 response = self.session.post(url, json=payload, headers={"Content-Type": "application/json"})
                 
                 if response.status_code == 200:
-                    time.sleep(0.5)  # Rate limiting prevention
+                    time.sleep(RATE_LIMIT_DELAY)  # Rate limiting prevention
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
-                    delay = min(base_delay * (2 ** attempt) + random.uniform(0, 1), max_delay)
-                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
+                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 1), MAX_DELAY)
+                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
                     time.sleep(delay)
                 else:
-                    print(f"Error response: {response.status_code} - {response.text}")
+                    print(ERROR_MESSAGES["API_ERROR"].format(f"{response.status_code} - {response.text}"))
                     if attempt < max_retries - 1:
-                        time.sleep(base_delay)
+                        time.sleep(BASE_DELAY)
                     return None
                     
             except Exception as e:
-                print(f"Request error: {str(e)}")
+                print(ERROR_MESSAGES["API_ERROR"].format(str(e)))
                 if attempt < max_retries - 1:
-                    delay = min(base_delay * (2 ** attempt) + random.uniform(0, 1), max_delay)
+                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 1), MAX_DELAY)
                     time.sleep(delay)
                 else:
                     return None

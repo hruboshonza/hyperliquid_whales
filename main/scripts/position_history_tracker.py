@@ -21,6 +21,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+from config import (
+    MAX_RETRIES, BASE_DELAY, MAX_DELAY, RATE_LIMIT_DELAY,
+    ERROR_MESSAGES, SUCCESS_MESSAGES, DEBUG_MODE
+)
 
 @dataclass
 class AssetSnapshot:
@@ -103,11 +107,8 @@ class PositionHistoryTracker:
         except Exception as e:
             print(f"Error saving history: {e}")
             
-    def make_request_with_retry(self, url: str, payload: dict, max_retries: int = 3) -> Optional[dict]:
+    def make_request_with_retry(self, url: str, payload: dict, max_retries: int = MAX_RETRIES) -> Optional[dict]:
         """Make a request with exponential backoff retry logic."""
-        base_delay = 1
-        max_delay = 16
-        
         for attempt in range(max_retries):
             try:
                 response = self.session.post(url, json=payload, headers={"Content-Type": "application/json"})
@@ -115,17 +116,17 @@ class PositionHistoryTracker:
                 if response.status_code == 200:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
-                    delay = min(base_delay * (2 ** attempt) + random.uniform(0, 0.5), max_delay)
-                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
+                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 0.5), MAX_DELAY)
+                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
                     time.sleep(delay)
                 else:
-                    print(f"Error response: {response.status_code} - {response.text}")
+                    print(ERROR_MESSAGES["API_ERROR"].format(f"{response.status_code} - {response.text}"))
                     return None
                     
             except Exception as e:
-                print(f"Request error: {str(e)}")
+                print(ERROR_MESSAGES["API_ERROR"].format(str(e)))
                 if attempt < max_retries - 1:
-                    delay = min(base_delay * (2 ** attempt) + random.uniform(0, 0.5), max_delay)
+                    delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 0.5), MAX_DELAY)
                     time.sleep(delay)
                 else:
                     return None

@@ -20,6 +20,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
+from config import (
+    MAX_WORKERS, ERROR_MESSAGES, SUCCESS_MESSAGES,
+    DEBUG_MODE, TABLE_FORMAT, ADDRESS_DISPLAY_LENGTH
+)
 
 @dataclass
 class AssetPosition:
@@ -40,7 +44,7 @@ class WhalePositionAnalyzer:
         self.asset_positions = defaultdict(lambda: AssetPosition(asset=""))  # Initialize with empty asset name
         self.processed_wallets = 0
         self.wallets_with_positions = 0
-        self.MAX_WORKERS = 10  # Number of concurrent workers
+        self.MAX_WORKERS = MAX_WORKERS  # Number of concurrent workers
         self.info = Info(hl_constants.MAINNET_API_URL)
         
     def get_all_positions(self, whale_address: str) -> List[Dict]:

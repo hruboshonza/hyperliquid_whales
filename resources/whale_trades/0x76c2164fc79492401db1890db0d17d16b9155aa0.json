@@ -3,60 +3,60 @@
   "positions": [
     {
       "coin": "HYPE",
-      "size": -202650.0,
-      "entry_price": 20.6859,
+      "size": -276900.0,
+      "entry_price": 18.7576,
       "mark_price": 0.0,
-      "unrealized_pnl": 941305.765871,
-      "position_value": 3250708.65,
+      "unrealized_pnl": 1532256.262189,
+      "position_value": 3661725.6,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:04.806033"
+      "timestamp": "2025-04-01T21:57:46.348112"
     },
     {
       "coin": "XRP",
       "size": -111907.0,
       "entry_price": 2.63489,
       "mark_price": 0.0,
-      "unrealized_pnl": 18810.511628,
-      "position_value": 276052.1876,
+      "unrealized_pnl": 55806.965828,
+      "position_value": 239055.7334,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:04.806024"
+      "timestamp": "2025-04-01T21:57:46.348102"
     },
     {
       "coin": "ADA",
       "size": -326000.0,
       "entry_price": 0.80631,
       "mark_price": 0.0,
-      "unrealized_pnl": 13379.32192,
-      "position_value": 249478.02,
+      "unrealized_pnl": 41738.06192,
+      "position_value": 221119.28,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-26T10:48:04.806028"
+      "timestamp": "2025-04-01T21:57:46.348107"
     },
     {
       "coin": "kPEPE",
       "size": -10000.0,
       "entry_price": 0.025256,
       "mark_price": 0.0,
-      "unrealized_pnl": 164.26348,
-      "position_value": 88.3,
+      "unrealized_pnl": 176.10348,
+      "position_value": 76.46,
       "leverage": {
         "type": "cross",
         "value": 10
       },
-      "timestamp": "2025-03-26T10:48:04.806017"
+      "timestamp": "2025-04-01T21:57:46.348092"
     }
   ],
-  "total_position_value": 3776327.1575999996,
-  "total_unrealized_pnl": 973659.8628989999,
+  "total_position_value": 4121977.0733999996,
+  "total_unrealized_pnl": 1629977.393417,
   "account_value": 6870120.37,
   "roi": 35.56,
-  "timestamp": "2025-03-26T10:48:04.815674"
+  "timestamp": "2025-04-01T21:57:46.348183"
 }

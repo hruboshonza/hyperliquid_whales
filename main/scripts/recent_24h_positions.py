@@ -28,11 +28,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from services.position_tracker import PositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
-
-# Configuration
-TIME_PERIOD_HOURS = 4  # Time period to analyze in hours
-MIN_POSITION_VALUE = 100000  # Minimum position value to track in USD
-DEBUG_MODE = False  # Set to True to see detailed debug messages
+from config import (
+    TIME_PERIOD_HOURS, MIN_POSITION_VALUE, DEBUG_MODE,
+    MAX_RETRIES, BASE_DELAY, MAX_DELAY, RATE_LIMIT_DELAY,
+    MAX_WORKERS, POSITION_TYPES, ACTION_TYPES, ORDER_TYPES,
+    ERROR_MESSAGES, SUCCESS_MESSAGES, TABLE_FORMAT,
+    EXCLUDE_TWAP_ORDERS
+)
 
 @dataclass
 class RecentAssetPosition:
@@ -50,38 +52,29 @@ class RecentAssetPosition:
     total_new_short_value: float = 0.0
     total_closed_long_value: float = 0.0
     total_closed_short_value: float = 0.0
-    long_whales: set = None  # Set of whale addresses that opened long positions
-    short_whales: set = None  # Set of whale addresses that opened short positions
-    closed_long_whales: set = None  # Set of whale addresses that closed long positions
-    closed_short_whales: set = None  # Set of whale addresses that closed short positions
+    whale_addresses: List[str] = None  # List of whale addresses that opened positions
 
     def __post_init__(self):
-        self.long_whales = set()
-        self.short_whales = set()
-        self.closed_long_whales = set()
-        self.closed_short_whales = set()
+        self.whale_addresses = []
 
-class RecentWhalePositionAnalyzer:
+class RecentPositionAnalyzer:
     """Analyze recently opened positions across all whale wallets."""
     
     def __init__(self):
         """Initialize the analyzer."""
         self.asset_positions = defaultdict(lambda: RecentAssetPosition(asset=""))
         self.processed_wallets = 0
-        self.wallets_with_new_positions = 0
-        self.MAX_WORKERS = 5  # Reduced to 5 workers
+        self.wallets_with_positions = 0
+        self.MAX_WORKERS = MAX_WORKERS
         self.info = Info(hl_constants.MAINNET_API_URL)
         
-        # Round to the nearest hour for consistent time windows
-        now = datetime.now()
-        self.reference_time = now.replace(minute=0, second=0, microsecond=0)
-        if now.minute >= 30:  # Round up if we're past half hour
-            self.reference_time = self.reference_time + timedelta(hours=1)
+        # Use actual current time instead of rounding
+        self.reference_time = datetime.now()
         self.cutoff_time = self.reference_time - timedelta(hours=TIME_PERIOD_HOURS)
         
-        print(f"\nTime Window:")
-        print(f"Reference time: {self.reference_time.strftime('%Y-%m-%d %H:00:00')}")
-        print(f"Cutoff time: {self.cutoff_time.strftime('%Y-%m-%d %H:00:00')}")
+        print(f"\nTracking Window:")
+        print(f"Reference time: {self.reference_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Cutoff time: {self.cutoff_time.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"Analysis period: {TIME_PERIOD_HOURS} hours\n")
         
         self.session = requests.Session()
@@ -113,7 +106,7 @@ class RecentWhalePositionAnalyzer:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
                     delay = min(base_delay * (2 ** attempt) + random.uniform(0, 1), max_delay)
-                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
+                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
                     time.sleep(delay)
                 else:
                     print(f"Error response: {response.status_code} - {response.text}")
@@ -236,10 +229,7 @@ class RecentWhalePositionAnalyzer:
                 'closed_long_size': 0, 'closed_short_size': 0,
                 'long_value': 0, 'short_value': 0,
                 'closed_long_value': 0, 'closed_short_value': 0,
-                'long_whales': set(),
-                'short_whales': set(),
-                'closed_long_whales': set(),
-                'closed_short_whales': set()
+                'whale_addresses': []
             })
             
             # Debug counters
@@ -262,23 +252,20 @@ class RecentWhalePositionAnalyzer:
                         asset_positions[asset]['long'] += 1
                         asset_positions[asset]['long_size'] += size
                         asset_positions[asset]['long_value'] += value
-                        asset_positions[asset]['long_whales'].add(whale_address)
+                        asset_positions[asset]['whale_addresses'].append(whale_address)
                     else:
                         asset_positions[asset]['closed_long'] += 1
                         asset_positions[asset]['closed_long_size'] += size
                         asset_positions[asset]['closed_long_value'] += value
-                        asset_positions[asset]['closed_long_whales'].add(whale_address)
                 else:
                     if position['is_open']:
                         asset_positions[asset]['short'] += 1
                         asset_positions[asset]['short_size'] += abs(size)
                         asset_positions[asset]['short_value'] += value
-                        asset_positions[asset]['short_whales'].add(whale_address)
                     else:
                         asset_positions[asset]['closed_short'] += 1
                         asset_positions[asset]['closed_short_size'] += abs(size)
                         asset_positions[asset]['closed_short_value'] += value
-                        asset_positions[asset]['closed_short_whales'].add(whale_address)
             
             return asset_positions
             
@@ -303,11 +290,8 @@ class RecentWhalePositionAnalyzer:
                 self.asset_positions[asset].total_closed_long_value += positions['closed_long_value']
                 self.asset_positions[asset].total_closed_short_value += positions['closed_short_value']
                 
-                # Update whale sets
-                self.asset_positions[asset].long_whales.update(positions['long_whales'])
-                self.asset_positions[asset].short_whales.update(positions['short_whales'])
-                self.asset_positions[asset].closed_long_whales.update(positions['closed_long_whales'])
-                self.asset_positions[asset].closed_short_whales.update(positions['closed_short_whales'])
+                # Update whale addresses
+                self.asset_positions[asset].whale_addresses.extend(positions['whale_addresses'])
             
     def display_top_positions(self):
         """Display top 10 most longed and shorted assets by new position value."""
@@ -329,35 +313,29 @@ class RecentWhalePositionAnalyzer:
         print("=" * 100)
         long_data = [[asset, f"${pos.total_new_long_value:,.2f}", 
                      f"{pos.total_new_long_size:,.2f}", pos.new_long_count,
-                     len(pos.long_whales), len(pos.closed_long_whales)] 
+                     len(pos.whale_addresses)] 
                      for asset, pos in sorted_longs]
         print(tabulate(long_data, 
                       headers=['Asset', 'Total New Long Value', 'Total New Long Size', 
-                              'New Positions', 'Long Whales', 'Closed Long Whales'],
+                              'New Positions', 'Long Whales'],
                       tablefmt='grid'))
         
         print(f"\nTop 10 Most Shorted Assets (New Positions in Last {TIME_PERIOD_HOURS} Hours, > ${MIN_POSITION_VALUE:,}, Excluding TWAPs)")
         print("=" * 100)
         short_data = [[asset, f"${pos.total_new_short_value:,.2f}", 
                       f"{pos.total_new_short_size:,.2f}", pos.new_short_count,
-                      len(pos.short_whales), len(pos.closed_short_whales)] 
+                      len(pos.whale_addresses)] 
                       for asset, pos in sorted_shorts]
         print(tabulate(short_data, 
                       headers=['Asset', 'Total New Short Value', 'Total New Short Size', 
-                              'New Positions', 'Short Whales', 'Closed Short Whales'],
+                              'New Positions', 'Short Whales'],
                       tablefmt='grid'))
         
         # Calculate totals
-        total_long_whales = len(set().union(*[pos.long_whales for pos in self.asset_positions.values()]))
-        total_short_whales = len(set().union(*[pos.short_whales for pos in self.asset_positions.values()]))
-        total_closed_long_whales = len(set().union(*[pos.closed_long_whales for pos in self.asset_positions.values()]))
-        total_closed_short_whales = len(set().union(*[pos.closed_short_whales for pos in self.asset_positions.values()]))
+        total_whales = len(set(whale for pos in self.asset_positions.values() for whale in pos.whale_addresses))
         
         print("\nWhale Summary:")
-        print(f"Total Long Whales: {total_long_whales}")
-        print(f"Total Short Whales: {total_short_whales}")
-        print(f"Total Whales Closing Longs: {total_closed_long_whales}")
-        print(f"Total Whales Closing Shorts: {total_closed_short_whales}")
+        print(f"Total Whales: {total_whales}")
 
     def analyze_positions(self):
         """Analyze all whale positions using parallel processing."""
@@ -392,7 +370,7 @@ class RecentWhalePositionAnalyzer:
                     asset_positions = future.result()
                     if asset_positions:
                         self.update_asset_positions(asset_positions)
-                        self.wallets_with_new_positions += 1
+                        self.wallets_with_positions += 1
                     self.processed_wallets += 1
                     completed += 1
                     
@@ -416,8 +394,8 @@ class RecentWhalePositionAnalyzer:
         
         print(f"\nSummary:")
         print(f"Total wallets processed: {self.processed_wallets}")
-        print(f"Wallets with new positions: {self.wallets_with_new_positions}")
-        print(f"Wallets with no activity: {self.processed_wallets - self.wallets_with_new_positions}")
+        print(f"Wallets with new positions: {self.wallets_with_positions}")
+        print(f"Wallets with no activity: {self.processed_wallets - self.wallets_with_positions}")
         print(f"Total assets with new positions: {len(self.asset_positions)}")
         print(f"Processing time: {duration:.2f} seconds")
 
@@ -447,8 +425,8 @@ class RecentWhalePositionAnalyzer:
                     f"${positions.total_new_short_value:,.2f}",
                     f"${positions.total_closed_long_value:,.2f}",
                     f"${positions.total_closed_short_value:,.2f}",
-                    len(positions.long_whales),
-                    len(positions.short_whales)
+                    positions.new_long_count,  # Number of whales with new long positions
+                    positions.new_short_count  # Number of whales with new short positions
                 ])
                 total_new_long_value += positions.total_new_long_value
                 total_new_short_value += positions.total_new_short_value
@@ -457,7 +435,7 @@ class RecentWhalePositionAnalyzer:
         
         # Display results
         print(f"\nWhale Position Analysis (Positions > ${MIN_POSITION_VALUE:,} in Last {TIME_PERIOD_HOURS} Hours, Excluding TWAPs)")
-        print("=" * 140)
+        print("=" * 160)
         print(tabulate(table_data, 
                       headers=['Asset', 'New Long', 'New Short', 'Closed Long', 'Closed Short',
                               'New Long Size', 'New Short Size', 'Closed Long Size', 'Closed Short Size',
@@ -476,7 +454,7 @@ class RecentWhalePositionAnalyzer:
 
 def main():
     try:
-        analyzer = RecentWhalePositionAnalyzer()
+        analyzer = RecentPositionAnalyzer()
         analyzer.analyze_positions()
     except KeyboardInterrupt:
         print("\nScript interrupted by user. Cleaning up...")

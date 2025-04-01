@@ -6,44 +6,44 @@
       "size": -170439.54,
       "entry_price": 22.1635,
       "mark_price": 0.0,
-      "unrealized_pnl": 1043523.195104,
-      "position_value": 2734020.66114,
+      "unrealized_pnl": 1523651.379284,
+      "position_value": 2253892.47696,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.087147"
+      "timestamp": "2025-04-01T21:57:46.494112"
     },
     {
       "coin": "SOL",
       "size": 2000.0,
       "entry_price": 212.8521,
       "mark_price": 0.0,
-      "unrealized_pnl": -137984.3232,
-      "position_value": 287720.0,
+      "unrealized_pnl": -172164.3232,
+      "position_value": 253540.0,
       "leverage": {
         "type": "cross",
         "value": 20
       },
-      "timestamp": "2025-03-26T10:48:05.087124"
+      "timestamp": "2025-04-01T21:57:46.494095"
     },
     {
       "coin": "PURR",
       "size": -1800000.0,
       "entry_price": 0.284799,
       "mark_price": 0.0,
-      "unrealized_pnl": 284993.774142,
-      "position_value": 227646.0,
+      "unrealized_pnl": 346647.374142,
+      "position_value": 165992.4,
       "leverage": {
         "type": "cross",
         "value": 3
       },
-      "timestamp": "2025-03-26T10:48:05.087142"
+      "timestamp": "2025-04-01T21:57:46.494107"
     }
   ],
-  "total_position_value": 3249386.66114,
-  "total_unrealized_pnl": 1190532.646046,
+  "total_position_value": 2673424.87696,
+  "total_unrealized_pnl": 1698134.430226,
   "account_value": 6192575.51,
   "roi": 49.73,
-  "timestamp": "2025-03-26T10:48:05.088276"
+  "timestamp": "2025-04-01T21:57:46.494172"
 }
