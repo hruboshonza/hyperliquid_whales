@@ -52,6 +52,8 @@ class PositionHistoryTracker:
         self.session = requests.Session()
         self.cutoff_time = datetime.now() - timedelta(hours=1)
         self.history: Dict[str, List[AssetSnapshot]] = defaultdict(list)
+        self.processed_wallets = 0
+        self.total_wallets = 0
         self.load_history()
         
     def load_history(self):
@@ -117,7 +119,8 @@ class PositionHistoryTracker:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
                     delay = min(BASE_DELAY * (2 ** attempt) + random.uniform(0, 0.5), MAX_DELAY)
-                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
+                    if self.total_wallets > 0:
+                        print(f"\rProgress: {self.processed_wallets}/{self.total_wallets} wallets processed", end="")
                     time.sleep(delay)
                 else:
                     print(ERROR_MESSAGES["API_ERROR"].format(f"{response.status_code} - {response.text}"))
@@ -271,6 +274,10 @@ class PositionHistoryTracker:
                         else:
                             closed_short_positions += 1
             
+            self.processed_wallets += 1
+            if self.total_wallets > 0:
+                print(f"\rProgress: {self.processed_wallets}/{self.total_wallets} wallets processed", end="")
+            
             time.sleep(0.1)  # Rate limiting
             
         return AssetSnapshot(
@@ -298,9 +305,11 @@ class PositionHistoryTracker:
                 active_whales = json.load(f)
                 
             whale_addresses = [whale['fullAddress'] for whale in active_whales['wallets']]
+            self.total_wallets = len(whale_addresses)
+            self.processed_wallets = 0
             
             print(f"\nTaking snapshot at {datetime.now()}")
-            print(f"Processing {len(whale_addresses)} whale addresses...")
+            print(f"Processing {self.total_wallets} whale addresses...")
             
             # Analyze each asset
             for asset in self.assets:

@@ -72,7 +72,24 @@ class WhaleTrackerWebApp:
                 return jsonify({'error': ERROR_MESSAGES["NO_WHALES"]})
                 
             analyzer = WhaleTokenAnalyzer(token, whale_addresses)
-            positions = analyzer.analyze_positions()
+            
+            try:
+                positions = analyzer.analyze_positions()
+            except Exception as e:
+                error_msg = str(e)
+                if "429" in error_msg or "rate limited" in error_msg.lower():
+                    logger.warning("Rate limit hit during position analysis")
+                    return jsonify({
+                        'error': "Rate limit reached. Please try again in a few moments.",
+                        'status': 'rate_limited',
+                        'retry_after': 30  # Suggest retry after 30 seconds
+                    })
+                else:
+                    logger.error(f"Error analyzing positions: {e}")
+                    return jsonify({
+                        'error': "An error occurred while analyzing positions. Please try again later.",
+                        'status': 'error'
+                    })
             
             if not positions:
                 return self._create_empty_response(token, len(whale_addresses))
@@ -81,7 +98,10 @@ class WhaleTrackerWebApp:
             
         except Exception as e:
             logger.error(f"Error analyzing positions: {e}")
-            return jsonify({'error': str(e)})
+            return jsonify({
+                'error': "An unexpected error occurred. Please try again later.",
+                'status': 'error'
+            })
             
     def _create_empty_response(self, token, total_wallets):
         """Create an empty response when no positions are found."""
@@ -138,8 +158,30 @@ class WhaleTrackerWebApp:
     def get_recent_positions(self):
         """Get recent position data for all assets."""
         try:
+            # Get whale addresses first
+            whale_addresses = self.get_whale_addresses()
+            if not whale_addresses:
+                return jsonify({'error': ERROR_MESSAGES["NO_WHALES"]})
+                
             analyzer = RecentPositionAnalyzer()
-            analyzer.analyze_positions()
+            
+            try:
+                analyzer.analyze_positions()
+            except Exception as e:
+                error_msg = str(e)
+                if "429" in error_msg or "rate limited" in error_msg.lower():
+                    logger.warning("Rate limit hit during position analysis")
+                    return jsonify({
+                        'error': "Rate limit reached. Please try again in a few moments.",
+                        'status': 'rate_limited',
+                        'retry_after': 30  # Suggest retry after 30 seconds
+                    })
+                else:
+                    logger.error(f"Error analyzing positions: {e}")
+                    return jsonify({
+                        'error': "An error occurred while analyzing positions. Please try again later.",
+                        'status': 'error'
+                    })
             
             # Sort assets by new long and short value
             sorted_longs = sorted(
@@ -167,7 +209,7 @@ class WhaleTrackerWebApp:
                 'size': f"{pos.total_new_long_size:,.2f}",
                 'new_count': pos.new_long_count,
                 'closed_count': pos.closed_long_count,
-                'whale_count': pos.new_long_count  # Use the count directly from the analyzer
+                'whale_count': pos.new_long_count
             } for asset, pos in sorted_longs]
             
             short_positions = [{
@@ -176,7 +218,7 @@ class WhaleTrackerWebApp:
                 'size': f"{pos.total_new_short_size:,.2f}",
                 'new_count': pos.new_short_count,
                 'closed_count': pos.closed_short_count,
-                'whale_count': pos.new_short_count  # Use the count directly from the analyzer
+                'whale_count': pos.new_short_count
             } for asset, pos in sorted_shorts]
             
             return jsonify({
@@ -186,13 +228,18 @@ class WhaleTrackerWebApp:
                     'total_new_long': total_new_long_positions,
                     'total_new_short': total_new_short_positions,
                     'total_closed_long': total_closed_long_positions,
-                    'total_closed_short': total_closed_short_positions
-                }
+                    'total_closed_short': total_closed_short_positions,
+                    'total_wallets': len(whale_addresses)
+                },
+                'status': 'success'
             })
             
         except Exception as e:
             logger.error(f"Error getting recent positions: {e}")
-            return jsonify({'error': str(e)})
+            return jsonify({
+                'error': "An unexpected error occurred. Please try again later.",
+                'status': 'error'
+            })
             
     def run(self):
         """Run the Flask application."""

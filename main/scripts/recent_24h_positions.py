@@ -115,7 +115,7 @@ class RecentPositionAnalyzer:
                     return None
                     
             except Exception as e:
-                print(f"Request error: {str(e)}")
+                print(f"\rRequest error: {str(e)}")
                 if attempt < max_retries - 1:
                     delay = min(base_delay * (2 ** attempt) + random.uniform(0, 1), max_delay)
                     time.sleep(delay)
@@ -356,14 +356,20 @@ class RecentPositionAnalyzer:
         print("Note: Excluding TWAP orders to focus on direct position openings")
         print("Note: Position values are calculated from fill data (entry price * size)")
         
-        # Process whales in parallel with rate limiting
+        # Use WhalePositionTracker to get all positions
+        tracker = WhalePositionTracker()
+        tracker.track_positions()
+        
+        # Process positions in parallel
         with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
-            future_to_whale = {
-                executor.submit(self.process_whale, address): address 
-                for address in whale_addresses
-            }
+            future_to_whale = {}
+            for address in whale_addresses:
+                future = executor.submit(self.process_whale_positions, address, tracker.get_whale_positions(address))
+                future_to_whale[future] = address
             
             completed = 0
+            failed_addresses = []
+            
             for future in as_completed(future_to_whale):
                 address = future_to_whale[future]
                 try:
@@ -377,12 +383,31 @@ class RecentPositionAnalyzer:
                     # Print progress
                     print(f"\rProgress: {completed}/{len(whale_addresses)} wallets processed", end="")
                     
-                    # Add delay between batches
-                    if completed % 5 == 0:
-                        time.sleep(1)  # Add delay every 5 wallets
-                        
                 except Exception as e:
                     print(f"\nError processing whale {address}: {str(e)}")
+                    failed_addresses.append(address)
+            
+            # Retry failed addresses
+            if failed_addresses:
+                print(f"\nRetrying {len(failed_addresses)} failed addresses...")
+                for address in failed_addresses:
+                    try:
+                        # Add a small delay before retry
+                        time.sleep(1)
+                        
+                        # Retry with the same tracker instance
+                        asset_positions = self.process_whale_positions(address, tracker.get_whale_positions(address))
+                        if asset_positions:
+                            self.update_asset_positions(asset_positions)
+                            self.wallets_with_positions += 1
+                        self.processed_wallets += 1
+                        completed += 1
+                        
+                        # Print progress
+                        print(f"\rProgress: {completed}/{len(whale_addresses)} wallets processed", end="")
+                        
+                    except Exception as e:
+                        print(f"\nFailed to process whale {address} after retry: {str(e)}")
         
         print("\n")  # New line after progress
         
@@ -398,6 +423,11 @@ class RecentPositionAnalyzer:
         print(f"Wallets with no activity: {self.processed_wallets - self.wallets_with_positions}")
         print(f"Total assets with new positions: {len(self.asset_positions)}")
         print(f"Processing time: {duration:.2f} seconds")
+        
+        if failed_addresses:
+            print(f"\nWarning: {len(failed_addresses)} wallets failed to process after retry:")
+            for address in failed_addresses:
+                print(f"- {address}")
 
     def display_results(self):
         """Display the analysis results."""

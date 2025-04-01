@@ -92,7 +92,7 @@ class RecentPositionAnalyzer:
                     return response.json()
                 elif response.status_code == 429:  # Rate limit
                     delay = min(base_delay * (2 ** attempt) + random.uniform(0, 0.5), max_delay)
-                    print(f"\rProgress: {self.processed_wallets}/{len(whale_addresses)} wallets processed", end="")
+                    print(f"Rate limited. Waiting {delay:.1f} seconds before retry {attempt + 1}/{max_retries}")
                     time.sleep(delay)
                 else:
                     print(f"Error response: {response.status_code} - {response.text}")

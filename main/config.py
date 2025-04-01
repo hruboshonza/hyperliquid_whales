@@ -8,8 +8,8 @@ MAINNET_API_URL = "https://api.hyperliquid.xyz"
 TESTNET_API_URL = "https://api.testnet.hyperliquid.xyz"
 
 # Time and Analysis Settings
-TIME_PERIOD_HOURS = 1  # Time period to analyze in hours
-MIN_POSITION_VALUE = 50000  # Minimum position value to track in USD
+TIME_PERIOD_HOURS = 2  # Time period to analyze in hours
+MIN_POSITION_VALUE = 100000  # Minimum position value to track in USD
 
 # Debug and Logging
 DEBUG_MODE = False  # Set to True to see detailed debug messages
