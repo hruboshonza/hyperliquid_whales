@@ -26,6 +26,7 @@ import atexit
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from services.position_tracker import PositionTracker
+from scripts.whale_position_tracker import WhalePositionTracker
 from hyperliquid.info import Info
 from hyperliquid.utils import constants as hl_constants
 from config import (
@@ -65,6 +66,7 @@ class RecentPositionAnalyzer:
         self.asset_positions = defaultdict(lambda: RecentAssetPosition(asset=""))
         self.processed_wallets = 0
         self.wallets_with_positions = 0
+        self.total_whales = 0
         self.MAX_WORKERS = MAX_WORKERS
         self.info = Info(hl_constants.MAINNET_API_URL)
         
@@ -349,6 +351,7 @@ class RecentPositionAnalyzer:
             active_whales = json.load(f)
             
         whale_addresses = [whale['fullAddress'] for whale in active_whales['wallets']]
+        self.total_whales = len(whale_addresses)
         
         print(f"\nProcessing {len(whale_addresses)} whale addresses...")
         print(f"Analyzing positions opened in the last {TIME_PERIOD_HOURS} hours (since {self.cutoff_time})")
