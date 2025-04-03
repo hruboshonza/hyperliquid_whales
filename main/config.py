@@ -18,11 +18,11 @@ DEBUG_MODE = False  # Set to True to see detailed debug messages
 LOG_LEVEL = "INFO"  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
 # Rate Limiting and Request Settings
-MAX_RETRIES = 5
+MAX_RETRIES = 3
 BASE_DELAY = 2  # Base delay for exponential backoff
 MAX_DELAY = 30  # Maximum delay for exponential backoff
 REQUEST_TIMEOUT = 30  # Request timeout in seconds
-RATE_LIMIT_DELAY = 0.5  # Delay between requests to prevent rate limiting
+RATE_LIMIT_DELAY = 0.1  # Delay between requests to prevent rate limiting
 
 # Threading and Processing
 MAX_WORKERS = 5  # Maximum number of concurrent workers
@@ -86,4 +86,18 @@ SUCCESS_MESSAGES = {
     "PROCESSING_COMPLETE": "Processing completed successfully",
     "POSITIONS_FOUND": "Found {} positions for wallet {}",
     "FILE_LOADED": "Successfully loaded {}"
+}
+
+# Whale tracking specific settings
+WHALE_CONFIG = {
+    'rate_limit_delay': 0.1,  # Delay between API calls in seconds
+    'min_position_value': 100000,  # Minimum position value to track ($100k)
+    'max_history_snapshots': 24,  # Number of snapshots to keep (6 hours with 15-min intervals)
+    'position_change_types': {
+        'NEW': 'New',
+        'INCREASED': 'Increased',
+        'DECREASED': 'Decreased',
+        'REVERSED': 'Reversed',
+        'CLOSED': 'Closed'
+    }
 } 

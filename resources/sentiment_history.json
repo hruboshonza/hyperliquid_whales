@@ -1,0 +1,4087 @@
+{
+  "timestamp": "2025-04-03T01:16:30.983000",
+  "score": -243,
+  "new_longs": 156,
+  "new_shorts": 399,
+  "positions": {
+    "0x8cc94dc843e1ea7a19805e0cca43001123512b6a": {
+      "BTC": {
+        "type": "Short",
+        "value": 15790945.1224,
+        "size": -191.1112,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 1930866.786,
+        "size": -16266.78,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 235839.162,
+        "size": -13182.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 382414.5,
+        "size": -650.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 2521571.0,
+        "size": -31000.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "INJ": {
+        "type": "Long",
+        "value": 112343.721,
+        "size": 13573.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 2539348.56,
+        "size": -362764080.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 249202.261,
+        "size": 123398.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 614579.28,
+        "size": -4076.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 916775.188,
+        "size": -707.17,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "SEI": {
+        "type": "Short",
+        "value": 137412.41184,
+        "size": -846344.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "JUP": {
+        "type": "Short",
+        "value": 474810.7829,
+        "size": -1263265.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "ENA": {
+        "type": "Long",
+        "value": 519138.73545,
+        "size": 1541157.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "HBAR": {
+        "type": "Short",
+        "value": 107239.1536,
+        "size": -670580.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "RENDER": {
+        "type": "Short",
+        "value": 105950.3784,
+        "size": -32262.6,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 2398366.51272,
+        "size": -200063.94,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "MOVE": {
+        "type": "Short",
+        "value": 480600.9299,
+        "size": -1288129.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "VIRTUAL": {
+        "type": "Long",
+        "value": 121643.22688,
+        "size": 225332.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "S": {
+        "type": "Short",
+        "value": 825837.79392,
+        "size": -1784592.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 622677.93,
+        "size": 68460.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "VINE": {
+        "type": "Short",
+        "value": 687889.569952,
+        "size": -16776976.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "IP": {
+        "type": "Short",
+        "value": 1133543.55324,
+        "size": -260100.4,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "OM": {
+        "type": "Short",
+        "value": 394338.66979,
+        "size": -62556.7,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      },
+      "NIL": {
+        "type": "Short",
+        "value": 1023049.8766,
+        "size": -2417986.0,
+        "time": "01:15:23",
+        "timestamp": 1743635723.926
+      }
+    },
+    "0x45d26f28196d226497130c4bac709d808fed4029": {
+      "ETH": {
+        "type": "Short",
+        "value": 5768630.0,
+        "size": -3220.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "ATOM": {
+        "type": "Short",
+        "value": 102459.0,
+        "size": -24600.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 1889420.01,
+        "size": -15927.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 176534.82,
+        "size": -9870.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 582436.8,
+        "size": -990.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "ARB": {
+        "type": "Short",
+        "value": 123825.94,
+        "size": -406000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 172462.056,
+        "size": -24648000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 504575.0,
+        "size": -250000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 304677.5,
+        "size": -235.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "kSHIB": {
+        "type": "Short",
+        "value": 230070.705,
+        "size": -19155000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 413498.08,
+        "size": -37880000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "ONDO": {
+        "type": "Short",
+        "value": 128752.8,
+        "size": -165000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 454671.65,
+        "size": -2165.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "kFLOKI": {
+        "type": "Short",
+        "value": 146453.575,
+        "size": -2675000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 805721.28,
+        "size": -2392000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 128791.13,
+        "size": -793000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "BLAST": {
+        "type": "Short",
+        "value": 185930.622042,
+        "size": -66546393.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 2935859.58978,
+        "size": -244940.73,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "PENGU": {
+        "type": "Short",
+        "value": 159064.653,
+        "size": -33693000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 221360.05,
+        "size": -529000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      },
+      "BERA": {
+        "type": "Short",
+        "value": 648230.0,
+        "size": -100000.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.435
+      }
+    },
+    "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9": {
+      "BTC": {
+        "type": "Short",
+        "value": 16791250.78034,
+        "size": -203.28883,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 3528540.72895,
+        "size": 1969.6013,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 162474.810498,
+        "size": -200385.8,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 506130.4076,
+        "size": -39268.4,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 328748.6496,
+        "size": -2180.32,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "WLD": {
+        "type": "Short",
+        "value": 102715.67745,
+        "size": -143557.9,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 210881.2918,
+        "size": -19318550.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 525985.7652,
+        "size": -1561530.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 987052.25398,
+        "size": -82350.43,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 1082537.34734,
+        "size": -2587017.2,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "AI16Z": {
+        "type": "Short",
+        "value": 216537.82315,
+        "size": -1273302.5,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      },
+      "ZEREBRO": {
+        "type": "Short",
+        "value": 135163.09554,
+        "size": -5184622.0,
+        "time": "01:15:24",
+        "timestamp": 1743635724.842
+      }
+    },
+    "0x7fdafde5cfb5465924316eced2d3715494c517d1": {
+      "BTC": {
+        "type": "Long",
+        "value": 4747500.11364,
+        "size": 57.47718,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 10618509.6124,
+        "size": -89509.48,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "BNB": {
+        "type": "Long",
+        "value": 178206.83456,
+        "size": 302.908,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 2520396.2992,
+        "size": -30993.56,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 1435463.54289,
+        "size": -8784429.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 7291274.2506,
+        "size": 3612582.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 1445646.65297,
+        "size": -8901217.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 2840682.0,
+        "size": -237000.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.24
+      }
+    },
+    "0x023a3d058020fb76cca98f01b3c48c8938a22355": {
+      "BTC": {
+        "type": "Long",
+        "value": 4127474.09674,
+        "size": 49.97063,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 5551034.7683,
+        "size": 3098.5402,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 1012492.8144,
+        "size": 8534.88,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 120346.7392,
+        "size": -204.56,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "LTC": {
+        "type": "Long",
+        "value": 131739.2132,
+        "size": 1620.01,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "DOGE": {
+        "type": "Long",
+        "value": 221029.18305,
+        "size": 1352605.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 1735538.46889,
+        "size": -248040370.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "CRV": {
+        "type": "Long",
+        "value": 184624.967592,
+        "size": 381015.7,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 2309449.8665,
+        "size": 1144255.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 466088.1204,
+        "size": -3091.18,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "MKR": {
+        "type": "Long",
+        "value": 133960.0846,
+        "size": 103.3244,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "WLD": {
+        "type": "Short",
+        "value": 226326.3876,
+        "size": -316319.2,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "TRX": {
+        "type": "Long",
+        "value": 172707.80263,
+        "size": 741649.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "SEI": {
+        "type": "Long",
+        "value": 218593.755,
+        "size": 1346850.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "RUNE": {
+        "type": "Short",
+        "value": 182470.45915,
+        "size": -164195.5,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 293815.67413,
+        "size": 459899.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "TON": {
+        "type": "Long",
+        "value": 207719.9949,
+        "size": 54419.7,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "MEME": {
+        "type": "Short",
+        "value": 129478.455282,
+        "size": -70292321.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "JUP": {
+        "type": "Short",
+        "value": 106238.07017,
+        "size": -282721.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "JTO": {
+        "type": "Long",
+        "value": 137830.7131,
+        "size": 66071.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "ONDO": {
+        "type": "Long",
+        "value": 106447.3528,
+        "size": 136415.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "ENA": {
+        "type": "Long",
+        "value": 287582.2026,
+        "size": 853765.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "HBAR": {
+        "type": "Long",
+        "value": 252348.15129,
+        "size": 1578261.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "ZK": {
+        "type": "Short",
+        "value": 241759.90155,
+        "size": -3984506.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "BLAST": {
+        "type": "Short",
+        "value": 110499.7663,
+        "size": -39548950.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "RENDER": {
+        "type": "Short",
+        "value": 196327.8027,
+        "size": -59830.5,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "GRASS": {
+        "type": "Long",
+        "value": 212960.43717,
+        "size": 126109.1,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "MOVE": {
+        "type": "Long",
+        "value": 212004.88344,
+        "size": 568134.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "PENGU": {
+        "type": "Short",
+        "value": 106189.632398,
+        "size": -22493038.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "AI16Z": {
+        "type": "Short",
+        "value": 420306.112996,
+        "size": -2471516.6,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "SPX": {
+        "type": "Long",
+        "value": 135285.675448,
+        "size": 310416.4,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 296293.35921,
+        "size": 32583.7,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "VINE": {
+        "type": "Long",
+        "value": 178972.477589,
+        "size": 4364863.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "VVV": {
+        "type": "Short",
+        "value": 200564.850976,
+        "size": -85324.96,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "IP": {
+        "type": "Long",
+        "value": 134957.82854,
+        "size": 30972.1,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "OM": {
+        "type": "Short",
+        "value": 111151.77858,
+        "size": -17638.1,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      },
+      "NIL": {
+        "type": "Short",
+        "value": 268616.844,
+        "size": -635028.0,
+        "time": "01:15:25",
+        "timestamp": 1743635725.729
+      }
+    },
+    "0x56498e5f90c14060499b62b6f459b3e3fb9280c5": {
+      "BTC": {
+        "type": "Long",
+        "value": 10849063.93244,
+        "size": 131.34778,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 6199306.42085,
+        "size": 3460.3999,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      },
+      "LINK": {
+        "type": "Long",
+        "value": 3567376.1752,
+        "size": 276776.8,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 7074420.0254,
+        "size": 3505138.0,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 1288244.93941,
+        "size": 2016443.0,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 1298524.9368,
+        "size": -3855020.0,
+        "time": "01:15:26",
+        "timestamp": 1743635726.132
+      }
+    },
+    "0xa312114b5795dff9b8db50474dd57701aa78ad1e": {
+      "BTC": {
+        "type": "Short",
+        "value": 217990.16366,
+        "size": -2.63917,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 1103295.81245,
+        "size": -615.8503,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 158088.7106,
+        "size": -1332.62,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 2755439.35602,
+        "size": -16862122.0,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 160381.1352,
+        "size": -70699.2,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 156246.6945,
+        "size": -77415.0,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 1458076.04436,
+        "size": -121648.26,
+        "time": "01:15:26",
+        "timestamp": 1743635726.535
+      }
+    },
+    "0x499beed00ee60bef8ce07a68c92103bd2225b5fb": {
+      "TRUMP": {
+        "type": "Short",
+        "value": 454670.45598,
+        "size": -50000.6,
+        "time": "01:15:27",
+        "timestamp": 1743635727.001
+      },
+      "IP": {
+        "type": "Long",
+        "value": 556305.77208,
+        "size": 127669.2,
+        "time": "01:15:27",
+        "timestamp": 1743635727.001
+      }
+    },
+    "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36": {
+      "SOL": {
+        "type": "Short",
+        "value": 1186044.6712,
+        "size": -9995.32,
+        "time": "01:15:27",
+        "timestamp": 1743635727.418
+      }
+    },
+    "0x5d2f4460ac3514ada79f5d9838916e508ab39bb7": {
+      "BTC": {
+        "type": "Short",
+        "value": 22795390.97816,
+        "size": -275.98328,
+        "time": "01:15:28",
+        "timestamp": 1743635728.151
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 653970.5,
+        "size": -365.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.151
+      }
+    },
+    "0xa87a233e8a7d8951ff790a2e39738086cb5f71b7": {
+      "ETH": {
+        "type": "Short",
+        "value": 322157.15601,
+        "size": -179.8053,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 2119666.2976,
+        "size": -17863.36,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 1104073.53105,
+        "size": -6754809.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 352048.2264,
+        "size": -155142.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 509667.596856,
+        "size": -72851286.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "APT": {
+        "type": "Short",
+        "value": 123691.90972,
+        "size": -24413.68,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "SEI": {
+        "type": "Short",
+        "value": 134103.79738,
+        "size": -826322.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 161151.803274,
+        "size": -14753438.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 1853652.55456,
+        "size": -5502412.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "EIGEN": {
+        "type": "Short",
+        "value": 165334.41341,
+        "size": -203038.7,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "GRASS": {
+        "type": "Short",
+        "value": 210854.0983,
+        "size": -124847.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 1360092.92438,
+        "size": -113322.19,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "VIRTUAL": {
+        "type": "Short",
+        "value": 128308.104032,
+        "size": -237603.2,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 154166.802,
+        "size": -368467.5,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      },
+      "BERA": {
+        "type": "Short",
+        "value": 1650539.8983,
+        "size": -254626.5,
+        "time": "01:15:28",
+        "timestamp": 1743635728.623
+      }
+    },
+    "0x880ac484a1743862989a441d6d867238c7aa311c": {
+      "BTC": {
+        "type": "Long",
+        "value": 217115.30017,
+        "size": 2.62861,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 1400914.1992,
+        "size": -11806.12,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 3214421.82418,
+        "size": -39514.94,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "DOGE": {
+        "type": "Long",
+        "value": 173603.67745,
+        "size": 1062121.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 9821638.926,
+        "size": -1403893500.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 114086.6391,
+        "size": -8850.1,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 2533806.065,
+        "size": 1254670.0,
+        "time": "01:15:28",
+        "timestamp": 1743635728.824
+      }
+    },
+    "0xe86b057f5eb764c9738d6b0d38170befd0723664": {
+      "BTC": {
+        "type": "Long",
+        "value": 9766370.04834,
+        "size": 118.24122,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 4551359.11654,
+        "size": 2540.2462,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 1912166.7422,
+        "size": 16114.67,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "BNB": {
+        "type": "Long",
+        "value": 152812.8342,
+        "size": 259.74,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "DOGE": {
+        "type": "Long",
+        "value": 358095.7401,
+        "size": 2190858.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "SUI": {
+        "type": "Long",
+        "value": 248407.28172,
+        "size": 109469.1,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 7018352.415888,
+        "size": -1003195028.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "CRV": {
+        "type": "Short",
+        "value": 101006.809251,
+        "size": -208317.3,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "LINK": {
+        "type": "Long",
+        "value": 170901.1434,
+        "size": 13257.4,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 1671309.927,
+        "size": 827586.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "AAVE": {
+        "type": "Long",
+        "value": 335024.82,
+        "size": 2221.65,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "COMP": {
+        "type": "Short",
+        "value": 214417.20408,
+        "size": -4912.08,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "MKR": {
+        "type": "Long",
+        "value": 115401.92301,
+        "size": 88.9829,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 169921.58058,
+        "size": 265893.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "kBONK": {
+        "type": "Long",
+        "value": 227140.628253,
+        "size": 20794711.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "MAV": {
+        "type": "Short",
+        "value": 211421.8969,
+        "size": -3669245.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "WIF": {
+        "type": "Long",
+        "value": 124719.6528,
+        "size": 334728.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "TAO": {
+        "type": "Long",
+        "value": 207276.0887,
+        "size": 986.935,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 143167.8625,
+        "size": -881033.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "REZ": {
+        "type": "Long",
+        "value": 377583.06018,
+        "size": 22132653.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "MEW": {
+        "type": "Long",
+        "value": 114983.304748,
+        "size": 37478261.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "MOVE": {
+        "type": "Long",
+        "value": 334000.53232,
+        "size": 894868.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 347749.64544,
+        "size": -831141.6,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "S": {
+        "type": "Long",
+        "value": 534556.63718,
+        "size": 1154999.0,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "VVV": {
+        "type": "Short",
+        "value": 277944.327927,
+        "size": -118208.79,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      },
+      "BERA": {
+        "type": "Long",
+        "value": 106754.05536,
+        "size": 16468.8,
+        "time": "01:15:29",
+        "timestamp": 1743635729.427
+      }
+    },
+    "0x162cc7c861ebd0c06b3d72319201150482518185": {
+      "ETH": {
+        "type": "Long",
+        "value": 1767029.72235,
+        "size": 986.3409,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 102269.7367,
+        "size": 862.09,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "LTC": {
+        "type": "Long",
+        "value": 208761.49364,
+        "size": 2566.34,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "SUI": {
+        "type": "Long",
+        "value": 218609.87634,
+        "size": 96350.6,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 138525.1968,
+        "size": 68604.0,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "POPCAT": {
+        "type": "Long",
+        "value": 145182.02015,
+        "size": 893153.0,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 459026.3013,
+        "size": -38236.26,
+        "time": "01:15:30",
+        "timestamp": 1743635730.715
+      }
+    },
+    "0xd487e26c62ed8c28ce3cc70b5791e501c2934982": {
+      "BTC": {
+        "type": "Short",
+        "value": 4872751.0,
+        "size": -59.0,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 1074900.0,
+        "size": -600.0,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 164223.57963,
+        "size": -1004487.0,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 232270.46946,
+        "size": -102371.4,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 1605264.0,
+        "size": -795000.0,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 536802.0,
+        "size": -840000.0,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 1753414.16495,
+        "size": -146056.99,
+        "time": "01:15:31",
+        "timestamp": 1743635731.15
+      }
+    },
+    "0x9458f423df6569f053358ee9906613cd69c1ec04": {
+      "SOL": {
+        "type": "Short",
+        "value": 2167945.4555,
+        "size": -18274.85,
+        "time": "01:15:31",
+        "timestamp": 1743635731.556
+      }
+    },
+    "0xd47587702a91731dc1089b5db0932cf820151a91": {
+      "HYPE": {
+        "type": "Short",
+        "value": 6605260.36555,
+        "size": -550209.11,
+        "time": "01:15:32",
+        "timestamp": 1743635732.019
+      }
+    },
+    "0x5a54ad9860b08aaee07174887f9ee5107b0a2e72": {
+      "BTC": {
+        "type": "Short",
+        "value": 16396703.05286,
+        "size": -198.53374,
+        "time": "01:15:32",
+        "timestamp": 1743635732.341
+      }
+    },
+    "0x76c2164fc79492401db1890db0d17d16b9155aa0": {
+      "XRP": {
+        "type": "Short",
+        "value": 225962.6144,
+        "size": -111907.0,
+        "time": "01:15:33",
+        "timestamp": 1743635733.14
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 208330.3,
+        "size": -326000.0,
+        "time": "01:15:33",
+        "timestamp": 1743635733.14
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 3324184.5,
+        "size": -276900.0,
+        "time": "01:15:33",
+        "timestamp": 1743635733.14
+      }
+    },
+    "0xeb93e6fc46b78c19bfe3264afabccae410956389": {
+      "ETH": {
+        "type": "Short",
+        "value": 1947924.4642,
+        "size": -1087.3148,
+        "time": "01:15:33",
+        "timestamp": 1743635733.631
+      },
+      "PENDLE": {
+        "type": "Short",
+        "value": 374604.0064,
+        "size": -127616.0,
+        "time": "01:15:33",
+        "timestamp": 1743635733.631
+      },
+      "USUAL": {
+        "type": "Short",
+        "value": 287683.90071,
+        "size": -2711441.1,
+        "time": "01:15:33",
+        "timestamp": 1743635733.631
+      }
+    },
+    "0x8bff50aad8b4e06c5e148eaeb9d7aef69e26cdc3": {
+      "BTC": {
+        "type": "Short",
+        "value": 4943583.45585,
+        "size": -59.85765,
+        "time": "01:15:34",
+        "timestamp": 1743635734.027
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 7433195.59645,
+        "size": -4149.1463,
+        "time": "01:15:34",
+        "timestamp": 1743635734.027
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 3018580.6842,
+        "size": -25445.34,
+        "time": "01:15:34",
+        "timestamp": 1743635734.027
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 891329.62,
+        "size": -49820.0,
+        "time": "01:15:34",
+        "timestamp": 1743635734.027
+      }
+    },
+    "0x7fe8cfe481ec2f702692a9152e3f002f3e417ac6": {
+      "ETH": {
+        "type": "Short",
+        "value": 2328950.0,
+        "size": -1300.0,
+        "time": "01:15:34",
+        "timestamp": 1743635734.509
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 154219.0,
+        "size": -1300.0,
+        "time": "01:15:34",
+        "timestamp": 1743635734.509
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 1508100.0,
+        "size": -10000.0,
+        "time": "01:15:34",
+        "timestamp": 1743635734.509
+      }
+    },
+    "0xdbd1bac81ad581c7198c9d155ca468f32a0c29dd": {
+      "BTC": {
+        "type": "Short",
+        "value": 1000775.51106,
+        "size": -12.11754,
+        "time": "01:15:34",
+        "timestamp": 1743635734.954
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 3823854.6345,
+        "size": -2134.443,
+        "time": "01:15:34",
+        "timestamp": 1743635734.954
+      }
+    },
+    "0xaea8e3bd369217cc6e3e6abddf0da318fba8e59b": {
+      "BTC": {
+        "type": "Long",
+        "value": 3313531.3429,
+        "size": 40.11782,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 126298.6002,
+        "size": -70.4988,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "DYDX": {
+        "type": "Short",
+        "value": 231835.052425,
+        "size": -392441.9,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 496250.9256,
+        "size": -4181.42,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 172948.19117,
+        "size": -9665.69,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "OP": {
+        "type": "Short",
+        "value": 189951.976025,
+        "size": -269202.5,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "ARB": {
+        "type": "Short",
+        "value": 184758.43102,
+        "size": -605606.5,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 186729.80779,
+        "size": -82270.7,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 150244.029367,
+        "size": -21460367.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 203747.363,
+        "size": -100895.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "BCH": {
+        "type": "Short",
+        "value": 135273.73235,
+        "size": -460.193,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "WLD": {
+        "type": "Long",
+        "value": 157365.04608,
+        "size": 219888.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "SEI": {
+        "type": "Short",
+        "value": 183043.79499,
+        "size": -1127603.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "TIA": {
+        "type": "Short",
+        "value": 157046.5046,
+        "size": -54031.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 181948.45778,
+        "size": -284677.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "FET": {
+        "type": "Short",
+        "value": 145083.78696,
+        "size": -339171.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 272786.414026,
+        "size": -24964438.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 221558.49975,
+        "size": -594389.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "HBAR": {
+        "type": "Short",
+        "value": 175359.79624,
+        "size": -1096547.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 250796.34504,
+        "size": -1541844.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "MOODENG": {
+        "type": "Short",
+        "value": 123482.0366,
+        "size": -4668508.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 226574.023704,
+        "size": -541550.8,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "S": {
+        "type": "Short",
+        "value": 132264.90414,
+        "size": -285657.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "TRUMP": {
+        "type": "Short",
+        "value": 280320.9252,
+        "size": -30784.2,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      },
+      "MELANIA": {
+        "type": "Short",
+        "value": 123885.85743,
+        "size": -215821.5,
+        "time": "01:15:35",
+        "timestamp": 1743635735.374
+      }
+    },
+    "0xceec48581b3145a575508719f45da07dc57fa7ce": {
+      "SOL": {
+        "type": "Long",
+        "value": 237360.0,
+        "size": 2000.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.719
+      },
+      "PURR": {
+        "type": "Short",
+        "value": 146863.8,
+        "size": -1800000.0,
+        "time": "01:15:35",
+        "timestamp": 1743635735.719
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 2046808.43586,
+        "size": -170439.54,
+        "time": "01:15:35",
+        "timestamp": 1743635735.719
+      }
+    },
+    "0xbfc79c444c41a74516bf31237ebf586a231480b4": {
+      "BTC": {
+        "type": "Short",
+        "value": 2560445.0,
+        "size": -31.0,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 210836.6,
+        "size": -260000.0,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 583425.0,
+        "size": -450.0,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      },
+      "WLD": {
+        "type": "Short",
+        "value": 181061.98,
+        "size": -253000.0,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 202495.03746,
+        "size": -16861.94,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 339724.56,
+        "size": -812000.0,
+        "time": "01:15:36",
+        "timestamp": 1743635736.124
+      }
+    },
+    "0xb39230a0352ada7a287da138876fa4728e2a0405": {
+      "HYPE": {
+        "type": "Short",
+        "value": 1818940.54302,
+        "size": -151464.78,
+        "time": "01:15:37",
+        "timestamp": 1743635737.077
+      }
+    },
+    "0x265bda080f9107223a74455201674538c32482b0": {
+      "HYPE": {
+        "type": "Short",
+        "value": 2755948.77252,
+        "size": -229490.28,
+        "time": "01:15:37",
+        "timestamp": 1743635737.537
+      }
+    },
+    "0xcf13fae6690c07cbd471574b68e504319ee0882d": {
+      "BTC": {
+        "type": "Short",
+        "value": 1212357.4923,
+        "size": -14.67834,
+        "time": "01:15:38",
+        "timestamp": 1743635738.213
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 429632.33465,
+        "size": -239.8171,
+        "time": "01:15:38",
+        "timestamp": 1743635738.213
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 5376271.6476,
+        "size": -45300.57,
+        "time": "01:15:38",
+        "timestamp": 1743635738.213
+      }
+    },
+    "0xb3e475368ed0fa0ad23c04de0423d48a0758806f": {
+      "BTC": {
+        "type": "Long",
+        "value": 1156484.0,
+        "size": 14.0,
+        "time": "01:15:39",
+        "timestamp": 1743635739.017
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 380628.9256,
+        "size": -647.02,
+        "time": "01:15:39",
+        "timestamp": 1743635739.017
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 1646830.197,
+        "size": -137133.0,
+        "time": "01:15:39",
+        "timestamp": 1743635739.017
+      }
+    },
+    "0xa9ed0db00e5c29e7e18a55db159ea33fb5fea60a": {
+      "HYPE": {
+        "type": "Short",
+        "value": 2144098.74891,
+        "size": -178540.99,
+        "time": "01:15:40",
+        "timestamp": 1743635740.728
+      },
+      "S": {
+        "type": "Short",
+        "value": 240104.9448,
+        "size": -518630.0,
+        "time": "01:15:40",
+        "timestamp": 1743635740.728
+      },
+      "BERA": {
+        "type": "Short",
+        "value": 740203.20258,
+        "size": -114154.9,
+        "time": "01:15:40",
+        "timestamp": 1743635740.728
+      }
+    },
+    "0x27c9fa86c91b84ddfa15de58c482ff662498d65d": {
+      "BTC": {
+        "type": "Short",
+        "value": 979157.00404,
+        "size": -11.85334,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 119342.8589,
+        "size": -1005.67,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 126638.47497,
+        "size": -774879.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 297280.179,
+        "size": -42468597.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 221829.882984,
+        "size": -20310372.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 210184.0326,
+        "size": -564101.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 248757.55894,
+        "size": -1184.447,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 229823.08454,
+        "size": 25225.9,
+        "time": "01:15:42",
+        "timestamp": 1743635742.01
+      }
+    },
+    "0x29eb62882a8bd104a64400a2971d0d6881777043": {
+      "SOL": {
+        "type": "Short",
+        "value": 1188593.9732,
+        "size": -10015.96,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 798068.075,
+        "size": -114009725.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "CRV": {
+        "type": "Short",
+        "value": 461816.807363,
+        "size": -952454.9,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "COMP": {
+        "type": "Short",
+        "value": 332654.65632,
+        "size": -7613.28,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "ZRO": {
+        "type": "Short",
+        "value": 118514.0868,
+        "size": -44036.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "ENA": {
+        "type": "Long",
+        "value": 131824.14661,
+        "size": 391367.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "ZK": {
+        "type": "Short",
+        "value": 319961.87784,
+        "size": -5272938.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "MOVE": {
+        "type": "Short",
+        "value": 278342.46846,
+        "size": -745467.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "USUAL": {
+        "type": "Long",
+        "value": 175619.59531,
+        "size": 1655227.1,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "VVV": {
+        "type": "Short",
+        "value": 274853.741733,
+        "size": -116944.11,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      },
+      "NIL": {
+        "type": "Short",
+        "value": 257502.82471,
+        "size": -608653.0,
+        "time": "01:15:42",
+        "timestamp": 1743635742.558
+      }
+    },
+    "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f": {
+      "BTC": {
+        "type": "Short",
+        "value": 9729454.48576,
+        "size": -117.81568,
+        "time": "01:15:44",
+        "timestamp": 1743635744.97
+      },
+      "HYPE": {
+        "type": "Long",
+        "value": 101524.34736,
+        "size": 8444.88,
+        "time": "01:15:44",
+        "timestamp": 1743635744.97
+      }
+    },
+    "0x2657a9d65dc2e832dd0f6e05a556408353a149bc": {
+      "XRP": {
+        "type": "Short",
+        "value": 504550.0,
+        "size": -250000.0,
+        "time": "01:15:45",
+        "timestamp": 1743635745.374
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 432792.0,
+        "size": -36000.0,
+        "time": "01:15:45",
+        "timestamp": 1743635745.374
+      }
+    },
+    "0x24a126962fe500e557f1019eac2e9bdf92a22f5f": {
+      "HYPE": {
+        "type": "Short",
+        "value": 1082100.58066,
+        "size": -90010.03,
+        "time": "01:15:46",
+        "timestamp": 1743635746.339
+      }
+    },
+    "0x3c65c137bf380df7f5f61d9318c193b32a344fb0": {
+      "HYPE": {
+        "type": "Short",
+        "value": 707541.82624,
+        "size": -58853.92,
+        "time": "01:15:46",
+        "timestamp": 1743635746.686
+      }
+    },
+    "0x5647249079e257329ecb6f46ed41821d3c69e7de": {
+      "SOL": {
+        "type": "Short",
+        "value": 282184.0536,
+        "size": -2378.49,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 206813.4838,
+        "size": -2543.8,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 669099.438096,
+        "size": -95612952.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "CRV": {
+        "type": "Short",
+        "value": 595314.65834,
+        "size": -1227782.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 506727.6413,
+        "size": -624818.3,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "SEI": {
+        "type": "Short",
+        "value": 122278.82784,
+        "size": -753691.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "ZRO": {
+        "type": "Short",
+        "value": 116295.963,
+        "size": -43232.7,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "NEAR": {
+        "type": "Short",
+        "value": 164211.9533,
+        "size": -67747.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 316013.7988,
+        "size": -848587.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "ONDO": {
+        "type": "Short",
+        "value": 349891.5527,
+        "size": -448930.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "ENA": {
+        "type": "Long",
+        "value": 343196.65276,
+        "size": 1019174.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "HBAR": {
+        "type": "Short",
+        "value": 350092.59846,
+        "size": -2189858.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "ZK": {
+        "type": "Short",
+        "value": 212807.351297,
+        "size": -3508951.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "XLM": {
+        "type": "Long",
+        "value": 161543.90098,
+        "size": 630883.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 139966.23875,
+        "size": 15387.5,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      },
+      "VVV": {
+        "type": "Short",
+        "value": 505866.926824,
+        "size": -215390.84,
+        "time": "01:15:47",
+        "timestamp": 1743635747.145
+      }
+    },
+    "0xa581bb0ac1a7ec393e76ccd45de2bfff6146e213": {
+      "HYPE": {
+        "type": "Short",
+        "value": 624728.0,
+        "size": -52000.0,
+        "time": "01:15:47",
+        "timestamp": 1743635747.546
+      }
+    },
+    "0xa351db10472a07059ea099e0581444e568bff894": {
+      "ETH": {
+        "type": "Short",
+        "value": 183271.33305,
+        "size": -102.3805,
+        "time": "01:15:48",
+        "timestamp": 1743635748.281
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 146388.49271,
+        "size": -434813.0,
+        "time": "01:15:48",
+        "timestamp": 1743635748.281
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 598662.78602,
+        "size": -49830.43,
+        "time": "01:15:48",
+        "timestamp": 1743635748.281
+      }
+    },
+    "0x7bca5eb262f16af84f4f3c2431b9bfaa533bee75": {
+      "HYPE": {
+        "type": "Short",
+        "value": 782325.12906,
+        "size": -65117.79,
+        "time": "01:15:48",
+        "timestamp": 1743635748.803
+      }
+    },
+    "0xbaaaf6571ab7d571043ff1e313a9609a10637864": {
+      "HYPE": {
+        "type": "Long",
+        "value": 1151599.44706,
+        "size": 95854.79,
+        "time": "01:15:49",
+        "timestamp": 1743635749.292
+      }
+    },
+    "0x142a1aad965db6b3d2ad63b174419a3095bfa4c0": {
+      "HYPE": {
+        "type": "Long",
+        "value": 1060337.73914,
+        "size": 88258.51,
+        "time": "01:15:49",
+        "timestamp": 1743635749.579
+      }
+    },
+    "0x3ca146d2692f61746a28fa926dc9d18086ce37c6": {
+      "XRP": {
+        "type": "Long",
+        "value": 131109.0167,
+        "size": 64973.0,
+        "time": "01:15:50",
+        "timestamp": 1743635750.151
+      },
+      "COMP": {
+        "type": "Short",
+        "value": 101773.37555,
+        "size": -2330.35,
+        "time": "01:15:50",
+        "timestamp": 1743635750.151
+      }
+    },
+    "0x2f7a83314829ea002450381ad181fd525bdb340d": {
+      "MOVE": {
+        "type": "Long",
+        "value": 297149.28132,
+        "size": 796412.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.542
+      }
+    },
+    "0xd6ef5649200101eb44ce8949f4cfb167b0c5a07a": {
+      "BTC": {
+        "type": "Long",
+        "value": 494586.25293,
+        "size": 5.98983,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 1457775.0954,
+        "size": 814.354,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 315591.042,
+        "size": 2660.97,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "BNB": {
+        "type": "Long",
+        "value": 189440.89555,
+        "size": 322.151,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 161571.7352,
+        "size": -1987.45,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "DOGE": {
+        "type": "Long",
+        "value": 887147.54388,
+        "size": 5431959.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "SUI": {
+        "type": "Long",
+        "value": 677305.65125,
+        "size": 298701.5,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 808885.8514,
+        "size": -115637720.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 271941.825086,
+        "size": -335411.8,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 176002.3944,
+        "size": -13656.3,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 1544317.89,
+        "size": 765575.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "APT": {
+        "type": "Long",
+        "value": 256416.12583,
+        "size": 50652.1,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 326899.6224,
+        "size": -2168.92,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "WLD": {
+        "type": "Short",
+        "value": 200943.8689,
+        "size": -280977.5,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "UNI": {
+        "type": "Long",
+        "value": 163848.0012,
+        "size": 28259.4,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "TIA": {
+        "type": "Short",
+        "value": 173173.0399,
+        "size": -59569.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "JUP": {
+        "type": "Short",
+        "value": 269508.14025,
+        "size": -719475.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 264240.18064,
+        "size": -1259.246,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 241912.19712,
+        "size": -718608.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "PENGU": {
+        "type": "Long",
+        "value": 108136.519872,
+        "size": 22900576.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "AI16Z": {
+        "type": "Short",
+        "value": 276910.160876,
+        "size": -1629170.8,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 584215.56291,
+        "size": 64234.1,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "LAYER": {
+        "type": "Long",
+        "value": 184367.277,
+        "size": 137855.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      },
+      "KAITO": {
+        "type": "Short",
+        "value": 182096.093,
+        "size": -208205.0,
+        "time": "01:15:51",
+        "timestamp": 1743635751.966
+      }
+    },
+    "0xaed0696ed15e0e499a70264feee1b3ea0c6530fb": {
+      "HYPE": {
+        "type": "Short",
+        "value": 839337.4655,
+        "size": -69886.55,
+        "time": "01:15:52",
+        "timestamp": 1743635752.767
+      }
+    },
+    "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6": {
+      "kPEPE": {
+        "type": "Long",
+        "value": 29381010.20911,
+        "size": 4200287378.0,
+        "time": "01:15:53",
+        "timestamp": 1743635753.944
+      }
+    },
+    "0x6901d18437304adf9d33c9f03b929c3c4f73e3be": {
+      "HYPE": {
+        "type": "Short",
+        "value": 1354968.2,
+        "size": -112820.0,
+        "time": "01:15:54",
+        "timestamp": 1743635754.312
+      }
+    },
+    "0x84838a8c45a9572846ec1c7a7f7fd8183fca9d3f": {
+      "HYPE": {
+        "type": "Short",
+        "value": 624520.0,
+        "size": -52000.0,
+        "time": "01:15:54",
+        "timestamp": 1743635754.715
+      }
+    },
+    "0xf58b673c1633ccef0ac58263cdc95ed80f817fc7": {
+      "BTC": {
+        "type": "Long",
+        "value": 4524596.84724,
+        "size": 54.79644,
+        "time": "01:15:55",
+        "timestamp": 1743635755.248
+      }
+    },
+    "0x9321d8117e73b0c79035f0e87debcfd8dbb1d75a": {
+      "HYPE": {
+        "type": "Short",
+        "value": 325526.246,
+        "size": -27104.6,
+        "time": "01:15:56",
+        "timestamp": 1743635756.051
+      }
+    },
+    "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5": {
+      "ETH": {
+        "type": "Short",
+        "value": 138911468.97072,
+        "size": -77621.5182,
+        "time": "01:15:57",
+        "timestamp": 1743635757.608
+      }
+    },
+    "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": {
+      "BTC": {
+        "type": "Long",
+        "value": 14493091.46738,
+        "size": 175.52278,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 2780150.40048,
+        "size": 1553.5038,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 2422436.8896,
+        "size": 20432.16,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 365342.07675,
+        "size": -4494.25,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 628348.41108,
+        "size": -3848052.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 842099.43582,
+        "size": -371394.3,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 3436394.12825,
+        "size": -491264350.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 1067013.237888,
+        "size": -1316130.4,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 261625.4305,
+        "size": -20301.5,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 2494947.4407,
+        "size": 1237389.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "APT": {
+        "type": "Short",
+        "value": 459619.914018,
+        "size": -90832.18,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "WLD": {
+        "type": "Short",
+        "value": 1147442.09447,
+        "size": -1604589.7,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "TRX": {
+        "type": "Short",
+        "value": 625036.81933,
+        "size": -2684059.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "UNI": {
+        "type": "Short",
+        "value": 282899.64,
+        "size": -48775.8,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "SEI": {
+        "type": "Short",
+        "value": 156557.70594,
+        "size": -965333.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "TIA": {
+        "type": "Short",
+        "value": 396442.87936,
+        "size": -136412.8,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 795920.014359,
+        "size": -72946569.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 535792.66015,
+        "size": -1438949.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "ONDO": {
+        "type": "Short",
+        "value": 451157.40942,
+        "size": -579142.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 406474.65182,
+        "size": -1937.993,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 191867.8281,
+        "size": -570102.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 477763.09295,
+        "size": -2942797.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "GRASS": {
+        "type": "Long",
+        "value": 100361.56376,
+        "size": 59498.2,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "PURR": {
+        "type": "Short",
+        "value": 1181142.373963,
+        "size": -14472833.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 10773732.67324,
+        "size": -896839.48,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "PENGU": {
+        "type": "Short",
+        "value": 242547.362136,
+        "size": -51365388.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "USUAL": {
+        "type": "Long",
+        "value": 112099.507344,
+        "size": 1057143.6,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 1821611.918538,
+        "size": -4353965.1,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "AI16Z": {
+        "type": "Short",
+        "value": 701548.982387,
+        "size": -4127487.1,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "AIXBT": {
+        "type": "Short",
+        "value": 383441.3104,
+        "size": -4941254.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "GRIFFAIN": {
+        "type": "Short",
+        "value": 390784.588445,
+        "size": -11525869.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "SPX": {
+        "type": "Long",
+        "value": 353055.174869,
+        "size": 808480.1,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "TRUMP": {
+        "type": "Short",
+        "value": 115731.1558,
+        "size": -12726.8,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "MELANIA": {
+        "type": "Long",
+        "value": 368010.838836,
+        "size": 640286.1,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "BERA": {
+        "type": "Long",
+        "value": 359049.82784,
+        "size": 55436.3,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      },
+      "KAITO": {
+        "type": "Long",
+        "value": 162348.32554,
+        "size": 185681.0,
+        "time": "01:15:58",
+        "timestamp": 1743635758.465
+      }
+    },
+    "0x8af700ba841f30e0a3fcb0ee4c4a9d223e1efa05": {
+      "ETH": {
+        "type": "Short",
+        "value": 8439560.68112,
+        "size": -4715.8922,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 216153.55308,
+        "size": -12091.83,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "LTC": {
+        "type": "Long",
+        "value": 691932.7338,
+        "size": 8511.8,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 2173342.70919,
+        "size": -13309711.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 4902467.52612,
+        "size": -2162153.8,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "CRV": {
+        "type": "Short",
+        "value": 436296.935575,
+        "size": -899822.5,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 5129797.9313,
+        "size": -398059.9,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "SNX": {
+        "type": "Long",
+        "value": 134980.992668,
+        "size": 208519.6,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 11478721.2969,
+        "size": -5692963.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "APT": {
+        "type": "Short",
+        "value": 450225.787767,
+        "size": -88975.67,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "AAVE": {
+        "type": "Long",
+        "value": 588594.498,
+        "size": 3908.33,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 193152.71976,
+        "size": -149.3141,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "WLD": {
+        "type": "Long",
+        "value": 250712.77282,
+        "size": 350598.2,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 1341757.68636,
+        "size": -2101652.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "TON": {
+        "type": "Short",
+        "value": 443226.18929,
+        "size": -116097.7,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "PENDLE": {
+        "type": "Short",
+        "value": 454931.2462,
+        "size": -155378.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "NEAR": {
+        "type": "Short",
+        "value": 147115.4286,
+        "size": -60741.3,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "kBONK": {
+        "type": "Short",
+        "value": 259976.50611,
+        "size": -23827010.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 925789.48065,
+        "size": -2750823.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "POPCAT": {
+        "type": "Long",
+        "value": 881555.79185,
+        "size": 5429971.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "GRASS": {
+        "type": "Short",
+        "value": 456163.34816,
+        "size": -270431.2,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "PNUT": {
+        "type": "Long",
+        "value": 654304.915495,
+        "size": 4593225.1,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 155233.90808,
+        "size": -12922.16,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      },
+      "TRUMP": {
+        "type": "Short",
+        "value": 569219.45405,
+        "size": -62596.3,
+        "time": "01:15:59",
+        "timestamp": 1743635759.275
+      }
+    },
+    "0x6859da14835424957a1e6b397d8026b1d9ff7e1e": {
+      "BTC": {
+        "type": "Short",
+        "value": 2425250.6407,
+        "size": -29.3717,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 4862642.0632,
+        "size": -2717.167,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "ARB": {
+        "type": "Short",
+        "value": 107124.756768,
+        "size": -351597.6,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 525843.2925,
+        "size": -40810.5,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "JUP": {
+        "type": "Short",
+        "value": 289564.5235,
+        "size": -773203.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 147024.16,
+        "size": -905600.0,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 406106.27855,
+        "size": -970965.4,
+        "time": "01:15:59",
+        "timestamp": 1743635759.82
+      }
+    },
+    "0x2ba553d9f990a3b66b03b2dc0d030dfc1c061036": {
+      "BTC": {
+        "type": "Long",
+        "value": 2486349.05215,
+        "size": 30.11165,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 7166739.536,
+        "size": -4004.66,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 3738680.476,
+        "size": -31539.4,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "DOGE": {
+        "type": "Short",
+        "value": 190120.83666,
+        "size": -1164742.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 13176152.64,
+        "size": -6535790.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "AAVE": {
+        "type": "Long",
+        "value": 826696.3536,
+        "size": 5490.81,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "MKR": {
+        "type": "Long",
+        "value": 1158471.108,
+        "size": 895.956,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 440388.57999,
+        "size": -689929.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 4373730.51951,
+        "size": -364204.39,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "MORPHO": {
+        "type": "Long",
+        "value": 231510.38198,
+        "size": 210406.6,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      },
+      "NIL": {
+        "type": "Long",
+        "value": 421750.8772,
+        "size": 996670.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.296
+      }
+    },
+    "0x1f793d9f0368c1da329cb112212d81d521e7a9b8": {
+      "BTC": {
+        "type": "Long",
+        "value": 6605680.0,
+        "size": 80.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.901
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 2863360.0,
+        "size": -1600.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.901
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 6638240.0,
+        "size": -56000.0,
+        "time": "01:16:00",
+        "timestamp": 1743635760.901
+      }
+    },
+    "0x123dbca6a27005a3c4ce10cb66ee8ece8fc13bff": {
+      "BTC": {
+        "type": "Short",
+        "value": 8571225.68101,
+        "size": -103.80431,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 588604.8088,
+        "size": 328.903,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "BNB": {
+        "type": "Long",
+        "value": 214025.19579,
+        "size": 364.007,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ARB": {
+        "type": "Long",
+        "value": 194390.440668,
+        "size": 638015.1,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "SUI": {
+        "type": "Long",
+        "value": 5227054.09875,
+        "size": 2305612.5,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 173568.159125,
+        "size": -24813175.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "CRV": {
+        "type": "Short",
+        "value": 278828.003826,
+        "size": -575069.1,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 344039.808,
+        "size": -26700.8,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "GMX": {
+        "type": "Short",
+        "value": 141866.00512,
+        "size": -12875.84,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 7983835.776,
+        "size": 3960236.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "BCH": {
+        "type": "Long",
+        "value": 104242.5904,
+        "size": 354.808,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "APT": {
+        "type": "Long",
+        "value": 729971.240424,
+        "size": 144260.24,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 2567921.248,
+        "size": -17055.8,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 1951432.7091,
+        "size": -1509.2287,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "UNI": {
+        "type": "Short",
+        "value": 384455.92286,
+        "size": -66311.8,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "RUNE": {
+        "type": "Long",
+        "value": 240666.90642,
+        "size": 216563.4,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ZRO": {
+        "type": "Short",
+        "value": 335449.79085,
+        "size": -124772.1,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "TIA": {
+        "type": "Short",
+        "value": 581160.0,
+        "size": -200000.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 2332551.33891,
+        "size": 3654261.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "PENDLE": {
+        "type": "Short",
+        "value": 427383.4208,
+        "size": -146104.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "NEAR": {
+        "type": "Short",
+        "value": 125696.67474,
+        "size": -51927.9,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 296974.4025,
+        "size": -797675.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ETC": {
+        "type": "Long",
+        "value": 113761.4086,
+        "size": 7116.76,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 256908.0451,
+        "size": -1225.414,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "kFLOKI": {
+        "type": "Long",
+        "value": 193319.460512,
+        "size": 3534112.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 2059028.45112,
+        "size": -6118228.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "MNT": {
+        "type": "Long",
+        "value": 425239.132727,
+        "size": 548646.1,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "RENDER": {
+        "type": "Short",
+        "value": 913692.78396,
+        "size": -278828.4,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "POL": {
+        "type": "Long",
+        "value": 101172.5,
+        "size": 550000.0,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "VIRTUAL": {
+        "type": "Long",
+        "value": 159605.800528,
+        "size": 295966.4,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      },
+      "MELANIA": {
+        "type": "Long",
+        "value": 432744.993348,
+        "size": 753569.8,
+        "time": "01:16:01",
+        "timestamp": 1743635761.704
+      }
+    },
+    "0xff8850989681b1163cbaf0b0f6b719c1c663dc25": {
+      "BTC": {
+        "type": "Long",
+        "value": 105230.13382,
+        "size": 1.27442,
+        "time": "01:16:02",
+        "timestamp": 1743635762.391
+      }
+    },
+    "0x7c976f00e84db0b44f945fc6d7fad34b43150a1a": {
+      "OP": {
+        "type": "Short",
+        "value": 187303.798718,
+        "size": -265897.9,
+        "time": "01:16:02",
+        "timestamp": 1743635762.91
+      },
+      "ARB": {
+        "type": "Short",
+        "value": 244854.938241,
+        "size": -804411.9,
+        "time": "01:16:02",
+        "timestamp": 1743635762.91
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 1675139.5024,
+        "size": -831376.0,
+        "time": "01:16:02",
+        "timestamp": 1743635762.91
+      },
+      "ADA": {
+        "type": "Short",
+        "value": 1540145.68568,
+        "size": -2414627.0,
+        "time": "01:16:02",
+        "timestamp": 1743635762.91
+      },
+      "HBAR": {
+        "type": "Short",
+        "value": 703471.99648,
+        "size": -4405511.0,
+        "time": "01:16:02",
+        "timestamp": 1743635762.91
+      }
+    },
+    "0xb4a04f60522a539caa55e9ce74c9bb3e6f2253f0": {
+      "BTC": {
+        "type": "Short",
+        "value": 8283591.45,
+        "size": -100.35,
+        "time": "01:16:03",
+        "timestamp": 1743635763.455
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 487627.8132,
+        "size": -4119.87,
+        "time": "01:16:03",
+        "timestamp": 1743635763.455
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 173054.42,
+        "size": -14420.0,
+        "time": "01:16:03",
+        "timestamp": 1743635763.455
+      }
+    },
+    "0x9f07dc88dc450978e5ddf973f6a0236a7cfbf99a": {
+      "BTC": {
+        "type": "Short",
+        "value": 758859.52382,
+        "size": -9.19306,
+        "time": "01:16:04",
+        "timestamp": 1743635764.185
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 633775.58277,
+        "size": -354.5201,
+        "time": "01:16:04",
+        "timestamp": 1743635764.185
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 180825.81476,
+        "size": -307.642,
+        "time": "01:16:04",
+        "timestamp": 1743635764.185
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 177607.11936,
+        "size": -14799.36,
+        "time": "01:16:04",
+        "timestamp": 1743635764.185
+      }
+    },
+    "0xb0fbfefc6c325964d0ffc3f909bdda80b8421326": {
+      "BTC": {
+        "type": "Short",
+        "value": 138678.96,
+        "size": -1.68,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 401003.68,
+        "size": -3388.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 125784.0,
+        "size": -18000000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "ONDO": {
+        "type": "Short",
+        "value": 224127.36,
+        "size": -288000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "POPCAT": {
+        "type": "Short",
+        "value": 162050.0,
+        "size": -1000000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "RENDER": {
+        "type": "Short",
+        "value": 163675.0,
+        "size": -50000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "GOAT": {
+        "type": "Short",
+        "value": 216501.2,
+        "size": -4880000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 200568.0,
+        "size": -480000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "S": {
+        "type": "Short",
+        "value": 129516.8,
+        "size": -280000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      },
+      "NIL": {
+        "type": "Short",
+        "value": 160557.6,
+        "size": -380000.0,
+        "time": "01:16:04",
+        "timestamp": 1743635764.672
+      }
+    },
+    "0xccf135ab352d561a15eb7be2a243cc4fcb7f0ab1": {
+      "HYPE": {
+        "type": "Short",
+        "value": 1442327.70396,
+        "size": -120183.96,
+        "time": "01:16:05",
+        "timestamp": 1743635765.298
+      }
+    },
+    "0x1111bbf435a2b5e0f17e97a0764c58f2ed4bf167": {
+      "ETH": {
+        "type": "Long",
+        "value": 3576800.0,
+        "size": 2000.0,
+        "time": "01:16:06",
+        "timestamp": 1743635766.151
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 1184500.0,
+        "size": 10000.0,
+        "time": "01:16:06",
+        "timestamp": 1743635766.151
+      }
+    },
+    "0x0aa989625dedaee97b1996edd964bbb1bf52184d": {
+      "HYPE": {
+        "type": "Long",
+        "value": 1227366.04042,
+        "size": 102399.97,
+        "time": "01:16:06",
+        "timestamp": 1743635766.558
+      }
+    },
+    "0x083384f897ee0f19899168e3b1bec365f52a9012": {
+      "ETH": {
+        "type": "Short",
+        "value": 758872.12968,
+        "size": -424.3302,
+        "time": "01:16:07",
+        "timestamp": 1743635767.996
+      }
+    },
+    "0x06cecfbac34101ae41c88ebc2450f8602b3d164b": {
+      "ETH": {
+        "type": "Short",
+        "value": 1985574.40062,
+        "size": -1109.6934,
+        "time": "01:16:08",
+        "timestamp": 1743635768.576
+      }
+    },
+    "0x7717a7a245d9f950e586822b8c9b46863ed7bd7e": {
+      "XRP": {
+        "type": "Long",
+        "value": 149186.73,
+        "size": 73950.0,
+        "time": "01:16:09",
+        "timestamp": 1743635769.224
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 118481.20036,
+        "size": -283549.6,
+        "time": "01:16:09",
+        "timestamp": 1743635769.224
+      }
+    },
+    "0xe0ffc829349c88c159462942ad885f12130e7610": {
+      "XRP": {
+        "type": "Short",
+        "value": 182955.9886,
+        "size": -90689.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.335
+      }
+    },
+    "0x399d7adeecc4f5e83891d3ca03d588155765459d": {
+      "SOL": {
+        "type": "Short",
+        "value": 375265.98,
+        "size": -3166.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 193073.3877,
+        "size": -10800.1,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "BNB": {
+        "type": "Long",
+        "value": 366521.796,
+        "size": 623.4,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "kPEPE": {
+        "type": "Short",
+        "value": 686677.635,
+        "size": -98195000.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 690626.629,
+        "size": 342335.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "ZRO": {
+        "type": "Short",
+        "value": 115676.384,
+        "size": -43060.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 384864.75,
+        "size": 603000.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "ENA": {
+        "type": "Short",
+        "value": 228072.42,
+        "size": -678000.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "HYPE": {
+        "type": "Long",
+        "value": 165101.4116,
+        "size": 13781.42,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "OM": {
+        "type": "Long",
+        "value": 750039.225,
+        "size": 118950.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      },
+      "NIL": {
+        "type": "Short",
+        "value": 167302.08,
+        "size": -396000.0,
+        "time": "01:16:10",
+        "timestamp": 1743635770.779
+      }
+    },
+    "0x24fb6523036ebcb3cc51deff138066dccf6bed0f": {
+      "BTC": {
+        "type": "Long",
+        "value": 908193.0,
+        "size": 11.0,
+        "time": "01:16:11",
+        "timestamp": 1743635771.326
+      },
+      "ETH": {
+        "type": "Long",
+        "value": 1032426.1,
+        "size": 577.0,
+        "time": "01:16:11",
+        "timestamp": 1743635771.326
+      },
+      "SOL": {
+        "type": "Long",
+        "value": 3166610.7357,
+        "size": 26715.69,
+        "time": "01:16:11",
+        "timestamp": 1743635771.326
+      },
+      "HYPE": {
+        "type": "Long",
+        "value": 1112774.28,
+        "size": 92886.0,
+        "time": "01:16:11",
+        "timestamp": 1743635771.326
+      },
+      "TRUMP": {
+        "type": "Long",
+        "value": 202460.1976,
+        "size": 22222.0,
+        "time": "01:16:11",
+        "timestamp": 1743635771.326
+      }
+    },
+    "0x5bc43f38c2ddcd85857f218674cd384f172c3b0c": {
+      "SOL": {
+        "type": "Short",
+        "value": 130999.7566,
+        "size": -1106.23,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 261373.0532,
+        "size": -14626.36,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 699562.351718,
+        "size": -863635.9,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "LINK": {
+        "type": "Short",
+        "value": 731539.475,
+        "size": -56818.6,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "XRP": {
+        "type": "Long",
+        "value": 103474.3164,
+        "size": 51324.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 2289375.264,
+        "size": -15221.91,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "FXS": {
+        "type": "Short",
+        "value": 141341.82358,
+        "size": -76853.8,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 203476.064,
+        "size": 318928.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "CAKE": {
+        "type": "Short",
+        "value": 168551.5116,
+        "size": -93535.8,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "HBAR": {
+        "type": "Short",
+        "value": 2100502.48232,
+        "size": -13142104.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "XLM": {
+        "type": "Long",
+        "value": 156400.87632,
+        "size": 611323.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 515984.445548,
+        "size": -1235713.3,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      },
+      "OM": {
+        "type": "Long",
+        "value": 358337.17428,
+        "size": 56826.6,
+        "time": "01:16:12",
+        "timestamp": 1743635772.404
+      }
+    },
+    "0x369daedbefcb30b82154338c8fd613a70c60d251": {
+      "ZK": {
+        "type": "Short",
+        "value": 186706.917944,
+        "size": -3080159.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.694
+      },
+      "PURR": {
+        "type": "Short",
+        "value": 405339.624179,
+        "size": -4966241.0,
+        "time": "01:16:12",
+        "timestamp": 1743635772.694
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 537232.16138,
+        "size": -44832.86,
+        "time": "01:16:12",
+        "timestamp": 1743635772.694
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 127936.584204,
+        "size": -306390.9,
+        "time": "01:16:12",
+        "timestamp": 1743635772.694
+      }
+    },
+    "0x7c4b71c1d8a11ed426f301c372a72e06f528e00b": {
+      "HYPE": {
+        "type": "Long",
+        "value": 228464.76242,
+        "size": 19065.74,
+        "time": "01:16:13",
+        "timestamp": 1743635773.553
+      }
+    },
+    "0x919805f1cd563d3b50e124e582a4a16c3dcf1819": {
+      "BTC": {
+        "type": "Short",
+        "value": 1651160.0,
+        "size": -20.0,
+        "time": "01:16:15",
+        "timestamp": 1743635775.246
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 1073280.0,
+        "size": -600.0,
+        "time": "01:16:15",
+        "timestamp": 1743635775.246
+      }
+    },
+    "0x349f8e8d1495341f520406997ebae476fcfebd06": {
+      "ETH": {
+        "type": "Short",
+        "value": 1595656.28768,
+        "size": -892.0261,
+        "time": "01:16:15",
+        "timestamp": 1743635775.847
+      }
+    },
+    "0x64a4fbb71858f681f3fa10a42b34180a9a48088d": {
+      "HYPE": {
+        "type": "Short",
+        "value": 326372.3061,
+        "size": -27238.55,
+        "time": "01:16:16",
+        "timestamp": 1743635776.114
+      }
+    },
+    "0xa99767ff6874018935af8924eeb3de3c7b578edc": {
+      "BTC": {
+        "type": "Short",
+        "value": 136468.374,
+        "size": -1.653,
+        "time": "01:16:16",
+        "timestamp": 1743635776.456
+      },
+      "SOL": {
+        "type": "Short",
+        "value": 789626.5472,
+        "size": -6664.64,
+        "time": "01:16:16",
+        "timestamp": 1743635776.456
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 119824.55316,
+        "size": -10000.38,
+        "time": "01:16:16",
+        "timestamp": 1743635776.456
+      }
+    },
+    "0x404ca2035b37bf2e83505134ebcf8d03babb5f03": {
+      "BTC": {
+        "type": "Short",
+        "value": 1568671.34872,
+        "size": -19.00084,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "ETH": {
+        "type": "Short",
+        "value": 195785.59104,
+        "size": -109.4508,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "AVAX": {
+        "type": "Short",
+        "value": 197033.98,
+        "size": -11022.88,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "BNB": {
+        "type": "Short",
+        "value": 102089.6918,
+        "size": -173.681,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "LTC": {
+        "type": "Short",
+        "value": 852158.4104,
+        "size": -10487.2,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "LDO": {
+        "type": "Short",
+        "value": 140671.850144,
+        "size": -173651.8,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 361570.3344,
+        "size": -2402.78,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "ADA": {
+        "type": "Long",
+        "value": 707134.71082,
+        "size": 1108049.0,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "WIF": {
+        "type": "Short",
+        "value": 182360.1987,
+        "size": -490018.0,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      },
+      "TAO": {
+        "type": "Short",
+        "value": 164170.41585,
+        "size": -783.069,
+        "time": "01:16:16",
+        "timestamp": 1743635776.974
+      }
+    },
+    "0xd50bc99565e7ec90fb03e4b4a502419968464078": {
+      "SOL": {
+        "type": "Short",
+        "value": 125430.0368,
+        "size": -1058.66,
+        "time": "01:16:17",
+        "timestamp": 1743635777.81
+      },
+      "EIGEN": {
+        "type": "Short",
+        "value": 129159.7615,
+        "size": -159005.0,
+        "time": "01:16:17",
+        "timestamp": 1743635777.81
+      }
+    },
+    "0x56cd86d6ef24a3f51ce6992b7f1db751b0a0276a": {
+      "SOL": {
+        "type": "Short",
+        "value": 1611336.2936,
+        "size": -13600.07,
+        "time": "01:16:19",
+        "timestamp": 1743635779.234
+      }
+    },
+    "0xf14be72acba3becf3b6f0fc014f49e54e8511358": {
+      "HYPE": {
+        "type": "Short",
+        "value": 694492.0,
+        "size": -58000.0,
+        "time": "01:16:19",
+        "timestamp": 1743635779.611
+      }
+    },
+    "0x9e1e303635910c2d398647313170b11fc41cb0dc": {
+      "SOL": {
+        "type": "Long",
+        "value": 1184800.0,
+        "size": 10000.0,
+        "time": "01:16:19",
+        "timestamp": 1743635779.905
+      }
+    },
+    "0x3fc56e944aa7b1594c85861b2d46a07f82a2c0c1": {
+      "SOL": {
+        "type": "Short",
+        "value": 1540110.0,
+        "size": -13000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "REZ": {
+        "type": "Short",
+        "value": 153639.0,
+        "size": -9000000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 2395600.0,
+        "size": -200000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "S": {
+        "type": "Short",
+        "value": 138975.0,
+        "size": -300000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "BERA": {
+        "type": "Short",
+        "value": 220401.6,
+        "size": -34000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "LAYER": {
+        "type": "Short",
+        "value": 134000.0,
+        "size": -100000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "IP": {
+        "type": "Short",
+        "value": 433490.0,
+        "size": -100000.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      },
+      "KAITO": {
+        "type": "Short",
+        "value": 501846.95066,
+        "size": -573782.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.311
+      }
+    },
+    "0x7258d00a24d6829ac4bf355127bfbc9e2303aed4": {
+      "BTC": {
+        "type": "Short",
+        "value": 825740.0,
+        "size": -10.0,
+        "time": "01:16:21",
+        "timestamp": 1743635781.777
+      }
+    },
+    "0x98e499210ec2f4085b4bc0ca2ed93a1b26a8402b": {
+      "BTC": {
+        "type": "Short",
+        "value": 1883184.29548,
+        "size": -22.80602,
+        "time": "01:16:23",
+        "timestamp": 1743635783.656
+      }
+    },
+    "0xa4e33be0b96c1ec4031f2db53dcd5660621ce3ec": {
+      "LTC": {
+        "type": "Short",
+        "value": 217413.47995,
+        "size": -2676.55,
+        "time": "01:16:24",
+        "timestamp": 1743635784.634
+      },
+      "AAVE": {
+        "type": "Short",
+        "value": 275882.8896,
+        "size": -1833.84,
+        "time": "01:16:24",
+        "timestamp": 1743635784.634
+      }
+    },
+    "0x8554501f855388039f2bc86110462adfbbde46dc": {
+      "BTC": {
+        "type": "Short",
+        "value": 2105359.6232,
+        "size": -25.5022,
+        "time": "01:16:25",
+        "timestamp": 1743635785.341
+      }
+    },
+    "0x6fbe81055140287005ffb5659a9312eba019f350": {
+      "NIL": {
+        "type": "Long",
+        "value": 166716.0609,
+        "size": 394221.0,
+        "time": "01:16:25",
+        "timestamp": 1743635785.936
+      }
+    },
+    "0x9f70c7ed063bddc92a780fc3e6b365e13a75db0d": {
+      "HYPE": {
+        "type": "Long",
+        "value": 7825699.76799,
+        "size": 653830.71,
+        "time": "01:16:26",
+        "timestamp": 1743635786.281
+      }
+    },
+    "0x8835b0975f734ad00e577cd45d686b4d9319457d": {
+      "HYPE": {
+        "type": "Short",
+        "value": 167441.68802,
+        "size": -14008.34,
+        "time": "01:16:26",
+        "timestamp": 1743635786.675
+      }
+    },
+    "0xcfa99b8e07d37f25e5769400c29e22076bc08e81": {
+      "HYPE": {
+        "type": "Long",
+        "value": 7113732.68459,
+        "size": 595142.03,
+        "time": "01:16:28",
+        "timestamp": 1743635788.073
+      }
+    },
+    "0x7625dc67deab1864570ad816f59a9b867f280e49": {
+      "BTC": {
+        "type": "Short",
+        "value": 2113122.07338,
+        "size": -25.60398,
+        "time": "01:16:28",
+        "timestamp": 1743635788.643
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 197224.5,
+        "size": -16500.0,
+        "time": "01:16:28",
+        "timestamp": 1743635788.643
+      }
+    },
+    "0x5a733b25a17dc0f26b862ca9e32b439801b1a8c7": {
+      "SOL": {
+        "type": "Short",
+        "value": 267894.8404,
+        "size": -2263.39,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "SUI": {
+        "type": "Short",
+        "value": 213823.9799,
+        "size": -94237.1,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "XRP": {
+        "type": "Short",
+        "value": 229246.55,
+        "size": -113770.0,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "MKR": {
+        "type": "Short",
+        "value": 176214.12648,
+        "size": -136.3992,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "PENDLE": {
+        "type": "Short",
+        "value": 108356.0426,
+        "size": -36998.0,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "HYPE": {
+        "type": "Short",
+        "value": 301384.49589,
+        "size": -25214.13,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "FARTCOIN": {
+        "type": "Short",
+        "value": 184921.772236,
+        "size": -444395.3,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      },
+      "BERA": {
+        "type": "Short",
+        "value": 264500.31278,
+        "size": -40841.9,
+        "time": "01:16:29",
+        "timestamp": 1743635789.229
+      }
+    },
+    "0x43696620c4d433eca1361eb9722cc3098c184a13": {
+      "BTC": {
+        "type": "Short",
+        "value": 2997282.4255,
+        "size": -36.31925,
+        "time": "01:16:30",
+        "timestamp": 1743635790.983
+      }
+    }
+  }
+}
