@@ -287,6 +287,7 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                 print(f"\nProcessing wallet {entry['trader']}:")
                 print(f"Account Value: ${account_value:,.2f}")
                 print(f"ROI: {roi:.2f}%")
+                print(f"PnL30: {pnl30:.2f}%")
                 print(f"Volume: ${volume:,.2f}")
                 
                 # Check if meets whale criteria
@@ -311,10 +312,10 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                         print(f"   Account value ${account_value:,.2f} < ${LoadWalletsDrafts.MIN_ACCOUNT_VALUE:,.2f}")
                     if roi < LoadWalletsDrafts.MIN_ROI:
                         print(f"   ROI {roi:.2f}% < {LoadWalletsDrafts.MIN_ROI}%")
-                    if volume < LoadWalletsDrafts.MIN_VOLUME:
-                        print(f"   Volume ${volume:,.2f} < ${LoadWalletsDrafts.MIN_VOLUME:,.2f}")
                     if pnl30 < 0:
                         print(f"    PnL 30d ${pnl30:,.2f} < 0")
+                    if volume < LoadWalletsDrafts.MIN_VOLUME:
+                        print(f"   Volume ${volume:,.2f} < ${LoadWalletsDrafts.MIN_VOLUME:,.2f}")
 
             except Exception as e:
                 print(f"Error processing entry {entry}: {e}")

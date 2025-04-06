@@ -14,7 +14,7 @@ from main.services.whale_wallet_finder import WhaleWalletFinder
 from constants import WhaleConfig
 
 # Constants
-
+# NOT USED IN ANY CLASS
 class PositionViewer:
     """
     A class for viewing open positions on Hyperliquid exchange.
@@ -112,6 +112,7 @@ class PositionViewer:
                 print(f"Withdrawable: ${float(positions['withdrawable']):,.2f}")
 
 async def main():
+    print("Position Viewer class/script")
     viewer = PositionViewer(use_testnet=False)  # Using mainnet
     print(f"Connecting to Hyperliquid Mainnet and fetching positions (min account value: ${WhaleConfig.MIN_ACCOUNT_VALUE_USD:,.2f})...")
     

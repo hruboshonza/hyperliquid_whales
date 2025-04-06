@@ -2,45 +2,45 @@
     "wallets": [
         {
             "fullAddress": "0x8cc94dc843e1ea7a19805e0cca43001123512b6a",
-            "accountValue": 10301533.54,
-            "roi": 104.04,
-            "volume": 8361938.39
+            "accountValue": 11048841.02,
+            "roi": 74.25,
+            "volume": 5443149.37
         },
         {
             "fullAddress": "0x45d26f28196d226497130c4bac709d808fed4029",
-            "accountValue": 9772146.31,
-            "roi": 65.17,
-            "volume": 7639086.79
+            "accountValue": 10513177.38,
+            "roi": 36.13,
+            "volume": 4816051.2
         },
         {
             "fullAddress": "0x8e096995c3e4a3f0bc5b3ea1cba94de2aa4d70c9",
-            "accountValue": 11101283.23,
-            "roi": 41.42,
-            "volume": 6034592.43
+            "accountValue": 9129201.23,
+            "roi": 41.07,
+            "volume": 3716960.21
         },
         {
             "fullAddress": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-            "accountValue": 18181640.1,
-            "roi": 28.18,
-            "volume": 4405153.99
+            "accountValue": 18221523.06,
+            "roi": 26.77,
+            "volume": 4076539.23
         },
         {
             "fullAddress": "0x023a3d058020fb76cca98f01b3c48c8938a22355",
-            "accountValue": 15463657.76,
-            "roi": 15.9,
-            "volume": 4845238.21
+            "accountValue": 11949502.76,
+            "roi": 16.29,
+            "volume": 3596336.68
         },
         {
             "fullAddress": "0x56498e5f90c14060499b62b6f459b3e3fb9280c5",
-            "accountValue": 12784152.13,
-            "roi": 58.79,
-            "volume": 4708456.95
+            "accountValue": 7615178.86,
+            "roi": 15.89,
+            "volume": 1750433.05
         },
         {
             "fullAddress": "0xa312114b5795dff9b8db50474dd57701aa78ad1e",
-            "accountValue": 4684365.02,
-            "roi": 62.33,
-            "volume": 4588518.54
+            "accountValue": 5497433.58,
+            "roi": 17.37,
+            "volume": 1968229.06
         },
         {
             "fullAddress": "0x499beed00ee60bef8ce07a68c92103bd2225b5fb",
@@ -56,9 +56,9 @@
         },
         {
             "fullAddress": "0x5d2f4460ac3514ada79f5d9838916e508ab39bb7",
-            "accountValue": 5108890.76,
-            "roi": 88.68,
-            "volume": 4046309.32
+            "accountValue": 4905762.72,
+            "roi": 45.19,
+            "volume": 3207765.19
         },
         {
             "fullAddress": "0xa87a233e8a7d8951ff790a2e39738086cb5f71b7",
@@ -67,15 +67,15 @@
         },
         {
             "fullAddress": "0x880ac484a1743862989a441d6d867238c7aa311c",
-            "accountValue": 3488771.17,
-            "roi": 115.74,
-            "volume": 3480804.76
+            "accountValue": 4515106.59,
+            "roi": 67.46,
+            "volume": 2624407.17
         },
         {
             "fullAddress": "0xe86b057f5eb764c9738d6b0d38170befd0723664",
-            "accountValue": 7940450.42,
-            "roi": 26.64,
-            "volume": 1848775.38
+            "accountValue": 9415164.56,
+            "roi": 35.04,
+            "volume": 3026957.55
         },
         {
             "fullAddress": "0x863b676e5e4fea0541062c32983dc8f84749ca6d",
@@ -97,63 +97,63 @@
         },
         {
             "fullAddress": "0xd487e26c62ed8c28ce3cc70b5791e501c2934982",
-            "accountValue": 7087293.04,
-            "roi": 44.89,
-            "volume": 2278650.03
+            "accountValue": 7806457.64,
+            "roi": 23.2,
+            "volume": 1601257.3
         },
         {
             "fullAddress": "0x9458f423df6569f053358ee9906613cd69c1ec04",
-            "accountValue": 4226785.74,
-            "roi": 131.11,
-            "volume": 2397848.68
+            "accountValue": 3398822.82,
+            "roi": 92.94,
+            "volume": 2600707.89
         },
         {
             "fullAddress": "0xd47587702a91731dc1089b5db0932cf820151a91",
-            "accountValue": 4300004.26,
-            "roi": 37.3,
-            "volume": 1886721.16
+            "accountValue": 6427371.93,
+            "roi": 16.68,
+            "volume": 1256497.51
         },
         {
             "fullAddress": "0x5a54ad9860b08aaee07174887f9ee5107b0a2e72",
-            "accountValue": 4579612.45,
-            "roi": 115.58,
-            "volume": 2455249.03
+            "accountValue": 5227769.48,
+            "roi": 22.35,
+            "volume": 954738.09
         },
         {
             "fullAddress": "0x76c2164fc79492401db1890db0d17d16b9155aa0",
-            "accountValue": 6870120.37,
-            "roi": 35.56,
-            "volume": 2129547.66
+            "accountValue": 6765595.88,
+            "roi": 18.28,
+            "volume": 970651.92
         },
         {
             "fullAddress": "0xeb93e6fc46b78c19bfe3264afabccae410956389",
-            "accountValue": 826611.51,
-            "roi": 129.63,
-            "volume": 2388787.97
+            "accountValue": 503598.68,
+            "roi": 56.03,
+            "volume": 1105465.78
         },
         {
             "fullAddress": "0x8bff50aad8b4e06c5e148eaeb9d7aef69e26cdc3",
-            "accountValue": 3764467.78,
-            "roi": 44.13,
-            "volume": 2253765.98
+            "accountValue": 9114854.56,
+            "roi": 26.99,
+            "volume": 1941090.56
         },
         {
             "fullAddress": "0x7fe8cfe481ec2f702692a9152e3f002f3e417ac6",
-            "accountValue": 4721766.5,
-            "roi": 42.81,
-            "volume": 1446384.87
+            "accountValue": 4589353.67,
+            "roi": 10.52,
+            "volume": 312969.55
         },
         {
             "fullAddress": "0xdbd1bac81ad581c7198c9d155ca468f32a0c29dd",
-            "accountValue": 3025192.91,
-            "roi": 91.71,
-            "volume": 2016302.02
+            "accountValue": 3608372.08,
+            "roi": 33.81,
+            "volume": 1107408.53
         },
         {
             "fullAddress": "0xaea8e3bd369217cc6e3e6abddf0da318fba8e59b",
-            "accountValue": 1678258.81,
-            "roi": 52.25,
-            "volume": 1208847.03
+            "accountValue": 3023784.75,
+            "roi": 53.76,
+            "volume": 1153384.94
         },
         {
             "fullAddress": "0xceec48581b3145a575508719f45da07dc57fa7ce",
@@ -163,9 +163,9 @@
         },
         {
             "fullAddress": "0xbfc79c444c41a74516bf31237ebf586a231480b4",
-            "accountValue": 2332115.53,
-            "roi": 67.92,
-            "volume": 1173084.22
+            "accountValue": 1624300.78,
+            "roi": 11.6,
+            "volume": 293831.72
         },
         {
             "fullAddress": "0x3fd4444154242720c0d0c61c74a240d90c127d33",
@@ -181,15 +181,15 @@
         },
         {
             "fullAddress": "0x265bda080f9107223a74455201674538c32482b0",
-            "accountValue": 6080710.97,
-            "roi": 34.3,
-            "volume": 959551.19
+            "accountValue": 6112942.67,
+            "roi": 20.51,
+            "volume": 710658.25
         },
         {
             "fullAddress": "0xcf13fae6690c07cbd471574b68e504319ee0882d",
-            "accountValue": 1037129.51,
-            "roi": 48.57,
-            "volume": 849792.04
+            "accountValue": 1283690.11,
+            "roi": 88.22,
+            "volume": 1331484.84
         },
         {
             "fullAddress": "0xcccf42c120fa1a7ad953665500c1bd4f6307b34b",
@@ -210,9 +210,9 @@
         },
         {
             "fullAddress": "0xad8be12a452b5b8f9ad9883f6e8e67536627db4b",
-            "accountValue": 737467.6,
-            "roi": 144.0,
-            "volume": 1246197.9
+            "accountValue": 968581.63,
+            "roi": 102.33,
+            "volume": 615094.36
         },
         {
             "fullAddress": "0xd0e825fa2ecc2f67b97dc1f3b1595fd842c0ff47",
@@ -222,9 +222,9 @@
         },
         {
             "fullAddress": "0xa9ed0db00e5c29e7e18a55db159ea33fb5fea60a",
-            "accountValue": 3471928.4,
-            "roi": 33.36,
-            "volume": 983701.76
+            "accountValue": 2405341.87,
+            "roi": 19.45,
+            "volume": 815754.53
         },
         {
             "fullAddress": "0x60a8d209af0b997d87d8e69dd48ac7330d4d6900",
@@ -239,20 +239,21 @@
         },
         {
             "fullAddress": "0x27c9fa86c91b84ddfa15de58c482ff662498d65d",
-            "accountValue": 1656416.37,
-            "roi": 129.11
+            "accountValue": 1780414.26,
+            "roi": 16.68,
+            "volume": 254473.1
         },
         {
             "fullAddress": "0x29eb62882a8bd104a64400a2971d0d6881777043",
-            "accountValue": 1890458.43,
-            "roi": 77.97,
-            "volume": 1901477.29
+            "accountValue": 1990816.41,
+            "roi": 59.46,
+            "volume": 1358136.61
         },
         {
             "fullAddress": "0xa4dedda59f2908b92ae192cfd494839373bcb3c4",
-            "accountValue": 3368949.37,
-            "roi": 127.21,
-            "volume": 1740438.24
+            "accountValue": 1744662.88,
+            "roi": 36.91,
+            "volume": 450547.84
         },
         {
             "fullAddress": "0x1072c71c11c15de15ff664c8736dc9a04966fabd",
@@ -267,9 +268,9 @@
         },
         {
             "fullAddress": "0xa64a1222d70015fcb2ea356d51f2bdac8aca5f70",
-            "accountValue": 3033189.63,
-            "roi": 40.05,
-            "volume": 502524.85
+            "accountValue": 3384935.75,
+            "roi": 26.27,
+            "volume": 477546.42
         },
         {
             "fullAddress": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
@@ -296,20 +297,21 @@
         },
         {
             "fullAddress": "0x3c65c137bf380df7f5f61d9318c193b32a344fb0",
-            "accountValue": 1608782.54,
-            "roi": 78.75,
-            "volume": 598315.16
+            "accountValue": 1339161.95,
+            "roi": 20.17,
+            "volume": 271946.44
         },
         {
             "fullAddress": "0x5647249079e257329ecb6f46ed41821d3c69e7de",
-            "accountValue": 1551424.28,
-            "roi": 39.81
+            "accountValue": 1715953.62,
+            "roi": 54.52,
+            "volume": 957976.65
         },
         {
             "fullAddress": "0xa581bb0ac1a7ec393e76ccd45de2bfff6146e213",
-            "accountValue": 1526302.4,
-            "roi": 67.84,
-            "volume": 555605.49
+            "accountValue": 1690187.51,
+            "roi": 35.04,
+            "volume": 314602.26
         },
         {
             "fullAddress": "0xa351db10472a07059ea099e0581444e568bff894",
@@ -318,14 +320,15 @@
         },
         {
             "fullAddress": "0x7bca5eb262f16af84f4f3c2431b9bfaa533bee75",
-            "accountValue": 2783000.81,
-            "roi": 44.72
+            "accountValue": 2572956.59,
+            "roi": 10.89,
+            "volume": 245812.91
         },
         {
             "fullAddress": "0xbaaaf6571ab7d571043ff1e313a9609a10637864",
-            "accountValue": 2008682.81,
-            "roi": 28.05,
-            "volume": 659882.27
+            "accountValue": 1281223.79,
+            "roi": 24.47,
+            "volume": 613735.52
         },
         {
             "fullAddress": "0x142a1aad965db6b3d2ad63b174419a3095bfa4c0",
@@ -334,19 +337,21 @@
         },
         {
             "fullAddress": "0x3ca146d2692f61746a28fa926dc9d18086ce37c6",
-            "accountValue": 1218125.82,
-            "roi": 54.01
+            "accountValue": 1256794.73,
+            "roi": 18.96,
+            "volume": 248071.5
         },
         {
             "fullAddress": "0x1aa780bb10425b86bcf05ecbb7953f9a93729ed9",
-            "accountValue": 535807.43,
-            "roi": 52.69,
-            "volume": 1353382.89
+            "accountValue": 531012.7,
+            "roi": 57.94,
+            "volume": 1363806.21
         },
         {
             "fullAddress": "0xe220cc6cc750c14e3340a74a6fff7d63e8e43d7b",
-            "accountValue": 4302718.02,
-            "roi": 13.3
+            "accountValue": 4373702.66,
+            "roi": 12.69,
+            "volume": 568629.35
         },
         {
             "fullAddress": "0x2f7a83314829ea002450381ad181fd525bdb340d",
@@ -355,20 +360,21 @@
         },
         {
             "fullAddress": "0xd6ef5649200101eb44ce8949f4cfb167b0c5a07a",
-            "accountValue": 2879621.44,
-            "roi": 24.24,
-            "volume": 634712.29
+            "accountValue": 3609600.71,
+            "roi": 27.37,
+            "volume": 748568.87
         },
         {
             "fullAddress": "0xaed0696ed15e0e499a70264feee1b3ea0c6530fb",
-            "accountValue": 3195679.14,
-            "roi": 46.05
+            "accountValue": 2912811.62,
+            "roi": 17.85,
+            "volume": 256007.56
         },
         {
             "fullAddress": "0x89c645ecbd07825b194e3b98300eb3497aaba406",
-            "accountValue": 4167150.5,
-            "roi": 45.63,
-            "volume": 570174.89
+            "accountValue": 3753779.71,
+            "roi": 18.89,
+            "volume": 298809.71
         },
         {
             "fullAddress": "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
@@ -399,44 +405,45 @@
         },
         {
             "fullAddress": "0x9321d8117e73b0c79035f0e87debcfd8dbb1d75a",
-            "accountValue": 867882.04,
-            "roi": 54.01,
-            "volume": 512056.31
+            "accountValue": 910738.27,
+            "roi": 30.09,
+            "volume": 261669.59
         },
         {
             "fullAddress": "0xdf9ea6ec3b7109935ccb4fb267e15ac1fb077ab1",
-            "accountValue": 1284064.11,
-            "roi": 45.82,
-            "volume": 514068.93
+            "accountValue": 1264318.82,
+            "roi": 42.8,
+            "volume": 337513.41
         },
         {
             "fullAddress": "0x2025137a136bea7446deba681cbfc7cf1970840e",
-            "accountValue": 2813099.6,
-            "roi": 19.82
+            "accountValue": 2250109.46,
+            "roi": 19.53,
+            "volume": 493999.97
         },
         {
             "fullAddress": "0x20c2d95a3dfdca9e9ad12794d5fa6fad99da44f5",
-            "accountValue": 91721019.2,
-            "roi": 58.77,
-            "volume": 51148156.98
+            "accountValue": 90227953.43,
+            "roi": 36.06,
+            "volume": 32653675.58
         },
         {
             "fullAddress": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-            "accountValue": 39283418.54,
-            "roi": 35.47,
-            "volume": 15450454.86
+            "accountValue": 54290061.93,
+            "roi": 29.84,
+            "volume": 10331593.49
         },
         {
             "fullAddress": "0x8af700ba841f30e0a3fcb0ee4c4a9d223e1efa05",
-            "accountValue": 12898216.87,
-            "roi": 37.61,
-            "volume": 5838671.05
+            "accountValue": 12423756.74,
+            "roi": 66.09,
+            "volume": 7114422.27
         },
         {
             "fullAddress": "0x6859da14835424957a1e6b397d8026b1d9ff7e1e",
-            "accountValue": 1945408.94,
-            "roi": 105.13,
-            "volume": 3599783.07
+            "accountValue": 3514318.47,
+            "roi": 83.21,
+            "volume": 2310923.38
         },
         {
             "fullAddress": "0x2ba553d9f990a3b66b03b2dc0d030dfc1c061036",
@@ -446,15 +453,15 @@
         },
         {
             "fullAddress": "0x1f793d9f0368c1da329cb112212d81d521e7a9b8",
-            "accountValue": 2253588.59,
-            "roi": 53.93,
-            "volume": 2431038.51
+            "accountValue": 2779468.1,
+            "roi": 86.23,
+            "volume": 2011836.59
         },
         {
             "fullAddress": "0x9e8b1e51c642f4c8b87c6ba11c53d516a218afc4",
-            "accountValue": 5322167.59,
-            "roi": 55.78,
-            "volume": 2444752.92
+            "accountValue": 6372475.73,
+            "roi": 64.17,
+            "volume": 2700688.16
         },
         {
             "fullAddress": "0x123dbca6a27005a3c4ce10cb66ee8ece8fc13bff",
@@ -470,39 +477,39 @@
         },
         {
             "fullAddress": "0x7c976f00e84db0b44f945fc6d7fad34b43150a1a",
-            "accountValue": 12335902.31,
-            "roi": 21.0,
-            "volume": 1478135.77
+            "accountValue": 12238702.86,
+            "roi": 22.9,
+            "volume": 1762012.75
         },
         {
             "fullAddress": "0xb4a04f60522a539caa55e9ce74c9bb3e6f2253f0",
-            "accountValue": 1203962.92,
-            "roi": 51.84,
-            "volume": 856096.61
+            "accountValue": 1607411.12,
+            "roi": 59.0,
+            "volume": 742511.15
         },
         {
             "fullAddress": "0xb4caaff781251594911cc76aec61cef46ba00894",
-            "accountValue": 8542342.13,
-            "roi": 32.26,
-            "volume": 891795.58
+            "accountValue": 6492531.16,
+            "roi": 25.73,
+            "volume": 571894.87
         },
         {
             "fullAddress": "0x9f07dc88dc450978e5ddf973f6a0236a7cfbf99a",
-            "accountValue": 1676959.49,
-            "roi": 90.38,
-            "volume": 865344.54
+            "accountValue": 938226.06,
+            "roi": 57.05,
+            "volume": 560436.32
         },
         {
             "fullAddress": "0xb0fbfefc6c325964d0ffc3f909bdda80b8421326",
-            "accountValue": 938318.18,
-            "roi": 64.41,
-            "volume": 893134.11
+            "accountValue": 1174609.62,
+            "roi": 87.23,
+            "volume": 1018789.84
         },
         {
             "fullAddress": "0xccf135ab352d561a15eb7be2a243cc4fcb7f0ab1",
-            "accountValue": 3571439.51,
-            "roi": 53.28,
-            "volume": 708998.6
+            "accountValue": 2916554.29,
+            "roi": 17.71,
+            "volume": 401124.63
         },
         {
             "fullAddress": "0xb35add6ed8de7ab9dd3e35544fa2e4d5634da765",
@@ -548,9 +555,9 @@
         },
         {
             "fullAddress": "0x7717a7a245d9f950e586822b8c9b46863ed7bd7e",
-            "accountValue": 1475835.7,
-            "roi": 43.77,
-            "volume": 698934.07
+            "accountValue": 1917923.58,
+            "roi": 22.68,
+            "volume": 504325.1
         },
         {
             "fullAddress": "0xe0ffc829349c88c159462942ad885f12130e7610",
@@ -565,9 +572,9 @@
         },
         {
             "fullAddress": "0x24fb6523036ebcb3cc51deff138066dccf6bed0f",
-            "accountValue": 1725202.08,
-            "roi": 53.73,
-            "volume": 1022844.53
+            "accountValue": 1928977.94,
+            "roi": 31.49,
+            "volume": 835031.2
         },
         {
             "fullAddress": "0x3e9b6020cb47785b9416e83fad561a72d2af4de8",
@@ -576,8 +583,9 @@
         },
         {
             "fullAddress": "0x5bc43f38c2ddcd85857f218674cd384f172c3b0c",
-            "accountValue": 4483626.5,
-            "roi": 17.1
+            "accountValue": 4717735.79,
+            "roi": 42.65,
+            "volume": 1978566.27
         },
         {
             "fullAddress": "0x369daedbefcb30b82154338c8fd613a70c60d251",
@@ -586,9 +594,9 @@
         },
         {
             "fullAddress": "0x7c4b71c1d8a11ed426f301c372a72e06f528e00b",
-            "accountValue": 902731.82,
-            "roi": 95.57,
-            "volume": 715871.11
+            "accountValue": 803742.58,
+            "roi": 44.01,
+            "volume": 489156.76
         },
         {
             "fullAddress": "0xa7938a22fee8e98e19e930df45cb588a178efb9c",
@@ -620,18 +628,21 @@
         },
         {
             "fullAddress": "0x64a4fbb71858f681f3fa10a42b34180a9a48088d",
-            "accountValue": 1008384.74,
-            "roi": 42.31
+            "accountValue": 1441661.29,
+            "roi": 11.3,
+            "volume": 187496.39
         },
         {
             "fullAddress": "0xa99767ff6874018935af8924eeb3de3c7b578edc",
-            "accountValue": 1026172.02,
-            "roi": 49.77
+            "accountValue": 1021554.12,
+            "roi": 33.07,
+            "volume": 287257.25
         },
         {
             "fullAddress": "0x404ca2035b37bf2e83505134ebcf8d03babb5f03",
-            "accountValue": 915259.04,
-            "roi": 65.46
+            "accountValue": 968951.15,
+            "roi": 40.71,
+            "volume": 439027.5
         },
         {
             "fullAddress": "0x31c683a67f0e3919a86fead9241d94f34679f11f",
@@ -662,8 +673,9 @@
         },
         {
             "fullAddress": "0xf14be72acba3becf3b6f0fc014f49e54e8511358",
-            "accountValue": 1314762.78,
-            "roi": 65.26
+            "accountValue": 1439760.94,
+            "roi": 19.22,
+            "volume": 199355.39
         },
         {
             "fullAddress": "0x9e1e303635910c2d398647313170b11fc41cb0dc",
@@ -673,9 +685,9 @@
         },
         {
             "fullAddress": "0x9ab1c356e6af86361446497fce954b3cdf940206",
-            "accountValue": 5208974.54,
-            "roi": 33.88,
-            "volume": 1318150.32
+            "accountValue": 5242177.45,
+            "roi": 30.7,
+            "volume": 1039283.84
         },
         {
             "fullAddress": "0x4174579ea2143c6ce23fc33b3f4b6ba9224bf572",
@@ -685,15 +697,15 @@
         },
         {
             "fullAddress": "0x3fc56e944aa7b1594c85861b2d46a07f82a2c0c1",
-            "accountValue": 6156564.82,
-            "roi": 29.44,
-            "volume": 903104.15
+            "accountValue": 6508604.22,
+            "roi": 50.3,
+            "volume": 1722112.38
         },
         {
             "fullAddress": "0x7258d00a24d6829ac4bf355127bfbc9e2303aed4",
-            "accountValue": 349913.29,
-            "roi": 100.61,
-            "volume": 1843325.34
+            "accountValue": 305023.13,
+            "roi": 180.78,
+            "volume": 1889915.31
         },
         {
             "fullAddress": "0xaeae3319f670f1f7aa18b42f9d5f3452f4ee69e6",
@@ -715,9 +727,9 @@
         },
         {
             "fullAddress": "0x98e499210ec2f4085b4bc0ca2ed93a1b26a8402b",
-            "accountValue": 1925282.24,
-            "roi": 23.5,
-            "volume": 777499.78
+            "accountValue": 1948346.53,
+            "roi": 93.12,
+            "volume": 1991269.0
         },
         {
             "fullAddress": "0xf08d17632e7a83582677456159a1158101e69e07",
@@ -733,15 +745,15 @@
         },
         {
             "fullAddress": "0x8554501f855388039f2bc86110462adfbbde46dc",
-            "accountValue": 307853.11,
-            "roi": 74.4,
-            "volume": 644706.61
+            "accountValue": 441572.13,
+            "roi": 46.0,
+            "volume": 275663.05
         },
         {
             "fullAddress": "0x6fbe81055140287005ffb5659a9312eba019f350",
-            "accountValue": 1910186.28,
-            "roi": 36.41,
-            "volume": 691703.87
+            "accountValue": 1667760.82,
+            "roi": 59.62,
+            "volume": 495788.97
         },
         {
             "fullAddress": "0x9f70c7ed063bddc92a780fc3e6b365e13a75db0d",
@@ -751,9 +763,9 @@
         },
         {
             "fullAddress": "0x8835b0975f734ad00e577cd45d686b4d9319457d",
-            "accountValue": 640703.87,
-            "roi": 19.81,
-            "volume": 613259.86
+            "accountValue": 932126.58,
+            "roi": 13.23,
+            "volume": 444418.23
         },
         {
             "fullAddress": "0xc8d95f6d7aa69c55b8cc9328f908408df4f3313c",
@@ -775,15 +787,15 @@
         },
         {
             "fullAddress": "0x7625dc67deab1864570ad816f59a9b867f280e49",
-            "accountValue": 1176133.85,
-            "roi": 37.51,
-            "volume": 534484.67
+            "accountValue": 1058632.84,
+            "roi": 27.87,
+            "volume": 396214.09
         },
         {
             "fullAddress": "0x5a733b25a17dc0f26b862ca9e32b439801b1a8c7",
-            "accountValue": 2002263.67,
-            "roi": 33.72,
-            "volume": 618426.68
+            "accountValue": 3408302.27,
+            "roi": 16.04,
+            "volume": 538402.33
         },
         {
             "fullAddress": "0x4583f9b7a06ab8b5b7b4a7dd27e774356015d406",
@@ -799,21 +811,1203 @@
         },
         {
             "fullAddress": "0x99460c6b44fd9d93528b3b6e3365793acb40bb46",
-            "accountValue": 1258724.63,
-            "roi": 187.87,
-            "volume": 544600.3
+            "accountValue": 940823.05,
+            "roi": 82.31,
+            "volume": 784759.41
         },
         {
             "fullAddress": "0x43696620c4d433eca1361eb9722cc3098c184a13",
-            "accountValue": 888334.8,
-            "roi": 63.02,
-            "volume": 486642.88
+            "accountValue": 610216.31,
+            "roi": 20.63,
+            "volume": 185472.86
         },
         {
             "fullAddress": "0xde9593fe5cdc5cb0917f5d5618a111f1174f5c91",
             "accountValue": 300437.74,
             "roi": 100.78,
             "volume": 503899.04
+        },
+        {
+            "fullAddress": "0xec7756092894a9b2bb5e53856f329ce962f7cb1a",
+            "accountValue": 12698787.3,
+            "roi": 189.24,
+            "volume": 8302752.4
+        },
+        {
+            "fullAddress": "0x5db201ae15f9702f0a0ff9f00b8c1c18355373d0",
+            "accountValue": 1669601.51,
+            "roi": 44.17,
+            "volume": 4049423.46
+        },
+        {
+            "fullAddress": "0xf967239debef10dbc78e9bbbb2d8a16b72a614eb",
+            "accountValue": 9589263.94,
+            "roi": 25.19,
+            "volume": 1929381.12
+        },
+        {
+            "fullAddress": "0x153c8444380512cabdc34f6cea09c322e14e319a",
+            "accountValue": 6015854.59,
+            "roi": 60.78,
+            "volume": 2274101.28
+        },
+        {
+            "fullAddress": "0xf7bf60583377a56319c42e9daedfa7d06f70a316",
+            "accountValue": 11282419.58,
+            "roi": 12.09,
+            "volume": 1612721.17
+        },
+        {
+            "fullAddress": "0xef4a52d5483049b37cb883539d1b380eed80a598",
+            "accountValue": 309221.04,
+            "roi": 501.2,
+            "volume": 1432437.95
+        },
+        {
+            "fullAddress": "0x555ce236c0220695b68341bc48c68d52210cc35b",
+            "accountValue": 398571.9,
+            "roi": 662.4,
+            "volume": 1398956.33
+        },
+        {
+            "fullAddress": "0x8463d6ffcbfb56bf20ab2e1111f9a0e8359533f2",
+            "accountValue": 346953.92,
+            "roi": 46.94,
+            "volume": 1399219.49
+        },
+        {
+            "fullAddress": "0xc7c87046d9e147b14cc773bf3f865febfb966ea4",
+            "accountValue": 3249091.38,
+            "roi": 18.01,
+            "volume": 1259129.88
+        },
+        {
+            "fullAddress": "0x6d7823cd5c3d9dcd63e6a8021b475e0c7c94b291",
+            "accountValue": 3664459.41,
+            "roi": 10.83,
+            "volume": 912536.06
+        },
+        {
+            "fullAddress": "0x1d52fe9bde2694f6172192381111a91e24304397",
+            "accountValue": 1077702.51,
+            "roi": 252.4,
+            "volume": 891131.25
+        },
+        {
+            "fullAddress": "0x2744fec1df92b381458793b50f464a41c2f601ca",
+            "accountValue": 1710881.47,
+            "roi": 32.76,
+            "volume": 596109.64
+        },
+        {
+            "fullAddress": "0xc7662938031924398ffc51d47f8964c4d5b060a9",
+            "accountValue": 606760.99,
+            "roi": 100.0,
+            "volume": 588288.6
+        },
+        {
+            "fullAddress": "0xb2d78e67eee79ef125464a9bafc2af8e00028f31",
+            "accountValue": 1968077.36,
+            "roi": 41.47,
+            "volume": 565190.96
+        },
+        {
+            "fullAddress": "0x9dcde9fd7566fe92fc7419cf1c1441c73badc0e9",
+            "accountValue": 1173152.54,
+            "roi": 47.19,
+            "volume": 539585.54
+        },
+        {
+            "fullAddress": "0x4f5190f4c97f2c19fca8c8a0a8c52cfc90c3d5a1",
+            "accountValue": 1024297.53,
+            "roi": 100.07,
+            "volume": 512319.05
+        },
+        {
+            "fullAddress": "0xadaeb7cb0ae350ab8fa146e92b04a53ce3d18ba1",
+            "accountValue": 2658585.96,
+            "roi": 104.63,
+            "volume": 529417.57
+        },
+        {
+            "fullAddress": "0xcc89d2eb1f307e56f7c79a5f0a3384be6656bd41",
+            "accountValue": 2045845.83,
+            "roi": 31.14,
+            "volume": 485819.38
+        },
+        {
+            "fullAddress": "0x28233e5edddfc9f71f0cecf58ca98f6a2ca11f43",
+            "accountValue": 1571145.51,
+            "roi": 31.93,
+            "volume": 481754.43
+        },
+        {
+            "fullAddress": "0x5de721dd41577d2ab55dea184b8cf849591d2cfd",
+            "accountValue": 378090.01,
+            "roi": 79.73,
+            "volume": 433904.58
+        },
+        {
+            "fullAddress": "0xf28e1b06e00e8774c612e31ab3ac35d5a720085f",
+            "accountValue": 1424688.89,
+            "roi": 35.66,
+            "volume": 427083.82
+        },
+        {
+            "fullAddress": "0x2d760d867ebebd7da5b0be18fed71b4bcc9610eb",
+            "accountValue": 2910479.41,
+            "roi": 36.51,
+            "volume": 408902.7
+        },
+        {
+            "fullAddress": "0x0fffab764a78d2cf36a9f6079ad0e8361fa2eb94",
+            "accountValue": 449779.2,
+            "roi": 41.32,
+            "volume": 412445.4
+        },
+        {
+            "fullAddress": "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd",
+            "accountValue": 1622715.77,
+            "roi": 37.07,
+            "volume": 407579.13
+        },
+        {
+            "fullAddress": "0x3a3056908a2f106026acd0c5b2fa20893f30f64e",
+            "accountValue": 1558941.71,
+            "roi": 35.75,
+            "volume": 410523.31
+        },
+        {
+            "fullAddress": "0x9dea4d13ac1c469b7fe9049d43835df1be143ec0",
+            "accountValue": 1495262.15,
+            "roi": 48.04,
+            "volume": 404404.28
+        },
+        {
+            "fullAddress": "0x0cb187c574c5dde74b0284a165b1f82f78109c68",
+            "accountValue": 875617.54,
+            "roi": 22.19,
+            "volume": 388773.75
+        },
+        {
+            "fullAddress": "0x7d97544a5b4e43cf442b6952b313a68d35ef924b",
+            "accountValue": 891734.02,
+            "roi": 52.46,
+            "volume": 394409.26
+        },
+        {
+            "fullAddress": "0x4fe56c2713883a96a1f42c2bf5c596b43f142bbc",
+            "accountValue": 543733.27,
+            "roi": 53.34,
+            "volume": 397741.54
+        },
+        {
+            "fullAddress": "0x9b28837deb55b014f7a37f2812d6ec042ce87ca1",
+            "accountValue": 1893087.33,
+            "roi": 25.8,
+            "volume": 388275.61
+        },
+        {
+            "fullAddress": "0x9f6fed26339789725b0751f57aeac23367ceee57",
+            "accountValue": 664703.08,
+            "roi": 72.06,
+            "volume": 360231.65
+        },
+        {
+            "fullAddress": "0xfcf936c433bd3d05be0c3be9c9f8e10228d88d2a",
+            "accountValue": 401791.53,
+            "roi": 107.67,
+            "volume": 368856.67
+        },
+        {
+            "fullAddress": "0xdf52df044f1b150dfa79590909cdac6ad83d59fc",
+            "accountValue": 953975.62,
+            "roi": 52.03,
+            "volume": 366012.76
+        },
+        {
+            "fullAddress": "0x3659234a1e72f3b78a50a9332641295ecd8f2bb6",
+            "accountValue": 510536.19,
+            "roi": 140.86,
+            "volume": 357508.5
+        },
+        {
+            "fullAddress": "0x4cd80aa0ce4881eb8679eda1f6fbe3d89aec0f7f",
+            "accountValue": 2722458.74,
+            "roi": 25.52,
+            "volume": 368565.82
+        },
+        {
+            "fullAddress": "0x6572d48041935ac7e644392f5338f47f2b85c900",
+            "accountValue": 523872.29,
+            "roi": 38.75,
+            "volume": 346122.84
+        },
+        {
+            "fullAddress": "0x7a6a2c4f88763e0f5f119dda5d06d3efc9f36c7d",
+            "accountValue": 793723.13,
+            "roi": 61.31,
+            "volume": 338197.97
+        },
+        {
+            "fullAddress": "0xb919448d2f1797e5d9e7b9e88cd909a5089e6d4e",
+            "accountValue": 1446241.02,
+            "roi": 31.56,
+            "volume": 346322.94
+        },
+        {
+            "fullAddress": "0xbb97757984fa4408c13bd3b4a9189f520bf317d3",
+            "accountValue": 706260.15,
+            "roi": 54.46,
+            "volume": 334478.13
+        },
+        {
+            "fullAddress": "0x862dd8e68f30693e3d3c9daa42a440bc6d2a1f0c",
+            "accountValue": 1019295.93,
+            "roi": 70.59,
+            "volume": 334118.08
+        },
+        {
+            "fullAddress": "0x987163b6b482c30c2f5f3aa2760109668eb0091d",
+            "accountValue": 477191.32,
+            "roi": 52.5,
+            "volume": 326100.52
+        },
+        {
+            "fullAddress": "0x720a68bf0813853cd3ed74d2fd0f54edfc7a43e1",
+            "accountValue": 5891597.21,
+            "roi": 16.4,
+            "volume": 324696.47
+        },
+        {
+            "fullAddress": "0xa115c3a2d2c298cfd425fdb9c2dfec3ed7ee9c5e",
+            "accountValue": 783469.13,
+            "roi": 64.04,
+            "volume": 305871.34
+        },
+        {
+            "fullAddress": "0xa5ee12ffed6a53622c11ea5f678ccea19b8b243f",
+            "accountValue": 798003.94,
+            "roi": 51.24,
+            "volume": 312597.03
+        },
+        {
+            "fullAddress": "0xe912cac1a6641004a8803687ee7699227fdb0550",
+            "accountValue": 2125185.18,
+            "roi": 21.32,
+            "volume": 310760.15
+        },
+        {
+            "fullAddress": "0x03ca2d85b85dc1d61243cc2932382dbc6285fbda",
+            "accountValue": 799451.9,
+            "roi": 62.58,
+            "volume": 307716.99
+        },
+        {
+            "fullAddress": "0x413c7a0a3489563350219bc96965a7da02f0fffc",
+            "accountValue": 342849.21,
+            "roi": 291.92,
+            "volume": 291575.36
+        },
+        {
+            "fullAddress": "0x51f63885534cb494f4592a0311551f369bff2b39",
+            "accountValue": 1619158.53,
+            "roi": 15.48,
+            "volume": 288449.56
+        },
+        {
+            "fullAddress": "0xd2475df33e452c8d0a974c9c1adcbc187e0ebed6",
+            "accountValue": 1564581.81,
+            "roi": 21.34,
+            "volume": 275160.58
+        },
+        {
+            "fullAddress": "0x0468aece9ee888878f7d8130c2882f61e3cf677a",
+            "accountValue": 1086182.67,
+            "roi": 32.35,
+            "volume": 268659.6
+        },
+        {
+            "fullAddress": "0xe0cc85525563dadd56fdcd96581f7b587a2b2411",
+            "accountValue": 466403.51,
+            "roi": 131.58,
+            "volume": 265007.94
+        },
+        {
+            "fullAddress": "0x8e2c81960e7e472b146b373b69e45847ce90ac5c",
+            "accountValue": 552773.59,
+            "roi": 99.54,
+            "volume": 250354.13
+        },
+        {
+            "fullAddress": "0xbc9efeb7403afe702593b128def2dece5da1bbaf",
+            "accountValue": 1031039.08,
+            "roi": 28.77,
+            "volume": 230368.62
+        },
+        {
+            "fullAddress": "0x864b81c40d8314d5c4289a14eb92f03b9f43b6bc",
+            "accountValue": 531849.69,
+            "roi": 34.2,
+            "volume": 241765.26
+        },
+        {
+            "fullAddress": "0xd260b2216b735277da6771564a01c04856e78321",
+            "accountValue": 940307.63,
+            "roi": 15.48,
+            "volume": 252716.77
+        },
+        {
+            "fullAddress": "0x00620ada30d98ffcf8e3c91e65283127d11c64ce",
+            "accountValue": 776293.7,
+            "roi": 44.8,
+            "volume": 234686.35
+        },
+        {
+            "fullAddress": "0x422c56a208222ecd27d90e7c7ad0fc979fd188a2",
+            "accountValue": 1529555.29,
+            "roi": 16.07,
+            "volume": 230099.75
+        },
+        {
+            "fullAddress": "0x4b66f4048a0a90fd5ff44abbe5d68332656b78b8",
+            "accountValue": 1088798.3,
+            "roi": 24.7,
+            "volume": 219843.05
+        },
+        {
+            "fullAddress": "0x3d8fe1bdad418b26381d832de158c4d6a52c71f8",
+            "accountValue": 961606.54,
+            "roi": 49.3,
+            "volume": 228760.56
+        },
+        {
+            "fullAddress": "0x9b890a732cef94d90754b1fafa5a4c79eede8bdb",
+            "accountValue": 412984.66,
+            "roi": 115.39,
+            "volume": 237414.33
+        },
+        {
+            "fullAddress": "0x564bbf08f4c190e12fb8317776925120c8305296",
+            "accountValue": 510795.76,
+            "roi": 80.77,
+            "volume": 228227.0
+        },
+        {
+            "fullAddress": "0x4acb90e786d897ecffb614dc822eb231b4ffb9f4",
+            "accountValue": 859600.48,
+            "roi": 15.72,
+            "volume": 225453.06
+        },
+        {
+            "fullAddress": "0x453290d448047088504f83fa72839b79c6758f8d",
+            "accountValue": 804338.12,
+            "roi": 36.86,
+            "volume": 222584.11
+        },
+        {
+            "fullAddress": "0xd2055c67884ef085760f31c06300880e7f745acf",
+            "accountValue": 638141.36,
+            "roi": 386.99,
+            "volume": 221780.64
+        },
+        {
+            "fullAddress": "0x8a83716acd66d9e1fb18c9b79540b72e04f80ac0",
+            "accountValue": 388951.81,
+            "roi": 86.31,
+            "volume": 214936.31
+        },
+        {
+            "fullAddress": "0x7348d97fcfcab9ed4b8e6d1e5b7b7020c29c2811",
+            "accountValue": 865352.16,
+            "roi": 32.32,
+            "volume": 211374.13
+        },
+        {
+            "fullAddress": "0xf1262a1cefbdacd51055f0eb8f32f0daefd4bf9b",
+            "accountValue": 855846.55,
+            "roi": 82.51,
+            "volume": 215121.23
+        },
+        {
+            "fullAddress": "0xda3cdff67ce27fa68ba5600a7c95efd8153d9f15",
+            "accountValue": 13855245.44,
+            "roi": 28.27,
+            "volume": 208809.52
+        },
+        {
+            "fullAddress": "0x9d6086239968f79c0c4a6883653f5c3270331692",
+            "accountValue": 702748.81,
+            "roi": 47.5,
+            "volume": 206356.99
+        },
+        {
+            "fullAddress": "0x86ccd73e2de200ab3e15ee0bd5865f0b405f52b9",
+            "accountValue": 909694.72,
+            "roi": 43.31,
+            "volume": 201101.2
+        },
+        {
+            "fullAddress": "0x54f9524155c82f1f3f2c5e086ba513df442a18ef",
+            "accountValue": 480883.22,
+            "roi": 34.74,
+            "volume": 201242.14
+        },
+        {
+            "fullAddress": "0x7c3f3ea90c19670c7429e47e9972330bd549dea9",
+            "accountValue": 1001290.77,
+            "roi": 23.87,
+            "volume": 195122.59
+        },
+        {
+            "fullAddress": "0x350e33a777d510616fbdb483d1de3b50d1edfcfb",
+            "accountValue": 1497169.58,
+            "roi": 14.86,
+            "volume": 193789.78
+        },
+        {
+            "fullAddress": "0x90f4174d630c02c425ba27986b76410e6ee37434",
+            "accountValue": 575722.21,
+            "roi": 51.1,
+            "volume": 194715.36
+        },
+        {
+            "fullAddress": "0x407afe1e87bf741293d47e562b107a633e678562",
+            "accountValue": 474302.54,
+            "roi": 77.82,
+            "volume": 192739.49
+        },
+        {
+            "fullAddress": "0xcd278177b13eb5c269fed43960c4171b66df5b9c",
+            "accountValue": 450304.11,
+            "roi": 25.5,
+            "volume": 193088.45
+        },
+        {
+            "fullAddress": "0xf53a0480ca2e28afdb385d25f94c8ca3dd453033",
+            "accountValue": 862472.49,
+            "roi": 20.83,
+            "volume": 189822.91
+        },
+        {
+            "fullAddress": "0xd94606128b20680539a719b07bca6cbc30786a28",
+            "accountValue": 416535.01,
+            "roi": 65.36,
+            "volume": 188148.0
+        },
+        {
+            "fullAddress": "0x1e07a22190c1d161248febf9fc2c440f324a16e2",
+            "accountValue": 485402.43,
+            "roi": 83.76,
+            "volume": 184805.28
+        },
+        {
+            "fullAddress": "0x052c405b0291dbac72c6a106db8c65580c53241f",
+            "accountValue": 378639.83,
+            "roi": 34.38,
+            "volume": 184306.66
+        },
+        {
+            "fullAddress": "0x675462411d40a169c3397ac1dc00786dc9c7d3a1",
+            "accountValue": 611474.25,
+            "roi": 72.63,
+            "volume": 185808.1
+        },
+        {
+            "fullAddress": "0xed48b856556a69c7c40229c9c4c829b909257c9b",
+            "accountValue": 1856157.65,
+            "roi": 25.18,
+            "volume": 189885.33
+        },
+        {
+            "fullAddress": "0xe7e25d4f0f0076b08459e343529c446fef04f958",
+            "accountValue": 2235240.34,
+            "roi": 13.33,
+            "volume": 183968.95
+        },
+        {
+            "fullAddress": "0x4cd4f36b9477ee2b6e1c1ca53d6140d029da61de",
+            "accountValue": 1462474.72,
+            "roi": 12.34,
+            "volume": 181506.21
+        },
+        {
+            "fullAddress": "0xd96ea3bcce83d4e1ef8abd1776eecd0cea1bb09e",
+            "accountValue": 1456137.2,
+            "roi": 20.61,
+            "volume": 179577.62
+        },
+        {
+            "fullAddress": "0xdd0c5de50d72e5eaa96816e920e41ce89c4b8888",
+            "accountValue": 1386558.89,
+            "roi": 14.57,
+            "volume": 175381.68
+        },
+        {
+            "fullAddress": "0x1f1b1c9d467d2874b736829f0b4ded42098ce235",
+            "accountValue": 308986.79,
+            "roi": 45.16,
+            "volume": 169936.05
+        },
+        {
+            "fullAddress": "0xf62edeee17968d4c55d1c74936d2110333342f30",
+            "accountValue": 968459.43,
+            "roi": 15.2,
+            "volume": 172577.42
+        },
+        {
+            "fullAddress": "0x22bcdbf9910135f38dbb401e5c6c6927303b4043",
+            "accountValue": 1475914.89,
+            "roi": 18.06,
+            "volume": 181363.09
+        },
+        {
+            "fullAddress": "0xe113311f35a53b196c0ab3ed31ad0bf937cc5c07",
+            "accountValue": 1496665.5,
+            "roi": 20.76,
+            "volume": 173894.0
+        },
+        {
+            "fullAddress": "0x3d89bcea338f35edfaeb313b1c713978c6dceb14",
+            "accountValue": 709843.03,
+            "roi": 21.74,
+            "volume": 163486.34
+        },
+        {
+            "fullAddress": "0x5559da6ec434c5723d0ce9c4da7f29e3f8a3d43b",
+            "accountValue": 1176288.85,
+            "roi": 12.38,
+            "volume": 162582.75
+        },
+        {
+            "fullAddress": "0xca230e816bdb34a46960c2f978a30a563d1ae9e0",
+            "accountValue": 427724.13,
+            "roi": 16.78,
+            "volume": 159482.31
+        },
+        {
+            "fullAddress": "0x2c352e53a2b471b0d98f00d6117ee40e708c72b8",
+            "accountValue": 342294.34,
+            "roi": 96.38,
+            "volume": 167997.11
+        },
+        {
+            "fullAddress": "0x786f7f37095697221a09f2b2eb82657beafde435",
+            "accountValue": 815308.75,
+            "roi": 25.26,
+            "volume": 164430.06
+        },
+        {
+            "fullAddress": "0x30a895cf669354ec3770d0bc1a9c8539fec1f81f",
+            "accountValue": 1496580.25,
+            "roi": 11.6,
+            "volume": 155610.25
+        },
+        {
+            "fullAddress": "0x388855cd19e68891bf6eb081e969b7ee9ca1dcdd",
+            "accountValue": 665706.18,
+            "roi": 25.38,
+            "volume": 161424.26
+        },
+        {
+            "fullAddress": "0x07fdb901da2fa1fe725d2eeeac8e43076bbcf24d",
+            "accountValue": 1089017.23,
+            "roi": 16.08,
+            "volume": 157909.97
+        },
+        {
+            "fullAddress": "0xd0452d2159468b30f9c084b1a0bea4f3f1dee79e",
+            "accountValue": 955525.17,
+            "roi": 19.99,
+            "volume": 153366.45
+        },
+        {
+            "fullAddress": "0x13261649e6aac1b1c24988706bdf84c7688f53b8",
+            "accountValue": 338940.47,
+            "roi": 60.91,
+            "volume": 148051.05
+        },
+        {
+            "fullAddress": "0x417b1ee56908b68761a83b066cf55ee356e8df00",
+            "accountValue": 459935.79,
+            "roi": 52.25,
+            "volume": 144903.49
+        },
+        {
+            "fullAddress": "0xc780e827ac11eef9767cb5370080ce70cd77c521",
+            "accountValue": 545879.01,
+            "roi": 38.96,
+            "volume": 141832.95
+        },
+        {
+            "fullAddress": "0x44c9c226cdfae773002b3f86d3966af3cd8f277c",
+            "accountValue": 893617.9,
+            "roi": 15.56,
+            "volume": 141571.62
+        },
+        {
+            "fullAddress": "0x7688b399c3237d098be4688d222d586ab5236451",
+            "accountValue": 482233.41,
+            "roi": 34.35,
+            "volume": 138951.55
+        },
+        {
+            "fullAddress": "0xc885a6dc3d73bc413d762f9a9e47b231cbecc767",
+            "accountValue": 600277.9,
+            "roi": 30.22,
+            "volume": 139307.14
+        },
+        {
+            "fullAddress": "0x0087188d27ac73b715ad38dff9b99554861a2b55",
+            "accountValue": 712758.56,
+            "roi": 21.52,
+            "volume": 138511.16
+        },
+        {
+            "fullAddress": "0x0284bbd3646b59740a167ef78a306028343f3806",
+            "accountValue": 430218.73,
+            "roi": 27.14,
+            "volume": 136111.04
+        },
+        {
+            "fullAddress": "0xb90626418fc66baf1f078257cca852030cbebb12",
+            "accountValue": 478519.46,
+            "roi": 18.33,
+            "volume": 132413.47
+        },
+        {
+            "fullAddress": "0x34d3e9b531d2bbdd4593777d2b6fdcea8a6b821f",
+            "accountValue": 940850.9,
+            "roi": 15.48,
+            "volume": 132827.83
+        },
+        {
+            "fullAddress": "0xdd588eeebfa4c1b0112a9efffc7f0bc8529bfb1c",
+            "accountValue": 435282.03,
+            "roi": 42.16,
+            "volume": 129083.38
+        },
+        {
+            "fullAddress": "0x44b1b486ce8d9c82f605626347a7b1f74add11de",
+            "accountValue": 366189.84,
+            "roi": 54.27,
+            "volume": 130571.72
+        },
+        {
+            "fullAddress": "0x30fabf0754da17f6c8eca338ddd3581eb911fa11",
+            "accountValue": 1182271.78,
+            "roi": 12.13,
+            "volume": 129896.53
+        },
+        {
+            "fullAddress": "0xf8f3160d4d85c92cdf5fd59846923465cc1f2671",
+            "accountValue": 768425.99,
+            "roi": 17.69,
+            "volume": 129354.14
+        },
+        {
+            "fullAddress": "0x157b3a3868cf3ee9e3a5dc71cf4998c154c6d5c9",
+            "accountValue": 610862.28,
+            "roi": 26.51,
+            "volume": 128024.6
+        },
+        {
+            "fullAddress": "0xb3399eea8fbc2e01e4418f5fb3476df5d714945e",
+            "accountValue": 343218.51,
+            "roi": 45.73,
+            "volume": 127481.26
+        },
+        {
+            "fullAddress": "0xf2dfd97b1df442c6337c83a8e2f7555085ddcd86",
+            "accountValue": 707272.76,
+            "roi": 23.16,
+            "volume": 128427.41
+        },
+        {
+            "fullAddress": "0x45974824c1c4e4d797aa8d057a5499b46cdefe33",
+            "accountValue": 475014.19,
+            "roi": 22.76,
+            "volume": 122961.83
+        },
+        {
+            "fullAddress": "0x9b86b5e96ca9f278f9cb62e118e67937a9350653",
+            "accountValue": 1043722.79,
+            "roi": 23.57,
+            "volume": 136452.02
+        },
+        {
+            "fullAddress": "0x127fa43e17ea1a819cd07692ee17d4f65e927564",
+            "accountValue": 405474.76,
+            "roi": 54.93,
+            "volume": 125507.39
+        },
+        {
+            "fullAddress": "0x7f59d2e24b0ee23ba9c123838a3057e994fcfaba",
+            "accountValue": 697338.22,
+            "roi": 20.98,
+            "volume": 118910.96
+        },
+        {
+            "fullAddress": "0xbd3e5876cc7924be16c2534b1b990a808041469c",
+            "accountValue": 522941.07,
+            "roi": 30.69,
+            "volume": 119930.06
+        },
+        {
+            "fullAddress": "0x288ed4efc8fbd1e42a06fe083ea942d20c90b336",
+            "accountValue": 492994.46,
+            "roi": 30.84,
+            "volume": 116214.27
+        },
+        {
+            "fullAddress": "0xa2d1dd0f09239349354b662f75fbd81f3dbc824e",
+            "accountValue": 3880383.08,
+            "roi": 34.33,
+            "volume": 120982.93
+        },
+        {
+            "fullAddress": "0x0c51fe7923bee4c22a84c5b4109e0c5336d8fde2",
+            "accountValue": 664331.34,
+            "roi": 21.08,
+            "volume": 114942.95
+        },
+        {
+            "fullAddress": "0x5a19b7ada05b85cbc929ef0e80470934ac012b4d",
+            "accountValue": 342469.12,
+            "roi": 49.74,
+            "volume": 113765.44
+        },
+        {
+            "fullAddress": "0x4b1e012d2b5934b018200fae0d89eba37fd7a06e",
+            "accountValue": 634947.09,
+            "roi": 30.44,
+            "volume": 112490.78
+        },
+        {
+            "fullAddress": "0x279818c822e5c6135d989df50d0bba96e9564ce5",
+            "accountValue": 587857.23,
+            "roi": 22.54,
+            "volume": 108115.67
+        },
+        {
+            "fullAddress": "0x71b71fe222a3afd08332cc48660ee1c24aff2284",
+            "accountValue": 717795.38,
+            "roi": 28.44,
+            "volume": 106921.82
+        },
+        {
+            "fullAddress": "0x61d897b1246fd61076914b619310707dc0be790e",
+            "accountValue": 480180.89,
+            "roi": 20.85,
+            "volume": 104208.37
+        },
+        {
+            "fullAddress": "0x9fa494940762c73b37bf417df63d01c5d369b791",
+            "accountValue": 671834.47,
+            "roi": 31.31,
+            "volume": 107051.87
+        },
+        {
+            "fullAddress": "0x12824145da50b64b7efebd1a8dc5cf403a756b2c",
+            "accountValue": 343947.3,
+            "roi": 27.64,
+            "volume": 102130.7
+        },
+        {
+            "fullAddress": "0x39be8fad61f5fa0cdfa2fc97c30a59833f58705d",
+            "accountValue": 754317.52,
+            "roi": 24.67,
+            "volume": 101957.27
+        },
+        {
+            "fullAddress": "0xb1910d8ff351e13659ee4527c0f825f32d11d3c1",
+            "accountValue": 455850.99,
+            "roi": 23.8,
+            "volume": 103553.59
+        },
+        {
+            "fullAddress": "0x2e32935bfd5b2718f99bc8fdf8b37c16811f7d97",
+            "accountValue": 1562138.39,
+            "roi": 14.16,
+            "volume": 110686.12
+        },
+        {
+            "fullAddress": "0x3745587df8362f9a541e14a2be84da981df0e21e",
+            "accountValue": 340358.24,
+            "roi": 15.5,
+            "volume": 100682.29
+        },
+        {
+            "fullAddress": "0xd8d198fc4f21a61d093815997954c605ffe04cd1",
+            "accountValue": 494720.06,
+            "roi": 16.84,
+            "volume": 90925.94
+        },
+        {
+            "fullAddress": "0x19c51bf584b70d4bf70585125e929f7e0387b723",
+            "accountValue": 342619.04,
+            "roi": 40.4,
+            "volume": 98584.21
+        },
+        {
+            "fullAddress": "0x0cb1bc9c2a357ffc3627fa8e1cd7cf6ff74f6edb",
+            "accountValue": 904555.05,
+            "roi": 16.06,
+            "volume": 95599.79
+        },
+        {
+            "fullAddress": "0xf770f371cc66499a89ae56aa84f9506e083f99ea",
+            "accountValue": 587830.86,
+            "roi": 14.31,
+            "volume": 88810.35
+        },
+        {
+            "fullAddress": "0x9a568bfeb8cb19e4bafcb57ee69498d57d9591ca",
+            "accountValue": 633697.81,
+            "roi": 16.03,
+            "volume": 88981.7
+        },
+        {
+            "fullAddress": "0x520863bab865050e635207c4ed099eec568f3f47",
+            "accountValue": 417913.42,
+            "roi": 18.47,
+            "volume": 90338.18
+        },
+        {
+            "fullAddress": "0x8888892c503f24822ed71eb2de512b9742ddcee8",
+            "accountValue": 899169.38,
+            "roi": 10.81,
+            "volume": 87715.86
+        },
+        {
+            "fullAddress": "0x1c9e242d85fc0e4376ad1ea56143b9fdf9f61017",
+            "accountValue": 487875.73,
+            "roi": 27.14,
+            "volume": 89039.26
+        },
+        {
+            "fullAddress": "0x885989fd94d30c150e6eaf897090509bce4f6aa8",
+            "accountValue": 805971.32,
+            "roi": 12.35,
+            "volume": 88592.74
+        },
+        {
+            "fullAddress": "0x7b01fdf8fcae491237ab04d7069d1551aca96b08",
+            "accountValue": 530572.63,
+            "roi": 44.57,
+            "volume": 87026.38
+        },
+        {
+            "fullAddress": "0x610aec3851d7688c4c8aef3a6173f667e8beef73",
+            "accountValue": 431637.16,
+            "roi": 23.82,
+            "volume": 83760.23
+        },
+        {
+            "fullAddress": "0xaaccee70fa4a63aec2de35e1a7afd380b9fa2310",
+            "accountValue": 902694.24,
+            "roi": 12.79,
+            "volume": 86766.58
+        },
+        {
+            "fullAddress": "0x3c165893deaaf04ac79f4f959594747b6ef77e92",
+            "accountValue": 337068.77,
+            "roi": 21.99,
+            "volume": 83232.05
+        },
+        {
+            "fullAddress": "0xa7f5832c2465dd44ad58ff28a746aebfd146a660",
+            "accountValue": 560158.69,
+            "roi": 16.44,
+            "volume": 81962.37
+        },
+        {
+            "fullAddress": "0x5fddaf29681f3acd3ee5d88ef150f066b4db9890",
+            "accountValue": 1132708.82,
+            "roi": 17.48,
+            "volume": 86331.2
+        },
+        {
+            "fullAddress": "0xf4dd79ff834f2e5d93f89ca68a1652b4d95fc669",
+            "accountValue": 359215.46,
+            "roi": 21.41,
+            "volume": 80967.27
+        },
+        {
+            "fullAddress": "0x3d55184fb6521cf927b2f730967b05ff1dca8ef9",
+            "accountValue": 472259.44,
+            "roi": 21.65,
+            "volume": 84047.66
+        },
+        {
+            "fullAddress": "0x0030a54224df51cd2ccfaf004134e8cddc23267e",
+            "accountValue": 313079.1,
+            "roi": 32.2,
+            "volume": 78914.65
+        },
+        {
+            "fullAddress": "0x68af3f19b7cf1934909bd43776050fe83b0ac654",
+            "accountValue": 365442.93,
+            "roi": 24.77,
+            "volume": 72550.32
+        },
+        {
+            "fullAddress": "0xbc82ea13fe0da6970624b73d5754b9187a17558b",
+            "accountValue": 445033.33,
+            "roi": 24.21,
+            "volume": 86743.05
+        },
+        {
+            "fullAddress": "0x23d6f6a2f9fa4843959211cb7f9018b0b1e9f8d9",
+            "accountValue": 405898.58,
+            "roi": 28.49,
+            "volume": 74876.66
+        },
+        {
+            "fullAddress": "0x62ada4c40cfb35162c81b06f85997dbb48adeb37",
+            "accountValue": 331258.56,
+            "roi": 26.15,
+            "volume": 73077.45
+        },
+        {
+            "fullAddress": "0xf034364a93edd7c38a1c59b8700b6613e0623e77",
+            "accountValue": 361432.77,
+            "roi": 28.43,
+            "volume": 79996.96
+        },
+        {
+            "fullAddress": "0x0ba4ca7a5df76d9c954df01a5e1d3d9b190a1602",
+            "accountValue": 574365.35,
+            "roi": 21.59,
+            "volume": 73094.06
+        },
+        {
+            "fullAddress": "0x4b1c09fa8322548360a76a3747e32a60a864bc38",
+            "accountValue": 513905.16,
+            "roi": 12.09,
+            "volume": 73102.49
+        },
+        {
+            "fullAddress": "0x33cd83ca975dfe9fce7111eeb644f4fd0c558ad9",
+            "accountValue": 573019.46,
+            "roi": 10.47,
+            "volume": 71263.16
+        },
+        {
+            "fullAddress": "0xa1cb16d2b17202c336138f765559dfc73830b1fb",
+            "accountValue": 682125.33,
+            "roi": 18.39,
+            "volume": 73121.89
+        },
+        {
+            "fullAddress": "0x24ab0a8b1e991b6cd8013a75698f5821f7172155",
+            "accountValue": 347587.3,
+            "roi": 26.57,
+            "volume": 72963.37
+        },
+        {
+            "fullAddress": "0x891140a93bef082312952b48479a853e90952fc2",
+            "accountValue": 403975.37,
+            "roi": 28.77,
+            "volume": 71150.71
+        },
+        {
+            "fullAddress": "0x7f2e54d53258dc45b8581f11f924075146608d19",
+            "accountValue": 331935.98,
+            "roi": 31.55,
+            "volume": 69350.62
+        },
+        {
+            "fullAddress": "0x29516dcf8b40718a5ef925981768d43277fa89e0",
+            "accountValue": 360761.77,
+            "roi": 23.32,
+            "volume": 68217.74
+        },
+        {
+            "fullAddress": "0xf961e5e6c5276164adb2865b7e80cf82dc04e920",
+            "accountValue": 3181945.05,
+            "roi": 13.79,
+            "volume": 69076.79
+        },
+        {
+            "fullAddress": "0x524a1844327471da4196aad4538db6d21f1e4e92",
+            "accountValue": 534283.31,
+            "roi": 15.94,
+            "volume": 71580.74
+        },
+        {
+            "fullAddress": "0x37acc4445d73f984d0140794b2f3afadc67ce31b",
+            "accountValue": 343770.19,
+            "roi": 23.78,
+            "volume": 67090.72
+        },
+        {
+            "fullAddress": "0xa1d0df035fc67efea14a1985f169c466a0b97d70",
+            "accountValue": 402961.82,
+            "roi": 31.99,
+            "volume": 68200.24
+        },
+        {
+            "fullAddress": "0xf97ad6704baec104d00b88e0c157e2b7b3a1ddd1",
+            "accountValue": 753075.84,
+            "roi": 24.27,
+            "volume": 66442.27
+        },
+        {
+            "fullAddress": "0xead5b7d86c681c036c59cd00a0390541061c69f2",
+            "accountValue": 4010176.95,
+            "roi": 17.05,
+            "volume": 62481.86
+        },
+        {
+            "fullAddress": "0x4e38e0832fb129d2405ebdb7ec5ea60dfbe26b87",
+            "accountValue": 397943.25,
+            "roi": 13.0,
+            "volume": 63321.93
+        },
+        {
+            "fullAddress": "0x5df2fed8188902f86f2074b70fd36ed3a39a1256",
+            "accountValue": 327222.63,
+            "roi": 39.37,
+            "volume": 62794.34
+        },
+        {
+            "fullAddress": "0xbd5fead7180a9c139fa51a103cb6a2ce86ddb5c3",
+            "accountValue": 538626.94,
+            "roi": 13.07,
+            "volume": 62277.78
+        },
+        {
+            "fullAddress": "0x6ab645ffb20c5ab0d57c2fd218d4c3bd22273cc9",
+            "accountValue": 426744.61,
+            "roi": 24.52,
+            "volume": 59365.96
+        },
+        {
+            "fullAddress": "0x6041f881358c71d64bc9253c9ba0391df69f7d98",
+            "accountValue": 865315.4,
+            "roi": 28.03,
+            "volume": 59701.55
+        },
+        {
+            "fullAddress": "0x1a1c5f14f03c179484a6005d99c2c956ca85db24",
+            "accountValue": 422792.06,
+            "roi": 11.01,
+            "volume": 56825.84
+        },
+        {
+            "fullAddress": "0xe158d53614c6d0ba4ad85e3965b872a08570c3e8",
+            "accountValue": 563183.23,
+            "roi": 10.13,
+            "volume": 51809.26
+        },
+        {
+            "fullAddress": "0x89636f28a959fc4012f1649fb48de7648eded9ce",
+            "accountValue": 308503.87,
+            "roi": 19.14,
+            "volume": 49532.43
+        },
+        {
+            "fullAddress": "0x7aa335dd4b35a47e4ac23e6b9201893665c3c12d",
+            "accountValue": 307764.66,
+            "roi": 26.81,
+            "volume": 56097.61
+        },
+        {
+            "fullAddress": "0xc5ed4501500fcbfb2b88fb7f0aa52f834ed44346",
+            "accountValue": 878925.35,
+            "roi": 12.73,
+            "volume": 54079.28
+        },
+        {
+            "fullAddress": "0x60ceef10f9dd4a5d7874f22f461048ea96f475f6",
+            "accountValue": 423065.13,
+            "roi": 63.04,
+            "volume": 52351.43
+        },
+        {
+            "fullAddress": "0x7151609fdc7e0cac89fb9720f0957af9d552f8f9",
+            "accountValue": 381664.56,
+            "roi": 11.08,
+            "volume": 50069.66
+        },
+        {
+            "fullAddress": "0x6ea2698c46eb96039c683106f8d6294433d282e9",
+            "accountValue": 548029.21,
+            "roi": 12.1,
+            "volume": 51725.24
+        },
+        {
+            "fullAddress": "0x4cace946b49c6af6066f4950a4d9f457235c3e80",
+            "accountValue": 377506.0,
+            "roi": 14.85,
+            "volume": 48814.37
+        },
+        {
+            "fullAddress": "0x81dd236893b50383256aee3ccd6ded98fdd155b6",
+            "accountValue": 410528.22,
+            "roi": 16.81,
+            "volume": 50326.34
+        },
+        {
+            "fullAddress": "0x25652b7750934c68e78d5a8dd643ffec9dc9cc37",
+            "accountValue": 477351.31,
+            "roi": 11.42,
+            "volume": 48926.31
+        },
+        {
+            "fullAddress": "0x43d271c17612f8f431c7533b7827993e203e9e83",
+            "accountValue": 998179.13,
+            "roi": 23.87,
+            "volume": 47182.77
+        },
+        {
+            "fullAddress": "0x84c8855a9c4def842266ecf7e7533040e2a3f4b7",
+            "accountValue": 308238.95,
+            "roi": 16.94,
+            "volume": 44640.95
+        },
+        {
+            "fullAddress": "0xcc38e76900d496f50b8bd1bfa9da576c16fd90b4",
+            "accountValue": 375457.88,
+            "roi": 10.35,
+            "volume": 44431.07
+        },
+        {
+            "fullAddress": "0xaf6f7a06f7bfb3bdf7bcd2c751564f4990d1efc7",
+            "accountValue": 403582.73,
+            "roi": 14.56,
+            "volume": 43898.14
+        },
+        {
+            "fullAddress": "0xd35e4b057bb0b7b82fd61cc886aa4cad7e31deaf",
+            "accountValue": 306473.99,
+            "roi": 15.45,
+            "volume": 43156.53
+        },
+        {
+            "fullAddress": "0x5e47dd29c33e73ad142fcb864ea87fbc7037cc1f",
+            "accountValue": 416848.47,
+            "roi": 17.07,
+            "volume": 43594.59
+        },
+        {
+            "fullAddress": "0x7e5198aecb7285e6c4419620685c3950816e780f",
+            "accountValue": 374563.9,
+            "roi": 12.56,
+            "volume": 41782.65
+        },
+        {
+            "fullAddress": "0x056ba834114908fc6093a9206c0c3453ad73d2df",
+            "accountValue": 379553.45,
+            "roi": 11.19,
+            "volume": 38199.17
+        },
+        {
+            "fullAddress": "0xe6801a4696c8f775c0a347df633a3df3abf002c1",
+            "accountValue": 301831.51,
+            "roi": 18.35,
+            "volume": 39406.59
         }
     ]
 }

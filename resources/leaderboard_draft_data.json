@@ -1,882 +1,1190 @@
 [
     {
         "trader": "0x20c2...44f5",
-        "account_value": "$92,197,072.92",
-        "pnl_30d": "$153,033,790.70",
-        "roi_30d": "59,32%",
-        "volume_30d": "$51,624,945.11",
-        "is_whale": true
+        "account_value": "$89,637,681.79"
     },
     {
         "trader": "0xecb6...2b00",
-        "account_value": "$39,523,476.48",
-        "pnl_30d": "$17,282,304,036.87",
-        "roi_30d": "36,16%",
-        "volume_30d": "$15,749,223.42",
-        "is_whale": true
+        "account_value": "$54,279,176.01"
     },
     {
-        "trader": "0x8cc9...2b6a",
-        "account_value": "$10,425,231.80",
-        "pnl_30d": "$110,027,940.75",
-        "roi_30d": "106,14%",
-        "volume_30d": "$8,531,003.90",
-        "is_whale": true
-    },
-    {
-        "trader": "0x45d2...4029",
-        "account_value": "$9,906,139.66",
-        "pnl_30d": "$13,277,395.24",
-        "roi_30d": "66,53%",
-        "volume_30d": "$7,798,543.47",
-        "is_whale": true
-    },
-    {
-        "trader": "\u61a8\u5df4\u5c0f\u9f99",
-        "account_value": "$11,237,390.13",
-        "pnl_30d": "$87,353,275.23",
-        "roi_30d": "42,40%",
-        "volume_30d": "$6,177,677.46",
-        "is_whale": true
+        "trader": "0xec77...cb1a",
+        "account_value": "$12,822,308.31"
     },
     {
         "trader": "0x8af7...fa05",
-        "account_value": "$13,064,073.19",
-        "pnl_30d": "$544,847,471.70",
-        "roi_30d": "38,82%",
-        "volume_30d": "$6,025,756.12",
-        "is_whale": true
+        "account_value": "$12,524,234.10"
     },
     {
-        "trader": "Auros",
-        "account_value": "$15,217,428.97",
-        "pnl_30d": "$21,617,259,344.24",
-        "roi_30d": "16,34%",
-        "volume_30d": "$4,977,939.76",
-        "is_whale": true
+        "trader": "0x8cc9...2b6a",
+        "account_value": "$11,009,598.32"
     },
     {
-        "trader": "0x5649...80c5",
-        "account_value": "$12,846,120.13",
-        "pnl_30d": "$206,551,419.76",
-        "roi_30d": "59,57%",
-        "volume_30d": "$4,770,431.35",
-        "is_whale": true
-    },
-    {
-        "trader": "0xa312...ad1e",
-        "account_value": "$4,722,679.91",
-        "pnl_30d": "$6,827,727.18",
-        "roi_30d": "63,27%",
-        "volume_30d": "$4,657,488.06",
-        "is_whale": true
+        "trader": "0x45d2...4029",
+        "account_value": "$10,465,800.78"
     },
     {
         "trader": "BobbyBigSize",
-        "account_value": "$21,112,295.55",
-        "pnl_30d": "$485,686,322.92",
-        "roi_30d": "29,72%",
-        "volume_30d": "$4,646,036.59",
-        "is_whale": true
+        "account_value": "$18,251,165.42"
     },
     {
-        "trader": "0xb83d...6e36",
-        "account_value": "$6,561,312.62",
-        "pnl_30d": "$22,691,545.26",
-        "roi_30d": "28,49%",
-        "volume_30d": "$4,603,098.54",
-        "is_whale": true
+        "trader": "0x5db2...73d0",
+        "account_value": "$1,679,520.25"
+    },
+    {
+        "trader": "\u61a8\u5df4\u5c0f\u9f99",
+        "account_value": "$9,135,071.10"
+    },
+    {
+        "trader": "Auros",
+        "account_value": "$10,166,830.83"
     },
     {
         "trader": "0x5d2f...9bb7",
-        "account_value": "$5,248,182.96",
-        "pnl_30d": "$124,749,443.05",
-        "roi_30d": "91,74%",
-        "volume_30d": "$4,185,601.51",
-        "is_whale": true
-    },
-    {
-        "trader": "0x863b...ca6d",
-        "account_value": "$841,488.64",
-        "pnl_30d": "$151,795,823.15",
-        "roi_30d": "200,93%",
-        "volume_30d": "$3,835,964.10",
-        "is_whale": true
-    },
-    {
-        "trader": "0x6859...7e1e",
-        "account_value": "$2,000,662.51",
-        "pnl_30d": "$16,553,271.60",
-        "roi_30d": "106,77%",
-        "volume_30d": "$3,655,852.60",
-        "is_whale": true
-    },
-    {
-        "trader": "btc@tuta.com",
-        "account_value": "$3,601,862.10",
-        "pnl_30d": "$393,440,888.14",
-        "roi_30d": "119,50%",
-        "volume_30d": "$3,593,900.49",
-        "is_whale": true
-    },
-    {
-        "trader": "0x2ba5...1036",
-        "account_value": "$14,110,310.60",
-        "pnl_30d": "$538,159,634.01",
-        "roi_30d": "24,35%",
-        "volume_30d": "$3,155,584.77",
-        "is_whale": true
-    },
-    {
-        "trader": "0x5a54...2e72",
-        "account_value": "$4,629,105.13",
-        "pnl_30d": "$143,861,754.71",
-        "roi_30d": "117,91%",
-        "volume_30d": "$2,504,741.71",
-        "is_whale": true
-    },
-    {
-        "trader": "0x1f79...a9b8",
-        "account_value": "$2,309,723.20",
-        "pnl_30d": "$65,588,778.86",
-        "roi_30d": "55,18%",
-        "volume_30d": "$2,487,173.12",
-        "is_whale": true
-    },
-    {
-        "trader": "0x9e8b...afc4",
-        "account_value": "$5,291,531.55",
-        "pnl_30d": "$208,189,345.66",
-        "roi_30d": "55,08%",
-        "volume_30d": "$2,414,116.88",
-        "is_whale": true
-    },
-    {
-        "trader": "0xeb93...6389",
-        "account_value": "$836,309.45",
-        "pnl_30d": "$5,572,051.03",
-        "roi_30d": "130,15%",
-        "volume_30d": "$2,398,485.91",
-        "is_whale": true
-    },
-    {
-        "trader": "0x9458...ec04",
-        "account_value": "$4,213,054.02",
-        "pnl_30d": "$36,783,202.83",
-        "roi_30d": "130,36%",
-        "volume_30d": "$2,384,116.95",
-        "is_whale": true
-    },
-    {
-        "trader": "0x499b...b5fb",
-        "account_value": "$775,636.76",
-        "pnl_30d": "$18,167,848.24",
-        "roi_30d": "43,58%",
-        "volume_30d": "$2,359,957.63",
-        "is_whale": true
-    },
-    {
-        "trader": "0xd487...4982",
-        "account_value": "$7,104,786.16",
-        "pnl_30d": "$44,611,600.41",
-        "roi_30d": "45,97%",
-        "volume_30d": "$2,333,898.80",
-        "is_whale": true
-    },
-    {
-        "trader": "0x8bff...cdc3",
-        "account_value": "$3,825,585.62",
-        "pnl_30d": "$700,484,477.16",
-        "roi_30d": "45,33%",
-        "volume_30d": "$2,314,883.83",
-        "is_whale": true
+        "account_value": "$4,845,255.46"
     },
     {
         "trader": "0xe86b...3664",
-        "account_value": "$8,277,344.13",
-        "pnl_30d": "$8,259,182,960.38",
-        "roi_30d": "31,50%",
-        "volume_30d": "$2,185,673.89",
-        "is_whale": true
+        "account_value": "$9,444,126.56"
     },
     {
-        "trader": "0x76c2...5aa0",
-        "account_value": "$6,882,408.38",
-        "pnl_30d": "$35,254,237.09",
-        "roi_30d": "36,10%",
-        "volume_30d": "$2,161,690.61",
-        "is_whale": true
+        "trader": "0x9e8b...afc4",
+        "account_value": "$6,392,846.73"
     },
     {
-        "trader": "0x162c...8185",
-        "account_value": "$10,222,081.74",
-        "pnl_30d": "$20,691,350,992.33",
-        "roi_30d": "22,10%",
-        "volume_30d": "$2,139,662.58",
-        "is_whale": true
+        "trader": "btc@tuta.com",
+        "account_value": "$4,580,606.51"
     },
     {
-        "trader": "0xcccf...b34b",
-        "account_value": "$3,012,826.47",
-        "pnl_30d": "$5,447,359.57",
-        "roi_30d": "47,93%",
-        "volume_30d": "$2,061,945.03",
-        "is_whale": true
+        "trader": "0x9458...ec04",
+        "account_value": "$3,398,826.39"
     },
     {
-        "trader": "0xdbd1...29dd",
-        "account_value": "$3,036,228.17",
-        "pnl_30d": "$557,100.00",
-        "roi_30d": "92,40%",
-        "volume_30d": "$2,031,530.28",
-        "is_whale": true
+        "trader": "0x6859...7e1e",
+        "account_value": "$3,470,880.78"
     },
     {
-        "trader": "0xd475...1a91",
-        "account_value": "$4,334,003.65",
-        "pnl_30d": "$1,465,209.36",
-        "roi_30d": "38,23%",
-        "volume_30d": "$1,934,125.37",
-        "is_whale": true
+        "trader": "0xf967...14eb",
+        "account_value": "$9,862,832.61"
     },
     {
-        "trader": "0x29eb...7043",
-        "account_value": "$1,922,195.56",
-        "pnl_30d": "$34,971,926.69",
-        "roi_30d": "79,27%",
-        "volume_30d": "$1,933,214.42",
-        "is_whale": true
+        "trader": "0x153c...319a",
+        "account_value": "$5,943,525.15"
     },
     {
-        "trader": "0x7258...aed4",
-        "account_value": "$361,692.06",
-        "pnl_30d": "$316,960,071.53",
-        "roi_30d": "101,26%",
-        "volume_30d": "$1,855,104.10",
-        "is_whale": true
-    },
-    {
-        "trader": "0x3fd4...7d33",
-        "account_value": "$5,948,128.43",
-        "pnl_30d": "$727,742,747.34",
-        "roi_30d": "35,58%",
-        "volume_30d": "$1,751,849.29",
-        "is_whale": true
-    },
-    {
-        "trader": "0xa4de...b3c4",
-        "account_value": "$3,335,761.31",
-        "pnl_30d": "$766,183,209.71",
-        "roi_30d": "127,21%",
-        "volume_30d": "$1,740,438.24",
-        "is_whale": true
-    },
-    {
-        "trader": "0xaeae...69e6",
-        "account_value": "$3,632,264.22",
-        "pnl_30d": "$2,080,706.22",
-        "roi_30d": "24,92%",
-        "volume_30d": "$1,728,646.56",
-        "is_whale": true
-    },
-    {
-        "trader": "0x7c97...0a1a",
-        "account_value": "$12,306,201.06",
-        "pnl_30d": "$10,642,028.35",
-        "roi_30d": "21,35%",
-        "volume_30d": "$1,502,161.40",
-        "is_whale": true
-    },
-    {
-        "trader": "Barron Meme Account",
-        "account_value": "$5,620,330.54",
-        "pnl_30d": "$427,670,404.20",
-        "roi_30d": "31,56%",
-        "volume_30d": "$1,468,182.46",
-        "is_whale": true
-    },
-    {
-        "trader": "0x7fe8...7ac6",
-        "account_value": "$4,669,557.24",
-        "pnl_30d": "$280,047,849.81",
-        "roi_30d": "41,71%",
-        "volume_30d": "$1,409,115.44",
-        "is_whale": true
-    },
-    {
-        "trader": "0xff88...dc25",
-        "account_value": "$5,214,762.08",
-        "pnl_30d": "$2,261,816,914.02",
-        "roi_30d": "22,57%",
-        "volume_30d": "$1,397,063.82",
-        "is_whale": true
-    },
-    {
-        "trader": "0x1aa7...9ed9",
-        "account_value": "$539,479.21",
-        "pnl_30d": "$35,959,479.10",
-        "roi_30d": "52,60%",
-        "volume_30d": "$1,351,066.14",
-        "is_whale": true
-    },
-    {
-        "trader": "0xceec...a7ce",
-        "account_value": "$6,172,847.65",
-        "pnl_30d": "$104,049.69",
-        "roi_30d": "51,37%",
-        "volume_30d": "$1,307,356.06",
-        "is_whale": true
-    },
-    {
-        "trader": "0x9ab1...0206",
-        "account_value": "$5,197,286.12",
-        "pnl_30d": "$131,042,204.70",
-        "roi_30d": "33,58%",
-        "volume_30d": "$1,306,461.89",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb35a...a765",
-        "account_value": "$1,848,506.62",
-        "pnl_30d": "$1,520,663.49",
-        "roi_30d": "60,59%",
-        "volume_30d": "$1,284,521.90",
-        "is_whale": true
-    },
-    {
-        "trader": "0xaea8...e59b",
-        "account_value": "$1,722,212.26",
-        "pnl_30d": "$20,451,296.30",
-        "roi_30d": "54,23%",
-        "volume_30d": "$1,254,711.75",
-        "is_whale": true
-    },
-    {
-        "trader": "0xad8b...db4b",
-        "account_value": "$739,506.43",
-        "pnl_30d": "$10,358,465,529.67",
-        "roi_30d": "144,24%",
-        "volume_30d": "$1,248,241.80",
-        "is_whale": true
-    },
-    {
-        "trader": "0xbfc7...80b4",
-        "account_value": "$2,390,439.89",
-        "pnl_30d": "$18,504,124.56",
-        "roi_30d": "71,31%",
-        "volume_30d": "$1,231,674.45",
-        "is_whale": true
-    },
-    {
-        "trader": "0x6138...82ad",
-        "account_value": "$5,542,757.52",
-        "pnl_30d": "$2,272,011,715.22",
-        "roi_30d": "17,95%",
-        "volume_30d": "$1,199,133.14",
-        "is_whale": true
-    },
-    {
-        "trader": "circle packing strat",
-        "account_value": "$1,878,274.31",
-        "pnl_30d": "$11,175,872,605.18",
-        "roi_30d": "66,21%",
-        "volume_30d": "$1,158,247.83",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb392...0405",
-        "account_value": "$6,855,466.38",
-        "pnl_30d": "$380,951.56",
-        "roi_30d": "29,50%",
-        "volume_30d": "$1,127,354.01",
-        "is_whale": true
-    },
-    {
-        "trader": "0xd791...ec7a",
-        "account_value": "$707,519.06",
-        "pnl_30d": "$12,931,791.77",
-        "roi_30d": "60,20%",
-        "volume_30d": "$1,084,647.11",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb3e4...806f",
-        "account_value": "$6,192,553.97",
-        "pnl_30d": "$29,860,413.92",
-        "roi_30d": "25,51%",
-        "volume_30d": "$1,051,997.52",
-        "is_whale": true
-    },
-    {
-        "trader": "0xa9ed...a60a",
-        "account_value": "$3,478,890.13",
-        "pnl_30d": "$0.00",
-        "roi_30d": "35,14%",
-        "volume_30d": "$1,036,265.96",
-        "is_whale": true
-    },
-    {
-        "trader": "0x265b...82b0",
-        "account_value": "$6,085,987.62",
-        "pnl_30d": "$1,956,028.48",
-        "roi_30d": "36,92%",
-        "volume_30d": "$1,032,657.98",
-        "is_whale": true
-    },
-    {
-        "trader": "0x24fb...ed0f",
-        "account_value": "$1,714,673.87",
-        "pnl_30d": "$424,851,325.90",
-        "roi_30d": "53,73%",
-        "volume_30d": "$1,022,844.53",
-        "is_whale": true
-    },
-    {
-        "trader": "0x4174...f572",
-        "account_value": "$2,191,611.04",
-        "pnl_30d": "$54,139,849.59",
-        "roi_30d": "71,23%",
-        "volume_30d": "$996,954.75",
-        "is_whale": true
-    },
-    {
-        "trader": "0x3fc5...c0c1",
-        "account_value": "$6,179,067.98",
-        "pnl_30d": "$15,412,763.07",
-        "roi_30d": "31,12%",
-        "volume_30d": "$954,692.83",
-        "is_whale": true
-    },
-    {
-        "trader": "0xd0e8...ff47",
-        "account_value": "$2,556,781.58",
-        "pnl_30d": "$225,388.29",
-        "roi_30d": "68,49%",
-        "volume_30d": "$944,909.74",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb0fb...1326",
-        "account_value": "$983,020.88",
-        "pnl_30d": "$25,698,211.48",
-        "roi_30d": "67,88%",
-        "volume_30d": "$941,334.44",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb4ca...0894",
-        "account_value": "$8,425,491.62",
-        "pnl_30d": "$4,912,948.19",
-        "roi_30d": "33,94%",
-        "volume_30d": "$938,227.17",
-        "is_whale": true
-    },
-    {
-        "trader": "0xcf13...882d",
-        "account_value": "$1,117,156.30",
-        "pnl_30d": "$28,437,794.63",
-        "roi_30d": "53,14%",
-        "volume_30d": "$929,818.77",
-        "is_whale": true
-    },
-    {
-        "trader": "0xb4a0...53f0",
-        "account_value": "$1,274,250.28",
-        "pnl_30d": "$40,730,957.41",
-        "roi_30d": "56,10%",
-        "volume_30d": "$926,383.96",
-        "is_whale": true
-    },
-    {
-        "trader": "0x9f07...f99a",
-        "account_value": "$1,698,625.94",
-        "pnl_30d": "$84,141,763.69",
-        "roi_30d": "93,17%",
-        "volume_30d": "$892,023.39",
-        "is_whale": true
-    },
-    {
-        "trader": "0x06ce...164b",
-        "account_value": "$510,801.78",
-        "pnl_30d": "$0.00",
-        "roi_30d": "116,77%",
-        "volume_30d": "$813,830.20",
-        "is_whale": true
+        "trader": "0x1f79...a9b8",
+        "account_value": "$2,783,905.87"
     },
     {
         "trader": "yawakamo",
-        "account_value": "$1,939,046.48",
-        "pnl_30d": "$20,735,221.86",
-        "roi_30d": "23,92%",
-        "volume_30d": "$791,264.03",
-        "is_whale": true
+        "account_value": "$1,953,636.76"
     },
     {
-        "trader": "0x0833...9012",
-        "account_value": "$1,899,580.77",
-        "pnl_30d": "$11,772,900.88",
-        "roi_30d": "69,19%",
-        "volume_30d": "$776,831.26",
-        "is_whale": true
+        "trader": "0x5bc4...3b0c",
+        "account_value": "$4,702,983.85"
     },
     {
-        "trader": "0x2657...49bc",
-        "account_value": "$961,105.16",
-        "pnl_30d": "$90,409,252.12",
-        "roi_30d": "141,95%",
-        "volume_30d": "$756,325.71",
-        "is_whale": true
+        "trader": "0xa312...ad1e",
+        "account_value": "$5,477,730.67"
     },
     {
-        "trader": "0xccf1...0ab1",
-        "account_value": "$3,576,173.80",
-        "pnl_30d": "$1,321,237.92",
-        "roi_30d": "56,52%",
-        "volume_30d": "$752,056.01",
-        "is_whale": true
+        "trader": "0x7258...aed4",
+        "account_value": "$321,924.13"
     },
     {
-        "trader": "Prof. Sam Howison",
-        "account_value": "$990,058.08",
-        "pnl_30d": "$821,326,642.72",
-        "roi_30d": "59,60%",
-        "volume_30d": "$746,760.48",
-        "is_whale": true
+        "trader": "0x8bff...cdc3",
+        "account_value": "$8,984,613.04"
     },
     {
-        "trader": "0xf08d...9e07",
-        "account_value": "$950,455.67",
-        "pnl_30d": "$988.00",
-        "roi_30d": "20,27%",
-        "volume_30d": "$741,926.28",
-        "is_whale": true
+        "trader": "0x5649...80c5",
+        "account_value": "$7,666,374.03"
     },
     {
-        "trader": "0x7717...bd7e",
-        "account_value": "$1,516,402.46",
-        "pnl_30d": "$443,535,013.33",
-        "roi_30d": "46,31%",
-        "volume_30d": "$739,500.82",
-        "is_whale": true
+        "trader": "0x7c97...0a1a",
+        "account_value": "$12,253,922.67"
     },
     {
-        "trader": "0x7c4b...e00b",
-        "account_value": "$1,290,687.56",
-        "pnl_30d": "$44,061,274.69",
-        "roi_30d": "95,48%",
-        "volume_30d": "$715,180.82",
-        "is_whale": true
+        "trader": "0x3fc5...c0c1",
+        "account_value": "$6,528,821.36"
     },
     {
-        "trader": "0xd6ef...a07a",
-        "account_value": "$2,942,638.76",
-        "pnl_30d": "$198,834,149.97",
-        "roi_30d": "27,00%",
-        "volume_30d": "$706,930.36",
-        "is_whale": true
+        "trader": "0xf7bf...a316",
+        "account_value": "$11,232,981.72"
     },
     {
-        "trader": "0xa4e3...e3ec",
-        "account_value": "$379,257.40",
-        "pnl_30d": "$6,292,652.65",
-        "roi_30d": "90,71%",
-        "volume_30d": "$679,826.67",
-        "is_whale": true
+        "trader": "0xd487...4982",
+        "account_value": "$7,771,706.50"
     },
     {
-        "trader": "0x0aa9...184d",
-        "account_value": "$9,476,408.70",
-        "pnl_30d": "$3,230,435.15",
-        "roi_30d": "12,02%",
-        "volume_30d": "$678,681.15",
-        "is_whale": true
+        "trader": "refcode PENES",
+        "account_value": "$311,984.83"
     },
     {
-        "trader": "0x349f...bd06",
-        "account_value": "$2,534,244.95",
-        "pnl_30d": "$0.00",
-        "roi_30d": "36,06%",
-        "volume_30d": "$671,626.59",
-        "is_whale": true
+        "trader": "0x555c...c35b",
+        "account_value": "$398,926.70"
     },
     {
-        "trader": "0xbaaa...7864",
-        "account_value": "$2,005,930.11",
-        "pnl_30d": "$52,298,059.79",
-        "roi_30d": "28,05%",
-        "volume_30d": "$659,863.31",
-        "is_whale": true
+        "trader": "0x8463...33f2",
+        "account_value": "$300,988.48"
     },
     {
-        "trader": "0x8554...46dc",
-        "account_value": "$319,631.30",
-        "pnl_30d": "$15,469,813.71",
-        "roi_30d": "75,76%",
-        "volume_30d": "$656,484.79",
-        "is_whale": true
+        "trader": "0x29eb...7043",
+        "account_value": "$2,002,537.17"
     },
     {
-        "trader": "TRUMP PUMP",
-        "account_value": "$2,194,106.05",
-        "pnl_30d": "$23,795,196.48",
-        "roi_30d": "42,40%",
-        "volume_30d": "$653,307.49",
-        "is_whale": true
+        "trader": "0x1aa7...9ed9",
+        "account_value": "$489,582.78"
     },
     {
-        "trader": "0x6fbe...f350",
-        "account_value": "$1,867,048.44",
-        "pnl_30d": "$21,901,001.83",
-        "roi_30d": "34,14%",
-        "volume_30d": "$648,566.04",
-        "is_whale": true
+        "trader": "0xcf13...882d",
+        "account_value": "$1,276,426.00"
     },
     {
-        "trader": "0x123d...3bff",
-        "account_value": "$6,215,513.84",
-        "pnl_30d": "$45,242,497.69",
-        "roi_30d": "11,65%",
-        "volume_30d": "$648,450.01",
-        "is_whale": true
+        "trader": "0xc7c8...6ea4",
+        "account_value": "$3,249,091.39"
     },
     {
-        "trader": "0x06a3...05f9",
-        "account_value": "$1,830,147.32",
-        "pnl_30d": "$306,243,064.65",
-        "roi_30d": "54,05%",
-        "volume_30d": "$642,045.28",
-        "is_whale": true
+        "trader": "0xd475...1a91",
+        "account_value": "$6,415,737.89"
     },
     {
-        "trader": "0x4bbf...4b4b",
-        "account_value": "$2,914,425.07",
-        "pnl_30d": "$3,015,313.52",
-        "roi_30d": "58,69%",
-        "volume_30d": "$636,845.71",
-        "is_whale": true
+        "trader": "0xaea8...e59b",
+        "account_value": "$3,013,444.25"
     },
     {
-        "trader": "tardfather",
-        "account_value": "$461,296.01",
-        "pnl_30d": "$156,962,855.23",
-        "roi_30d": "123,59%",
-        "volume_30d": "$614,255.39",
-        "is_whale": true
+        "trader": "0xeb93...6389",
+        "account_value": "$499,893.20"
     },
     {
-        "trader": "0x3c65...4fb0",
-        "account_value": "$1,612,472.44",
-        "pnl_30d": "$365,643.72",
-        "roi_30d": "80,84%",
-        "volume_30d": "$614,220.89",
-        "is_whale": true
+        "trader": "0xdbd1...29dd",
+        "account_value": "$3,587,320.68"
     },
     {
-        "trader": "0x9f70...db0d",
-        "account_value": "$8,322,582.13",
-        "pnl_30d": "$17,882,060.44",
-        "roi_30d": "15,65%",
-        "volume_30d": "$614,034.01",
-        "is_whale": true
+        "trader": "0x9ab1...0206",
+        "account_value": "$5,243,742.20"
     },
     {
-        "trader": "0x9198...1819",
-        "account_value": "$1,945,900.06",
-        "pnl_30d": "$0.00",
-        "roi_30d": "46,06%",
-        "volume_30d": "$613,654.60",
-        "is_whale": true
+        "trader": "0xb0fb...1326",
+        "account_value": "$1,164,430.32"
     },
     {
-        "trader": "0x8835...457d",
-        "account_value": "$638,556.19",
-        "pnl_30d": "$25,489,138.43",
-        "roi_30d": "19,78%",
-        "volume_30d": "$612,124.44",
-        "is_whale": true
+        "trader": "0x5647...e7de",
+        "account_value": "$1,723,282.54"
     },
     {
-        "trader": "0xc8d9...313c",
-        "account_value": "$3,066,781.41",
-        "pnl_30d": "$48,478,393.79",
-        "roi_30d": "23,50%",
-        "volume_30d": "$587,321.60",
-        "is_whale": true
+        "trader": "0x76c2...5aa0",
+        "account_value": "$6,766,692.77"
     },
     {
-        "trader": "0xa6e2...c49f",
-        "account_value": "$1,271,379.67",
-        "pnl_30d": "$442,461,673.52",
-        "roi_30d": "42,81%",
-        "volume_30d": "$583,134.16",
-        "is_whale": true
+        "trader": "0x6d78...b291",
+        "account_value": "$3,668,765.12"
     },
     {
-        "trader": "0x807a...aca1",
-        "account_value": "$8,688,438.32",
-        "pnl_30d": "$1,880,205.05",
-        "roi_30d": "14,66%",
-        "volume_30d": "$580,419.78",
-        "is_whale": true
+        "trader": "0x1d52...4397",
+        "account_value": "$1,082,308.99"
     },
     {
-        "trader": "0xeeba...3690",
-        "account_value": "$495,387.91",
-        "pnl_30d": "$246,694.12",
-        "roi_30d": "105,48%",
-        "volume_30d": "$572,160.08",
-        "is_whale": true
+        "trader": "0x5a54...2e72",
+        "account_value": "$5,124,999.63"
     },
     {
-        "trader": "0xa581...e213",
-        "account_value": "$1,529,146.45",
-        "pnl_30d": "$751,286.69",
-        "roi_30d": "69,62%",
-        "volume_30d": "$570,204.32",
-        "is_whale": true
+        "trader": "0x24fb...ed0f",
+        "account_value": "$1,929,766.93"
     },
     {
-        "trader": "0x89c6...a406",
-        "account_value": "$4,121,366.22",
-        "pnl_30d": "$9,180,107,105.31",
-        "roi_30d": "45,50%",
-        "volume_30d": "$568,528.90",
-        "is_whale": true
-    },
-    {
-        "trader": "0xcfa9...8e81",
-        "account_value": "$4,441,802.09",
-        "pnl_30d": "$94,411,891.53",
-        "roi_30d": "22,14%",
-        "volume_30d": "$564,034.95",
-        "is_whale": true
-    },
-    {
-        "trader": "0x7625...0e49",
-        "account_value": "$1,196,400.48",
-        "pnl_30d": "$8,515,190.69",
-        "roi_30d": "39,04%",
-        "volume_30d": "$556,285.46",
-        "is_whale": true
-    },
-    {
-        "trader": "555 E2",
-        "account_value": "$740,008.99",
-        "pnl_30d": "$91,108,127.16",
-        "roi_30d": "17,28%",
-        "volume_30d": "$553,124.34",
-        "is_whale": true
-    },
-    {
-        "trader": "0x5a73...a8c7",
-        "account_value": "$2,381,380.95",
-        "pnl_30d": "$18,605,747.99",
-        "roi_30d": "29,77%",
-        "volume_30d": "$546,241.63",
-        "is_whale": true
-    },
-    {
-        "trader": "0xa64a...5f70",
-        "account_value": "$3,035,985.84",
-        "pnl_30d": "$7,473,465.25",
-        "roi_30d": "43,14%",
-        "volume_30d": "$541,266.86",
-        "is_whale": true
-    },
-    {
-        "trader": "0x4583...d406",
-        "account_value": "$411,575.12",
-        "pnl_30d": "$14,593,628.74",
-        "roi_30d": "51,70%",
-        "volume_30d": "$535,640.51",
-        "is_whale": true
-    },
-    {
-        "trader": "0x0d2c...b208",
-        "account_value": "$1,046,875.93",
-        "pnl_30d": "$16,768,637.86",
-        "roi_30d": "73,77%",
-        "volume_30d": "$533,780.73",
-        "is_whale": true
-    },
-    {
-        "trader": "0xfb6e...6137",
-        "account_value": "$837,053.10",
-        "pnl_30d": "$1,354,221.49",
-        "roi_30d": "19,18%",
-        "volume_30d": "$531,856.91",
-        "is_whale": true
-    },
-    {
-        "trader": "0xa4f7...f2cb",
-        "account_value": "$1,526,573.22",
-        "pnl_30d": "$5,715,891.98",
-        "roi_30d": "52,65%",
-        "volume_30d": "$526,567.33",
-        "is_whale": true
-    },
-    {
-        "trader": "0xe0ff...7610",
-        "account_value": "$1,459,078.96",
-        "pnl_30d": "$1,345,684.72",
-        "roi_30d": "36,02%",
-        "volume_30d": "$525,080.56",
-        "is_whale": true
+        "trader": "0xa9ed...a60a",
+        "account_value": "$2,371,737.31"
     },
     {
         "trader": "0x9946...bb46",
-        "account_value": "$1,224,531.34",
-        "pnl_30d": "$4,539,990.01",
-        "roi_30d": "179,94%",
-        "volume_30d": "$521,623.84",
-        "is_whale": true
+        "account_value": "$936,048.34"
     },
     {
-        "trader": "0x9321...d75a",
-        "account_value": "$872,806.17",
-        "pnl_30d": "$2,184,282.34",
-        "roi_30d": "54,53%",
-        "volume_30d": "$516,980.44",
-        "is_whale": true
+        "trader": "0xd6ef...a07a",
+        "account_value": "$3,622,168.65"
+    },
+    {
+        "trader": "0xb4a0...53f0",
+        "account_value": "$1,587,366.45"
+    },
+    {
+        "trader": "0x265b...82b0",
+        "account_value": "$6,111,974.12"
+    },
+    {
+        "trader": "0xbaaa...7864",
+        "account_value": "$1,281,934.12"
+    },
+    {
+        "trader": "0xad8b...db4b",
+        "account_value": "$965,355.29"
+    },
+    {
+        "trader": "0x2744...01ca",
+        "account_value": "$1,711,973.16"
+    },
+    {
+        "trader": "0xc766...60a9",
+        "account_value": "$605,290.31"
+    },
+    {
+        "trader": "0xb2d7...8f31",
+        "account_value": "$1,988,635.18"
+    },
+    {
+        "trader": "0xb4ca...0894",
+        "account_value": "$6,516,026.24"
+    },
+    {
+        "trader": "0x9f07...f99a",
+        "account_value": "$940,220.82"
+    },
+    {
+        "trader": "0xe220...3d7b",
+        "account_value": "$4,361,846.15"
+    },
+    {
+        "trader": "baby",
+        "account_value": "$1,174,491.00"
+    },
+    {
+        "trader": "0x5a73...a8c7",
+        "account_value": "$3,400,552.24"
+    },
+    {
+        "trader": "0x4f51...d5a1",
+        "account_value": "$1,024,297.53"
+    },
+    {
+        "trader": "0xadae...8ba1",
+        "account_value": "$2,640,261.94"
+    },
+    {
+        "trader": "0x6fbe...f350",
+        "account_value": "$1,683,871.30"
+    },
+    {
+        "trader": "0xcc89...bd41",
+        "account_value": "$2,062,214.16"
+    },
+    {
+        "trader": "0x7717...bd7e",
+        "account_value": "$1,913,499.57"
+    },
+    {
+        "trader": "0x2025...840e",
+        "account_value": "$2,250,388.33"
+    },
+    {
+        "trader": "0x7c4b...e00b",
+        "account_value": "$806,788.06"
+    },
+    {
+        "trader": "0x2823...1f43",
+        "account_value": "$1,562,341.55"
+    },
+    {
+        "trader": "0xa4de...b3c4",
+        "account_value": "$1,755,226.66"
+    },
+    {
+        "trader": "0xa64a...5f70",
+        "account_value": "$3,384,154.24"
+    },
+    {
+        "trader": "0x8835...457d",
+        "account_value": "$932,460.93"
+    },
+    {
+        "trader": "0x404c...5f03",
+        "account_value": "$969,514.64"
+    },
+    {
+        "trader": "0x5de7...2cfd",
+        "account_value": "$374,279.51"
+    },
+    {
+        "trader": "0xf28e...085f",
+        "account_value": "$1,424,161.73"
+    },
+    {
+        "trader": "0x2d76...10eb",
+        "account_value": "$2,932,975.82"
+    },
+    {
+        "trader": "0x0fff...eb94",
+        "account_value": "$450,136.94"
+    },
+    {
+        "trader": "0x7c93...c8fd",
+        "account_value": "$1,621,747.66"
+    },
+    {
+        "trader": "0x3a30...f64e",
+        "account_value": "$1,551,327.44"
+    },
+    {
+        "trader": "0xccf1...0ab1",
+        "account_value": "$2,916,533.59"
+    },
+    {
+        "trader": "0x9dea...3ec0",
+        "account_value": "$1,490,822.16"
+    },
+    {
+        "trader": "0x7625...0e49",
+        "account_value": "$1,055,507.29"
+    },
+    {
+        "trader": "Fullstack",
+        "account_value": "$875,225.61"
+    },
+    {
+        "trader": "0x7d97...924b",
+        "account_value": "$888,291.17"
+    },
+    {
+        "trader": "0x4fe5...2bbc",
+        "account_value": "$531,368.79"
+    },
+    {
+        "trader": "0x9b28...7ca1",
+        "account_value": "$1,888,511.17"
+    },
+    {
+        "trader": "0x9f6f...ee57",
+        "account_value": "$678,890.72"
+    },
+    {
+        "trader": "0xfcf9...8d2a",
+        "account_value": "$397,930.49"
+    },
+    {
+        "trader": "0xdf52...59fc",
+        "account_value": "$951,751.91"
+    },
+    {
+        "trader": "0x3659...2bb6",
+        "account_value": "$515,382.04"
+    },
+    {
+        "trader": "0x4cd8...0f7f",
+        "account_value": "$2,724,134.55"
+    },
+    {
+        "trader": "0x6572...c900",
+        "account_value": "$524,959.96"
     },
     {
         "trader": "0xdf9e...7ab1",
-        "account_value": "$1,270,460.30",
-        "pnl_30d": "$6,355,257,598.88",
-        "roi_30d": "45,76%",
-        "volume_30d": "$513,406.36",
-        "is_whale": true
+        "account_value": "$1,267,564.24"
+    },
+    {
+        "trader": "0x7a6a...6c7d",
+        "account_value": "$793,148.89"
+    },
+    {
+        "trader": "0xb919...6d4e",
+        "account_value": "$1,437,026.24"
+    },
+    {
+        "trader": "0xbb97...17d3",
+        "account_value": "$708,211.98"
+    },
+    {
+        "trader": "0x862d...1f0c",
+        "account_value": "$1,023,672.94"
+    },
+    {
+        "trader": "u guys r rly dum",
+        "account_value": "$477,191.32"
+    },
+    {
+        "trader": "H universe",
+        "account_value": "$5,890,873.39"
+    },
+    {
+        "trader": "0xa115...9c5e",
+        "account_value": "$789,921.29"
+    },
+    {
+        "trader": "0x7fe8...7ac6",
+        "account_value": "$4,595,437.69"
+    },
+    {
+        "trader": "0xa581...e213",
+        "account_value": "$1,690,667.60"
+    },
+    {
+        "trader": "0xa5ee...243f",
+        "account_value": "$790,853.44"
+    },
+    {
+        "trader": "0xe912...0550",
+        "account_value": "$2,120,793.96"
+    },
+    {
+        "trader": "0x89c6...a406",
+        "account_value": "$3,777,046.56"
+    },
+    {
+        "trader": "0x03ca...fbda",
+        "account_value": "$789,600.01"
+    },
+    {
+        "trader": "0xbfc7...80b4",
+        "account_value": "$1,623,365.57"
+    },
+    {
+        "trader": "0x413c...fffc",
+        "account_value": "$338,821.89"
+    },
+    {
+        "trader": "0x51f6...2b39",
+        "account_value": "$1,616,901.54"
+    },
+    {
+        "trader": "0xa997...8edc",
+        "account_value": "$1,019,876.77"
+    },
+    {
+        "trader": "0x8554...46dc",
+        "account_value": "$442,391.63"
+    },
+    {
+        "trader": "0xd247...bed6",
+        "account_value": "$1,562,206.27"
+    },
+    {
+        "trader": "0x0468...677a",
+        "account_value": "$1,089,128.14"
+    },
+    {
+        "trader": "0xe0cc...2411",
+        "account_value": "$468,524.33"
+    },
+    {
+        "trader": "0x3c65...4fb0",
+        "account_value": "$1,339,682.43"
+    },
+    {
+        "trader": "0x9321...d75a",
+        "account_value": "$911,680.57"
+    },
+    {
+        "trader": "0x27c9...d65d",
+        "account_value": "$1,787,511.62"
+    },
+    {
+        "trader": "0x8e2c...ac5c",
+        "account_value": "$557,714.77"
+    },
+    {
+        "trader": "0xaed0...30fb",
+        "account_value": "$2,914,349.10"
+    },
+    {
+        "trader": "0x3ca1...37c6",
+        "account_value": "$1,254,185.94"
+    },
+    {
+        "trader": "0xbc9e...bbaf",
+        "account_value": "$1,044,966.70"
+    },
+    {
+        "trader": "0x7bca...ee75",
+        "account_value": "$2,573,050.55"
+    },
+    {
+        "trader": "0x864b...b6bc",
+        "account_value": "$529,667.89"
+    },
+    {
+        "trader": "0xd260...8321",
+        "account_value": "$926,580.41"
+    },
+    {
+        "trader": "0x0062...64ce",
+        "account_value": "$776,373.14"
+    },
+    {
+        "trader": "0x422c...88a2",
+        "account_value": "$1,531,953.91"
+    },
+    {
+        "trader": "0x4b66...78b8",
+        "account_value": "$1,099,578.62"
+    },
+    {
+        "trader": "0x3d8f...71f8",
+        "account_value": "$964,832.84"
+    },
+    {
+        "trader": "0x9b89...8bdb",
+        "account_value": "$404,089.94"
+    },
+    {
+        "trader": "0x564b...5296",
+        "account_value": "$510,795.76"
+    },
+    {
+        "trader": "0x4acb...b9f4",
+        "account_value": "$861,675.74"
+    },
+    {
+        "trader": "0x4532...8f8d",
+        "account_value": "$805,748.60"
+    },
+    {
+        "trader": "thx jefe",
+        "account_value": "$638,895.79"
+    },
+    {
+        "trader": "0x8a83...0ac0",
+        "account_value": "$394,175.32"
+    },
+    {
+        "trader": "0x7348...2811",
+        "account_value": "$863,759.76"
+    },
+    {
+        "trader": "0xf126...bf9b",
+        "account_value": "$850,229.89"
+    },
+    {
+        "trader": "0xda3c...9f15",
+        "account_value": "$13,921,440.41"
+    },
+    {
+        "trader": "0x9d60...1692",
+        "account_value": "$704,495.71"
+    },
+    {
+        "trader": "0x86cc...52b9",
+        "account_value": "$909,767.77"
+    },
+    {
+        "trader": "0x54f9...18ef",
+        "account_value": "$479,741.52"
+    },
+    {
+        "trader": "0x7c3f...dea9",
+        "account_value": "$1,003,309.42"
+    },
+    {
+        "trader": "0x350e...fcfb",
+        "account_value": "$1,499,012.48"
+    },
+    {
+        "trader": "0xf14b...1358",
+        "account_value": "$1,439,723.36"
+    },
+    {
+        "trader": "0x90f4...7434",
+        "account_value": "$575,853.66"
+    },
+    {
+        "trader": "0x407a...8562",
+        "account_value": "$474,952.96"
+    },
+    {
+        "trader": "0xcd27...5b9c",
+        "account_value": "$449,561.89"
+    },
+    {
+        "trader": "0xf53a...3033",
+        "account_value": "$861,503.24"
+    },
+    {
+        "trader": "0x64a4...088d",
+        "account_value": "$1,442,004.75"
+    },
+    {
+        "trader": "0xd946...6a28",
+        "account_value": "$415,522.88"
+    },
+    {
+        "trader": "0x1e07...16e2",
+        "account_value": "$486,005.66"
+    },
+    {
+        "trader": "\u65e9\u5bdd\u65e9\u8d77",
+        "account_value": "$379,132.87"
+    },
+    {
+        "trader": "0x6754...d3a1",
+        "account_value": "$611,035.06"
+    },
+    {
+        "trader": "0xed48...7c9b",
+        "account_value": "$1,860,584.29"
+    },
+    {
+        "trader": "0xe7e2...f958",
+        "account_value": "$2,237,300.28"
+    },
+    {
+        "trader": "0x4cd4...61de",
+        "account_value": "$1,462,491.23"
     },
     {
         "trader": "0x4369...4a13",
-        "account_value": "$913,769.15",
-        "pnl_30d": "$20,357,940.48",
-        "roi_30d": "66,32%",
-        "volume_30d": "$512,081.37",
-        "is_whale": true
+        "account_value": "$603,061.20"
     },
     {
-        "trader": "0xde95...5c91",
-        "account_value": "$300,437.74",
-        "pnl_30d": "$2,822,374.42",
-        "roi_30d": "100,78%",
-        "volume_30d": "$503,899.04",
-        "is_whale": true
+        "trader": "0xd96e...b09e",
+        "account_value": "$1,456,198.86"
     },
     {
-        "trader": "0x07c7...8114",
-        "account_value": "$1,367,544.97",
-        "pnl_30d": "$659,961.27",
-        "roi_30d": "58,04%",
-        "volume_30d": "$502,231.38",
-        "is_whale": true
+        "trader": "0xdd0c...8888",
+        "account_value": "$1,386,586.50"
     },
     {
-        "trader": "0x9e1e...b0dc",
-        "account_value": "$2,121,297.28",
-        "pnl_30d": "$12,535,162.38",
-        "roi_30d": "30,89%",
-        "volume_30d": "$500,569.73",
-        "is_whale": true
+        "trader": "0x1f1b...e235",
+        "account_value": "$311,296.52"
+    },
+    {
+        "trader": "0xf62e...2f30",
+        "account_value": "$969,198.35"
+    },
+    {
+        "trader": "0x22bc...4043",
+        "account_value": "$1,474,655.67"
+    },
+    {
+        "trader": "0xe113...5c07",
+        "account_value": "$1,497,518.33"
+    },
+    {
+        "trader": "0x3d89...eb14",
+        "account_value": "$712,913.71"
+    },
+    {
+        "trader": "0x5559...d43b",
+        "account_value": "$1,179,737.53"
+    },
+    {
+        "trader": "0xca23...e9e0",
+        "account_value": "$433,112.31"
+    },
+    {
+        "trader": "0x2c35...72b8",
+        "account_value": "$338,789.26"
+    },
+    {
+        "trader": "0x786f...e435",
+        "account_value": "$815,308.75"
+    },
+    {
+        "trader": "0x30a8...f81f",
+        "account_value": "$1,504,522.12"
+    },
+    {
+        "trader": "0x3888...dcdd",
+        "account_value": "$664,469.38"
+    },
+    {
+        "trader": "0x07fd...f24d",
+        "account_value": "$1,091,267.34"
+    },
+    {
+        "trader": "0xd045...e79e",
+        "account_value": "$954,774.35"
+    },
+    {
+        "trader": "0x1326...53b8",
+        "account_value": "$339,272.61"
+    },
+    {
+        "trader": "0x417b...df00",
+        "account_value": "$461,898.86"
+    },
+    {
+        "trader": "0xc780...c521",
+        "account_value": "$547,274.40"
+    },
+    {
+        "trader": "0x44c9...277c",
+        "account_value": "$894,216.23"
+    },
+    {
+        "trader": "0x7688...6451",
+        "account_value": "$482,877.41"
+    },
+    {
+        "trader": "0xc885...c767",
+        "account_value": "$600,278.03"
+    },
+    {
+        "trader": "0x0087...2b55",
+        "account_value": "$714,161.04"
+    },
+    {
+        "trader": "0x0284...3806",
+        "account_value": "$430,675.04"
+    },
+    {
+        "trader": "0xb906...bb12",
+        "account_value": "$481,942.66"
+    },
+    {
+        "trader": "0x34d3...821f",
+        "account_value": "$941,337.95"
+    },
+    {
+        "trader": "0xdd58...fb1c",
+        "account_value": "$438,777.13"
+    },
+    {
+        "trader": "0x44b1...11de",
+        "account_value": "$368,166.60"
+    },
+    {
+        "trader": "0x30fa...fa11",
+        "account_value": "$1,182,310.91"
+    },
+    {
+        "trader": "0xf8f3...2671",
+        "account_value": "$770,895.52"
+    },
+    {
+        "trader": "0x60fe...1f77",
+        "account_value": "$1,052,687.14"
+    },
+    {
+        "trader": "0x157b...d5c9",
+        "account_value": "$610,863.03"
+    },
+    {
+        "trader": "0xb339...945e",
+        "account_value": "$343,218.51"
+    },
+    {
+        "trader": "0xf2df...cd86",
+        "account_value": "$705,951.01"
+    },
+    {
+        "trader": "0x4597...fe33",
+        "account_value": "$478,008.88"
+    },
+    {
+        "trader": "0x9b86...6e6e",
+        "account_value": "$458,037.52"
+    },
+    {
+        "trader": "0x127f...7564",
+        "account_value": "$405,239.01"
+    },
+    {
+        "trader": "0x7f59...faba",
+        "account_value": "$701,268.89"
+    },
+    {
+        "trader": "0xbd3e...469c",
+        "account_value": "$525,403.08"
+    },
+    {
+        "trader": "0x288e...b336",
+        "account_value": "$496,307.19"
+    },
+    {
+        "trader": "0xa2d1...824e",
+        "account_value": "$3,913,393.09"
+    },
+    {
+        "trader": "0x0c51...fde2",
+        "account_value": "$663,686.63"
+    },
+    {
+        "trader": "0x5a19...2b4d",
+        "account_value": "$339,820.05"
+    },
+    {
+        "trader": "0x4b1e...a06e",
+        "account_value": "$634,986.47"
+    },
+    {
+        "trader": "0x2798...4ce5",
+        "account_value": "$586,802.29"
+    },
+    {
+        "trader": "0x71b7...2284",
+        "account_value": "$720,352.98"
+    },
+    {
+        "trader": "0x61d8...790e",
+        "account_value": "$480,653.73"
+    },
+    {
+        "trader": "0x9fa4...b791",
+        "account_value": "$671,759.06"
+    },
+    {
+        "trader": "guwaya",
+        "account_value": "$344,291.04"
+    },
+    {
+        "trader": "0x39be...705d",
+        "account_value": "$754,564.92"
+    },
+    {
+        "trader": "0xb191...d3c1",
+        "account_value": "$456,196.41"
+    },
+    {
+        "trader": "0x2e32...7d97",
+        "account_value": "$1,558,785.40"
+    },
+    {
+        "trader": "ttttttt",
+        "account_value": "$339,057.73"
+    },
+    {
+        "trader": "kacexbt",
+        "account_value": "$499,966.11"
+    },
+    {
+        "trader": "0x19c5...b723",
+        "account_value": "$338,281.89"
+    },
+    {
+        "trader": "0x0cb1...6edb",
+        "account_value": "$909,257.17"
+    },
+    {
+        "trader": "0xf770...99ea",
+        "account_value": "$589,864.60"
+    },
+    {
+        "trader": "witness",
+        "account_value": "$634,457.16"
+    },
+    {
+        "trader": "0x5208...3f47",
+        "account_value": "$417,597.19"
+    },
+    {
+        "trader": "run it up",
+        "account_value": "$900,608.71"
+    },
+    {
+        "trader": "0x1c9e...1017",
+        "account_value": "$489,323.78"
+    },
+    {
+        "trader": "0x8859...6aa8",
+        "account_value": "$805,988.26"
+    },
+    {
+        "trader": "0x7b01...6b08",
+        "account_value": "$531,096.59"
+    },
+    {
+        "trader": "0x610a...ef73",
+        "account_value": "$432,889.12"
+    },
+    {
+        "trader": "0xaacc...2310",
+        "account_value": "$902,056.50"
+    },
+    {
+        "trader": "0x3c16...7e92",
+        "account_value": "$337,070.26"
+    },
+    {
+        "trader": "0xa7f5...a660",
+        "account_value": "$560,552.76"
+    },
+    {
+        "trader": "0x5fdd...9890",
+        "account_value": "$1,129,263.50"
+    },
+    {
+        "trader": "0xf4dd...c669",
+        "account_value": "$358,793.89"
+    },
+    {
+        "trader": "0x3d55...8ef9",
+        "account_value": "$466,802.25"
+    },
+    {
+        "trader": "0x0030...267e",
+        "account_value": "$313,100.42"
+    },
+    {
+        "trader": "0x68af...c654",
+        "account_value": "$368,183.04"
+    },
+    {
+        "trader": "0xbc82...558b",
+        "account_value": "$433,511.92"
+    },
+    {
+        "trader": "0x23d6...f8d9",
+        "account_value": "$406,256.02"
+    },
+    {
+        "trader": "0x62ad...eb37",
+        "account_value": "$332,027.69"
+    },
+    {
+        "trader": "0xf034...3e77",
+        "account_value": "$354,760.86"
+    },
+    {
+        "trader": "0x0ba4...1602",
+        "account_value": "$574,568.31"
+    },
+    {
+        "trader": "0x4b1c...bc38",
+        "account_value": "$513,099.16"
+    },
+    {
+        "trader": "0x33cd...8ad9",
+        "account_value": "$572,997.01"
+    },
+    {
+        "trader": "0xa1cb...b1fb",
+        "account_value": "$682,203.39"
+    },
+    {
+        "trader": "0x24ab...2155",
+        "account_value": "$345,110.15"
+    },
+    {
+        "trader": "0x8911...2fc2",
+        "account_value": "$403,187.75"
+    },
+    {
+        "trader": "burger capital",
+        "account_value": "$332,226.92"
+    },
+    {
+        "trader": "0x2951...89e0",
+        "account_value": "$361,861.80"
+    },
+    {
+        "trader": "0xf961...e920",
+        "account_value": "$3,194,766.76"
+    },
+    {
+        "trader": "0x524a...4e92",
+        "account_value": "$531,133.64"
+    },
+    {
+        "trader": "Tassadar",
+        "account_value": "$343,770.20"
+    },
+    {
+        "trader": "0xa1d0...7d70",
+        "account_value": "$403,801.52"
+    },
+    {
+        "trader": "Loco",
+        "account_value": "$755,393.53"
+    },
+    {
+        "trader": "purrrr",
+        "account_value": "$4,038,477.75"
+    },
+    {
+        "trader": "0x4e38...6b87",
+        "account_value": "$397,635.40"
+    },
+    {
+        "trader": "0x5df2...1256",
+        "account_value": "$326,808.67"
+    },
+    {
+        "trader": "0xbd5f...b5c3",
+        "account_value": "$537,878.05"
+    },
+    {
+        "trader": "0x6ab6...3cc9",
+        "account_value": "$428,479.36"
+    },
+    {
+        "trader": "0x6041...7d98",
+        "account_value": "$870,258.00"
+    },
+    {
+        "trader": "USE CODE DG",
+        "account_value": "$422,630.63"
+    },
+    {
+        "trader": "0xe158...c3e8",
+        "account_value": "$567,743.55"
+    },
+    {
+        "trader": "0x8963...d9ce",
+        "account_value": "$314,930.71"
+    },
+    {
+        "trader": "0x7aa3...c12d",
+        "account_value": "$308,023.32"
+    },
+    {
+        "trader": "0xc5ed...4346",
+        "account_value": "$879,432.25"
+    },
+    {
+        "trader": "0x60ce...75f6",
+        "account_value": "$425,640.36"
+    },
+    {
+        "trader": "0x7151...f8f9",
+        "account_value": "$383,917.51"
+    },
+    {
+        "trader": "0x6ea2...82e9",
+        "account_value": "$549,128.19"
+    },
+    {
+        "trader": "0x4cac...3e80",
+        "account_value": "$379,346.55"
+    },
+    {
+        "trader": "0x81dd...55b6",
+        "account_value": "$411,156.61"
+    },
+    {
+        "trader": "0x2565...cc37",
+        "account_value": "$477,351.31"
+    },
+    {
+        "trader": "0x43d2...9e83",
+        "account_value": "$1,009,527.23"
+    },
+    {
+        "trader": "0x84c8...f4b7",
+        "account_value": "$308,238.95"
+    },
+    {
+        "trader": "0xcc38...90b4",
+        "account_value": "$375,380.03"
+    },
+    {
+        "trader": "0xaf6f...efc7",
+        "account_value": "$404,009.14"
+    },
+    {
+        "trader": "0xd35e...deaf",
+        "account_value": "$306,515.95"
+    },
+    {
+        "trader": "0x5e47...cc1f",
+        "account_value": "$417,942.83"
+    },
+    {
+        "trader": "0x7e51...780f",
+        "account_value": "$375,258.19"
+    },
+    {
+        "trader": "0x056b...d2df",
+        "account_value": "$379,553.45"
+    },
+    {
+        "trader": "0xe680...02c1",
+        "account_value": "$301,948.69"
+    },
+    {
+        "trader": "0x872d...ba6d",
+        "account_value": "$490,455.87"
+    },
+    {
+        "trader": "0x8dea...f6db",
+        "account_value": "$1,620,246.29"
+    },
+    {
+        "trader": "0x84ac...4bdb",
+        "account_value": "$403,075.56"
+    },
+    {
+        "trader": "0x2160...7495",
+        "account_value": "$301,588.80"
+    },
+    {
+        "trader": "0xb1c7...888c",
+        "account_value": "$344,619.86"
+    },
+    {
+        "trader": "0x4bd8...eeb5",
+        "account_value": "$717,787.87"
+    },
+    {
+        "trader": "0xcbd6...c1d6",
+        "account_value": "$1,999,795.14"
+    },
+    {
+        "trader": "0xeb36...9a02",
+        "account_value": "$2,217,209.61"
+    },
+    {
+        "trader": "0x1363...e5aa",
+        "account_value": "$318,969.07"
+    },
+    {
+        "trader": "0xa567...f92c",
+        "account_value": "$1,419,298.93"
+    },
+    {
+        "trader": "0xf1df...c00d",
+        "account_value": "$326,039.13"
+    },
+    {
+        "trader": "0xeede...4cea",
+        "account_value": "$438,111.64"
+    },
+    {
+        "trader": "0x4c0f...979e",
+        "account_value": "$531,590.36"
+    },
+    {
+        "trader": "0x1d20...0b20",
+        "account_value": "$329,443.81"
+    },
+    {
+        "trader": "0x82ba...dcb7",
+        "account_value": "$1,510,137.87"
+    },
+    {
+        "trader": "0xaf60...42ab",
+        "account_value": "$333,896.85"
+    },
+    {
+        "trader": "0x9e8c...3f45",
+        "account_value": "$1,738,997.21"
+    },
+    {
+        "trader": "0x195a...a391",
+        "account_value": "$635,001.05"
+    },
+    {
+        "trader": "0x91c2...2eaa",
+        "account_value": "$2,091,317.55"
+    },
+    {
+        "trader": "0xbafa...1b76",
+        "account_value": "$509,901.57"
+    },
+    {
+        "trader": "0xbbbd...9227",
+        "account_value": "$897,613.12"
+    },
+    {
+        "trader": "0x698f...a600",
+        "account_value": "$545,977.39"
+    },
+    {
+        "trader": "0xf58b...f64d",
+        "account_value": "$614,277.08"
+    },
+    {
+        "trader": "0x01ff...079f",
+        "account_value": "$310,290.17"
+    },
+    {
+        "trader": "0x73a1...c17e",
+        "account_value": "$387,728.61"
     }
 ]
