@@ -117,7 +117,7 @@ class LoadWalletsDrafts:
             
             # Print header
             print("\n{:<5} {:<15} {:<20} {:<20} {:<15} {:<20}".format(
-                "Rank", "Trader", "Account Value", "Volume (30D)", "ROI (30D)", "PnL (30D)"
+                "Rank", "Trader", "Account Value", "PnL (30D)", "ROI (30D)", "Volume (30D)"
             ))
             print("-" * 95)
             
@@ -138,13 +138,13 @@ class LoadWalletsDrafts:
                         rank = cells[0].text.strip()
                         trader = cells[1].text.strip()
                         account_value = cells[2].text.strip()
-                        volume = cells[3].text.strip()
+                        pnl = cells[3].text.strip()
                         roi = cells[4].text.strip()
-                        pnl = cells[5].text.strip()
+                        volume = cells[5].text.strip()
                         
                         # Print in table format
                         print("{:<5} {:<15} {:<20} {:<20} {:<15} {:<20}".format(
-                            rank, trader, account_value, volume, roi, pnl
+                            rank, trader, account_value, pnl, roi, volume
                         ))
                         
                         # Store data
@@ -152,9 +152,9 @@ class LoadWalletsDrafts:
                             'rank': rank,
                             'trader': trader,
                             'account_value': account_value,
-                            'volume_30d': volume,
+                            'pnl_30d': pnl,
                             'roi_30d': roi,
-                            'pnl_30d': pnl
+                            'volume_30d': volume
                         }
                         page_data.append(trader_data)
                         self.total_wallets_processed += 1
