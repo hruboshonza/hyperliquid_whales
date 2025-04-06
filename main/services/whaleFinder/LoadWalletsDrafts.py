@@ -281,6 +281,7 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                 account_value = parse_number(entry['account_value'])
                 roi = parse_number(entry['roi_30d'])
                 volume = parse_number(entry['volume_30d'])
+                pnl30 = parse_number(entry['pnl_30d'])
                 
                 # Debug print for values
                 print(f"\nProcessing wallet {entry['trader']}:")
@@ -290,15 +291,16 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                 
                 # Check if meets whale criteria
                 if account_value >= LoadWalletsDrafts.MIN_ACCOUNT_VALUE and \
-                   roi >= LoadWalletsDrafts.MIN_ROI and \
-                   volume >= LoadWalletsDrafts.MIN_VOLUME:
+                    roi >= LoadWalletsDrafts.MIN_ROI and \
+                    pnl30 >= 0 and \
+                    volume >= LoadWalletsDrafts.MIN_VOLUME:
                     processed_entry = {
                         'trader': entry['trader'],
-                        'account_value': entry['account_value'],
-                        'pnl_30d': entry['pnl_30d'],
-                        'roi_30d': entry['roi_30d'],
-                        'volume_30d': entry['volume_30d'],
-                        'is_whale': True
+                        'account_value': entry['account_value']
+                        # 'pnl_30d': entry['pnl_30d'],
+                        # 'roi_30d': entry['roi_30d'],
+                        # 'volume_30d': entry['volume_30d']
+                        # 'is_whale': True
                     }
                     processed_data.append(processed_entry)
                     whales_count += 1
@@ -311,6 +313,8 @@ def save_to_json(data: List[Dict], filename: str = LoadWalletsDrafts.DATA_SAVE_F
                         print(f"   ROI {roi:.2f}% < {LoadWalletsDrafts.MIN_ROI}%")
                     if volume < LoadWalletsDrafts.MIN_VOLUME:
                         print(f"   Volume ${volume:,.2f} < ${LoadWalletsDrafts.MIN_VOLUME:,.2f}")
+                    if pnl30 < 0:
+                        print(f"    PnL 30d ${pnl30:,.2f} < 0")
 
             except Exception as e:
                 print(f"Error processing entry {entry}: {e}")

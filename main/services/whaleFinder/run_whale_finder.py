@@ -33,13 +33,13 @@ def main():
         loader.cleanup()
     
     # Step 2: Process wallets to get full addresses and details
-    print("\nStep 2: Processing wallets to get full addresses and details...")
+    # print("\nStep 2: Processing wallets to get full addresses and details...")
     processor = FullAddressSearcher()
-    processor.process_wallets()
+    # processor.process_wallets()
     
-    # Print summary
-    processed_wallets = processor.get_processed_wallets()
-    print(f"\nProcessed {len(processed_wallets)} wallets successfully.")
+    # # Print summary
+    # processed_wallets = processor.get_processed_wallets()
+    # print(f"\nProcessed {len(processed_wallets)} wallets successfully.")
     
 
 if __name__ == "__main__":
